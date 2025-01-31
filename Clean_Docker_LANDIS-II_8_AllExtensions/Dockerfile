@@ -496,7 +496,7 @@ RUN sed -i '/<\/Project>/i \
     <Reference Include="Landis.Library.UniversalCohorts-v1.dll">\n\
         <HintPath>../../build/extensions/Landis.Library.UniversalCohorts-v1.dll</HintPath>\n\
     </Reference>\n\
-</ItemGroup>' /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src/Console.csproj \
+</ItemGroup>' /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src/Console.csproj
 
 # ################################################################
 # # FINISHING
