@@ -45,8 +45,8 @@ RUN git config --global http.version HTTP/1.1 \
 
 # PREPARING VARIABLE FOR MORE EASY COMMANDS 
 ENV LANDIS_EXTENSIONS_TOOL="/bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Landis.Extensions.dll"
-ENV LANDIS_CONSOLE="/bin/LANDIS_Linux/build/Release/Landis.Console.dll"
-ENV LANDIS_FOLDER="/bin/LANDIS_Linux"
+ENV LANDIS_CONSOLE="/bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Landis.Console.dll"
+ENV LANDIS_FOLDER="/bin/LANDIS_Linux/Core-Model-v8-LINUX"
 
 ################################################################
 # COMPILING LANDIS-II
