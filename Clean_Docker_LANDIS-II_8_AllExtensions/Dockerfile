@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # PREPARING PACKAGES AND UPGRADING, AND INSTALLING DEPENDENCIES OF LANDIS-II
 # apt-get clean and rm -rf /var/lib/apt/lists/* are used to clear the packages folder caches
 # to avoid putting them in the docker layerin system, freeing space
-RUN apt update && apt upgrade \
+RUN apt update -y && apt upgrade -y \
 && apt-get update && apt-get -y upgrade \
 && apt-get install -y wget vim pip nano git python3 python-is-python3 \
 && apt-get install -y libjpeg62 \
@@ -45,8 +45,8 @@ RUN git config --global http.version HTTP/1.1 \
 
 # PREPARING VARIABLE FOR MORE EASY COMMANDS 
 ENV LANDIS_EXTENSIONS_TOOL="/bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Landis.Extensions.dll"
-ENV LANDIS_CONSOLE="/bin/LANDIS_Linux/build/Release/Landis.Console.dll"
-ENV LANDIS_FOLDER="/bin/LANDIS_Linux"
+ENV LANDIS_CONSOLE="/bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Landis.Console.dll"
+ENV LANDIS_FOLDER="/bin/LANDIS_Linux/Core-Model-v8-LINUX"
 
 ################################################################
 # COMPILING LANDIS-II
@@ -113,7 +113,7 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "NECN_Succession8.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-NECN-Succession
 
-# # PnET Succession - WORK IN PROGRESS
+# # PnET Succession
 # Currently left until https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession/issues/17 is fixed.
 # RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # # Commit 13ffece64f0b0180490aaa96cf91bd212e9e2e50 is the most recent at date of writing..
@@ -136,6 +136,7 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # # # Forest Carbon Succession (ForCS)
 # Not yet ready for corev8 as of writing. Will have to wait.
+
 
 # # DGS Succession extension : Not yet ready for v8.
 
@@ -426,7 +427,7 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Wildlife-Habitat
 
 # ################################################################
-# # RECOMPILING SOME THINGS TO SOLVE SOME ERRORS
+# # RECOMPILING SOME THINGS TO SOLVE METADATALIBRARY ERROR
 # ################################################################
 
 # Universal cohorts library
@@ -496,7 +497,12 @@ RUN sed -i '/<\/Project>/i \
     <Reference Include="Landis.Library.UniversalCohorts-v1.dll">\n\
         <HintPath>../../build/extensions/Landis.Library.UniversalCohorts-v1.dll</HintPath>\n\
     </Reference>\n\
-</ItemGroup>' /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src/Console.csproj
+</ItemGroup>' /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src/Console.csproj \
+# && cp /bin/LANDIS_Linux/build/extensions/extensions.xml /bin/LANDIS_Linux \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src && dotnet build -c Release \
+&& mkdir /bin/LANDIS_Linux/build && cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/* /bin/LANDIS_Linux/build 
+# && cp /bin/LANDIS_Linux/extensions.xml /bin/LANDIS_Linux/build/extensions/ \
+# && rm -r /bin/LANDIS_Linux/Core-Model-v8-LINUX
 
 # ################################################################
 # # FINISHING
@@ -504,3 +510,5 @@ RUN sed -i '/<\/Project>/i \
 
 # # Re-configure git for latest version of HTTP protocol
 RUN git config --global --unset http.version
+
+# TO FINISH : Put things OUT of Core-Model-v8-Linux in into LANDIS_Linux, and update environ var if needed.
