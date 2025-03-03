@@ -156,4 +156,18 @@ As you can see, the command is very similar to the one used with Docker.
 
 ## 🐛 Problem, issue or bug ?
 
-Head to the [LANDIS-II users group](https://www.landis-ii.org/users) if you have questions or issues !
+- **I'm encountering an error when compiling the Docker image where it says that it fails to download from github (something like `error unexpected disconnect while reading sideband packet`). What should I do ?**
+
+You're most likely using Windows; this error seems to be due to an oudated SSH library that deal with the encryption of connections. See [here](https://github.com/orgs/community/discussions/48568#discussioncomment-8510498) for more information. It seems like it can be solved by downloading the latest beta version of the SSH library of microsoft, by using the following command in a Powershell prompt :
+
+```powershell
+ winget install Microsoft.OpenSSH.Beta
+```
+
+- **I'm encountering an error when compiling the Docker image at the beginning of the process, where commands like `apt update` and `apt upgrade` are used. What should I do ?**
+ 
+Most likely, this error is due the fact that the command returned an interactive prompt in the form of `Do you want to continue? [Y/n]Abort.`. Because Docker cannot answer this prompt, the command is aborder and returns an error. Simply change the command to something like `apt update -y` in your Dockerfile; the `-y` flag will confirm the prompt automatically for you.
+
+- **I've got another error that is not indicated here ?**
+
+Please head to the [LANDIS-II users group](https://www.landis-ii.org/users) if you have questions or issues !
