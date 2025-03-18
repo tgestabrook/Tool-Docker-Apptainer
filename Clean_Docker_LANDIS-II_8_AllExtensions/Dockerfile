@@ -304,14 +304,12 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # Max species Age
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit bba5b5a4879d0d6cbfbcce4867702bd4df3ac350 is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Max-Species-Age.git bba5b5a4879d0d6cbfbcce4867702bd4df3ac350 /src \ 
+# Commit 5c9ae5394be1c897ed775cc446d800c34c3d5fec is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Max-Species-Age.git 5c9ae5394be1c897ed775cc446d800c34c3d5fec /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Output-Max-Species-Age/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./max-species-age.csproj \
-# We need to add a line to the csproj.
-&& sed -i '37i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' max-species-age.csproj \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Max-Species-Age/bba5b5a4879d0d6cbfbcce4867702bd4df3ac350/deploy/installer/Output%20MaxSpeciesAge%204.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Max-Species-Age/5c9ae5394be1c897ed775cc446d800c34c3d5fec/deploy/installer/Output%20MaxSpeciesAge%204.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Output MaxSpeciesAge 4.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Max-Species-Age
 
@@ -330,14 +328,12 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # Biomass Community
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 58252f441cc393cc1e63ea6c36175e15bba93916 is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community.git 58252f441cc393cc1e63ea6c36175e15bba93916 /src \ 
+# Commit 5942e9bebafb0a618e8f46195aac0b118de4ae31 is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community.git 5942e9bebafb0a618e8f46195aac0b118de4ae31 /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Output-Biomass-Community/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./output-biomass-community.csproj \
-# We need to add a line to the csproj.
-&& sed -i '36i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' output-biomass-community.csproj \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community/58252f441cc393cc1e63ea6c36175e15bba93916/deploy/installer/Output%20Biomass%20Community%203.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community/5942e9bebafb0a618e8f46195aac0b118de4ae31/deploy/installer/Output%20Biomass%20Community%203.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Output Biomass Community 3.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Biomass-Community
 
@@ -365,14 +361,12 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # # Cohort statistics outputs
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 045272850c77b8b5e8c36ba1fe8c5041b7a523c2 is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics.git 045272850c77b8b5e8c36ba1fe8c5041b7a523c2 /src \ 
+# Commit 0b5cb4ba929bb2f0f87db14fc013e660a79da903 is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics.git 0b5cb4ba929bb2f0f87db14fc013e660a79da903 /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Output-Cohort-Statistics/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./output-cohort-stats.csproj \
-# We need to add a line to the csproj.
-&& sed -i '37i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' output-cohort-stats.csproj \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/045272850c77b8b5e8c36ba1fe8c5041b7a523c2/deploy/installer/Output%20Cohort%20Statistics%204.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/0b5cb4ba929bb2f0f87db14fc013e660a79da903/deploy/installer/Output%20Cohort%20Statistics%204.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Output Cohort Statistics 4.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Cohort-Statistics
 
