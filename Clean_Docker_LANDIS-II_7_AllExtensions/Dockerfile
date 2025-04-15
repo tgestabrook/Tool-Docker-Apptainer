@@ -69,7 +69,7 @@ COPY ./files_to_help_compilation/editing_csproj_LANDIS-II_files.py /bin/LANDIS_L
 
 # Transfering the sh script that allows us to only download one folder from one commit from github
 COPY ./files_to_help_compilation/downloadSpecificGitCommitAndFolder.sh /bin/LANDIS_Linux
-
+RUN chmod +x /bin/LANDIS_Linux/downloadSpecificGitCommitAndFolder.sh
 
 ###### COMPILING AND REGISTERING EXTENSIONS 
 # INFO: The files necessary for the compilation are downloaded through the script downloadSpecificGitCommitAndFolder.sh
