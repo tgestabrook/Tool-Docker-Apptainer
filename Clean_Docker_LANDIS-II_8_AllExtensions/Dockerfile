@@ -46,7 +46,7 @@ RUN git config --global http.version HTTP/1.1 \
 # PREPARING VARIABLE FOR MORE EASY COMMANDS 
 ENV LANDIS_EXTENSIONS_TOOL="/bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Landis.Extensions.dll"
 ENV LANDIS_CONSOLE="/bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Landis.Console.dll"
-ENV LANDIS_FOLDER="/bin/LANDIS_Linux/Core-Model-v8-LINUX"
+ENV LANDIS_FOLDER="/bin/LANDIS_Linux/Core-Model-v8-LINUX/"
 
 ################################################################
 # COMPILING LANDIS-II
@@ -113,32 +113,40 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "NECN_Succession8.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-NECN-Succession
 
-# # PnET Succession
-# Currently left until https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession/issues/17 is fixed.
-# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# # Commit 13ffece64f0b0180490aaa96cf91bd212e9e2e50 is the most recent at date of writing..
-# && ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 13ffece64f0b0180490aaa96cf91bd212e9e2e50 /src \ 
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
-# && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
-# # A definition seems to be missing in Plugin.cs, even on newer versions; I add it here. Strange ?
-# # && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src && sed -i '57i        public int ThreadCount;' PlugIn.cs \
-# # We need to remove the .sln file; it's not useful to build, and is full of bad/missing references to other projects.
-# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src/PnET-Succession.sln
-# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
-# && dotnet build -c Release \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession \
-# # To finish, we have to transfer some "Default files" of PnET in the extension folder
-# && ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 13ffece64f0b0180490aaa96cf91bd212e9e2e50 /deploy \ 
-# && cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/deploy/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
-# && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-PnET-Succession/13ffece64f0b0180490aaa96cf91bd212e9e2e50/deploy/installer/PnET-Succession.txt \
-# && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Succession.txt" \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
+# PnET Succession
+# As of time of writing, seems to work, but is not released officially.
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Commit f54cb893fbd60bababdeed8305887fd695b9ac24 is the most recent at date of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git f54cb893fbd60bababdeed8305887fd695b9ac24 /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
+# Need to change a line because there is an error with the new climate library.
+&& sed -i 's/GetClimateRegionData(ecoregion_pnet, date, EndDate, Climate.Phase.Future_Climate)/GetClimateRegionData(ecoregion_pnet, date, EndDate)/g' PlugIn.cs \
+# Also need to change the title of the assembly that is created, as it still refers to the old one (v5)
+&& sed -i 's/Landis.Extension.Succession.BiomassPnET-v5/Landis.Extension.Succession.BiomassPnET-v6/g' PnET-Succession.csproj \
+# We need to remove the .sln file; it's not useful to build, and is full of bad/missing references to other projects.
+&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src/PnET-Succession.sln \
+# We make the build
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
+&& dotnet build -c Release \
+# We remove the files
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession \
+# To finish, we have to transfer some "Default files" of PnET in the extension folder
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git f54cb893fbd60bababdeed8305887fd695b9ac24 /deploy \ 
+&& cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/deploy/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
+# We also have to register the extension properly
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-PnET-Succession/f54cb893fbd60bababdeed8305887fd695b9ac24/deploy/installer/PnET-Succession.txt \
+&& dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Succession.txt" \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
+# We finish by moving the defaults from /extension to /Release; since apparently, the v8 core wants things to be there.
+# See section on recompiling the core at the end of the file.
+RUN cp -a /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Defaults
 
 # # # Forest Carbon Succession (ForCS)
 # Not yet ready for corev8 as of writing. Will have to wait.
 
-
 # # DGS Succession extension : Not yet ready for v8.
+
 
 #### DISTURBANCE EXTENSIONS
 
@@ -246,7 +254,6 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/LANDIS-II-Magic-Harvest && dotnet b
 && wget https://raw.githubusercontent.com/Klemet/LANDIS-II-Magic-Harvest/4def8fc98e3d816367f8ba2ec6d2b8ea76d279f6/Deploy/Installation%20Files/plug-ins-installer-files/Magic%20harvest%20v2.1.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Magic harvest v2.1.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r LANDIS-II-Magic-Harvest
-
 
 ## WIND
 
@@ -413,7 +420,16 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Local Habitat Output.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Local-Habitat-Suitability-Output
 
-# # PnET Output - Not yet available for v8
+# # PnET Output
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Commit 48705dbff64625eede398462a519dfaf25ab3b74 is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET.git 48705dbff64625eede398462a519dfaf25ab3b74 /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Output-Biomass-PnET/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./output-biomass-pnet.csproj \
+&& dotnet build -c Release \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET/48705dbff64625eede398462a519dfaf25ab3b74/deploy/installer/PnET-Output.txt \
+&& dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Output.txt" \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Biomass-PnET
 
 # Wildlife habitat Output
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
@@ -427,7 +443,12 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Wildlife-Habitat
 
 # ################################################################
-# # RECOMPILING SOME THINGS TO SOLVE METADATALIBRARY ERROR
+# # RECOMPILING SOME SUPPORT LIBRARIES TO SOLVE LIBRARY ERRORS
+#
+# Some library errors seem to come from the fact that the
+# support libraries in the support library repository are built in
+# an environment with references to libraries that are not yet available,
+# or other issues. By re-compiling, we avoid these issues.
 # ################################################################
 
 # Universal cohorts library
@@ -452,57 +473,49 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && dotnet build -c Release \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Initial-Community
 
+# PnET Cohort Library - We need to make it ourselves because there is an issue with the version
+# that is in the support libraries repository (it wants to load the wrong version of universal cohorts)
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.PnETCohorts-v2.dll \
+# Commit 13334584b97490b65f75243ec79ce47b0caa4145 is not the latest; but it's one of the only latest
+# that would end up working with PnET-Succession, as more recent versions seem to be "too advanced" for the
+# latest main commit of PnET-Succession. It's also one of the latest that does not return an error when building,
+# probably because of compatibility issues with Universal cohorts.
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
+&& git clone https://github.com/LANDIS-II-Foundation/Library-PnET-Cohort.git \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/ && git checkout 13334584b97490b65f75243ec79ce47b0caa4145 \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Library-PnET-Cohort.csproj \
+# Problem is : this older commit has a function that is not implemented properly. So, we have
+# to modify the function by hand for it to work.
+&& sed -i 's/public void ChangeANPP(int delta)/public void ChangeANPP(double delta)/g' Cohort.cs \
+&& sed -i 's/data.ANPP = data.ANPP + delta;/data.ANPP = data.ANPP + (int)delta;/g' Cohort.cs \
+&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
+&& dotnet build -c Release \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
+
+
+# ################################################################
+# # RECOMPILING THE CORE TO REFERENCE LIBRARIES
+#
 # Recompiling the core as per https://github.com/CU-ESIIL/ExtremeWildfire/blob/main/docker/landis2/Dockerfile
-RUN sed -i '/<\/Project>/i \
-<ItemGroup>\n\
-    <Reference Include="Landis.Extension.Succession.Biomass-v7.dll">\n\
-        <HintPath>../../build/extensions/Landis.Extension.Succession.Biomass-v7.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.Metadata-v2">\n\
-        <HintPath>../../build/extensions/Landis.Library.Metadata-v2.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.Succession-v9.dll">\n\
-        <HintPath>../../build/extensions/Landis.Library.Succession-v9.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Extension.Succession.NECN-v8.dll">\n\
-        <HintPath>../../build/extensions/Landis.Extension.Succession.NECN-v8.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Extension.SocialClimateFire-v4.dll">\n\
-        <HintPath>../../build/extensions/Landis.Extension.SocialClimateFire-v4.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Extension.Output.Biomass-v4.dll">\n\
-        <HintPath>../../build/extensions/Landis.Extension.Output.Biomass-v4.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Extension.Output.BiomassCommunity-v3.dll">\n\
-        <HintPath>../../build/extensions/Landis.Extension.Output.BiomassCommunity-v3.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Extension.Output.BiomassReclass-v4.dll">\n\
-        <HintPath>../../build/extensions/Landis.Extension.Output.BiomassReclass-v4.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.BiomassHarvest-v3.dll">\n\
-        <HintPath>../../build/extensions/Landis.Library.BiomassHarvest-v3.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.Climate-v5.dll">\n\
-        <HintPath>../../build/extensions/Landis.Library.Climate-v5.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.HarvestManagement-v4.dll">\n\
-        <HintPath>../../build/extensions/Landis.Library.HarvestManagement-v4.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.HarvestManagement-v4.dll">\n\
-        <HintPath>../../build/extensions/Landis.Library.HarvestManagement-v4.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="log4net.dll">\n\
-        <HintPath>../../build/extensions/log4net.dll</HintPath>\n\
-    </Reference>\n\
-    <Reference Include="Landis.Library.UniversalCohorts-v1.dll">\n\
-        <HintPath>../../build/extensions/Landis.Library.UniversalCohorts-v1.dll</HintPath>\n\
-    </Reference>\n\
-</ItemGroup>' /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src/Console.csproj \
-# && cp /bin/LANDIS_Linux/build/extensions/extensions.xml /bin/LANDIS_Linux \
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src && dotnet build -c Release \
-&& mkdir /bin/LANDIS_Linux/build && cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/* /bin/LANDIS_Linux/build 
-# && cp /bin/LANDIS_Linux/extensions.xml /bin/LANDIS_Linux/build/extensions/ \
-# && rm -r /bin/LANDIS_Linux/Core-Model-v8-LINUX
+# This part seems absolutly essential. Basically, it seems like the core of LANDIS-II v8 needs to have all 
+# librairies of all extensions clearly indicated as dependancies so that he can find them when running.
+# All of the dll indicated here will be copied from /build/extensions to /build/Release during this re-build process.
+# Simply copying the dlls into /build/Release is not enough; you have to indicate them here for the re-build.
+#
+# WARNING : If you added a new extension in the previous sections, you have to indicate
+# its .dll here, or it will not work !
+# ################################################################
+
+# To recompile the core properly, we need to add references to all of the libraries that are used
+# in the Console.csproj file of Tool-Console. Instead of doing it by hand, I made a python script
+# that will detect all of the libraries in /build/extensions, and add them in Console.csproj with the
+# right format. Open the script for more infos.
+
+COPY ./files_to_help_compilation/adding_xml_dll_references.py /bin/LANDIS_Linux/Core-Model-v8-LINUX/
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
+&& python adding_xml_dll_references.py /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src/Console.csproj
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Tool-Console/src && dotnet build -c Release
 
 # ################################################################
 # # FINISHING
@@ -510,5 +523,3 @@ RUN sed -i '/<\/Project>/i \
 
 # # Re-configure git for latest version of HTTP protocol
 RUN git config --global --unset http.version
-
-# TO FINISH : Put things OUT of Core-Model-v8-Linux in into LANDIS_Linux, and update environ var if needed.
