@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # PREPARING PACKAGES AND UPGRADING, AND INSTALLING DEPENDENCIES OF LANDIS-II
 # apt-get clean and rm -rf /var/lib/apt/lists/* are used to clear the packages folder caches
 # to avoid putting them in the docker layerin system, freeing space
-RUN apt update -y && apt upgrade -y \
+RUN apt-get update -y && apt-get upgrade -y \
 && apt-get update && apt-get -y upgrade \
 && apt-get install -y wget vim pip nano git python3 python-is-python3 \
 && apt-get install -y libjpeg62 \
