@@ -163,6 +163,8 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # We got to add two lines to indicate where the support libraries are
 && sed -i '31i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' original-fire.csproj \
 && sed -i '37i    <HintPath>..\\..\\build\\extensions\\Landis.Library.Parameters-v2.dll</HintPath>' original-fire.csproj \
+# Looks like a wrong variable type definition causes an error. We change it.
+&& sed -i 's/SiteCohorts/ISiteCohorts/g' SiteVars.cs \
 && dotnet build -c Release \
 && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Base-Fire/40169a04b62be126e109c7990fa6a6d64a8ff895/deploy/installer/Original%20Fire%205.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Original Fire 5.txt" \
@@ -265,6 +267,8 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./original-wind.csproj \
 # We need to add a line to the csproj.
 && sed -i '35i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' original-wind.csproj \
+# Looks like a wrong variable type definition causes an error. We change it.
+&& sed -i 's/SiteCohorts/ISiteCohorts/g' SiteVars.cs \
 && dotnet build -c Release \
 && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Base-Wind/e0796d577a6221c78b10502da4fc7dd0ddfe08e9/deploy/installer/Original%20Wind%204.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Original Wind 4.txt" \
@@ -452,15 +456,15 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # ################################################################
 
 # Universal cohorts library
-RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.UniversalCohorts-v1.dll \
-# Commit a1e84adc8073fb7c89ee078a38349b5d578d4179 is latest at time of writing.
-&& mkdir /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/ && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/ \
-&& git clone https://github.com/LANDIS-II-Foundation/Library-Universal-Cohort.git \ 
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/Library-Universal-Cohort/ && git checkout a1e84adc8073fb7c89ee078a38349b5d578d4179 \
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/Library-Universal-Cohort/ && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./universal-cohort.csproj \
-&& dotnet build -c Release \
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Universal-Cohort
+# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.UniversalCohorts-v1.dll \
+# # Commit a1e84adc8073fb7c89ee078a38349b5d578d4179 is latest at time of writing.
+# && mkdir /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/ && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/ \
+# && git clone https://github.com/LANDIS-II-Foundation/Library-Universal-Cohort.git \ 
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/Library-Universal-Cohort/ && git checkout a1e84adc8073fb7c89ee078a38349b5d578d4179 \
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/Library-Universal-Cohort/ && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./universal-cohort.csproj \
+# && dotnet build -c Release \
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Universal-Cohort
 
 # Universal Initial community library
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
