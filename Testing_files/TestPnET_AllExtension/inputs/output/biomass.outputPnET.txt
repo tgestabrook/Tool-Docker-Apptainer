@@ -1,0 +1,30 @@
+LandisData  "Output-PnET"
+
+Timestep  10
+
+Species ALL
+	  
+WoodBiomass	output/PnET_output/WoodBiomass/{species}/WoodBiomass-{timestep}.img
+FoliageBiomass output/PnET_output/FoliageBiomass/{species}/FoliageBiomass-{timestep}.img
+RootBiomass output/PnET_output/RootBiomass/{species}/RootBiomass-{timestep}.img
+NSC output/PnET_output/NSC/{species}/NSC-{timestep}.img
+WoodySenescence output/PnET_output/WoodySenescence/{species}/WoodySenescence-{timestep}.img
+FoliageSenescence output/PnET_output/FoliageSenescence/{species}/FoliageSenescence-{timestep}.img
+AETAvg output/PnET_output/AETAvg/{species}/AETAvg-{timestep}.img
+PET output/PnET_output/PET/{species}/PET-{timestep}.img
+AgeDistribution output/PnET_output/AgeDistribution/{species}/AgeDistribution-{timestep}.img
+AnnualPsn output/PnET_output/AnnualPsn/{species}/AnnualPsn-{timestep}.img
+CohortsPerSpecies output/PnET_output/CohortsPerSpecies/{species}/CohortsPerSpecies-{timestep}.img
+Establishment output/PnET_output/Establishment/{species}/Establishment-{timestep}.img
+EstablishmentProbability output/PnET_output/EstablishmentProbability/{species}/EstablishmentProbability-{timestep}.img
+LeafAreaIndex output/PnET_output/LeafAreaIndex/{species}/LeafAreaIndex-{timestep}.img
+MonthlyFolResp output/PnET_output/MonthlyFolResp/MonthlyFolResp-{timestep}.img
+MonthlyGrossPsn output/PnET_output/MonthlyGrossPsn/MonthlyGrossPsn-{timestep}.img
+MonthlyNetPsn output/PnET_output/MonthlyNetPsn/MonthlyNetPsn-{timestep}.img
+MonthlyMaintResp output/PnET_output/MonthlyMaintResp/MonthlyMaintResp-{timestep}.img
+WoodyDebris output/PnET_output/WoodyDebris/WoodyDebris-{timestep}.img
+SubCanopyPAR output/PnET_output/SubCanopyPAR/SubCanopyPAR-{timestep}.img
+Water output/PnET_output/Water/Water-{timestep}.img
+CohortBalance output/PnET_output/CohortBalance.csv
+EstablishmentTable output/PnET_output/EstablishmentTable.csv
+MortalityTable output/PnET_output/MortalityTable.csv
