@@ -116,6 +116,23 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "NECN_Succession8.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-NECN-Succession
 
+# PnET Cohort Library - We need to make it ourselves because there is an issue with the version
+# that is in the support libraries repository (it wants to load the wrong version of universal cohorts)
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.PnETCohorts-v2.dll \
+# Commit 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
+&& git clone https://github.com/LANDIS-II-Foundation/Library-PnET-Cohort.git \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/ && git checkout 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39 \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Library-PnET-Cohort.csproj \
+# Problem is : this older commit has a function that is not implemented properly. So, we have
+# to modify the function by hand for it to work.
+# && sed -i 's/public void ChangeANPP(int delta)/public void ChangeANPP(double delta)/g' Cohort.cs \
+# && sed -i 's/data.ANPP = data.ANPP + delta;/data.ANPP = data.ANPP + (int)delta;/g' Cohort.cs \
+&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
+&& dotnet build -c Release \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
+
 # PnET Succession
 # As of time of writing, seems to work, but is not released officially.
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
@@ -477,45 +494,6 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Initial-Community/Library-Initial-Community/ && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./initial-community.csproj \
 && dotnet build -c Release \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Initial-Community
-
-# PnET Cohort Library - We need to make it ourselves because there is an issue with the version
-# that is in the support libraries repository (it wants to load the wrong version of universal cohorts)
-# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.PnETCohorts-v2.dll \
-# # Commit 13334584b97490b65f75243ec79ce47b0caa4145 is not the latest; but it's one of the only latest
-# # that would end up working with PnET-Succession, as more recent versions seem to be "too advanced" for the
-# # latest main commit of PnET-Succession. It's also one of the latest that does not return an error when building,
-# # probably because of compatibility issues with Universal cohorts.
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
-# && git clone https://github.com/LANDIS-II-Foundation/Library-PnET-Cohort.git \ 
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/ && git checkout 13334584b97490b65f75243ec79ce47b0caa4145 \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Library-PnET-Cohort.csproj \
-# # Problem is : this older commit has a function that is not implemented properly. So, we have
-# # to modify the function by hand for it to work.
-# && sed -i 's/public void ChangeANPP(int delta)/public void ChangeANPP(double delta)/g' Cohort.cs \
-# && sed -i 's/data.ANPP = data.ANPP + delta;/data.ANPP = data.ANPP + (int)delta;/g' Cohort.cs \
-# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
-# && dotnet build -c Release \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
-
-# PnET Succession
-# Recompiling as per Auten's instructions
-RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 23191045088f848a04189955df36fee46ab3114d is the most recent at date of writing.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 23191045088f848a04189955df36fee46ab3114d /src \ 
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
-&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
-# Need to change a line because there is an error with the new climate library.
-# && sed -i 's/GetClimateRegionData(ecoregion_pnet, date, EndDate, Climate.Phase.Future_Climate)/GetClimateRegionData(ecoregion_pnet, date, EndDate)/g' PlugIn.cs \
-# Also need to change the title of the assembly that is created, as it still refers to the old one (v5)
-# && sed -i 's/Landis.Extension.Succession.BiomassPnET-v5/Landis.Extension.Succession.BiomassPnET-v6/g' PnET-Succession.csproj \
-# We need to remove the .sln file; it's not useful to build, and is full of bad/missing references to other projects.
-&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src/PnET-Succession.sln \
-# We make the build
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
-&& dotnet build -c Release \
-# We remove the files
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
 
 
 # ################################################################
