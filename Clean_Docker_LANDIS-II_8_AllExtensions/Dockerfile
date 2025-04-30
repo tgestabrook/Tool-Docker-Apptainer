@@ -157,17 +157,17 @@ RUN cp -a /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Defaults /bin/L
 
 # Base Fire
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 40169a04b62be126e109c7990fa6a6d64a8ff895 is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Base-Fire.git 40169a04b62be126e109c7990fa6a6d64a8ff895 /src \ 
+# Commit 59a3f9a128cf474ca2971e4b485aed1f2e1025d8 is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Base-Fire.git 59a3f9a128cf474ca2971e4b485aed1f2e1025d8 /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Base-Fire/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./original-fire.csproj \
 # We remove the .sln as it's not useful for the build
 && rm original-fire.sln \
 # We got to add two lines to indicate where the support libraries are
-&& sed -i '31i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' original-fire.csproj \
-&& sed -i '37i    <HintPath>..\\..\\build\\extensions\\Landis.Library.Parameters-v2.dll</HintPath>' original-fire.csproj \
+# && sed -i '31i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' original-fire.csproj \
+# && sed -i '37i    <HintPath>..\\..\\build\\extensions\\Landis.Library.Parameters-v2.dll</HintPath>' original-fire.csproj \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Base-Fire/40169a04b62be126e109c7990fa6a6d64a8ff895/deploy/installer/Original%20Fire%205.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Base-Fire/59a3f9a128cf474ca2971e4b485aed1f2e1025d8/deploy/installer/Original%20Fire%205.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Original Fire 5.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Base-Fire
 
@@ -262,14 +262,14 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/LANDIS-II-Magic-Harvest && dotnet b
 
 # Base Wind - Now called Original wind
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit e0796d577a6221c78b10502da4fc7dd0ddfe08e9 is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Base-Wind.git e0796d577a6221c78b10502da4fc7dd0ddfe08e9 /src \ 
+# Commit 84ab06131a007e78569e778d722a786986f2f8a9 is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Base-Wind.git 84ab06131a007e78569e778d722a786986f2f8a9 /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Base-Wind/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./original-wind.csproj \
 # We need to add a line to the csproj.
-&& sed -i '35i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' original-wind.csproj \
+# && sed -i '35i    <HintPath>..\\..\\build\\extensions\\Landis.Library.UniversalCohorts-v1.dll</HintPath>' original-wind.csproj \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Base-Wind/e0796d577a6221c78b10502da4fc7dd0ddfe08e9/deploy/installer/Original%20Wind%204.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Base-Wind/84ab06131a007e78569e778d722a786986f2f8a9/deploy/installer/Original%20Wind%204.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "Original Wind 4.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Base-Wind
 
@@ -497,6 +497,25 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
 # && dotnet build -c Release \
 # && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
+
+# PnET Succession
+# Recompiling as per Auten's instructions
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Commit 23191045088f848a04189955df36fee46ab3114d is the most recent at date of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 23191045088f848a04189955df36fee46ab3114d /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
+# Need to change a line because there is an error with the new climate library.
+# && sed -i 's/GetClimateRegionData(ecoregion_pnet, date, EndDate, Climate.Phase.Future_Climate)/GetClimateRegionData(ecoregion_pnet, date, EndDate)/g' PlugIn.cs \
+# Also need to change the title of the assembly that is created, as it still refers to the old one (v5)
+# && sed -i 's/Landis.Extension.Succession.BiomassPnET-v5/Landis.Extension.Succession.BiomassPnET-v6/g' PnET-Succession.csproj \
+# We need to remove the .sln file; it's not useful to build, and is full of bad/missing references to other projects.
+&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src/PnET-Succession.sln \
+# We make the build
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
+&& dotnet build -c Release \
+# We remove the files
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
 
 
 # ################################################################
