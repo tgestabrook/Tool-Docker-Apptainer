@@ -1,6 +1,6 @@
 LandisData  "Output-PnET"
 
-Timestep  10
+Timestep  5
 
 Species ALL
 	  

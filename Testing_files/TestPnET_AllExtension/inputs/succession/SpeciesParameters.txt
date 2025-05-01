@@ -1,5 +1,18 @@
 LandisData	PnETSpeciesParameters																
 																	
-PnETSpeciesParameters	FolN	SLWmax	SLWDel	TOfol	AmaxA	AmaxB	HalfSat	H3	H4	PsnTMin	PsnTOpt	PsnTMax	k	FracBelowG	FracFol	FrActWd	
-querrubr		2.8	75	0.2	1	-46	71.9	437	131	380	2	24	40	0.58	0.33	0.035	0.00004	<<querrub
-pinubank		2.6	180	0.2	0.35	-46	71.9	437	131	380	4	24	40	0.5	0.25	0.035	0.00004	
+PnETSpeciesParameters	FolN	TOfol	AmaxA	AmaxB	k	DVPD1	DVPD2	DNSC	FracBelowG	SLWmax	PsnTMin	HalfSat	PsnTOpt
+abiebals	2.39	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+acerrubr	2.39	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+acersacc	2.39	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+betualle	2.39	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+betupapy	2.39	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+fraxamer	2.3	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+piceglau	2.6	0.35	-46	71.9	0.5	0.05	2	0.03	0.25	180	4	437	24
+pinubank	2.6	0.35	-46	71.9	0.5	0.05	2	0.03	0.25	180	4	437	24
+pinuresi	2.6	0.35	-46	71.9	0.5	0.05	2	0.03	0.25	180	4	437	24
+pinustro	2.6	0.35	-46	71.9	0.5	0.05	2	0.03	0.25	180	4	437	24
+poputrem	2.87	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+querelli	2.87	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+querrubr	2.87	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+thujocci	3.92	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
+tiliamer	3.92	1	5.3	21.5	0.58	0.05	2	0.03	0.2	60	4	437	24
