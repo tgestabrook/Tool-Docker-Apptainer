@@ -62,7 +62,7 @@ RUN mkdir /bin/LANDIS_Linux \
 # We fix the commit that is used to avoid breaking the build of the Docker image
 # because of updates to the repository
 RUN cd /bin/LANDIS_Linux && git clone https://github.com/LANDIS-II-Foundation/Support-Library-Dlls-v8.git \
-&& cd /bin/LANDIS_Linux/Support-Library-Dlls-v8/ && git checkout 6792134d0882e565da667b034f97b2b8e24300e5 \
+&& cd /bin/LANDIS_Linux/Support-Library-Dlls-v8/ && git checkout e7f281dbe848a9dd1fee147e6a993290cd4384fc \
 && mv /bin/LANDIS_Linux/Support-Library-Dlls-v8/* /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
 && rm -r /bin/LANDIS_Linux/Support-Library-Dlls-v8
 
@@ -118,26 +118,26 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # PnET Cohort Library - We need to make it ourselves because there is an issue with the version
 # that is in the support libraries repository (it wants to load the wrong version of universal cohorts)
-RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.PnETCohorts-v2.dll \
-# Commit 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
-&& git clone https://github.com/LANDIS-II-Foundation/Library-PnET-Cohort.git \ 
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/ && git checkout 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39 \
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Library-PnET-Cohort.csproj \
-# Problem is : this older commit has a function that is not implemented properly. So, we have
-# to modify the function by hand for it to work.
-# && sed -i 's/public void ChangeANPP(int delta)/public void ChangeANPP(double delta)/g' Cohort.cs \
-# && sed -i 's/data.ANPP = data.ANPP + delta;/data.ANPP = data.ANPP + (int)delta;/g' Cohort.cs \
-&& rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
-&& dotnet build -c Release \
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
+# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.PnETCohorts-v2.dll \
+# # Commit 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
+# && git clone https://github.com/LANDIS-II-Foundation/Library-PnET-Cohort.git \ 
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/ && git checkout 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39 \
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Library-PnET-Cohort.csproj \
+# # Problem is : this older commit has a function that is not implemented properly. So, we have
+# # to modify the function by hand for it to work.
+# # && sed -i 's/public void ChangeANPP(int delta)/public void ChangeANPP(double delta)/g' Cohort.cs \
+# # && sed -i 's/data.ANPP = data.ANPP + delta;/data.ANPP = data.ANPP + (int)delta;/g' Cohort.cs \
+# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
+# && dotnet build -c Release \
+# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
 
 # PnET Succession
 # As of time of writing, seems to work, but is not released officially.
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 23191045088f848a04189955df36fee46ab3114d is the most recent at date of writing.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 23191045088f848a04189955df36fee46ab3114d /src \ 
+# Commit 72032753d9b88e6c56adf319df91f94555327cbe is the most recent at date of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 72032753d9b88e6c56adf319df91f94555327cbe /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
 # Need to change a line because there is an error with the new climate library.
@@ -152,10 +152,10 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # We remove the files
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession \
 # To finish, we have to transfer some "Default files" of PnET in the extension folder
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 23191045088f848a04189955df36fee46ab3114d /deploy \ 
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 72032753d9b88e6c56adf319df91f94555327cbe /deploy \ 
 && cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/deploy/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
 # We also have to register the extension properly
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-PnET-Succession/f54cb893fbd60bababdeed8305887fd695b9ac24/deploy/installer/PnET-Succession.txt \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-PnET-Succession/72032753d9b88e6c56adf319df91f94555327cbe/deploy/installer/PnET-Succession.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Succession.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
 # We finish by moving the defaults from /extension to /Release; since apparently, the v8 core wants things to be there.
@@ -442,14 +442,14 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # # PnET Output
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 48705dbff64625eede398462a519dfaf25ab3b74 is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET.git 48705dbff64625eede398462a519dfaf25ab3b74 /src \ 
+# Commit 71adffda54c7590c8a1e50edc070a38984808aea is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET.git 71adffda54c7590c8a1e50edc070a38984808aea /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Output-Biomass-PnET/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./output-biomass-pnet.csproj \
 # Looks like a wrong variable type definition causes an error. We change it.
 && sed -i 's/ISiteCohorts/SiteCohorts/g' PlugIn.cs \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET/48705dbff64625eede398462a519dfaf25ab3b74/deploy/installer/PnET-Output.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET/71adffda54c7590c8a1e50edc070a38984808aea/deploy/installer/PnET-Output.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Output.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Biomass-PnET
 
