@@ -8,3 +8,4 @@ DTemp		true
 Wythers		true
 PrecipEvents	25
 PrecipEventsWithReplacement	false
+Parallel 4
