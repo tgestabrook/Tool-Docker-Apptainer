@@ -62,7 +62,7 @@ RUN mkdir /bin/LANDIS_Linux \
 # We fix the commit that is used to avoid breaking the build of the Docker image
 # because of updates to the repository
 RUN cd /bin/LANDIS_Linux && git clone https://github.com/LANDIS-II-Foundation/Support-Library-Dlls-v8.git \
-&& cd /bin/LANDIS_Linux/Support-Library-Dlls-v8/ && git checkout e7f281dbe848a9dd1fee147e6a993290cd4384fc \
+&& cd /bin/LANDIS_Linux/Support-Library-Dlls-v8/ && git checkout f8178b2a8f8d39bf8c4f1884cc446e4e34fee1ff \
 && mv /bin/LANDIS_Linux/Support-Library-Dlls-v8/* /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
 && rm -r /bin/LANDIS_Linux/Support-Library-Dlls-v8
 
@@ -137,7 +137,8 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # As of time of writing, seems to work, but is not released officially.
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # Commit 72032753d9b88e6c56adf319df91f94555327cbe is the most recent at date of writing.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 72032753d9b88e6c56adf319df91f94555327cbe /src \ 
+# Testing an update from Austen !
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-PnET-Succession.git 45af394ed587c24bc0a84c2c51b856694f8e4c72 /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
 # Need to change a line because there is an error with the new climate library.
@@ -152,10 +153,10 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # We remove the files
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession \
 # To finish, we have to transfer some "Default files" of PnET in the extension folder
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-PnET-Succession.git 72032753d9b88e6c56adf319df91f94555327cbe /deploy \ 
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-PnET-Succession.git 45af394ed587c24bc0a84c2c51b856694f8e4c72 /deploy \ 
 && cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/deploy/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
 # We also have to register the extension properly
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-PnET-Succession/72032753d9b88e6c56adf319df91f94555327cbe/deploy/installer/PnET-Succession.txt \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/aruzicka555/Extension-PnET-Succession/45af394ed587c24bc0a84c2c51b856694f8e4c72/deploy/installer/PnET-Succession.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Succession.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
 # We finish by moving the defaults from /extension to /Release; since apparently, the v8 core wants things to be there.
@@ -442,14 +443,14 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 
 # # PnET Output
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 71adffda54c7590c8a1e50edc070a38984808aea is latest as of writing this.
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET.git 71adffda54c7590c8a1e50edc070a38984808aea /src \ 
+# Commit 3924c35120958be9319838ad37e4f67774ac194b is latest as of writing this.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET.git 3924c35120958be9319838ad37e4f67774ac194b /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-Output-Biomass-PnET/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./output-biomass-pnet.csproj \
 # Looks like a wrong variable type definition causes an error. We change it.
 && sed -i 's/ISiteCohorts/SiteCohorts/g' PlugIn.cs \
 && dotnet build -c Release \
-&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET/71adffda54c7590c8a1e50edc070a38984808aea/deploy/installer/PnET-Output.txt \
+&& wget https://raw.githubusercontent.com/LANDIS-II-Foundation/Extension-Output-Biomass-PnET/3924c35120958be9319838ad37e4f67774ac194b/deploy/installer/PnET-Output.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Output.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-Output-Biomass-PnET
 
