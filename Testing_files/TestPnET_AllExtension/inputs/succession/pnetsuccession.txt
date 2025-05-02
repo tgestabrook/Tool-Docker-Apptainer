@@ -17,6 +17,8 @@ InitialCommunitiesMap   ./inputs/succession/initial-communities.img
 PnETSpeciesParameters	./inputs/succession/SpeciesParameters.txt
 											
 EcoregionParameters	./inputs/succession/EcoregionParameters.txt	
+
+ClimateConfigFile	./inputs/disturbances/climateSocialFire/climate-generator-baseline.txt
    								
 PnETGenericParameters		./inputs/succession/PnETGenericParameters.txt
 

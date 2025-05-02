@@ -23,10 +23,12 @@ CellLength  30 << meters, so cell area = 900 m2
 >> We can put several of the same type and simply switch (have several scenario files with commented lines)
 
 >> Original Fire (Formerly Base Fire)
-	"Original Fire"		./inputs/disturbances/fire/original-fire.txt
+>> 	"Original Fire"		./inputs/disturbances/fire/original-fire.txt
 
 
->> Climate-social Fire ?
+>> Climate-social Fire
+	"Social Climate Fire"  ./inputs/disturbances/climateSocialFire/Social-Climate-Fire-Inputs.txt
+
 >> Dynamic Biomass Fuels
 >> Dynamic Fire system
 >> Biomass Harvest
