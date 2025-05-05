@@ -143,7 +143,26 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 RUN cp -a /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Defaults
 
 # # # Forest Carbon Succession (ForCS)
-# Not yet ready for corev8 as of writing. Will have to wait.
+# As of time of writing, seems to work, but is not released officially, and the ForCS extension has not been tested in the Docker container --MGarcia, 20250505
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Austen's commit a00be551c53b1da5cf3b5578b05601cad3d7c8da is the most recent at date of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-ForCS-Succession.git a00be551c53b1da5cf3b5578b05601cad3d7c8da /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-ForCS-Succession/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./CForCS.csproj \
+# We make the build
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-ForCS-Succession/src \
+&& dotnet build -c Release \
+# We remove the files
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-ForCS-Succession \
+# To finish, we have to transfer some ForCS deployment files in the extension folder
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-ForCS-Succession.git a00be551c53b1da5cf3b5578b05601cad3d7c8da /deploy \
+# We also have to register the extension properly
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-ForCS-Succession && wget https://raw.githubusercontent.com/aruzicka555/Extension-ForCS-Succession/a00be551c53b1da5cf3b5578b05601cad3d7c8da/deploy/installer/ForCS%204.0.txt \
+&& dotnet $LANDIS_EXTENSIONS_TOOL add "ForCS 4.0.txt" \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-ForCS-Succession
+# We finish by moving the defaults from /extension to /Release; since apparently, the v8 core wants things to be there.
+# See section on recompiling the core at the end of the file.
+RUN cp -a /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Defaults
 
 # # DGS Succession extension : Not yet ready for v8.
 
