@@ -468,6 +468,15 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # or other issues. By re-compiling, we avoid these issues.
 # ################################################################
 
+# Metadata library
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Commit 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca is latest at time of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Library-Metadata.git 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Metadata/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Metadata.csproj \
+&& dotnet build -c Release \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Metadata
+
 # Universal cohorts library
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.UniversalCohorts-v1.dll \
