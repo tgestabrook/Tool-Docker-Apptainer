@@ -159,14 +159,31 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/aruzicka555/Extension-PnET-Succession/45af394ed587c24bc0a84c2c51b856694f8e4c72/deploy/installer/PnET-Succession.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Succession.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
+
+# # # Forest Carbon Succession (ForCS)
+# As of time of writing, seems to work, but is not released officially and the ForCS extension has not been tested in the Docker container --MGarcia, 20250505
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Austen's commit a00be551c53b1da5cf3b5578b05601cad3d7c8da is the most recent at date of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-ForCS-Succession.git a00be551c53b1da5cf3b5578b05601cad3d7c8da /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-ForCS-Succession/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./CForCS.csproj \
+# We make the build
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-ForCS-Succession/src \
+&& dotnet build -c Release \
+# We remove the files
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-ForCS-Succession \
+# To finish, we have to transfer some ForCS deployment files in the extension folder
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-ForCS-Succession.git a00be551c53b1da5cf3b5578b05601cad3d7c8da /deploy \
+# We also have to register the extension properly
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-ForCS-Succession && wget https://raw.githubusercontent.com/aruzicka555/Extension-ForCS-Succession/a00be551c53b1da5cf3b5578b05601cad3d7c8da/deploy/installer/ForCS%204.0.txt \
+&& dotnet $LANDIS_EXTENSIONS_TOOL add "ForCS 4.0.txt" \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-ForCS-Succession
+
+# # DGS Succession extension : Not yet ready for v8.
+
 # We finish by moving the defaults from /extension to /Release; since apparently, the v8 core wants things to be there.
 # See section on recompiling the core at the end of the file.
 RUN cp -a /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/Release/Defaults
-
-# # # Forest Carbon Succession (ForCS)
-# Not yet ready for corev8 as of writing. Will have to wait.
-
-# # DGS Succession extension : Not yet ready for v8.
 
 
 #### DISTURBANCE EXTENSIONS
@@ -474,6 +491,16 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # or other issues. By re-compiling, we avoid these issues.
 # ################################################################
 
+# # Metadata library recompilation
+# Necessary to avoid an error with ForCS.
+RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
+# Commit 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca is latest at time of writing.
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/LANDIS-II-Foundation/Library-Metadata.git 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca /src \ 
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Metadata/src \
+&& python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Metadata.csproj \
+&& dotnet build -c Release \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Metadata
+
 # Universal cohorts library
 # RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.UniversalCohorts-v1.dll \
@@ -502,7 +529,7 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 #
 # Recompiling the core as per https://github.com/CU-ESIIL/ExtremeWildfire/blob/main/docker/landis2/Dockerfile
 # This part seems absolutly essential. Basically, it seems like the core of LANDIS-II v8 needs to have all 
-# librairies of all extensions clearly indicated as dependancies so that he can find them when running.
+# librairies of all extensions clearly indicated as dependancies so that it can find them when running.
 # All of the dll indicated here will be copied from /build/extensions to /build/Release during this re-build process.
 # Simply copying the dlls into /build/Release is not enough; you have to indicate them here for the re-build.
 #
