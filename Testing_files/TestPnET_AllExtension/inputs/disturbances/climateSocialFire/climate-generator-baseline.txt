@@ -4,7 +4,7 @@ ClimateTimeSeries			Daily_SequencedYears
 ClimateFile				inputs/disturbances/climateSocialFire/climate_data_2000_2051.csv
 
 SpinUpClimateTimeSeries			Daily_SequencedYears
-SpinUpClimateFile			inputs/disturbances/climateSocialFire/climate_data_2000_2051.csv
+SpinUpClimateFile			inputs/disturbances/climateSocialFire/climate_data_spinUp_1900_2000.csv
 
 GenerateClimateOutputFiles		no
 UsingFireClimate			yes
