@@ -136,15 +136,11 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # PnET Succession
 # As of time of writing, seems to work, but is not released officially.
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# Commit 72032753d9b88e6c56adf319df91f94555327cbe is the most recent at date of writing.
+# Commit 8cd34cd223e5cfbf9b63e2582ff863e2c2d37d07 is the most recent at date of writing.
 # Testing an update from Austen !
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-PnET-Succession.git 45af394ed587c24bc0a84c2c51b856694f8e4c72 /src \ 
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-PnET-Succession.git 8cd34cd223e5cfbf9b63e2582ff863e2c2d37d07 /src \ 
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./PnET-Succession.csproj \
-# Need to change a line because there is an error with the new climate library.
-# && sed -i 's/GetClimateRegionData(ecoregion_pnet, date, EndDate, Climate.Phase.Future_Climate)/GetClimateRegionData(ecoregion_pnet, date, EndDate)/g' PlugIn.cs \
-# Also need to change the title of the assembly that is created, as it still refers to the old one (v5)
-# && sed -i 's/Landis.Extension.Succession.BiomassPnET-v5/Landis.Extension.Succession.BiomassPnET-v6/g' PnET-Succession.csproj \
 # We need to remove the .sln file; it's not useful to build, and is full of bad/missing references to other projects.
 && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/src/PnET-Succession.sln \
 # We make the build
@@ -153,10 +149,10 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # We remove the files
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession \
 # To finish, we have to transfer some "Default files" of PnET in the extension folder
-&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-PnET-Succession.git 45af394ed587c24bc0a84c2c51b856694f8e4c72 /deploy \ 
+&& ./downloadSpecificGitCommitAndFolder.sh https://github.com/aruzicka555/Extension-PnET-Succession.git 8cd34cd223e5cfbf9b63e2582ff863e2c2d37d07 /deploy \ 
 && cp -r /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession/deploy/Defaults /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions \
 # We also have to register the extension properly
-&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/aruzicka555/Extension-PnET-Succession/45af394ed587c24bc0a84c2c51b856694f8e4c72/deploy/installer/PnET-Succession.txt \
+&& cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Extension-PnET-Succession && wget https://raw.githubusercontent.com/aruzicka555/Extension-PnET-Succession/8cd34cd223e5cfbf9b63e2582ff863e2c2d37d07/deploy/installer/PnET-Succession.txt \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "PnET-Succession.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-PnET-Succession
 
