@@ -33,6 +33,6 @@ WindSeverities
 >> OUTPUTS
 >>-------------
 
-MapNames 	output/wind/severity-{timestep}.tif
-SummaryLogFile		output/wind/wind-summary-log.csv
-EventLogFile	output/wind/wind-events-log.csv
+MapNames 	output/originalWind/severity-{timestep}.tif
+SummaryLogFile		output/originalWind/wind-summary-log.csv
+EventLogFile	output/originalWind/wind-events-log.csv

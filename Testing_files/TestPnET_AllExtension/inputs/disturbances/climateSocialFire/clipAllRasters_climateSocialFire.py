@@ -69,7 +69,7 @@ def crop_raster_to_reference(reference_raster_path, input_raster_path, output_ra
     
 
 # Set these paths to your actual data
-os.chdir(r"D:\OneDrive - UQAM\1 - Projets\Post-Doc - Docker and Apptainer Linux v8\Tool-Docker-Apptainer\Testing_files\TestPnET_AllExtension\inputs\disturbances\climateSocialFire")
+os.chdir(r"D:\OneDrive - UQAM\1 - Projets\Post-Doc - Docker and Apptainer Linux v8\Tool-Docker-Apptainer\Testing_files\TestPnET_AllExtension\inputs\disturbances\landUsePlus")
 reference_raster_path = "../../core/ecoregion.img"
 input_folder = "./"
 

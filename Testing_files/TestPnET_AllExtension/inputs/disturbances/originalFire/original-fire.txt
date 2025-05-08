@@ -2,7 +2,7 @@ LandisData  "Original Fire"
 
 Timestep  5
 
-Species_CSV_File ./inputs/disturbances/fire/OriginalFire_Spp_Table.csv
+Species_CSV_File ./inputs/disturbances/originalFire/OriginalFire_Spp_Table.csv
 
 >> ------------------------------------
 >> FIRE DISTURBANCE REGIME PARAMETERS
@@ -62,6 +62,6 @@ InitialFireRegionsMap	./inputs/core/ecoregion.img
 >> ---------------
 >> OUTPUTS
 >> -------------
-MapNames	output/fire/original-fire-severity-{timestep}.tif
-LogFile		output/fire/original-fire-log.csv
-SummaryLogFile 	output/fire/original-fire-summary-log.csv
+MapNames	output/originalFire/original-fire-severity-{timestep}.tif
+LogFile		output/originalFire/original-fire-log.csv
+SummaryLogFile 	output/originalFire/original-fire-summary-log.csv

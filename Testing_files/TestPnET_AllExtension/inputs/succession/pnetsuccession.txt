@@ -9,7 +9,7 @@ SeedingAlgorithm	WardSeedDispersal
 Latitude	42										
 >> MaxDevLyrAv	8000	
 
-PNEToutputsites 	./inputs/output/PnEToutputsites_onecell.txt
+PNEToutputsites 	./inputs/output/PnETCellOutput/PnEToutputsites_onecell.txt
 									
 InitialCommunities      ./inputs/succession/initial-communities.csv											
 InitialCommunitiesMap   ./inputs/succession/initial-communities.img	
