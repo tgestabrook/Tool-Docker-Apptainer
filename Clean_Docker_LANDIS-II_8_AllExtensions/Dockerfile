@@ -116,23 +116,6 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && dotnet $LANDIS_EXTENSIONS_TOOL add "NECN_Succession8.txt" \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Extension-NECN-Succession
 
-# PnET Cohort Library - We need to make it ourselves because there is an issue with the version
-# that is in the support libraries repository (it wants to load the wrong version of universal cohorts)
-# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.PnETCohorts-v2.dll \
-# # Commit 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
-# && git clone https://github.com/LANDIS-II-Foundation/Library-PnET-Cohort.git \ 
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/ && git checkout 2e49a13d9ad85ed8c6f7a4c9de406482fa539c39 \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Library-PnET-Cohort.csproj \
-# # Problem is : this older commit has a function that is not implemented properly. So, we have
-# # to modify the function by hand for it to work.
-# # && sed -i 's/public void ChangeANPP(int delta)/public void ChangeANPP(double delta)/g' Cohort.cs \
-# # && sed -i 's/data.ANPP = data.ANPP + delta;/data.ANPP = data.ANPP + (int)delta;/g' Cohort.cs \
-# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-PnET-Cohort/src/Library-PnET-Cohort.sln \
-# && dotnet build -c Release \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-PnET-Cohort
-
 # PnET Succession
 # As of time of writing, seems to work, but is not released officially.
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
@@ -496,17 +479,6 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./Metadata.csproj \
 && dotnet build -c Release \
 && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Metadata
-
-# Universal cohorts library
-# RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
-# && rm /bin/LANDIS_Linux/Core-Model-v8-LINUX/build/extensions/Landis.Library.UniversalCohorts-v1.dll \
-# # Commit a1e84adc8073fb7c89ee078a38349b5d578d4179 is latest at time of writing.
-# && mkdir /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/ && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/ \
-# && git clone https://github.com/LANDIS-II-Foundation/Library-Universal-Cohort.git \ 
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/Library-Universal-Cohort/ && git checkout a1e84adc8073fb7c89ee078a38349b5d578d4179 \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/Library-Universal-Cohort/Library-Universal-Cohort/ && python /bin/LANDIS_Linux/Core-Model-v8-LINUX/editing_csproj_LANDIS-II_files.py ./universal-cohort.csproj \
-# && dotnet build -c Release \
-# && cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ && rm -r Library-Universal-Cohort
 
 # Universal Initial community library
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
