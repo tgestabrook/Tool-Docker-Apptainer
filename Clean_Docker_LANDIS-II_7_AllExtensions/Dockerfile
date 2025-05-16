@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # PREPARING PACKAGES AND UPGRADING, AND INSTALLING DEPENDENCIES OF LANDIS-II
 # apt-get clean and rm -rf /var/lib/apt/lists/* are used to clear the packages folder caches
 # to avoid putting them in the docker layerin system, freeing space
-RUN apt update && apt upgrade \
+RUN apt-get update && apt-get upgrade -y \
 && apt-get update && apt-get -y upgrade \
 && apt-get install -y wget vim pip nano git python3 python-is-python3 \
 && apt-get install -y libjpeg62 \
@@ -69,7 +69,7 @@ COPY ./files_to_help_compilation/editing_csproj_LANDIS-II_files.py /bin/LANDIS_L
 
 # Transfering the sh script that allows us to only download one folder from one commit from github
 COPY ./files_to_help_compilation/downloadSpecificGitCommitAndFolder.sh /bin/LANDIS_Linux
-
+RUN chmod +x /bin/LANDIS_Linux/downloadSpecificGitCommitAndFolder.sh
 
 ###### COMPILING AND REGISTERING EXTENSIONS 
 # INFO: The files necessary for the compilation are downloaded through the script downloadSpecificGitCommitAndFolder.sh
