@@ -508,7 +508,7 @@ RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX \
 # To recompile the core properly, we need to add references to all of the libraries that are used
 # in the Console.csproj file of Tool-Console. Instead of doing it by hand, I made a python script
 # that will detect all of the libraries in /build/extensions, and add them in Console.csproj with the
-# right format. Open the script for more infos.
+# right format. Open the script for more info.
 
 COPY ./files_to_help_compilation/adding_xml_dll_references.py /bin/LANDIS_Linux/Core-Model-v8-LINUX/
 RUN cd /bin/LANDIS_Linux/Core-Model-v8-LINUX/ \
