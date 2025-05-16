@@ -50,6 +50,8 @@ The biggest advantage of Apptainers is that just like Docker Containers, they wi
 - Use the command `docker build -t landis_ii .` to tell Docker to build a Docker image containing LANDIS-II based on the instructions of the file named `Dockerfile` in the folder.
 	> 💡 In this command, `landis_ii` is simply the name we will give to our image. You can change this name to whatever is best for you. 
     > 💡 You can read the `Dockerfile` with any text editor. You will see that it contains a set of Linux commands to download the different programs and packages necessary to run LANDIS-II in the container, which uses a Linux environment (Ubuntu). You will be able to add commands to customize your Docker image, and the containers you will create from it.
+> [!WARNING]
+> You might sometimes get errors during the build that are dues to internet connection issues when downloading files from Github, like `HTTP request sent, awaiting response... 429 Too Many Requests` or others. We are working on ways to fix this; but in the mean time, you can simply re-start the build process by relaunching the command. This will keep going at the last successful step of the build thanks to the caching technology of Docker. Most often, a simple retry allows you to keep going. VPNs can also create some issues with some commands; if you encounter errors, be sure to disable your VPN and try again.
 	
 ### 📝 (Optional) Customizing the docker image image with R packages, Python packages, or anything else
 
