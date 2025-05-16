@@ -41,5 +41,5 @@ docker exec -it container_name /bin/bash
 
 ## Running landis (assuming your scenario file is named "scenario.txt"
 ```bash
-console scenario.txt
+dotnet $console scenario.txt
 ```
