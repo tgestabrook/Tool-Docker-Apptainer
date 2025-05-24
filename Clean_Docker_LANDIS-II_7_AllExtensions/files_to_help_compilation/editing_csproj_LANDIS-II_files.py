@@ -14,7 +14,7 @@ def remove_previous_debug_path_and_others(file_path):
         ignoreUntilClosingPropertyGroup = False
         ignoreUntilClosingTarget = False
         for line in file:
-            # Check if </HintPath> is in the line
+            # Check if </OutputPath> is in the line
             if '<PropertyGroup Condition="\'$(Configuration)|$(Platform)\'==\'Debug|AnyCPU\'">' in line or '<PropertyGroup Condition="\'$(Configuration)|$(Platform)\'==\'Release|AnyCPU\'">' in line:
                 ignoreUntilClosingPropertyGroup = True
                 # print("PROPERTY GROUP FOUND !")
