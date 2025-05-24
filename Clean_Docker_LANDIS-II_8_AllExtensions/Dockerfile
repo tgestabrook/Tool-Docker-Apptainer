@@ -495,11 +495,25 @@ RUN cd $LANDIS_FOLDER/ \
 RUN cd $LANDIS_FOLDER/Tool-Console/src && dotnet build -c Release
 
 ################################################################
-# # FINISHING
+## Testing
 ################################################################
+
+ARG TESTS_DIR="$LANDIS_DIR/tests"
+
+COPY ./tests $TESTS_DIR
+
+WORKDIR $TESTS_DIR/TestPnET_AllExtension
+
+RUN dotnet $LANDIS_CONSOLE scenario.txt
+
+################################################################
+## Cleanup
 ################################################################
 
 WORKDIR / ## reset to default
+
+## remove tests and their outputs from the image
+RUN rm -rf $TESTS_DIR
 
 ## restore git config changes made previously
 RUN git config --global --unset advice.detachedHead \
@@ -508,3 +522,4 @@ RUN git config --global --unset advice.detachedHead \
   && git config --global --unset http.postBuffer \
   && git config --global --unset http.version
 
+## TODO: refactor this to use multistage build to get smaller image
