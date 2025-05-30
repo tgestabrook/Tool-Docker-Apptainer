@@ -1,0 +1,21 @@
+## TODO: check whether others should be included
+
+########################################################
+## IMPORTANT: library order seems to matter here
+########################################################
+
+- repo: Library-Metadata
+  org: LANDIS-II-Foundation
+  commit: 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca
+
+- repo: Library-Universal-Cohort
+  org: LANDIS-II-Foundation
+  commit: f19b04a6ca8fd6022eaaedf3896a87dd560b3a10
+
+- repo: Library-Initial-Community
+  org: LANDIS-II-Foundation
+  commit: 5dc6dd299eef88ded1c88871470d58c26c1a4093
+
+# - repo: Library-PnET-Cohort
+#   org: LANDIS-II-Foundation
+#   commit: f32204629073964a2e99e098b6b0a669415c94dd

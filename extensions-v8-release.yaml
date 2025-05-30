@@ -1,0 +1,116 @@
+##  TODO:
+##  - (BFOLDS Fire)[https://www.fire-regime-model.com/] not yet ready for v8
+##  - "Extension-Biomass-Browse" not yet ready for v8
+##  - "Extension-DGS-Succession" not yet ready for v8 (requires additional libs)
+##  - "Extension-Root-Rot" not yet ready for v8
+##  - "Extension-SOSIEL-Harvest" not yet ready for v8
+##  - "Extension-Output-Landscape-Habitat" not yet ready for v8
+##  - "CarenD/Forest_Product_Sector_Module" not yet ready for v8
+##
+
+## Succession Extensions
+- repo: Extension-Biomass-Succession
+  org: LANDIS-II-Foundation
+  commit: 58ad3673e02abe82f437a6b68c44220c51351091
+
+# - repo: Extension-DGS-Succession
+#   org: LANDIS-II-Foundation
+#   commit: dde267702c587c10d04951f4c4ea754ebeb67bfa ## v8 branch
+
+- repo: Extension-ForCS-Succession
+  org: aruzicka555
+  commit: 8ebaf44fd49498b3f1312faafd85333d5b95b86b ## Austen's v8 branch
+
+- repo: Extension-NECN-Succession
+  org: LANDIS-II-Foundation
+  commit: 6d8451e24bf6df5845a98c314540686b6f1d20a9
+
+- repo: Extension-PnET-Succession
+  org: aruzicka555
+  commit: 8cd34cd223e5cfbf9b63e2582ff863e2c2d37d07 ## Austen's master branch
+
+## Disturbance and Other Extensions
+- repo: Extension-Base-BDA
+  org: LANDIS-II-Foundation
+  commit: 1aaa2e28627ba21949fd9053b9aae18f099032d5
+
+- repo: Extension-Base-Fire
+  org: LANDIS-II-Foundation
+  commit: 59a3f9a128cf474ca2971e4b485aed1f2e1025d8
+
+- repo: Extension-Base-Wind
+  org: LANDIS-II-Foundation
+  commit: 84ab06131a007e78569e778d722a786986f2f8a9
+
+- repo: Extension-Biomass-Harvest
+  org: LANDIS-II-Foundation
+  commit: 7e5efc0373e78001103b6b4d15aae4a96463a547
+
+- repo: Extension-Biomass-Hurricane
+  org: LANDIS-II-Foundation
+  commit: a6afe3f3d2c8664023e32a9ca66544aa14d24449
+
+- repo: Extension-Dynamic-Biomass-Fuels
+  org: LANDIS-II-Foundation
+  commit: 3a45afaec8c0dd17bf783043cd18eca8f79e1943
+
+- repo: Extension-Dynamic-Fire-System
+  org: LANDIS-II-Foundation
+  commit: 6c62e31405e64a486d1cee9b21672e1a9ff34e43
+
+- repo: Extension-Land-Use-Plus
+  org: LANDIS-II-Foundation
+  commit: 48bd05c98e7d041a36fcc5a3f6e9c310d68520f0
+
+- repo: Extension-LinearWind
+  org: LANDIS-II-Foundation
+  commit: fde29473f773c9f995f3a702ca919f7f30a6bcd1
+
+- repo: Extension-Social-Climate-Fire
+  org: LANDIS-II-Foundation
+  commit: 9206bc0c5cded05941a8405cc5956f00c5b4b103
+
+- repo: LANDIS-II-Forest-Roads-Simulation-extension
+  org: Klemet
+  commit: b2f1345f33bf0d089dabba75f8a1afe5de2d9d26
+
+- repo: LANDIS-II-Magic-Harvest
+  org: Klemet
+  commit: 4def8fc98e3d816367f8ba2ec6d2b8ea76d279f6
+
+## Output Extensions
+- repo: Extension-Output-Biomass
+  org: LANDIS-II-Foundation
+  commit: d24773efa0d57d9a00a23d4267ff30bd1179a7b6
+
+- repo: Extension-Output-Biomass-By-Age
+  org: FOR-CAST
+  commit: b8e1cadfe79433ad1c064e588dfc273ae4bff6e5 ## Alex's master branch
+
+- repo: Extension-Output-Biomass-Community
+  org: LANDIS-II-Foundation
+  commit: 5942e9bebafb0a618e8f46195aac0b118de4ae31
+
+- repo: Extension-Output-Biomass-PnET
+  org: LANDIS-II-Foundation
+  commit: 3924c35120958be9319838ad37e4f67774ac194b
+
+- repo: Extension-Output-Biomass-Reclass
+  org: LANDIS-II-Foundation
+  commit: d21d4d1ecb96aad2c36b63dbffcd51838eed50c0
+
+- repo: Extension-Output-Cohort-Statistics
+  org: LANDIS-II-Foundation
+  commit: 0b5cb4ba929bb2f0f87db14fc013e660a79da903
+
+- repo: Extension-Output-Max-Species-Age
+  org: LANDIS-II-Foundation
+  commit: 5c9ae5394be1c897ed775cc446d800c34c3d5fec
+
+- repo: Extension-Output-Wildlife-Habitat
+  org: LANDIS-II-Foundation
+  commit: d5004e3aec2981124d180cc47b72cf636218f388
+
+- repo: Extension-Local-Habitat-Suitability-Output
+  org: LANDIS-II-Foundation
+  commit: 82d58f26da4b66ef1117b7f350d5ec9f5410776f
