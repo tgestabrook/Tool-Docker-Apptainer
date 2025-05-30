@@ -86,7 +86,7 @@ These images are based on the generic images and add R and a running Rstudio Ser
 
 ```shell
 ## replace <imagename> with one from above
-docker pull ghcr.io/for-cast/<imagename>:main
+docker pull ghcr.io/landis-ii-foundation/<imagename>:main
 ```
 
 ### 📦 Building the docker image containing LANDIS-II
