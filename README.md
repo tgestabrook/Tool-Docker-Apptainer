@@ -49,12 +49,12 @@ Simply select an image that best suits your needs - you can use "as is" or simpl
 
 These images provide a minimal LANDIS-II installation, including GDAL, plus a python installation.
 
-| Subdirectory                               | Description                                         |
-| ------------------------------------------ | --------------------------------------------------- |
-| `Clean_Docker_LANDIS-II_7_AllExtensions/`  | LANDIS-II v7 (Ubuntu 22.04); fixed versions of v7-compatible extensions |
-| `Clean_Docker_LANDIS-II_8_AllExtensions/`  | LANDIS-II v8 (Ubuntu 22.04); fixed versions of v8 extensions |
-| `Clean_Docker_LANDIS-II_8_Latest_Commits/` | LANDIS-II v8 (Ubuntu 22.04); latest versions of v8 extensions |
-| `Docker-LANDIS-II-v8-release/`             | LANDIS-II v8 (Ubuntu 24.04); fixed versions of v8 extensions |
+| Image name             | Subdirectory                               | Description                                         |
+| ---------------------- | ------------------------------------------ | --------------------------------------------------- |
+| `landis-ii-v7-linux`   | `Clean_Docker_LANDIS-II_7_AllExtensions/`  | LANDIS-II v7 (Ubuntu 22.04); fixed versions of v7-compatible extensions |
+| `landis-ii-v8-linux`   | `Clean_Docker_LANDIS-II_8_AllExtensions/`  | LANDIS-II v8 (Ubuntu 22.04); fixed versions of v8 extensions |
+| `landis-ii-v8-latest`  | `Clean_Docker_LANDIS-II_8_Latest_Commits/` | LANDIS-II v8 (Ubuntu 22.04); latest versions of v8 extensions |
+| `landis-ii-v8-release` | `Docker-LANDIS-II-v8-release/`             | LANDIS-II v8 (Ubuntu 24.04); fixed versions of v8 extensions |
 
 > 💡 The `Clean_Docker_*` images hardcode the extensions and their specific commits directly in the Dockerfile,
 > whereas the others use `extensions-v8-release.yaml` or `extensions-v8-latest.yaml` to define the versions used.
@@ -65,9 +65,29 @@ These images provide a minimal LANDIS-II installation, including GDAL, plus a py
 
 These images are based on the generic images and add R and a running Rstudio Server instance.
 
-| Subdirectory                               | Description                                         |
-| ------------------------------------------ | --------------------------------------------------- |
-| `Docker-LANDIS-II-v8-release-Rstudio/`     | LANDIS-II v8 (Ubuntu 24.04); fixed versions of v8 extensions; Rstudio Server |
+| Image name             | Subdirectory                               | Description                                         |
+| ---------------------- | ------------------------------------------ | --------------------------------------------------- |
+| `landis-ii-v8-rstudio` | `Docker-LANDIS-II-v8-release-Rstudio/`     | LANDIS-II v8 (Ubuntu 24.04); fixed versions of v8 extensions; Rstudio Server |
+
+### 📥 Get a prebuilt image
+
+**Authenticate with the GitHub Container Registry:**
+
+1. Setup a personal access token following [these instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic);
+
+2. Login with Docker:
+
+    ```shell
+    export GHCR_PAT=YOUR_TOKEN
+    echo $GHCR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+    ```
+
+**Download the image:**
+
+```shell
+## replace <imagename> with one from above
+docker pull ghcr.io/landis-ii-foundation/<imagename>:main
+```
 
 ### 📦 Building the docker image containing LANDIS-II
 
