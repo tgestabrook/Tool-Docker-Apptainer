@@ -229,7 +229,7 @@ docker run -d -it \
   --cpus=4 \
   --memory=64g \
   -p 127.0.0.1:8080:8787 \
-  --mount type=bind,source=/home/<myUsername>/projects/LANDIS-II,target=/home/rstudio/LANDIS-II \
+  --mount type=bind,source=/home/$(id -un)/projects/LANDIS-II,target=/home/rstudio/LANDIS-II \
   --name landis01 \
   landis-ii-rstudio:release
 ```
