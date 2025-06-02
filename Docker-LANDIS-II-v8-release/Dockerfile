@@ -77,8 +77,8 @@ WORKDIR $LANDIS_DIR
 
 ## get and build the core model (use specific commit in case of broken updates)
 RUN git clone $LANDIS_GITHUB/Core-Model-v8-LINUX.git \
-  # && git -C $LANDIS_DIR/Core-Model-v8-LINUX checkout 7b0f215705900423068b85cec5eb197de4a7b419 \
-  && git -C $LANDIS_DIR/Core-Model-v8-LINUX checkout 8725da5cd7bfdf3ae28bbd59b1353ec442783d68 \
+  # && git -C $LANDIS_CORE_DIR checkout 7b0f215705900423068b85cec5eb197de4a7b419 \
+  && git -C $LANDIS_CORE_DIR checkout 8725da5cd7bfdf3ae28bbd59b1353ec442783d68 \
   && dotnet build $LANDIS_CORE_DIR/Tool-Console/src -c Release
 
 ## get support libraries (use specific commit in case of broken updates)
@@ -99,7 +99,7 @@ COPY extensions-v8-release.yaml $LANDIS_DIR/extensions-v8-release.yaml
 
 RUN scripts/install_extensions_v8.sh extensions-v8-release.yaml $LANDIS_DIR
 
-## DEBUG: library install and dependencies
+## DEBUG: extension install and dependencies
 # RUN echo "$(cat $EXT_LOG_FILE)" 1>&2 && exit 1
 
 ## recompile some support libraries to resolve library errors
@@ -112,7 +112,7 @@ COPY libraries-v8-release.yaml $LANDIS_DIR/libraries-v8-release.yaml
 
 RUN scripts/install_libraries_v8.sh libraries-v8-release.yaml $LANDIS_DIR
 
-## DEBUG: extension install and dependencies
+## DEBUG: library install and dependencies
 # RUN echo "$(cat $LIB_LOG_FILE)" 1>&2 && exit 1
 
 ## recompile console tool to reference extension libraries
