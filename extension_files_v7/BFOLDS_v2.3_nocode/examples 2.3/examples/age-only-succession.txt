@@ -1,0 +1,12 @@
+LandisData  "Age-only Succession"
+
+
+Timestep  5
+
+SeedingAlgorithm  WardSeedDispersal
+
+InitialCommunities     "initial-communities.txt"
+InitialCommunitiesMap  "initial-communities.asc"
+
+DynamicInputFile		./age-only-dynamic.txt
+

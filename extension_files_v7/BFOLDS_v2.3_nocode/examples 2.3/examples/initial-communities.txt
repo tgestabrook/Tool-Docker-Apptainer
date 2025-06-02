@@ -1,0 +1,8374 @@
+LandisData   "Initial Communities"
+
+>>SbLow-79
+MapCode 0
+	SbLow 79
+
+>>PoDee-79
+MapCode 1
+	PoDee 79
+
+>>SbDee-79
+MapCode 2
+	SbDee 79
+
+>>PoDee-84
+MapCode 3
+	PoDee 84
+
+>>SbMx1-84
+MapCode 4
+	SbMx1 84
+
+>>SbDee-84
+MapCode 5
+	SbDee 84
+
+>>ConMx-84
+MapCode 6
+	ConMx 84
+
+>>ConMx-79
+MapCode 7
+	ConMx 79
+
+>>SbMx1-159
+MapCode 8
+	SbMx1 159
+
+>>SbLow-84
+MapCode 9
+	SbLow 84
+
+>>SbMx1-60
+MapCode 10
+	SbMx1 60
+
+>>SbDee-29
+MapCode 11
+	SbDee 29
+
+>>PjDee-79
+MapCode 12
+	PjDee 79
+
+>>PjDee-89
+MapCode 13
+	PjDee 89
+
+>>SbDee-60
+MapCode 14
+	SbDee 60
+
+>>SbLow-159
+MapCode 15
+	SbLow 159
+
+>>SbDee-159
+MapCode 16
+	SbDee 159
+
+>>SbLow-60
+MapCode 17
+	SbLow 60
+
+>>SbLow-29
+MapCode 18
+	SbLow 29
+
+>>ConMx-159
+MapCode 19
+	ConMx 159
+
+>>ConMx-29
+MapCode 20
+	ConMx 29
+
+>>SbDee-59
+MapCode 21
+	SbDee 59
+
+>>PoDee-59
+MapCode 22
+	PoDee 59
+
+>>HrdMx-109
+MapCode 23
+	HrdMx 109
+
+>>PjMx1-109
+MapCode 24
+	PjMx1 109
+
+>>PjMx1-84
+MapCode 25
+	PjMx1 84
+
+>>SbDee-129
+MapCode 26
+	SbDee 129
+
+>>ConMx-129
+MapCode 27
+	ConMx 129
+
+>>ConMx-94
+MapCode 28
+	ConMx 94
+
+>>SbDee-94
+MapCode 29
+	SbDee 94
+
+>>SbMx1-129
+MapCode 30
+	SbMx1 129
+
+>>SbMx1-79
+MapCode 31
+	SbMx1 79
+
+>>SbDee-149
+MapCode 32
+	SbDee 149
+
+>>SbMx1-149
+MapCode 33
+	SbMx1 149
+
+>>PjDee-149
+MapCode 34
+	PjDee 149
+
+>>PjDee-84
+MapCode 35
+	PjDee 84
+
+>>SbLow-129
+MapCode 36
+	SbLow 129
+
+>>SbDee-119
+MapCode 37
+	SbDee 119
+
+>>SbLow-119
+MapCode 38
+	SbLow 119
+
+>>SbLow-149
+MapCode 39
+	SbLow 149
+
+>>SbDee-109
+MapCode 40
+	SbDee 109
+
+>>SbLow-109
+MapCode 41
+	SbLow 109
+
+>>PjMx1-79
+MapCode 42
+	PjMx1 79
+
+>>SbDee-164
+MapCode 43
+	SbDee 164
+
+>>SbDee-99
+MapCode 44
+	SbDee 99
+
+>>SbDee-179
+MapCode 45
+	SbDee 179
+
+>>ConMx-179
+MapCode 46
+	ConMx 179
+
+>>SbDee-139
+MapCode 47
+	SbDee 139
+
+>>ConMx-60
+MapCode 48
+	ConMx 60
+
+>>HrdMx-159
+MapCode 49
+	HrdMx 159
+
+>>HrdMx-54
+MapCode 50
+	HrdMx 54
+
+>>ConMx-139
+MapCode 51
+	ConMx 139
+
+>>HrdMx-139
+MapCode 52
+	HrdMx 139
+
+>>SbMx1-139
+MapCode 53
+	SbMx1 139
+
+>>ConMx-149
+MapCode 54
+	ConMx 149
+
+>>PjDee-60
+MapCode 55
+	PjDee 60
+
+>>SbLow-139
+MapCode 56
+	SbLow 139
+
+>>SbLow-164
+MapCode 57
+	SbLow 164
+
+>>SbMx1-164
+MapCode 58
+	SbMx1 164
+
+>>SbDee-89
+MapCode 59
+	SbDee 89
+
+>>ConMx-89
+MapCode 60
+	ConMx 89
+
+>>PoDee-119
+MapCode 61
+	PoDee 119
+
+>>PjMx1-149
+MapCode 62
+	PjMx1 149
+
+>>OcLow-159
+MapCode 63
+	OcLow 159
+
+>>HrdMx-84
+MapCode 64
+	HrdMx 84
+
+>>PoDee-88
+MapCode 65
+	PoDee 88
+
+>>PoDee-89
+MapCode 66
+	PoDee 89
+
+>>PjMx1-88
+MapCode 67
+	PjMx1 88
+
+>>ConMx-88
+MapCode 68
+	ConMx 88
+
+>>SbLow-125
+MapCode 69
+	SbLow 125
+
+>>SbDee-97
+MapCode 70
+	SbDee 97
+
+>>SbLow-97
+MapCode 71
+	SbLow 97
+
+>>SbLow-92
+MapCode 72
+	SbLow 92
+
+>>SbLow-105
+MapCode 73
+	SbLow 105
+
+>>SbLow-122
+MapCode 74
+	SbLow 122
+
+>>HrDom-89
+MapCode 75
+	HrDom 89
+
+>>SbDee-88
+MapCode 76
+	SbDee 88
+
+>>HrDom-88
+MapCode 77
+	HrDom 88
+
+>>HrDom-83
+MapCode 78
+	HrDom 83
+
+>>SbDee-83
+MapCode 79
+	SbDee 83
+
+>>ConMx-104
+MapCode 80
+	ConMx 104
+
+>>SbLow-104
+MapCode 81
+	SbLow 104
+
+>>SbLow-99
+MapCode 82
+	SbLow 99
+
+>>BfDom-133
+MapCode 83
+	BfDom 133
+
+>>ConMx-96
+MapCode 84
+	ConMx 96
+
+>>SbLow-106
+MapCode 85
+	SbLow 106
+
+>>ConMx-106
+MapCode 86
+	ConMx 106
+
+>>SbDee-104
+MapCode 87
+	SbDee 104
+
+>>SbDee-124
+MapCode 88
+	SbDee 124
+
+>>BfDom-124
+MapCode 89
+	BfDom 124
+
+>>SbDee-105
+MapCode 90
+	SbDee 105
+
+>>OcLow-139
+MapCode 91
+	OcLow 139
+
+>>OcLow-60
+MapCode 92
+	OcLow 60
+
+>>PoDee-99
+MapCode 93
+	PoDee 99
+
+>>PoDee-60
+MapCode 94
+	PoDee 60
+
+>>SbMx1-119
+MapCode 95
+	SbMx1 119
+
+>>SbDee-154
+MapCode 96
+	SbDee 154
+
+>>SbLow-154
+MapCode 97
+	SbLow 154
+
+>>PjDee-154
+MapCode 98
+	PjDee 154
+
+>>SbMx1-64
+MapCode 99
+	SbMx1 64
+
+>>PjDee-64
+MapCode 100
+	PjDee 64
+
+>>PjMx1-76
+MapCode 101
+	PjMx1 76
+
+>>ConMx-64
+MapCode 102
+	ConMx 64
+
+>>PjMx1-64
+MapCode 103
+	PjMx1 64
+
+>>SbDee-64
+MapCode 104
+	SbDee 64
+
+>>SbDee-81
+MapCode 105
+	SbDee 81
+
+>>PjDee-99
+MapCode 106
+	PjDee 99
+
+>>PjDee-159
+MapCode 107
+	PjDee 159
+
+>>PjDee-139
+MapCode 108
+	PjDee 139
+
+>>PjDee-109
+MapCode 109
+	PjDee 109
+
+>>PjDee-179
+MapCode 110
+	PjDee 179
+
+>>PjDee-29
+MapCode 111
+	PjDee 29
+
+>>ConMx-164
+MapCode 112
+	ConMx 164
+
+>>PoDee-139
+MapCode 113
+	PoDee 139
+
+>>PjDee-174
+MapCode 114
+	PjDee 174
+
+>>SbLow-89
+MapCode 115
+	SbLow 89
+
+>>PjMx1-159
+MapCode 116
+	PjMx1 159
+
+>>SbLow-150
+MapCode 117
+	SbLow 150
+
+>>ConMx-150
+MapCode 118
+	ConMx 150
+
+>>PjDee-83
+MapCode 119
+	PjDee 83
+
+>>PjDee-72
+MapCode 120
+	PjDee 72
+
+>>PjDee-105
+MapCode 121
+	PjDee 105
+
+>>SbLow-140
+MapCode 122
+	SbLow 140
+
+>>SbLow-120
+MapCode 123
+	SbLow 120
+
+>>SbDee-120
+MapCode 124
+	SbDee 120
+
+>>PjDee-120
+MapCode 125
+	PjDee 120
+
+>>SbDee-130
+MapCode 126
+	SbDee 130
+
+>>PjDee-130
+MapCode 127
+	PjDee 130
+
+>>PjDee-140
+MapCode 128
+	PjDee 140
+
+>>PjDee-45
+MapCode 129
+	PjDee 45
+
+>>SbDee-45
+MapCode 130
+	SbDee 45
+
+>>SbDee-50
+MapCode 131
+	SbDee 50
+
+>>SbDee-35
+MapCode 132
+	SbDee 35
+
+>>ConMx-35
+MapCode 133
+	ConMx 35
+
+>>SbLow-35
+MapCode 134
+	SbLow 35
+
+>>SbDee-40
+MapCode 135
+	SbDee 40
+
+>>PjDee-40
+MapCode 136
+	PjDee 40
+
+>>SbDee-140
+MapCode 137
+	SbDee 140
+
+>>ConMx-140
+MapCode 138
+	ConMx 140
+
+>>ConMx-130
+MapCode 139
+	ConMx 130
+
+>>SbDee-145
+MapCode 140
+	SbDee 145
+
+>>PjMx1-40
+MapCode 141
+	PjMx1 40
+
+>>ConMx-40
+MapCode 142
+	ConMx 40
+
+>>SbLow-40
+MapCode 143
+	SbLow 40
+
+>>SbDee-10
+MapCode 144
+	SbDee 10
+
+>>PjDee-150
+MapCode 145
+	PjDee 150
+
+>>ConMx-10
+MapCode 146
+	ConMx 10
+
+>>PjDee-10
+MapCode 147
+	PjDee 10
+
+>>SbDee-150
+MapCode 148
+	SbDee 150
+
+>>PjDee-70
+MapCode 149
+	PjDee 70
+
+>>PjDee-75
+MapCode 150
+	PjDee 75
+
+>>SbDee-70
+MapCode 151
+	SbDee 70
+
+>>PjMx1-70
+MapCode 152
+	PjMx1 70
+
+>>PjMx1-60
+MapCode 153
+	PjMx1 60
+
+>>PjMx1-75
+MapCode 154
+	PjMx1 75
+
+>>SbDee-75
+MapCode 155
+	SbDee 75
+
+>>SbLow-70
+MapCode 156
+	SbLow 70
+
+>>PjDee-80
+MapCode 157
+	PjDee 80
+
+>>PoDee-80
+MapCode 158
+	PoDee 80
+
+>>PoDee-75
+MapCode 159
+	PoDee 75
+
+>>SbLow-75
+MapCode 160
+	SbLow 75
+
+>>SbLow-95
+MapCode 161
+	SbLow 95
+
+>>PoDee-70
+MapCode 162
+	PoDee 70
+
+>>BwDom-70
+MapCode 163
+	BwDom 70
+
+>>BwDom-15
+MapCode 164
+	BwDom 15
+
+>>ConMx-80
+MapCode 165
+	ConMx 80
+
+>>BwDom-80
+MapCode 166
+	BwDom 80
+
+>>HrDom-100
+MapCode 167
+	HrDom 100
+
+>>SbMx1-100
+MapCode 168
+	SbMx1 100
+
+>>ConMx-100
+MapCode 169
+	ConMx 100
+
+>>SbDee-100
+MapCode 170
+	SbDee 100
+
+>>SbLow-115
+MapCode 171
+	SbLow 115
+
+>>SbDee-80
+MapCode 172
+	SbDee 80
+
+>>SbMx1-80
+MapCode 173
+	SbMx1 80
+
+>>SbDee-135
+MapCode 174
+	SbDee 135
+
+>>HrDom-84
+MapCode 175
+	HrDom 84
+
+>>SbDee-90
+MapCode 176
+	SbDee 90
+
+>>SbDee-165
+MapCode 177
+	SbDee 165
+
+>>HrDom-90
+MapCode 178
+	HrDom 90
+
+>>HrdMx-100
+MapCode 179
+	HrdMx 100
+
+>>SbDee-87
+MapCode 180
+	SbDee 87
+
+>>PjDee-135
+MapCode 181
+	PjDee 135
+
+>>PjDee-15
+MapCode 182
+	PjDee 15
+
+>>SbDee-15
+MapCode 183
+	SbDee 15
+
+>>SbLow-59
+MapCode 184
+	SbLow 59
+
+>>SbLow-94
+MapCode 185
+	SbLow 94
+
+>>ConMx-119
+MapCode 186
+	ConMx 119
+
+>>ConMx-54
+MapCode 187
+	ConMx 54
+
+>>PjMx1-164
+MapCode 188
+	PjMx1 164
+
+>>SbLow-100
+MapCode 189
+	SbLow 100
+
+>>SbLow-88
+MapCode 190
+	SbLow 88
+
+>>PoDee-125
+MapCode 191
+	PoDee 125
+
+>>ConMx-78
+MapCode 192
+	ConMx 78
+
+>>SbLow-78
+MapCode 193
+	SbLow 78
+
+>>SbLow-81
+MapCode 194
+	SbLow 81
+
+>>HrDom-122
+MapCode 195
+	HrDom 122
+
+>>ConMx-133
+MapCode 196
+	ConMx 133
+
+>>SbLow-133
+MapCode 197
+	SbLow 133
+
+>>SbLow-96
+MapCode 198
+	SbLow 96
+
+>>HrDom-159
+MapCode 199
+	HrDom 159
+
+>>SbLow-179
+MapCode 200
+	SbLow 179
+
+>>PjMx1-89
+MapCode 201
+	PjMx1 89
+
+>>ConMx-92
+MapCode 202
+	ConMx 92
+
+>>PjDee-95
+MapCode 203
+	PjDee 95
+
+>>Brush/Alder-95
+MapCode 204
+	Brush/Alder 95
+
+>>Brush/Alder-83
+MapCode 205
+	Brush/Alder 83
+
+>>SbDee-85
+MapCode 206
+	SbDee 85
+
+>>PjDee-85
+MapCode 207
+	PjDee 85
+
+>>SbDee-72
+MapCode 208
+	SbDee 72
+
+>>SbLow-72
+MapCode 209
+	SbLow 72
+
+>>PjDee-100
+MapCode 210
+	PjDee 100
+
+>>SbLow-50
+MapCode 211
+	SbLow 50
+
+>>PjDee-50
+MapCode 212
+	PjDee 50
+
+>>PoDee-130
+MapCode 213
+	PoDee 130
+
+>>HrdMx-60
+MapCode 214
+	HrdMx 60
+
+>>SbLow-10
+MapCode 215
+	SbLow 10
+
+>>SbLow-80
+MapCode 216
+	SbLow 80
+
+>>PoDee-65
+MapCode 217
+	PoDee 65
+
+>>PoDee-15
+MapCode 218
+	PoDee 15
+
+>>HrDom-80
+MapCode 219
+	HrDom 80
+
+>>SbDee-95
+MapCode 220
+	SbDee 95
+
+>>SbDee-115
+MapCode 221
+	SbDee 115
+
+>>ConMx-115
+MapCode 222
+	ConMx 115
+
+>>HrDom-95
+MapCode 223
+	HrDom 95
+
+>>BwDom-60
+MapCode 224
+	BwDom 60
+
+>>PjDee-94
+MapCode 225
+	PjDee 94
+
+>>HrDom-109
+MapCode 226
+	HrDom 109
+
+>>PjDee-129
+MapCode 227
+	PjDee 129
+
+>>PjMx1-119
+MapCode 228
+	PjMx1 119
+
+>>SbMx1-89
+MapCode 229
+	SbMx1 89
+
+>>PjMx1-100
+MapCode 230
+	PjMx1 100
+
+>>PoDee-78
+MapCode 231
+	PoDee 78
+
+>>ConMx-105
+MapCode 232
+	ConMx 105
+
+>>BfDom-105
+MapCode 233
+	BfDom 105
+
+>>PjDee-76
+MapCode 234
+	PjDee 76
+
+>>SbDee-101
+MapCode 235
+	SbDee 101
+
+>>ConMx-99
+MapCode 236
+	ConMx 99
+
+>>PjDee-164
+MapCode 237
+	PjDee 164
+
+>>SbLow-130
+MapCode 238
+	SbLow 130
+
+>>ConMx-72
+MapCode 239
+	ConMx 72
+
+>>ConMx-120
+MapCode 240
+	ConMx 120
+
+>>ConMx-70
+MapCode 241
+	ConMx 70
+
+>>PjDee-115
+MapCode 242
+	PjDee 115
+
+>>HrdMx-75
+MapCode 243
+	HrdMx 75
+
+>>HrdMx-70
+MapCode 244
+	HrdMx 70
+
+>>BwDom-65
+MapCode 245
+	BwDom 65
+
+>>ConMx-65
+MapCode 246
+	ConMx 65
+
+>>HrDom-94
+MapCode 247
+	HrDom 94
+
+>>SbMx1-90
+MapCode 248
+	SbMx1 90
+
+>>SbLow-90
+MapCode 249
+	SbLow 90
+
+>>HrdMx-89
+MapCode 250
+	HrdMx 89
+
+>>SbLow-135
+MapCode 251
+	SbLow 135
+
+>>SbMx1-109
+MapCode 252
+	SbMx1 109
+
+>>SbMx1-29
+MapCode 253
+	SbMx1 29
+
+>>SbMx1-94
+MapCode 254
+	SbMx1 94
+
+>>SbMx1-88
+MapCode 255
+	SbMx1 88
+
+>>SbDee-78
+MapCode 256
+	SbDee 78
+
+>>BfDom-104
+MapCode 257
+	BfDom 104
+
+>>OcLow-105
+MapCode 258
+	OcLow 105
+
+>>SbDee-123
+MapCode 259
+	SbDee 123
+
+>>SbLow-123
+MapCode 260
+	SbLow 123
+
+>>HrDom-129
+MapCode 261
+	HrDom 129
+
+>>HrDom-60
+MapCode 262
+	HrDom 60
+
+>>ConMx-76
+MapCode 263
+	ConMx 76
+
+>>SbMx1-76
+MapCode 264
+	SbMx1 76
+
+>>BfDom-60
+MapCode 265
+	BfDom 60
+
+>>ConMx-85
+MapCode 266
+	ConMx 85
+
+>>SbLow-85
+MapCode 267
+	SbLow 85
+
+>>PjDee-35
+MapCode 268
+	PjDee 35
+
+>>PoDee-150
+MapCode 269
+	PoDee 150
+
+>>PjDee-145
+MapCode 270
+	PjDee 145
+
+>>HrDom-65
+MapCode 271
+	HrDom 65
+
+>>ConMx-90
+MapCode 272
+	ConMx 90
+
+>>HrDom-115
+MapCode 273
+	HrDom 115
+
+>>HrDom-135
+MapCode 274
+	HrDom 135
+
+>>SbMx1-85
+MapCode 275
+	SbMx1 85
+
+>>HrdMx-80
+MapCode 276
+	HrdMx 80
+
+>>HrdMx-94
+MapCode 277
+	HrdMx 94
+
+>>SbDee-121
+MapCode 278
+	SbDee 121
+
+>>SbDee-122
+MapCode 279
+	SbDee 122
+
+>>PoDee-149
+MapCode 280
+	PoDee 149
+
+>>SbLow-64
+MapCode 281
+	SbLow 64
+
+>>SbDee-30
+MapCode 282
+	SbDee 30
+
+>>SbDee-65
+MapCode 283
+	SbDee 65
+
+>>SbLow-145
+MapCode 284
+	SbLow 145
+
+>>HrdMx-145
+MapCode 285
+	HrdMx 145
+
+>>PoDee-90
+MapCode 286
+	PoDee 90
+
+>>PjDee-55
+MapCode 287
+	PjDee 55
+
+>>SbDee-55
+MapCode 288
+	SbDee 55
+
+>>SbDee-69
+MapCode 289
+	SbDee 69
+
+>>SbLow-69
+MapCode 290
+	SbLow 69
+
+>>BfDom-59
+MapCode 291
+	BfDom 59
+
+>>BwDom-84
+MapCode 292
+	BwDom 84
+
+>>SbMx1-154
+MapCode 293
+	SbMx1 154
+
+>>PjMx1-179
+MapCode 294
+	PjMx1 179
+
+>>PoDee-121
+MapCode 295
+	PoDee 121
+
+>>BfDom-119
+MapCode 296
+	BfDom 119
+
+>>HrDom-119
+MapCode 297
+	HrDom 119
+
+>>ConMx-81
+MapCode 298
+	ConMx 81
+
+>>PjMx1-85
+MapCode 299
+	PjMx1 85
+
+>>ConMx-30
+MapCode 300
+	ConMx 30
+
+>>PjMx1-65
+MapCode 301
+	PjMx1 65
+
+>>PjDee-65
+MapCode 302
+	PjDee 65
+
+>>SbLow-165
+MapCode 303
+	SbLow 165
+
+>>ConMx-95
+MapCode 304
+	ConMx 95
+
+>>HrdMx-90
+MapCode 305
+	HrdMx 90
+
+>>BwDom-90
+MapCode 306
+	BwDom 90
+
+>>SbLow-155
+MapCode 307
+	SbLow 155
+
+>>SbDee-155
+MapCode 308
+	SbDee 155
+
+>>PjMx1-129
+MapCode 309
+	PjMx1 129
+
+>>SbMx1-179
+MapCode 310
+	SbMx1 179
+
+>>BfDom-106
+MapCode 311
+	BfDom 106
+
+>>BwDom-109
+MapCode 312
+	BwDom 109
+
+>>ConMx-109
+MapCode 313
+	ConMx 109
+
+>>PoDee-109
+MapCode 314
+	PoDee 109
+
+>>PjDee-92
+MapCode 315
+	PjDee 92
+
+>>SbDee-110
+MapCode 316
+	SbDee 110
+
+>>PjMx1-105
+MapCode 317
+	PjMx1 105
+
+>>PjDee-30
+MapCode 318
+	PjDee 30
+
+>>SbLow-30
+MapCode 319
+	SbLow 30
+
+>>PjMx1-80
+MapCode 320
+	PjMx1 80
+
+>>SbLow-65
+MapCode 321
+	SbLow 65
+
+>>SbMx1-105
+MapCode 322
+	SbMx1 105
+
+>>ConMx-93
+MapCode 323
+	ConMx 93
+
+>>HrdMx-99
+MapCode 324
+	HrdMx 99
+
+>>PjDee-119
+MapCode 325
+	PjDee 119
+
+>>HrdMx-97
+MapCode 326
+	HrdMx 97
+
+>>ConMx-123
+MapCode 327
+	ConMx 123
+
+>>SbDee-76
+MapCode 328
+	SbDee 76
+
+>>SbDee-71
+MapCode 329
+	SbDee 71
+
+>>PjMx1-92
+MapCode 330
+	PjMx1 92
+
+>>PjMx1-95
+MapCode 331
+	PjMx1 95
+
+>>PjMx1-130
+MapCode 332
+	PjMx1 130
+
+>>PjMx1-145
+MapCode 333
+	PjMx1 145
+
+>>PoDee-95
+MapCode 334
+	PoDee 95
+
+>>PoDee-100
+MapCode 335
+	PoDee 100
+
+>>Brush/Alder-60
+MapCode 336
+	Brush/Alder 60
+
+>>ConMx-132
+MapCode 337
+	ConMx 132
+
+>>HrDom-149
+MapCode 338
+	HrDom 149
+
+>>ConMx-71
+MapCode 339
+	ConMx 71
+
+>>SbDee-96
+MapCode 340
+	SbDee 96
+
+>>PoDee-154
+MapCode 341
+	PoDee 154
+
+>>ConMx-75
+MapCode 342
+	ConMx 75
+
+>>SbMx1-75
+MapCode 343
+	SbMx1 75
+
+>>SbMx1-145
+MapCode 344
+	SbMx1 145
+
+>>PjDee-165
+MapCode 345
+	PjDee 165
+
+>>SbMx1-135
+MapCode 346
+	SbMx1 135
+
+>>PoDee-135
+MapCode 347
+	PoDee 135
+
+>>PoDee-105
+MapCode 348
+	PoDee 105
+
+>>PoDee-93
+MapCode 349
+	PoDee 93
+
+>>BfDom-89
+MapCode 350
+	BfDom 89
+
+>>BfDom-109
+MapCode 351
+	BfDom 109
+
+>>BfDom-123
+MapCode 352
+	BfDom 123
+
+>>PjMx1-99
+MapCode 353
+	PjMx1 99
+
+>>PjDee-104
+MapCode 354
+	PjDee 104
+
+>>HrdMx-65
+MapCode 355
+	HrdMx 65
+
+>>PoDee-30
+MapCode 356
+	PoDee 30
+
+>>PjMx1-165
+MapCode 357
+	PjMx1 165
+
+>>PjMx1-15
+MapCode 358
+	PjMx1 15
+
+>>PjMx1-90
+MapCode 359
+	PjMx1 90
+
+>>HrdMx-105
+MapCode 360
+	HrdMx 105
+
+>>SbLow-110
+MapCode 361
+	SbLow 110
+
+>>SbLow-169
+MapCode 362
+	SbLow 169
+
+>>SbMx1-169
+MapCode 363
+	SbMx1 169
+
+>>BwDom-129
+MapCode 364
+	BwDom 129
+
+>>PoDee-129
+MapCode 365
+	PoDee 129
+
+>>ConMx-69
+MapCode 366
+	ConMx 69
+
+>>SbDee-92
+MapCode 367
+	SbDee 92
+
+>>SbDee-112
+MapCode 368
+	SbDee 112
+
+>>HrDom-164
+MapCode 369
+	HrDom 164
+
+>>HrDom-79
+MapCode 370
+	HrDom 79
+
+>>SbLow-124
+MapCode 371
+	SbLow 124
+
+>>BfDom-129
+MapCode 372
+	BfDom 129
+
+>>PjDee-144
+MapCode 373
+	PjDee 144
+
+>>PoDee-110
+MapCode 374
+	PoDee 110
+
+>>PjMx1-93
+MapCode 375
+	PjMx1 93
+
+>>BwDom-119
+MapCode 376
+	BwDom 119
+
+>>PjMx1-69
+MapCode 377
+	PjMx1 69
+
+>>ConMx-110
+MapCode 378
+	ConMx 110
+
+>>PoDee-159
+MapCode 379
+	PoDee 159
+
+>>SbLow-83
+MapCode 380
+	SbLow 83
+
+>>HrdMx-92
+MapCode 381
+	HrdMx 92
+
+>>SbLow-76
+MapCode 382
+	SbLow 76
+
+>>ConMx-83
+MapCode 383
+	ConMx 83
+
+>>PjDee-96
+MapCode 384
+	PjDee 96
+
+>>PjDee-69
+MapCode 385
+	PjDee 69
+
+>>PjDee-133
+MapCode 386
+	PjDee 133
+
+>>SbDee-133
+MapCode 387
+	SbDee 133
+
+>>Brush/Alder-85
+MapCode 388
+	Brush/Alder 85
+
+>>PjDee-71
+MapCode 389
+	PjDee 71
+
+>>SbLow-71
+MapCode 390
+	SbLow 71
+
+>>PjMx1-30
+MapCode 391
+	PjMx1 30
+
+>>HrDom-75
+MapCode 392
+	HrDom 75
+
+>>PoDee-85
+MapCode 393
+	PoDee 85
+
+>>SbDee-93
+MapCode 394
+	SbDee 93
+
+>>ConMx-169
+MapCode 395
+	ConMx 169
+
+>>HrdMx-149
+MapCode 396
+	HrdMx 149
+
+>>HrdMx-119
+MapCode 397
+	HrdMx 119
+
+>>ConMx-121
+MapCode 398
+	ConMx 121
+
+>>SbMx1-121
+MapCode 399
+	SbMx1 121
+
+>>HrdMx-79
+MapCode 400
+	HrdMx 79
+
+>>ConMx-112
+MapCode 401
+	ConMx 112
+
+>>SbDee-111
+MapCode 402
+	SbDee 111
+
+>>SbDee-116
+MapCode 403
+	SbDee 116
+
+>>SbLow-116
+MapCode 404
+	SbLow 116
+
+>>PoDee-164
+MapCode 405
+	PoDee 164
+
+>>PjDee-81
+MapCode 406
+	PjDee 81
+
+>>SbMx1-45
+MapCode 407
+	SbMx1 45
+
+>>SbMx1-65
+MapCode 408
+	SbMx1 65
+
+>>SbMx1-99
+MapCode 409
+	SbMx1 99
+
+>>ConMx-154
+MapCode 410
+	ConMx 154
+
+>>HrdMx-83
+MapCode 411
+	HrdMx 83
+
+>>BfDom-99
+MapCode 412
+	BfDom 99
+
+>>BfDom-114
+MapCode 413
+	BfDom 114
+
+>>BfDom-111
+MapCode 414
+	BfDom 111
+
+>>SbDee-74
+MapCode 415
+	SbDee 74
+
+>>PjMx1-135
+MapCode 416
+	PjMx1 135
+
+>>PoDee-165
+MapCode 417
+	PoDee 165
+
+>>BwDom-64
+MapCode 418
+	BwDom 64
+
+>>BfDom-64
+MapCode 419
+	BfDom 64
+
+>>Brush/Alder-79
+MapCode 420
+	Brush/Alder 79
+
+>>PjDee-59
+MapCode 421
+	PjDee 59
+
+>>PjMx1-115
+MapCode 422
+	PjMx1 115
+
+>>BwDom-85
+MapCode 423
+	BwDom 85
+
+>>ConMx-144
+MapCode 424
+	ConMx 144
+
+>>BfDom-69
+MapCode 425
+	BfDom 69
+
+>>BwDom-92
+MapCode 426
+	BwDom 92
+
+>>SbLow-114
+MapCode 427
+	SbLow 114
+
+>>BfDom-131
+MapCode 428
+	BfDom 131
+
+>>SbDee-91
+MapCode 429
+	SbDee 91
+
+>>SbDee-86
+MapCode 430
+	SbDee 86
+
+>>BfDom-84
+MapCode 431
+	BfDom 84
+
+>>PjDee-88
+MapCode 432
+	PjDee 88
+
+>>PjMx1-29
+MapCode 433
+	PjMx1 29
+
+>>SbLow-45
+MapCode 434
+	SbLow 45
+
+>>PjDee-125
+MapCode 435
+	PjDee 125
+
+>>BwDom-100
+MapCode 436
+	BwDom 100
+
+>>HrDom-85
+MapCode 437
+	HrDom 85
+
+>>SbLow-144
+MapCode 438
+	SbLow 144
+
+>>HrdMx-164
+MapCode 439
+	HrdMx 164
+
+>>HrdMx-179
+MapCode 440
+	HrdMx 179
+
+>>HrdMx-129
+MapCode 441
+	HrdMx 129
+
+>>SbLow-121
+MapCode 442
+	SbLow 121
+
+>>SbMx1-115
+MapCode 443
+	SbMx1 115
+
+>>ConMx-116
+MapCode 444
+	ConMx 116
+
+>>BfDom-94
+MapCode 445
+	BfDom 94
+
+>>SbDee-114
+MapCode 446
+	SbDee 114
+
+>>SbLow-74
+MapCode 447
+	SbLow 74
+
+>>SbLow-91
+MapCode 448
+	SbLow 91
+
+>>PjMx1-71
+MapCode 449
+	PjMx1 71
+
+>>PjMx1-34
+MapCode 450
+	PjMx1 34
+
+>>Brush/Alder-120
+MapCode 451
+	Brush/Alder 120
+
+>>Brush/Alder-30
+MapCode 452
+	Brush/Alder 30
+
+>>ConMx-45
+MapCode 453
+	ConMx 45
+
+>>HrdMx-114
+MapCode 454
+	HrdMx 114
+
+>>PoDee-94
+MapCode 455
+	PoDee 94
+
+>>SbLow-82
+MapCode 456
+	SbLow 82
+
+>>ConMx-82
+MapCode 457
+	ConMx 82
+
+>>PjDee-86
+MapCode 458
+	PjDee 86
+
+>>Brush/Alder-129
+MapCode 459
+	Brush/Alder 129
+
+>>SbLow-34
+MapCode 460
+	SbLow 34
+
+>>SbLow-160
+MapCode 461
+	SbLow 160
+
+>>BwDom-115
+MapCode 462
+	BwDom 115
+
+>>HrDom-70
+MapCode 463
+	HrDom 70
+
+>>HrdMx-69
+MapCode 464
+	HrdMx 69
+
+>>PoDee-116
+MapCode 465
+	PoDee 116
+
+>>ConMx-114
+MapCode 466
+	ConMx 114
+
+>>ConMx-74
+MapCode 467
+	ConMx 74
+
+>>PjDee-82
+MapCode 468
+	PjDee 82
+
+>>ConMx-59
+MapCode 469
+	ConMx 59
+
+>>SbDee-34
+MapCode 470
+	SbDee 34
+
+>>PjDee-160
+MapCode 471
+	PjDee 160
+
+>>PjMx1-125
+MapCode 472
+	PjMx1 125
+
+>>BwDom-95
+MapCode 473
+	BwDom 95
+
+>>HrdMx-85
+MapCode 474
+	HrdMx 85
+
+>>HrdMx-95
+MapCode 475
+	HrdMx 95
+
+>>SbMx1-174
+MapCode 476
+	SbMx1 174
+
+>>ConMx-131
+MapCode 477
+	ConMx 131
+
+>>SbDee-82
+MapCode 478
+	SbDee 82
+
+>>BfDom-154
+MapCode 479
+	BfDom 154
+
+>>PjMx1-120
+MapCode 480
+	PjMx1 120
+
+>>Brush/Alder-130
+MapCode 481
+	Brush/Alder 130
+
+>>SbMx1-55
+MapCode 482
+	SbMx1 55
+
+>>SbDee-144
+MapCode 483
+	SbDee 144
+
+>>BwDom-179
+MapCode 484
+	BwDom 179
+
+>>BwDom-29
+MapCode 485
+	BwDom 29
+
+>>ConMx-86
+MapCode 486
+	ConMx 86
+
+>>PoDee-71
+MapCode 487
+	PoDee 71
+
+>>SbDee-160
+MapCode 488
+	SbDee 160
+
+>>SbMx1-69
+MapCode 489
+	SbMx1 69
+
+>>SbDee-174
+MapCode 490
+	SbDee 174
+
+>>BwDom-89
+MapCode 491
+	BwDom 89
+
+>>ConMx-101
+MapCode 492
+	ConMx 101
+
+>>BfDom-121
+MapCode 493
+	BfDom 121
+
+>>SbDee-21
+MapCode 494
+	SbDee 21
+
+>>SbMx1-40
+MapCode 495
+	SbMx1 40
+
+>>SbMx1-144
+MapCode 496
+	SbMx1 144
+
+>>ConMx-174
+MapCode 497
+	ConMx 174
+
+>>BwDom-139
+MapCode 498
+	BwDom 139
+
+>>BfDom-101
+MapCode 499
+	BfDom 101
+
+>>SbLow-86
+MapCode 500
+	SbLow 86
+
+>>Brush/Alder-84
+MapCode 501
+	Brush/Alder 84
+
+>>PjDee-90
+MapCode 502
+	PjDee 90
+
+>>PjMx1-140
+MapCode 503
+	PjMx1 140
+
+>>PjMx1-35
+MapCode 504
+	PjMx1 35
+
+>>SbDee-38
+MapCode 505
+	SbDee 38
+
+>>ConMx-38
+MapCode 506
+	ConMx 38
+
+>>PjDee-87
+MapCode 507
+	PjDee 87
+
+>>SbLow-87
+MapCode 508
+	SbLow 87
+
+>>PjDee-111
+MapCode 509
+	PjDee 111
+
+>>ConMx-21
+MapCode 510
+	ConMx 21
+
+>>PjMx1-63
+MapCode 511
+	PjMx1 63
+
+>>ConMx-63
+MapCode 512
+	ConMx 63
+
+>>SbDee-125
+MapCode 513
+	SbDee 125
+
+>>HrdMx-112
+MapCode 514
+	HrdMx 112
+
+>>HrdMx-81
+MapCode 515
+	HrdMx 81
+
+>>SbLow-111
+MapCode 516
+	SbLow 111
+
+>>Brush/Alder-35
+MapCode 517
+	Brush/Alder 35
+
+>>SbLow-38
+MapCode 518
+	SbLow 38
+
+>>PjDee-38
+MapCode 519
+	PjDee 38
+
+>>PjDee-63
+MapCode 520
+	PjDee 63
+
+>>SbMx1-70
+MapCode 521
+	SbMx1 70
+
+>>PjMx1-94
+MapCode 522
+	PjMx1 94
+
+>>ConMx-87
+MapCode 523
+	ConMx 87
+
+>>PjDee-21
+MapCode 524
+	PjDee 21
+
+>>SbLow-21
+MapCode 525
+	SbLow 21
+
+>>PjMx1-10
+MapCode 526
+	PjMx1 10
+
+>>BwDom-99
+MapCode 527
+	BwDom 99
+
+>>PjMx1-74
+MapCode 528
+	PjMx1 74
+
+>>SbDee-128
+MapCode 529
+	SbDee 128
+
+>>BwDom-128
+MapCode 530
+	BwDom 128
+
+>>BwDom-112
+MapCode 531
+	BwDom 112
+
+>>SbLow-101
+MapCode 532
+	SbLow 101
+
+>>HrdMx-21
+MapCode 533
+	HrdMx 21
+
+>>PjDee-74
+MapCode 534
+	PjDee 74
+
+>>Brush/Alder-149
+MapCode 535
+	Brush/Alder 149
+
+>>PoDee-69
+MapCode 536
+	PoDee 69
+
+>>HrdMx-165
+MapCode 537
+	HrdMx 165
+
+>>HrDom-139
+MapCode 538
+	HrDom 139
+
+>>SbDee-169
+MapCode 539
+	SbDee 169
+
+>>BwDom-114
+MapCode 540
+	BwDom 114
+
+>>BwDom-132
+MapCode 541
+	BwDom 132
+
+>>SbMx1-59
+MapCode 542
+	SbMx1 59
+
+>>PjMx1-150
+MapCode 543
+	PjMx1 150
+
+>>SbMx1-95
+MapCode 544
+	SbMx1 95
+
+>>BfDom-79
+MapCode 545
+	BfDom 79
+
+>>BwDom-125
+MapCode 546
+	BwDom 125
+
+>>ConMx-125
+MapCode 547
+	ConMx 125
+
+>>BwDom-79
+MapCode 548
+	BwDom 79
+
+>>PoDee-35
+MapCode 549
+	PoDee 35
+
+>>PjMx1-87
+MapCode 550
+	PjMx1 87
+
+>>OcLow-79
+MapCode 551
+	OcLow 79
+
+>>OcLow-149
+MapCode 552
+	OcLow 149
+
+>>PjMx1-169
+MapCode 553
+	PjMx1 169
+
+>>PjMx1-82
+MapCode 554
+	PjMx1 82
+
+>>ConMx-128
+MapCode 555
+	ConMx 128
+
+>>PoDee-132
+MapCode 556
+	PoDee 132
+
+>>PjDee-23
+MapCode 557
+	PjDee 23
+
+>>SbDee-6
+MapCode 558
+	SbDee 6
+
+>>SbDee-66
+MapCode 559
+	SbDee 66
+
+>>PjDee-66
+MapCode 560
+	PjDee 66
+
+>>SbLow-66
+MapCode 561
+	SbLow 66
+
+>>PjDee-169
+MapCode 562
+	PjDee 169
+
+>>Brush/Alder-80
+MapCode 563
+	Brush/Alder 80
+
+>>HrdMx-61
+MapCode 564
+	HrdMx 61
+
+>>BwDom-149
+MapCode 565
+	BwDom 149
+
+>>PoDee-114
+MapCode 566
+	PoDee 114
+
+>>PjDee-6
+MapCode 567
+	PjDee 6
+
+>>Brush/Alder-38
+MapCode 568
+	Brush/Alder 38
+
+>>SbMx1-82
+MapCode 569
+	SbMx1 82
+
+>>ConMx-127
+MapCode 570
+	ConMx 127
+
+>>SbMx1-6
+MapCode 571
+	SbMx1 6
+
+>>Brush/Alder-94
+MapCode 572
+	Brush/Alder 94
+
+>>PjMx1-155
+MapCode 573
+	PjMx1 155
+
+>>PoDee-61
+MapCode 574
+	PoDee 61
+
+>>BwDom-69
+MapCode 575
+	BwDom 69
+
+>>ConMx-160
+MapCode 576
+	ConMx 160
+
+>>SbDee-63
+MapCode 577
+	SbDee 63
+
+>>HrdMx-87
+MapCode 578
+	HrdMx 87
+
+>>SbMx1-117
+MapCode 579
+	SbMx1 117
+
+>>SbMx1-21
+MapCode 580
+	SbMx1 21
+
+>>SbLow-6
+MapCode 581
+	SbLow 6
+
+>>PoDee-87
+MapCode 582
+	PoDee 87
+
+>>OcLow-179
+MapCode 583
+	OcLow 179
+
+>>HrDom-99
+MapCode 584
+	HrDom 99
+
+>>SbMx1-74
+MapCode 585
+	SbMx1 74
+
+>>SbMx1-86
+MapCode 586
+	SbMx1 86
+
+>>Brush/Alder-119
+MapCode 587
+	Brush/Alder 119
+
+>>Brush/Alder-45
+MapCode 588
+	Brush/Alder 45
+
+>>PoDee-91
+MapCode 589
+	PoDee 91
+
+>>OcLow-69
+MapCode 590
+	OcLow 69
+
+>>SbLow-107
+MapCode 591
+	SbLow 107
+
+>>SbLow-117
+MapCode 592
+	SbLow 117
+
+>>SbDee-9
+MapCode 593
+	SbDee 9
+
+>>SbLow-55
+MapCode 594
+	SbLow 55
+
+>>ConMx-61
+MapCode 595
+	ConMx 61
+
+>>SbMx1-63
+MapCode 596
+	SbMx1 63
+
+>>PjDee-155
+MapCode 597
+	PjDee 155
+
+>>PjMx1-144
+MapCode 598
+	PjMx1 144
+
+>>SbMx1-97
+MapCode 599
+	SbMx1 97
+
+>>ConMx-97
+MapCode 600
+	ConMx 97
+
+>>ConMx-107
+MapCode 601
+	ConMx 107
+
+>>PjDee-9
+MapCode 602
+	PjDee 9
+
+>>ConMx-155
+MapCode 603
+	ConMx 155
+
+>>HrDom-87
+MapCode 604
+	HrDom 87
+
+>>HrDom-61
+MapCode 605
+	HrDom 61
+
+>>SbDee-117
+MapCode 606
+	SbDee 117
+
+>>SbDee-132
+MapCode 607
+	SbDee 132
+
+>>PoDee-40
+MapCode 608
+	PoDee 40
+
+>>SbMx1-61
+MapCode 609
+	SbMx1 61
+
+>>SbMx1-114
+MapCode 610
+	SbMx1 114
+
+>>OcLow-154
+MapCode 611
+	OcLow 154
+
+>>ConMx-66
+MapCode 612
+	ConMx 66
+
+>>PoDee-140
+MapCode 613
+	PoDee 140
+
+>>SbDee-107
+MapCode 614
+	SbDee 107
+
+>>OcLow-84
+MapCode 615
+	OcLow 84
+
+>>ConMx-6
+MapCode 616
+	ConMx 6
+
+>>PjMx1-154
+MapCode 617
+	PjMx1 154
+
+>>OcLow-164
+MapCode 618
+	OcLow 164
+
+>>Brush/Alder-150
+MapCode 619
+	Brush/Alder 150
+
+>>Brush/Alder-40
+MapCode 620
+	Brush/Alder 40
+
+>>Brush/Alder-75
+MapCode 621
+	Brush/Alder 75
+
+>>PoDee-120
+MapCode 622
+	PoDee 120
+
+>>PoDee-179
+MapCode 623
+	PoDee 179
+
+>>PjDee-101
+MapCode 624
+	PjDee 101
+
+>>SbDee-106
+MapCode 625
+	SbDee 106
+
+>>PoDee-63
+MapCode 626
+	PoDee 63
+
+>>SbDee-7
+MapCode 627
+	SbDee 7
+
+>>ConMx-91
+MapCode 628
+	ConMx 91
+
+>>Brush/Alder-159
+MapCode 629
+	Brush/Alder 159
+
+>>PoDee-107
+MapCode 630
+	PoDee 107
+
+>>BwDom-75
+MapCode 631
+	BwDom 75
+
+>>PjDee-106
+MapCode 632
+	PjDee 106
+
+>>PjDee-194
+MapCode 633
+	PjDee 194
+
+>>SbLow-131
+MapCode 634
+	SbLow 131
+
+>>SbLow-7
+MapCode 635
+	SbLow 7
+
+>>PjDee-7
+MapCode 636
+	PjDee 7
+
+>>PjDee-91
+MapCode 637
+	PjDee 91
+
+>>ConMx-8
+MapCode 638
+	ConMx 8
+
+>>SbDee-209
+MapCode 639
+	SbDee 209
+
+>>SbDee-113
+MapCode 640
+	SbDee 113
+
+>>BfDom-116
+MapCode 641
+	BfDom 116
+
+>>PjDee-116
+MapCode 642
+	PjDee 116
+
+>>SbDee-8
+MapCode 643
+	SbDee 8
+
+>>HrDom-105
+MapCode 644
+	HrDom 105
+
+>>SbDee-108
+MapCode 645
+	SbDee 108
+
+>>PoDee-108
+MapCode 646
+	PoDee 108
+
+>>SbDee-194
+MapCode 647
+	SbDee 194
+
+>>PoDee-10
+MapCode 648
+	PoDee 10
+
+>>PoDee-113
+MapCode 649
+	PoDee 113
+
+>>SbLow-108
+MapCode 650
+	SbLow 108
+
+>>BwDom-104
+MapCode 651
+	BwDom 104
+
+>>HrdMx-104
+MapCode 652
+	HrdMx 104
+
+>>ConMx-117
+MapCode 653
+	ConMx 117
+
+>>SbDee-56
+MapCode 654
+	SbDee 56
+
+>>BfDom-159
+MapCode 655
+	BfDom 159
+
+>>PjDee-114
+MapCode 656
+	PjDee 114
+
+>>PjDee-134
+MapCode 657
+	PjDee 134
+
+>>ConMx-50
+MapCode 658
+	ConMx 50
+
+>>OcLow-117
+MapCode 659
+	OcLow 117
+
+>>OcLow-131
+MapCode 660
+	OcLow 131
+
+>>PjDee-8
+MapCode 661
+	PjDee 8
+
+>>PjDee-56
+MapCode 662
+	PjDee 56
+
+>>SbDee-134
+MapCode 663
+	SbDee 134
+
+>>PjDee-108
+MapCode 664
+	PjDee 108
+
+>>HrdMx-154
+MapCode 665
+	HrdMx 154
+
+>>OcLow-129
+MapCode 666
+	OcLow 129
+
+>>ConMx-156
+MapCode 667
+	ConMx 156
+
+>>SbDee-68
+MapCode 668
+	SbDee 68
+
+>>HrDom-110
+MapCode 669
+	HrDom 110
+
+>>Brush/Alder-100
+MapCode 670
+	Brush/Alder 100
+
+>>SbLow-156
+MapCode 671
+	SbLow 156
+
+>>SbLow-194
+MapCode 672
+	SbLow 194
+
+>>PoDee-45
+MapCode 673
+	PoDee 45
+
+>>SbMx1-165
+MapCode 674
+	SbMx1 165
+
+>>PoDee-55
+MapCode 675
+	PoDee 55
+
+>>ConMx-55
+MapCode 676
+	ConMx 55
+
+>>PjMx1-9
+MapCode 677
+	PjMx1 9
+
+>>PjDee-61
+MapCode 678
+	PjDee 61
+
+>>ConMx-7
+MapCode 679
+	ConMx 7
+
+>>PjDee-48
+MapCode 680
+	PjDee 48
+
+>>SbDee-48
+MapCode 681
+	SbDee 48
+
+>>PjMx1-55
+MapCode 682
+	PjMx1 55
+
+>>SbDee-73
+MapCode 683
+	SbDee 73
+
+>>SbMx1-68
+MapCode 684
+	SbMx1 68
+
+>>SbLow-61
+MapCode 685
+	SbLow 61
+
+>>Brush/Alder-6
+MapCode 686
+	Brush/Alder 6
+
+>>Brush/Alder-7
+MapCode 687
+	Brush/Alder 7
+
+>>PjMx1-160
+MapCode 688
+	PjMx1 160
+
+>>PoDee-50
+MapCode 689
+	PoDee 50
+
+>>BwDom-10
+MapCode 690
+	BwDom 10
+
+>>ConMx-68
+MapCode 691
+	ConMx 68
+
+>>SbMx1-73
+MapCode 692
+	SbMx1 73
+
+>>OcLow-169
+MapCode 693
+	OcLow 169
+
+>>Brush/Alder-71
+MapCode 694
+	Brush/Alder 71
+
+>>Brush/Alder-96
+MapCode 695
+	Brush/Alder 96
+
+>>ConMx-48
+MapCode 696
+	ConMx 48
+
+>>HrdMx-30
+MapCode 697
+	HrdMx 30
+
+>>OthHd-10
+MapCode 698
+	OthHd 10
+
+>>ConMx-124
+MapCode 699
+	ConMx 124
+
+>>Brush/Alder-21
+MapCode 700
+	Brush/Alder 21
+
+>>Brush/Alder-76
+MapCode 701
+	Brush/Alder 76
+
+>>PjMx1-48
+MapCode 702
+	PjMx1 48
+
+>>ConMx-148
+MapCode 703
+	ConMx 148
+
+>>SbDee-148
+MapCode 704
+	SbDee 148
+
+>>ConMx-165
+MapCode 705
+	ConMx 165
+
+>>SbLow-9
+MapCode 706
+	SbLow 9
+
+>>OcLow-29
+MapCode 707
+	OcLow 29
+
+>>SbLow-148
+MapCode 708
+	SbLow 148
+
+>>PoDee-148
+MapCode 709
+	PoDee 148
+
+>>PjMx1-50
+MapCode 710
+	PjMx1 50
+
+>>SbDee-61
+MapCode 711
+	SbDee 61
+
+>>PoDee-48
+MapCode 712
+	PoDee 48
+
+>>PjMx1-148
+MapCode 713
+	PjMx1 148
+
+>>SbMx1-130
+MapCode 714
+	SbMx1 130
+
+>>SbMx1-30
+MapCode 715
+	SbMx1 30
+
+>>SbDee-67
+MapCode 716
+	SbDee 67
+
+>>SbMx1-83
+MapCode 717
+	SbMx1 83
+
+>>HrdMx-67
+MapCode 718
+	HrdMx 67
+
+>>OcLow-94
+MapCode 719
+	OcLow 94
+
+>>SbLow-93
+MapCode 720
+	SbLow 93
+
+>>PjDee-181
+MapCode 721
+	PjDee 181
+
+>>BwDom-140
+MapCode 722
+	BwDom 140
+
+>>PjMx1-110
+MapCode 723
+	PjMx1 110
+
+>>PjDee-121
+MapCode 724
+	PjDee 121
+
+>>PjMx1-45
+MapCode 725
+	PjMx1 45
+
+>>SbLow-67
+MapCode 726
+	SbLow 67
+
+>>HrdMx-72
+MapCode 727
+	HrdMx 72
+
+>>PoDee-115
+MapCode 728
+	PoDee 115
+
+>>OcLow-95
+MapCode 729
+	OcLow 95
+
+>>SbLow-181
+MapCode 730
+	SbLow 181
+
+>>ConMx-181
+MapCode 731
+	ConMx 181
+
+>>HrdMx-140
+MapCode 732
+	HrdMx 140
+
+>>SbMx1-150
+MapCode 733
+	SbMx1 150
+
+>>HrDom-78
+MapCode 734
+	HrDom 78
+
+>>BfDom-115
+MapCode 735
+	BfDom 115
+
+>>BfDom-95
+MapCode 736
+	BfDom 95
+
+>>OcLow-115
+MapCode 737
+	OcLow 115
+
+>>ConMx-113
+MapCode 738
+	ConMx 113
+
+>>PoDee-76
+MapCode 739
+	PoDee 76
+
+>>Brush/Alder-61
+MapCode 740
+	Brush/Alder 61
+
+>>ConMx-108
+MapCode 741
+	ConMx 108
+
+>>Brush/Alder-86
+MapCode 742
+	Brush/Alder 86
+
+>>ConMx-67
+MapCode 743
+	ConMx 67
+
+>>OcLow-99
+MapCode 744
+	OcLow 99
+
+>>PjDee-148
+MapCode 745
+	PjDee 148
+
+>>HrDom-67
+MapCode 746
+	HrDom 67
+
+>>SbMx1-113
+MapCode 747
+	SbMx1 113
+
+>>HrdMx-6
+MapCode 748
+	HrdMx 6
+
+>>SbDee-181
+MapCode 749
+	SbDee 181
+
+>>Brush/Alder-108
+MapCode 750
+	Brush/Alder 108
+
+>>SbMx1-140
+MapCode 751
+	SbMx1 140
+
+>>PjDee-78
+MapCode 752
+	PjDee 78
+
+>>SbLow-174
+MapCode 753
+	SbLow 174
+
+>>Brush/Alder-55
+MapCode 754
+	Brush/Alder 55
+
+>>HrdMx-7
+MapCode 755
+	HrdMx 7
+
+>>SbMx1-93
+MapCode 756
+	SbMx1 93
+
+>>PjMx1-104
+MapCode 757
+	PjMx1 104
+
+>>BwDom-159
+MapCode 758
+	BwDom 159
+
+>>SbMx1-104
+MapCode 759
+	SbMx1 104
+
+>>OcLow-89
+MapCode 760
+	OcLow 89
+
+>>SbDee-12
+MapCode 761
+	SbDee 12
+
+>>BfDom-81
+MapCode 762
+	BfDom 81
+
+>>Brush/Alder-10
+MapCode 763
+	Brush/Alder 10
+
+>>BwDom-88
+MapCode 764
+	BwDom 88
+
+>>SbMx1-106
+MapCode 765
+	SbMx1 106
+
+>>BfDom-88
+MapCode 766
+	BfDom 88
+
+>>ConMx-136
+MapCode 767
+	ConMx 136
+
+>>OcLow-136
+MapCode 768
+	OcLow 136
+
+>>OcLow-135
+MapCode 769
+	OcLow 135
+
+>>PjDee-12
+MapCode 770
+	PjDee 12
+
+>>SbDee-16
+MapCode 771
+	SbDee 16
+
+>>SbLow-102
+MapCode 772
+	SbLow 102
+
+>>PjDee-102
+MapCode 773
+	PjDee 102
+
+>>SbDee-102
+MapCode 774
+	SbDee 102
+
+>>BwDom-130
+MapCode 775
+	BwDom 130
+
+>>SbLow-136
+MapCode 776
+	SbLow 136
+
+>>ConMx-135
+MapCode 777
+	ConMx 135
+
+>>SbMx1-96
+MapCode 778
+	SbMx1 96
+
+>>BfDom-7
+MapCode 779
+	BfDom 7
+
+>>SbLow-16
+MapCode 780
+	SbLow 16
+
+>>ConMx-102
+MapCode 781
+	ConMx 102
+
+>>PjMx1-134
+MapCode 782
+	PjMx1 134
+
+>>SbLow-112
+MapCode 783
+	SbLow 112
+
+>>SbLow-134
+MapCode 784
+	SbLow 134
+
+>>ConMx-12
+MapCode 785
+	ConMx 12
+
+>>SbLow-98
+MapCode 786
+	SbLow 98
+
+>>SbMx1-87
+MapCode 787
+	SbMx1 87
+
+>>BfDom-91
+MapCode 788
+	BfDom 91
+
+>>SbLow-26
+MapCode 789
+	SbLow 26
+
+>>SbMx1-160
+MapCode 790
+	SbMx1 160
+
+>>SbDee-136
+MapCode 791
+	SbDee 136
+
+>>SbDee-77
+MapCode 792
+	SbDee 77
+
+>>PjDee-98
+MapCode 793
+	PjDee 98
+
+>>SbDee-98
+MapCode 794
+	SbDee 98
+
+>>PjMx1-77
+MapCode 795
+	PjMx1 77
+
+>>ConMx-26
+MapCode 796
+	ConMx 26
+
+>>ConMx-16
+MapCode 797
+	ConMx 16
+
+>>PjDee-16
+MapCode 798
+	PjDee 16
+
+>>SbDee-62
+MapCode 799
+	SbDee 62
+
+>>ConMx-77
+MapCode 800
+	ConMx 77
+
+>>SbDee-186
+MapCode 801
+	SbDee 186
+
+>>HrdMx-29
+MapCode 802
+	HrdMx 29
+
+>>ConMx-62
+MapCode 803
+	ConMx 62
+
+>>SbLow-77
+MapCode 804
+	SbLow 77
+
+>>SbLow-186
+MapCode 805
+	SbLow 186
+
+>>PjMx1-62
+MapCode 806
+	PjMx1 62
+
+>>PjMx1-86
+MapCode 807
+	PjMx1 86
+
+>>SbDee-26
+MapCode 808
+	SbDee 26
+
+>>SbMx1-103
+MapCode 809
+	SbMx1 103
+
+>>HrdMx-135
+MapCode 810
+	HrdMx 135
+
+>>ConMx-103
+MapCode 811
+	ConMx 103
+
+>>SbMx1-71
+MapCode 812
+	SbMx1 71
+
+>>HrdMx-116
+MapCode 813
+	HrdMx 116
+
+>>PoDee-160
+MapCode 814
+	PoDee 160
+
+>>HrdMx-71
+MapCode 815
+	HrdMx 71
+
+>>ConMx-98
+MapCode 816
+	ConMx 98
+
+>>PjDee-103
+MapCode 817
+	PjDee 103
+
+>>PjDee-97
+MapCode 818
+	PjDee 97
+
+>>SbDee-103
+MapCode 819
+	SbDee 103
+
+>>HrdMx-160
+MapCode 820
+	HrdMx 160
+
+>>HrdMx-130
+MapCode 821
+	HrdMx 130
+
+>>BfDom-74
+MapCode 822
+	BfDom 74
+
+>>PjMx1-21
+MapCode 823
+	PjMx1 21
+
+>>BfDom-86
+MapCode 824
+	BfDom 86
+
+>>SbMx1-10
+MapCode 825
+	SbMx1 10
+
+>>SbLow-103
+MapCode 826
+	SbLow 103
+
+>>PjMx1-81
+MapCode 827
+	PjMx1 81
+
+>>SbLow-18
+MapCode 828
+	SbLow 18
+
+>>PjMx1-139
+MapCode 829
+	PjMx1 139
+
+>>HrdMx-40
+MapCode 830
+	HrdMx 40
+
+>>SbLow-113
+MapCode 831
+	SbLow 113
+
+>>PjMx1-96
+MapCode 832
+	PjMx1 96
+
+>>HrdMx-10
+MapCode 833
+	HrdMx 10
+
+>>SbMx1-120
+MapCode 834
+	SbMx1 120
+
+>>HrDom-71
+MapCode 835
+	HrDom 71
+
+>>PjMx1-59
+MapCode 836
+	PjMx1 59
+
+>>BfDom-80
+MapCode 837
+	BfDom 80
+
+>>PjDee-26
+MapCode 838
+	PjDee 26
+
+>>SbDee-127
+MapCode 839
+	SbDee 127
+
+>>SbLow-127
+MapCode 840
+	SbLow 127
+
+>>SbMx1-34
+MapCode 841
+	SbMx1 34
+
+>>BfDom-71
+MapCode 842
+	BfDom 71
+
+>>Brush/Alder-103
+MapCode 843
+	Brush/Alder 103
+
+>>ConMx-34
+MapCode 844
+	ConMx 34
+
+>>BfDom-149
+MapCode 845
+	BfDom 149
+
+>>ConMx-134
+MapCode 846
+	ConMx 134
+
+>>SbDee-158
+MapCode 847
+	SbDee 158
+
+>>BfDom-29
+MapCode 848
+	BfDom 29
+
+>>BfDom-78
+MapCode 849
+	BfDom 78
+
+>>BfDom-83
+MapCode 850
+	BfDom 83
+
+>>SbLow-158
+MapCode 851
+	SbLow 158
+
+>>SbDee-23
+MapCode 852
+	SbDee 23
+
+>>BfDom-134
+MapCode 853
+	BfDom 134
+
+>>HrDom-179
+MapCode 854
+	HrDom 179
+
+>>HrdMx-78
+MapCode 855
+	HrdMx 78
+
+>>BfDom-130
+MapCode 856
+	BfDom 130
+
+>>OcLow-109
+MapCode 857
+	OcLow 109
+
+>>PjDee-77
+MapCode 858
+	PjDee 77
+
+>>Brush/Alder-140
+MapCode 859
+	Brush/Alder 140
+
+>>SbMx1-134
+MapCode 860
+	SbMx1 134
+
+>>BfDom-6
+MapCode 861
+	BfDom 6
+
+>>ConMx-158
+MapCode 862
+	ConMx 158
+
+>>HrdMx-133
+MapCode 863
+	HrdMx 133
+
+>>PjDee-62
+MapCode 864
+	PjDee 62
+
+>>PoDee-104
+MapCode 865
+	PoDee 104
+
+>>BfDom-66
+MapCode 866
+	BfDom 66
+
+>>BfDom-26
+MapCode 867
+	BfDom 26
+
+>>BfDom-179
+MapCode 868
+	BfDom 179
+
+>>BfDom-67
+MapCode 869
+	BfDom 67
+
+>>BwDom-30
+MapCode 870
+	BwDom 30
+
+>>Brush/Alder-91
+MapCode 871
+	Brush/Alder 91
+
+>>ConMx-23
+MapCode 872
+	ConMx 23
+
+>>Brush/Alder-70
+MapCode 873
+	Brush/Alder 70
+
+>>BfDom-21
+MapCode 874
+	BfDom 21
+
+>>SbLow-23
+MapCode 875
+	SbLow 23
+
+>>SbLow-68
+MapCode 876
+	SbLow 68
+
+>>Brush/Alder-89
+MapCode 877
+	Brush/Alder 89
+
+>>Brush/Alder-81
+MapCode 878
+	Brush/Alder 81
+
+>>Brush/Alder-23
+MapCode 879
+	Brush/Alder 23
+
+>>SbDee-54
+MapCode 880
+	SbDee 54
+
+>>ConMx-49
+MapCode 881
+	ConMx 49
+
+>>HrDom-81
+MapCode 882
+	HrDom 81
+
+>>SbMx1-81
+MapCode 883
+	SbMx1 81
+
+>>PjDee-110
+MapCode 884
+	PjDee 110
+
+>>OcLow-59
+MapCode 885
+	OcLow 59
+
+>>SbDee-14
+MapCode 886
+	SbDee 14
+
+>>BwDom-59
+MapCode 887
+	BwDom 59
+
+>>PrDom-149
+MapCode 888
+	PrDom 149
+
+>>ConMx-14
+MapCode 889
+	ConMx 14
+
+>>SbDee-219
+MapCode 890
+	SbDee 219
+
+>>HrdMx-59
+MapCode 891
+	HrdMx 59
+
+>>PrDom-60
+MapCode 892
+	PrDom 60
+
+>>SbDee-25
+MapCode 893
+	SbDee 25
+
+>>PjDee-219
+MapCode 894
+	PjDee 219
+
+>>HrdMx-88
+MapCode 895
+	HrdMx 88
+
+>>PjDee-25
+MapCode 896
+	PjDee 25
+
+>>SbLow-219
+MapCode 897
+	SbLow 219
+
+>>ConMx-219
+MapCode 898
+	ConMx 219
+
+>>HrdMx-96
+MapCode 899
+	HrdMx 96
+
+>>PjDee-14
+MapCode 900
+	PjDee 14
+
+>>SbLow-14
+MapCode 901
+	SbLow 14
+
+>>PjDee-49
+MapCode 902
+	PjDee 49
+
+>>BwDom-78
+MapCode 903
+	BwDom 78
+
+>>HrDom-59
+MapCode 904
+	HrDom 59
+
+>>PjMx1-78
+MapCode 905
+	PjMx1 78
+
+>>PoDee-29
+MapCode 906
+	PoDee 29
+
+>>BfDom-139
+MapCode 907
+	BfDom 139
+
+>>BwDom-8
+MapCode 908
+	BwDom 8
+
+>>SbLow-25
+MapCode 909
+	SbLow 25
+
+>>SbDee-13
+MapCode 910
+	SbDee 13
+
+>>SbDee-49
+MapCode 911
+	SbDee 49
+
+>>SbLow-49
+MapCode 912
+	SbLow 49
+
+>>HrDom-8
+MapCode 913
+	HrDom 8
+
+>>BwDom-154
+MapCode 914
+	BwDom 154
+
+>>SbMx1-78
+MapCode 915
+	SbMx1 78
+
+>>SbDee-22
+MapCode 916
+	SbDee 22
+
+>>HrDom-150
+MapCode 917
+	HrDom 150
+
+>>PjMx1-14
+MapCode 918
+	PjMx1 14
+
+>>SbMx1-14
+MapCode 919
+	SbMx1 14
+
+>>OcLow-78
+MapCode 920
+	OcLow 78
+
+>>OcLow-108
+MapCode 921
+	OcLow 108
+
+>>PjMx1-8
+MapCode 922
+	PjMx1 8
+
+>>PjDee-68
+MapCode 923
+	PjDee 68
+
+>>BfDom-65
+MapCode 924
+	BfDom 65
+
+>>PjMx1-108
+MapCode 925
+	PjMx1 108
+
+>>SbLow-8
+MapCode 926
+	SbLow 8
+
+>>PoDee-68
+MapCode 927
+	PoDee 68
+
+>>ConMx-22
+MapCode 928
+	ConMx 22
+
+>>Brush/Alder-99
+MapCode 929
+	Brush/Alder 99
+
+>>ConMx-209
+MapCode 930
+	ConMx 209
+
+>>PjMx1-209
+MapCode 931
+	PjMx1 209
+
+>>PjDee-22
+MapCode 932
+	PjDee 22
+
+>>SbLow-209
+MapCode 933
+	SbLow 209
+
+>>HrDom-104
+MapCode 934
+	HrDom 104
+
+>>HrdMx-124
+MapCode 935
+	HrdMx 124
+
+>>SbMx1-124
+MapCode 936
+	SbMx1 124
+
+>>ConMx-111
+MapCode 937
+	ConMx 111
+
+>>Brush/Alder-65
+MapCode 938
+	Brush/Alder 65
+
+>>SbMx1-155
+MapCode 939
+	SbMx1 155
+
+>>SbLow-22
+MapCode 940
+	SbLow 22
+
+>>SbDee-131
+MapCode 941
+	SbDee 131
+
+>>ConMx-13
+MapCode 942
+	ConMx 13
+
+>>PjMx1-13
+MapCode 943
+	PjMx1 13
+
+>>PjDee-13
+MapCode 944
+	PjDee 13
+
+>>ConMx-9
+MapCode 945
+	ConMx 9
+
+>>BfDom-70
+MapCode 946
+	BfDom 70
+
+>>ConMx-194
+MapCode 947
+	ConMx 194
+
+>>BfDom-160
+MapCode 948
+	BfDom 160
+
+>>SbMx1-8
+MapCode 949
+	SbMx1 8
+
+>>HrDom-160
+MapCode 950
+	HrDom 160
+
+>>PoDee-81
+MapCode 951
+	PoDee 81
+
+>>Brush/Alder-144
+MapCode 952
+	Brush/Alder 144
+
+>>SbLow-13
+MapCode 953
+	SbLow 13
+
+>>SbLow-15
+MapCode 954
+	SbLow 15
+
+>>BwDom-81
+MapCode 955
+	BwDom 81
+
+>>Brush/Alder-101
+MapCode 956
+	Brush/Alder 101
+
+>>PjDee-73
+MapCode 957
+	PjDee 73
+
+>>PjMx1-6
+MapCode 958
+	PjMx1 6
+
+>>PjMx1-83
+MapCode 959
+	PjMx1 83
+
+>>PjMx1-73
+MapCode 960
+	PjMx1 73
+
+>>ConMx-73
+MapCode 961
+	ConMx 73
+
+>>SbMx1-13
+MapCode 962
+	SbMx1 13
+
+>>SbLow-73
+MapCode 963
+	SbLow 73
+
+>>ConMx-15
+MapCode 964
+	ConMx 15
+
+>>PjMx1-174
+MapCode 965
+	PjMx1 174
+
+>>PoDee-86
+MapCode 966
+	PoDee 86
+
+>>HrdMx-86
+MapCode 967
+	HrdMx 86
+
+>>BfDom-92
+MapCode 968
+	BfDom 92
+
+>>SbMx1-92
+MapCode 969
+	SbMx1 92
+
+>>BfDom-85
+MapCode 970
+	BfDom 85
+
+>>BfDom-75
+MapCode 971
+	BfDom 75
+
+>>HrDom-174
+MapCode 972
+	HrDom 174
+
+>>BfDom-165
+MapCode 973
+	BfDom 165
+
+>>SbDee-156
+MapCode 974
+	SbDee 156
+
+>>SbMx1-125
+MapCode 975
+	SbMx1 125
+
+>>HrDom-92
+MapCode 976
+	HrDom 92
+
+>>Brush/Alder-139
+MapCode 977
+	Brush/Alder 139
+
+>>BfDom-155
+MapCode 978
+	BfDom 155
+
+>>BfDom-145
+MapCode 979
+	BfDom 145
+
+>>HrDom-165
+MapCode 980
+	HrDom 165
+
+>>PoDee-73
+MapCode 981
+	PoDee 73
+
+>>PoDee-8
+MapCode 982
+	PoDee 8
+
+>>HrdMx-155
+MapCode 983
+	HrdMx 155
+
+>>BfDom-135
+MapCode 984
+	BfDom 135
+
+>>PoDee-64
+MapCode 985
+	PoDee 64
+
+>>PjDee-156
+MapCode 986
+	PjDee 156
+
+>>HrdMx-132
+MapCode 987
+	HrdMx 132
+
+>>ConMx-141
+MapCode 988
+	ConMx 141
+
+>>SbDee-141
+MapCode 989
+	SbDee 141
+
+>>SbDee-51
+MapCode 990
+	SbDee 51
+
+>>Brush/Alder-66
+MapCode 991
+	Brush/Alder 66
+
+>>HrdMx-106
+MapCode 992
+	HrdMx 106
+
+>>ConMx-51
+MapCode 993
+	ConMx 51
+
+>>SbDee-153
+MapCode 994
+	SbDee 153
+
+>>BwDom-106
+MapCode 995
+	BwDom 106
+
+>>SbMx1-66
+MapCode 996
+	SbMx1 66
+
+>>SbLow-51
+MapCode 997
+	SbLow 51
+
+>>BwDom-17
+MapCode 998
+	BwDom 17
+
+>>BwDom-93
+MapCode 999
+	BwDom 93
+
+>>PjMx1-68
+MapCode 1000
+	PjMx1 68
+
+>>BfDom-12
+MapCode 1001
+	BfDom 12
+
+>>PjMx1-106
+MapCode 1002
+	PjMx1 106
+
+>>PjMx1-66
+MapCode 1003
+	PjMx1 66
+
+>>SbLow-56
+MapCode 1004
+	SbLow 56
+
+>>ConMx-145
+MapCode 1005
+	ConMx 145
+
+>>SbDee-17
+MapCode 1006
+	SbDee 17
+
+>>OcLow-119
+MapCode 1007
+	OcLow 119
+
+>>ConMx-56
+MapCode 1008
+	ConMx 56
+
+>>PoDee-74
+MapCode 1009
+	PoDee 74
+
+>>BwDom-155
+MapCode 1010
+	BwDom 155
+
+>>ConMx-153
+MapCode 1011
+	ConMx 153
+
+>>PjMx1-17
+MapCode 1012
+	PjMx1 17
+
+>>SbLow-12
+MapCode 1013
+	SbLow 12
+
+>>BfDom-132
+MapCode 1014
+	BfDom 132
+
+>>HrDom-7
+MapCode 1015
+	HrDom 7
+
+>>PjMx1-12
+MapCode 1016
+	PjMx1 12
+
+>>SbMx1-7
+MapCode 1017
+	SbMx1 7
+
+>>HrdMx-174
+MapCode 1018
+	HrdMx 174
+
+>>SbMx1-12
+MapCode 1019
+	SbMx1 12
+
+>>BfDom-77
+MapCode 1020
+	BfDom 77
+
+>>HrdMx-153
+MapCode 1021
+	HrdMx 153
+
+>>HrdMx-14
+MapCode 1022
+	HrdMx 14
+
+>>PjDee-131
+MapCode 1023
+	PjDee 131
+
+>>PoDee-83
+MapCode 1024
+	PoDee 83
+
+>>BwDom-153
+MapCode 1025
+	BwDom 153
+
+>>PjMx1-131
+MapCode 1026
+	PjMx1 131
+
+>>SbMx1-131
+MapCode 1027
+	SbMx1 131
+
+>>ConMx-118
+MapCode 1028
+	ConMx 118
+
+>>SbDee-118
+MapCode 1029
+	SbDee 118
+
+>>ConMx-17
+MapCode 1030
+	ConMx 17
+
+>>PjDee-141
+MapCode 1031
+	PjDee 141
+
+>>PjDee-118
+MapCode 1032
+	PjDee 118
+
+>>BfDom-150
+MapCode 1033
+	BfDom 150
+
+>>SbDee-171
+MapCode 1034
+	SbDee 171
+
+>>PjDee-171
+MapCode 1035
+	PjDee 171
+
+>>PoDee-118
+MapCode 1036
+	PoDee 118
+
+>>SbLow-118
+MapCode 1037
+	SbLow 118
+
+>>ConMx-171
+MapCode 1038
+	ConMx 171
+
+>>OcLow-88
+MapCode 1039
+	OcLow 88
+
+>>PoDee-7
+MapCode 1040
+	PoDee 7
+
+>>SbLow-171
+MapCode 1041
+	SbLow 171
+
+>>PjDee-128
+MapCode 1042
+	PjDee 128
+
+>>BfDom-164
+MapCode 1043
+	BfDom 164
+
+>>HrDom-154
+MapCode 1044
+	HrDom 154
+
+>>SbMx1-123
+MapCode 1045
+	SbMx1 123
+
+>>HrdMx-17
+MapCode 1046
+	HrdMx 17
+
+>>HrDom-29
+MapCode 1047
+	HrDom 29
+
+>>PjMx1-101
+MapCode 1048
+	PjMx1 101
+
+>>HrdMx-73
+MapCode 1049
+	HrdMx 73
+
+>>OcLow-73
+MapCode 1050
+	OcLow 73
+
+>>BwDom-73
+MapCode 1051
+	BwDom 73
+
+>>BfDom-14
+MapCode 1052
+	BfDom 14
+
+>>BfDom-17
+MapCode 1053
+	BfDom 17
+
+>>PjMx1-91
+MapCode 1054
+	PjMx1 91
+
+>>SbLow-128
+MapCode 1055
+	SbLow 128
+
+>>PjMx1-7
+MapCode 1056
+	PjMx1 7
+
+>>SbMx1-72
+MapCode 1057
+	SbMx1 72
+
+>>PjMx1-103
+MapCode 1058
+	PjMx1 103
+
+>>PjMx1-72
+MapCode 1059
+	PjMx1 72
+
+>>PoDee-98
+MapCode 1060
+	PoDee 98
+
+>>ConMx-53
+MapCode 1061
+	ConMx 53
+
+>>SbDee-53
+MapCode 1062
+	SbDee 53
+
+>>PoDee-123
+MapCode 1063
+	PoDee 123
+
+>>PjDee-124
+MapCode 1064
+	PjDee 124
+
+>>SbDee-137
+MapCode 1065
+	SbDee 137
+
+>>PjDee-17
+MapCode 1066
+	PjDee 17
+
+>>SbMx1-17
+MapCode 1067
+	SbMx1 17
+
+>>BwDom-164
+MapCode 1068
+	BwDom 164
+
+>>SbLow-53
+MapCode 1069
+	SbLow 53
+
+>>PjDee-123
+MapCode 1070
+	PjDee 123
+
+>>PjMx1-111
+MapCode 1071
+	PjMx1 111
+
+>>PjDee-93
+MapCode 1072
+	PjDee 93
+
+>>PjMx1-124
+MapCode 1073
+	PjMx1 124
+
+>>BwDom-14
+MapCode 1074
+	BwDom 14
+
+>>HrDom-69
+MapCode 1075
+	HrDom 69
+
+>>PjMx1-61
+MapCode 1076
+	PjMx1 61
+
+>>BwDom-83
+MapCode 1077
+	BwDom 83
+
+>>PjDee-53
+MapCode 1078
+	PjDee 53
+
+>>OcLow-8
+MapCode 1079
+	OcLow 8
+
+>>SbDee-18
+MapCode 1080
+	SbDee 18
+
+>>HrdMx-66
+MapCode 1081
+	HrdMx 66
+
+>>SbLow-63
+MapCode 1082
+	SbLow 63
+
+>>OcLow-68
+MapCode 1083
+	OcLow 68
+
+>>PoDee-12
+MapCode 1084
+	PoDee 12
+
+>>PjDee-54
+MapCode 1085
+	PjDee 54
+
+>>HrdMx-111
+MapCode 1086
+	HrdMx 111
+
+>>BwDom-68
+MapCode 1087
+	BwDom 68
+
+>>SbLow-200
+MapCode 1088
+	SbLow 200
+
+>>SbDee-200
+MapCode 1089
+	SbDee 200
+
+>>BwDom-165
+MapCode 1090
+	BwDom 165
+
+>>HrDom-169
+MapCode 1091
+	HrDom 169
+
+>>PjDee-58
+MapCode 1092
+	PjDee 58
+
+>>SbDee-58
+MapCode 1093
+	SbDee 58
+
+>>PjDee-200
+MapCode 1094
+	PjDee 200
+
+>>PjMx1-219
+MapCode 1095
+	PjMx1 219
+
+>>PjDee-113
+MapCode 1096
+	PjDee 113
+
+>>HrdMx-91
+MapCode 1097
+	HrdMx 91
+
+>>SbLow-58
+MapCode 1098
+	SbLow 58
+
+>>PjDee-142
+MapCode 1099
+	PjDee 142
+
+>>SbLow-142
+MapCode 1100
+	SbLow 142
+
+>>Brush/Alder-68
+MapCode 1101
+	Brush/Alder 68
+
+>>ConMx-143
+MapCode 1102
+	ConMx 143
+
+>>SbDee-143
+MapCode 1103
+	SbDee 143
+
+>>ConMx-58
+MapCode 1104
+	ConMx 58
+
+>>ConMx-200
+MapCode 1105
+	ConMx 200
+
+>>SbDee-142
+MapCode 1106
+	SbDee 142
+
+>>PjMx1-16
+MapCode 1107
+	PjMx1 16
+
+>>HrdMx-49
+MapCode 1108
+	HrdMx 49
+
+>>Brush/Alder-73
+MapCode 1109
+	Brush/Alder 73
+
+>>PjDee-18
+MapCode 1110
+	PjDee 18
+
+>>Brush/Alder-164
+MapCode 1111
+	Brush/Alder 164
+
+>>PjDee-143
+MapCode 1112
+	PjDee 143
+
+>>SbMx1-15
+MapCode 1113
+	SbMx1 15
+
+>>SbLow-143
+MapCode 1114
+	SbLow 143
+
+>>SbMx1-18
+MapCode 1115
+	SbMx1 18
+
+>>PoDee-128
+MapCode 1116
+	PoDee 128
+
+>>BwDom-108
+MapCode 1117
+	BwDom 108
+
+>>OcLow-12
+MapCode 1118
+	OcLow 12
+
+>>HrdMx-108
+MapCode 1119
+	HrdMx 108
+
+>>PoDee-58
+MapCode 1120
+	PoDee 58
+
+>>PjMx1-58
+MapCode 1121
+	PjMx1 58
+
+>>SbLow-62
+MapCode 1122
+	SbLow 62
+
+>>BwDom-9
+MapCode 1123
+	BwDom 9
+
+>>HrDom-18
+MapCode 1124
+	HrDom 18
+
+>>BwDom-49
+MapCode 1125
+	BwDom 49
+
+>>Brush/Alder-62
+MapCode 1126
+	Brush/Alder 62
+
+>>HrDom-82
+MapCode 1127
+	HrDom 82
+
+>>PoDee-6
+MapCode 1128
+	PoDee 6
+
+>>HrDom-13
+MapCode 1129
+	HrDom 13
+
+>>SbLow-20
+MapCode 1130
+	SbLow 20
+
+>>ConMx-2
+MapCode 1131
+	ConMx 2
+
+>>PjDee-2
+MapCode 1132
+	PjDee 2
+
+>>SbDee-2
+MapCode 1133
+	SbDee 2
+
+>>PoDee-103
+MapCode 1134
+	PoDee 103
+
+>>HrDom-73
+MapCode 1135
+	HrDom 73
+
+>>PoDee-21
+MapCode 1136
+	PoDee 21
+
+>>Brush/Alder-78
+MapCode 1137
+	Brush/Alder 78
+
+>>SbLow-2
+MapCode 1138
+	SbLow 2
+
+>>PjDee-33
+MapCode 1139
+	PjDee 33
+
+>>ConMx-20
+MapCode 1140
+	ConMx 20
+
+>>PjDee-28
+MapCode 1141
+	PjDee 28
+
+>>ConMx-28
+MapCode 1142
+	ConMx 28
+
+>>SbLow-28
+MapCode 1143
+	SbLow 28
+
+>>Brush/Alder-88
+MapCode 1144
+	Brush/Alder 88
+
+>>SbDee-28
+MapCode 1145
+	SbDee 28
+
+>>SbLow-33
+MapCode 1146
+	SbLow 33
+
+>>ConMx-18
+MapCode 1147
+	ConMx 18
+
+>>ConMx-33
+MapCode 1148
+	ConMx 33
+
+>>PoDee-155
+MapCode 1149
+	PoDee 155
+
+>>PoDee-9
+MapCode 1150
+	PoDee 9
+
+>>SbMx1-91
+MapCode 1151
+	SbMx1 91
+
+>>HrdMx-76
+MapCode 1152
+	HrdMx 76
+
+>>PjDee-180
+MapCode 1153
+	PjDee 180
+
+>>SbLow-180
+MapCode 1154
+	SbLow 180
+
+>>SbDee-180
+MapCode 1155
+	SbDee 180
+
+>>Brush/Alder-18
+MapCode 1156
+	Brush/Alder 18
+
+>>SbDee-33
+MapCode 1157
+	SbDee 33
+
+>>SbMx1-9
+MapCode 1158
+	SbMx1 9
+
+>>Brush/Alder-29
+MapCode 1159
+	Brush/Alder 29
+
+>>BfDom-68
+MapCode 1160
+	BfDom 68
+
+>>BwDom-58
+MapCode 1161
+	BwDom 58
+
+>>SbLow-48
+MapCode 1162
+	SbLow 48
+
+>>PjMx1-18
+MapCode 1163
+	PjMx1 18
+
+>>PoDee-18
+MapCode 1164
+	PoDee 18
+
+>>HrDom-9
+MapCode 1165
+	HrDom 9
+
+>>SbDee-170
+MapCode 1166
+	SbDee 170
+
+>>PjDee-170
+MapCode 1167
+	PjDee 170
+
+>>Brush/Alder-87
+MapCode 1168
+	Brush/Alder 87
+
+>>SbLow-170
+MapCode 1169
+	SbLow 170
+
+>>HrdMx-8
+MapCode 1170
+	HrdMx 8
+
+>>BfDom-58
+MapCode 1171
+	BfDom 58
+
+>>PjMx1-28
+MapCode 1172
+	PjMx1 28
+
+>>PjMx1-98
+MapCode 1173
+	PjMx1 98
+
+>>PjDee-20
+MapCode 1174
+	PjDee 20
+
+>>HrdMx-12
+MapCode 1175
+	HrdMx 12
+
+>>Brush/Alder-90
+MapCode 1176
+	Brush/Alder 90
+
+>>SbDee-20
+MapCode 1177
+	SbDee 20
+
+>>PjMx1-2
+MapCode 1178
+	PjMx1 2
+
+>>BfDom-93
+MapCode 1179
+	BfDom 93
+
+>>SbDee-138
+MapCode 1180
+	SbDee 138
+
+>>BwDom-6
+MapCode 1181
+	BwDom 6
+
+>>PjMx1-56
+MapCode 1182
+	PjMx1 56
+
+>>PoDee-2
+MapCode 1183
+	PoDee 2
+
+>>SbMx1-110
+MapCode 1184
+	SbMx1 110
+
+>>PjDee-138
+MapCode 1185
+	PjDee 138
+
+>>HrDom-155
+MapCode 1186
+	HrDom 155
+
+>>SbMx1-56
+MapCode 1187
+	SbMx1 56
+
+>>BfDom-110
+MapCode 1188
+	BfDom 110
+
+>>BfDom-55
+MapCode 1189
+	BfDom 55
+
+>>SbDee-52
+MapCode 1190
+	SbDee 52
+
+>>Brush/Alder-58
+MapCode 1191
+	Brush/Alder 58
+
+>>SbMx1-20
+MapCode 1192
+	SbMx1 20
+
+>>BfDom-56
+MapCode 1193
+	BfDom 56
+
+>>Brush/Alder-98
+MapCode 1194
+	Brush/Alder 98
+
+>>BfDom-103
+MapCode 1195
+	BfDom 103
+
+>>SbLow-138
+MapCode 1196
+	SbLow 138
+
+>>BfDom-100
+MapCode 1197
+	BfDom 100
+
+>>SbDee-43
+MapCode 1198
+	SbDee 43
+
+>>HrdMx-110
+MapCode 1199
+	HrdMx 110
+
+>>PjMx1-38
+MapCode 1200
+	PjMx1 38
+
+>>PjDee-43
+MapCode 1201
+	PjDee 43
+
+>>PjDee-67
+MapCode 1202
+	PjDee 67
+
+>>BfDom-73
+MapCode 1203
+	BfDom 73
+
+>>ConMx-11
+MapCode 1204
+	ConMx 11
+
+>>PjMx1-20
+MapCode 1205
+	PjMx1 20
+
+>>BwDom-18
+MapCode 1206
+	BwDom 18
+
+>>BfDom-28
+MapCode 1207
+	BfDom 28
+
+>>ConMx-138
+MapCode 1208
+	ConMx 138
+
+>>SbLow-11
+MapCode 1209
+	SbLow 11
+
+>>PjDee-11
+MapCode 1210
+	PjDee 11
+
+>>BwDom-7
+MapCode 1211
+	BwDom 7
+
+>>SbLow-5
+MapCode 1212
+	SbLow 5
+
+>>ConMx-5
+MapCode 1213
+	ConMx 5
+
+>>OthHd-70
+MapCode 1214
+	OthHd 70
+
+>>PjMx1-11
+MapCode 1215
+	PjMx1 11
+
+>>BfDom-20
+MapCode 1216
+	BfDom 20
+
+>>PjMx1-1
+MapCode 1217
+	PjMx1 1
+
+>>BfDom-90
+MapCode 1218
+	BfDom 90
+
+>>PjDee-1
+MapCode 1219
+	PjDee 1
+
+>>PoDee-57
+MapCode 1220
+	PoDee 57
+
+>>SbMx1-5
+MapCode 1221
+	SbMx1 5
+
+>>PoDee-5
+MapCode 1222
+	PoDee 5
+
+>>SbLow-1
+MapCode 1223
+	SbLow 1
+
+>>BwDom-74
+MapCode 1224
+	BwDom 74
+
+>>HrDom-10
+MapCode 1225
+	HrDom 10
+
+>>ConMx-43
+MapCode 1226
+	ConMx 43
+
+>>SbLow-43
+MapCode 1227
+	SbLow 43
+
+>>PjMx1-128
+MapCode 1228
+	PjMx1 128
+
+>>PjMx1-158
+MapCode 1229
+	PjMx1 158
+
+>>PjDee-158
+MapCode 1230
+	PjDee 158
+
+>>PoDee-145
+MapCode 1231
+	PoDee 145
+
+>>PoDee-1
+MapCode 1232
+	PoDee 1
+
+>>PjMx1-33
+MapCode 1233
+	PjMx1 33
+
+>>ConMx-1
+MapCode 1234
+	ConMx 1
+
+>>HrdMx-125
+MapCode 1235
+	HrdMx 125
+
+>>SbMx1-1
+MapCode 1236
+	SbMx1 1
+
+>>PoDee-33
+MapCode 1237
+	PoDee 33
+
+>>HrdMx-55
+MapCode 1238
+	HrdMx 55
+
+>>HrDom-55
+MapCode 1239
+	HrDom 55
+
+>>HrdMx-58
+MapCode 1240
+	HrdMx 58
+
+>>PoDee-52
+MapCode 1241
+	PoDee 52
+
+>>SbLow-57
+MapCode 1242
+	SbLow 57
+
+>>SbDee-1
+MapCode 1243
+	SbDee 1
+
+>>Brush/Alder-138
+MapCode 1244
+	Brush/Alder 138
+
+>>PjMx1-116
+MapCode 1245
+	PjMx1 116
+
+>>SbLow-52
+MapCode 1246
+	SbLow 52
+
+>>SbDee-190
+MapCode 1247
+	SbDee 190
+
+>>HrdMx-52
+MapCode 1248
+	HrdMx 52
+
+>>SbDee-24
+MapCode 1249
+	SbDee 24
+
+>>HrDom-58
+MapCode 1250
+	HrDom 58
+
+>>SbDee-5
+MapCode 1251
+	SbDee 5
+
+>>HrDom-91
+MapCode 1252
+	HrDom 91
+
+>>OcLow-110
+MapCode 1253
+	OcLow 110
+
+>>OcLow-20
+MapCode 1254
+	OcLow 20
+
+>>PjDee-24
+MapCode 1255
+	PjDee 24
+
+>>SbLow-24
+MapCode 1256
+	SbLow 24
+
+>>OcLow-121
+MapCode 1257
+	OcLow 121
+
+>>HrDom-5
+MapCode 1258
+	HrDom 5
+
+>>PjMx1-121
+MapCode 1259
+	PjMx1 121
+
+>>ConMx-52
+MapCode 1260
+	ConMx 52
+
+>>ConMx-24
+MapCode 1261
+	ConMx 24
+
+>>PjMx1-141
+MapCode 1262
+	PjMx1 141
+
+>>PjMx1-43
+MapCode 1263
+	PjMx1 43
+
+>>PjDee-5
+MapCode 1264
+	PjDee 5
+
+>>HrdMx-1
+MapCode 1265
+	HrdMx 1
+
+>>OcLow-83
+MapCode 1266
+	OcLow 83
+
+>>SbMx1-111
+MapCode 1267
+	SbMx1 111
+
+>>PjMx1-142
+MapCode 1268
+	PjMx1 142
+
+>>SbMx1-43
+MapCode 1269
+	SbMx1 43
+
+>>PoDee-66
+MapCode 1270
+	PoDee 66
+
+>>Brush/Alder-17
+MapCode 1271
+	Brush/Alder 17
+
+>>PoDee-11
+MapCode 1272
+	PoDee 11
+
+>>HrDom-1
+MapCode 1273
+	HrDom 1
+
+>>OcLow-11
+MapCode 1274
+	OcLow 11
+
+>>PjDee-127
+MapCode 1275
+	PjDee 127
+
+>>Brush/Alder-128
+MapCode 1276
+	Brush/Alder 128
+
+>>Brush/Alder-20
+MapCode 1277
+	Brush/Alder 20
+
+>>Brush/Alder-115
+MapCode 1278
+	Brush/Alder 115
+
+>>HrDom-145
+MapCode 1279
+	HrDom 145
+
+>>PoDee-28
+MapCode 1280
+	PoDee 28
+
+>>SbMx1-141
+MapCode 1281
+	SbMx1 141
+
+>>Brush/Alder-97
+MapCode 1282
+	Brush/Alder 97
+
+>>Brush/Alder-28
+MapCode 1283
+	Brush/Alder 28
+
+>>SbMx1-33
+MapCode 1284
+	SbMx1 33
+
+>>PjMx1-23
+MapCode 1285
+	PjMx1 23
+
+>>HrDom-128
+MapCode 1286
+	HrDom 128
+
+>>HrDom-107
+MapCode 1287
+	HrDom 107
+
+>>PrDom-119
+MapCode 1288
+	PrDom 119
+
+>>HrDom-121
+MapCode 1289
+	HrDom 121
+
+>>SbMx1-107
+MapCode 1290
+	SbMx1 107
+
+>>SbMx1-108
+MapCode 1291
+	SbMx1 108
+
+>>PjMx1-118
+MapCode 1292
+	PjMx1 118
+
+>>HrDom-6
+MapCode 1293
+	HrDom 6
+
+>>OthHd-60
+MapCode 1294
+	OthHd 60
+
+>>OthHd-99
+MapCode 1295
+	OthHd 99
+
+>>OcLow-28
+MapCode 1296
+	OcLow 28
+
+>>SbMx1-128
+MapCode 1297
+	SbMx1 128
+
+>>SbLow-17
+MapCode 1298
+	SbLow 17
+
+>>HrDom-118
+MapCode 1299
+	HrDom 118
+
+>>OthHd-94
+MapCode 1300
+	OthHd 94
+
+>>HrdMx-77
+MapCode 1301
+	HrdMx 77
+
+>>OthHd-84
+MapCode 1302
+	OthHd 84
+
+>>OthHd-85
+MapCode 1303
+	OthHd 85
+
+>>HrDom-108
+MapCode 1304
+	HrDom 108
+
+>>SbMx1-101
+MapCode 1305
+	SbMx1 101
+
+>>PrDom-99
+MapCode 1306
+	PrDom 99
+
+>>PrDom-159
+MapCode 1307
+	PrDom 159
+
+>>PrDom-84
+MapCode 1308
+	PrDom 84
+
+>>HrDom-93
+MapCode 1309
+	HrDom 93
+
+>>HrdMx-98
+MapCode 1310
+	HrdMx 98
+
+>>HrDom-101
+MapCode 1311
+	HrDom 101
+
+>>BwDom-23
+MapCode 1312
+	BwDom 23
+
+>>BfDom-23
+MapCode 1313
+	BfDom 23
+
+>>PoDee-13
+MapCode 1314
+	PoDee 13
+
+>>HrdMx-68
+MapCode 1315
+	HrdMx 68
+
+>>BwDom-91
+MapCode 1316
+	BwDom 91
+
+>>ConMx-170
+MapCode 1317
+	ConMx 170
+
+>>PrDom-95
+MapCode 1318
+	PrDom 95
+
+>>HrDom-68
+MapCode 1319
+	HrDom 68
+
+>>OcLow-75
+MapCode 1320
+	OcLow 75
+
+>>BwDom-121
+MapCode 1321
+	BwDom 121
+
+>>OthHd-79
+MapCode 1322
+	OthHd 79
+
+>>HrDom-111
+MapCode 1323
+	HrDom 111
+
+>>HrdMx-20
+MapCode 1324
+	HrdMx 20
+
+>>HrdMx-115
+MapCode 1325
+	HrdMx 115
+
+>>HrDom-15
+MapCode 1326
+	HrDom 15
+
+>>PjMx1-53
+MapCode 1327
+	PjMx1 53
+
+>>PrDom-79
+MapCode 1328
+	PrDom 79
+
+>>OthHd-89
+MapCode 1329
+	OthHd 89
+
+>>BfDom-82
+MapCode 1330
+	BfDom 82
+
+>>OcLow-82
+MapCode 1331
+	OcLow 82
+
+>>BfDom-76
+MapCode 1332
+	BfDom 76
+
+>>PrDom-75
+MapCode 1333
+	PrDom 75
+
+>>PoDee-53
+MapCode 1334
+	PoDee 53
+
+>>PrDom-139
+MapCode 1335
+	PrDom 139
+
+>>HrdMx-82
+MapCode 1336
+	HrdMx 82
+
+>>PoDee-20
+MapCode 1337
+	PoDee 20
+
+>>BfDom-140
+MapCode 1338
+	BfDom 140
+
+>>HrDom-103
+MapCode 1339
+	HrDom 103
+
+>>PoDee-82
+MapCode 1340
+	PoDee 82
+
+>>PoDee-16
+MapCode 1341
+	PoDee 16
+
+>>PoDee-38
+MapCode 1342
+	PoDee 38
+
+>>SbMx1-38
+MapCode 1343
+	SbMx1 38
+
+>>OthHd-149
+MapCode 1344
+	OthHd 149
+
+>>BwDom-20
+MapCode 1345
+	BwDom 20
+
+>>PoDee-156
+MapCode 1346
+	PoDee 156
+
+>>HrdMx-63
+MapCode 1347
+	HrdMx 63
+
+>>SbMx1-58
+MapCode 1348
+	SbMx1 58
+
+>>PjMx1-107
+MapCode 1349
+	PjMx1 107
+
+>>OcLow-101
+MapCode 1350
+	OcLow 101
+
+>>PrDom-109
+MapCode 1351
+	PrDom 109
+
+>>PrDom-130
+MapCode 1352
+	PrDom 130
+
+>>BwDom-135
+MapCode 1353
+	BwDom 135
+
+>>PrDom-129
+MapCode 1354
+	PrDom 129
+
+>>SbMx1-67
+MapCode 1355
+	SbMx1 67
+
+>>SbMx1-118
+MapCode 1356
+	SbMx1 118
+
+>>PrDom-113
+MapCode 1357
+	PrDom 113
+
+>>OcLow-113
+MapCode 1358
+	OcLow 113
+
+>>OcLow-104
+MapCode 1359
+	OcLow 104
+
+>>OcLow-200
+MapCode 1360
+	OcLow 200
+
+>>HrDom-76
+MapCode 1361
+	HrDom 76
+
+>>HrDom-96
+MapCode 1362
+	HrDom 96
+
+>>HrdMx-15
+MapCode 1363
+	HrdMx 15
+
+>>SbMx1-98
+MapCode 1364
+	SbMx1 98
+
+>>PrDom-104
+MapCode 1365
+	PrDom 104
+
+>>OcLow-114
+MapCode 1366
+	OcLow 114
+
+>>OcLow-76
+MapCode 1367
+	OcLow 76
+
+>>OcLow-142
+MapCode 1368
+	OcLow 142
+
+>>PrDom-110
+MapCode 1369
+	PrDom 110
+
+>>BwDom-101
+MapCode 1370
+	BwDom 101
+
+>>HrdMx-103
+MapCode 1371
+	HrdMx 103
+
+>>BwDom-200
+MapCode 1372
+	BwDom 200
+
+>>BwDom-76
+MapCode 1373
+	BwDom 76
+
+>>PoDee-142
+MapCode 1374
+	PoDee 142
+
+>>BfDom-33
+MapCode 1375
+	BfDom 33
+
+>>OthHd-20
+MapCode 1376
+	OthHd 20
+
+>>BwDom-12
+MapCode 1377
+	BwDom 12
+
+>>PjMx1-143
+MapCode 1378
+	PjMx1 143
+
+>>HrDom-63
+MapCode 1379
+	HrDom 63
+
+>>PrDom-69
+MapCode 1380
+	PrDom 69
+
+>>SbLow-141
+MapCode 1381
+	SbLow 141
+
+>>PrDom-20
+MapCode 1382
+	PrDom 20
+
+>>PrDom-80
+MapCode 1383
+	PrDom 80
+
+>>PoDee-23
+MapCode 1384
+	PoDee 23
+
+>>OcLow-70
+MapCode 1385
+	OcLow 70
+
+>>HrDom-12
+MapCode 1386
+	HrDom 12
+
+>>BwDom-1
+MapCode 1387
+	BwDom 1
+
+>>BwDom-103
+MapCode 1388
+	BwDom 103
+
+>>BfDom-38
+MapCode 1389
+	BfDom 38
+
+>>PoDee-101
+MapCode 1390
+	PoDee 101
+
+>>HrdMx-93
+MapCode 1391
+	HrdMx 93
+
+>>HrdMx-128
+MapCode 1392
+	HrdMx 128
+
+>>PrDom-73
+MapCode 1393
+	PrDom 73
+
+>>Brush/Alder-63
+MapCode 1394
+	Brush/Alder 63
+
+>>BfDom-128
+MapCode 1395
+	BfDom 128
+
+>>PjMx1-138
+MapCode 1396
+	PjMx1 138
+
+>>PrDom-101
+MapCode 1397
+	PrDom 101
+
+>>PrDom-91
+MapCode 1398
+	PrDom 91
+
+>>PoDee-96
+MapCode 1399
+	PoDee 96
+
+>>PoDee-17
+MapCode 1400
+	PoDee 17
+
+>>HrDom-66
+MapCode 1401
+	HrDom 66
+
+>>HrdMx-33
+MapCode 1402
+	HrdMx 33
+
+>>HrdMx-23
+MapCode 1403
+	HrdMx 23
+
+>>PrDom-121
+MapCode 1404
+	PrDom 121
+
+>>HrdMx-150
+MapCode 1405
+	HrdMx 150
+
+>>PoDee-77
+MapCode 1406
+	PoDee 77
+
+>>OcLow-81
+MapCode 1407
+	OcLow 81
+
+>>OthHd-65
+MapCode 1408
+	OthHd 65
+
+>>OthHd-95
+MapCode 1409
+	OthHd 95
+
+>>PjMx1-22
+MapCode 1410
+	PjMx1 22
+
+>>HrdMx-118
+MapCode 1411
+	HrdMx 118
+
+>>PjMx1-170
+MapCode 1412
+	PjMx1 170
+
+>>OthHd-105
+MapCode 1413
+	OthHd 105
+
+>>OthHd-101
+MapCode 1414
+	OthHd 101
+
+>>HrdMx-24
+MapCode 1415
+	HrdMx 24
+
+>>OcLow-128
+MapCode 1416
+	OcLow 128
+
+>>HrdMx-43
+MapCode 1417
+	HrdMx 43
+
+>>PoDee-111
+MapCode 1418
+	PoDee 111
+
+>>SbMx1-22
+MapCode 1419
+	SbMx1 22
+
+>>HrdMx-2
+MapCode 1420
+	HrdMx 2
+
+>>SbMx1-62
+MapCode 1421
+	SbMx1 62
+
+>>OcLow-38
+MapCode 1422
+	OcLow 38
+
+>>PoDee-72
+MapCode 1423
+	PoDee 72
+
+>>PoDee-24
+MapCode 1424
+	PoDee 24
+
+>>HrdMx-138
+MapCode 1425
+	HrdMx 138
+
+>>PrDom-23
+MapCode 1426
+	PrDom 23
+
+>>OcLow-43
+MapCode 1427
+	OcLow 43
+
+>>HrDom-11
+MapCode 1428
+	HrDom 11
+
+>>HrdMx-74
+MapCode 1429
+	HrdMx 74
+
+>>SbMx1-2
+MapCode 1430
+	SbMx1 2
+
+>>OcLow-85
+MapCode 1431
+	OcLow 85
+
+>>SbLow-151
+MapCode 1432
+	SbLow 151
+
+>>SbMx1-11
+MapCode 1433
+	SbMx1 11
+
+>>SbDee-11
+MapCode 1434
+	SbDee 11
+
+>>BfDom-98
+MapCode 1435
+	BfDom 98
+
+>>PrDom-85
+MapCode 1436
+	PrDom 85
+
+>>BfDom-1
+MapCode 1437
+	BfDom 1
+
+>>HrDom-33
+MapCode 1438
+	HrDom 33
+
+>>Brush/Alder-105
+MapCode 1439
+	Brush/Alder 105
+
+>>SbMx1-148
+MapCode 1440
+	SbMx1 148
+
+>>OcLow-33
+MapCode 1441
+	OcLow 33
+
+>>BfDom-43
+MapCode 1442
+	BfDom 43
+
+>>PrDom-115
+MapCode 1443
+	PrDom 115
+
+>>OcLow-23
+MapCode 1444
+	OcLow 23
+
+>>SbDee-32
+MapCode 1445
+	SbDee 32
+
+>>HrDom-151
+MapCode 1446
+	HrDom 151
+
+>>ConMx-32
+MapCode 1447
+	ConMx 32
+
+>>BfDom-24
+MapCode 1448
+	BfDom 24
+
+>>PrDom-98
+MapCode 1449
+	PrDom 98
+
+>>PjDee-32
+MapCode 1450
+	PjDee 32
+
+>>SbMx1-53
+MapCode 1451
+	SbMx1 53
+
+>>SbLow-32
+MapCode 1452
+	SbLow 32
+
+>>PjMx1-5
+MapCode 1453
+	PjMx1 5
+
+>>PoDee-14
+MapCode 1454
+	PoDee 14
+
+>>HrDom-14
+MapCode 1455
+	HrDom 14
+
+>>BfDom-2
+MapCode 1456
+	BfDom 2
+
+>>SbMx1-28
+MapCode 1457
+	SbMx1 28
+
+>>HrdMx-53
+MapCode 1458
+	HrdMx 53
+
+>>OcLow-80
+MapCode 1459
+	OcLow 80
+
+>>BfDom-62
+MapCode 1460
+	BfDom 62
+
+>>Brush/Alder-33
+MapCode 1461
+	Brush/Alder 33
+
+>>PrDom-28
+MapCode 1462
+	PrDom 28
+
+>>Brush/Alder-48
+MapCode 1463
+	Brush/Alder 48
+
+>>BwDom-28
+MapCode 1464
+	BwDom 28
+
+>>HrDom-2
+MapCode 1465
+	HrDom 2
+
+>>SbMx1-138
+MapCode 1466
+	SbMx1 138
+
+>>OcLow-64
+MapCode 1467
+	OcLow 64
+
+>>BfDom-50
+MapCode 1468
+	BfDom 50
+
+>>OthHd-78
+MapCode 1469
+	OthHd 78
+
+>>Brush/Alder-118
+MapCode 1470
+	Brush/Alder 118
+
+>>HrDom-20
+MapCode 1471
+	HrDom 20
+
+>>Brush/Alder-93
+MapCode 1472
+	Brush/Alder 93
+
+>>OcLow-118
+MapCode 1473
+	OcLow 118
+
+>>HrDom-72
+MapCode 1474
+	HrDom 72
+
+>>BfDom-148
+MapCode 1475
+	BfDom 148
+
+>>HrDom-21
+MapCode 1476
+	HrDom 21
+
+>>OcLow-7
+MapCode 1477
+	OcLow 7
+
+>>OcLow-103
+MapCode 1478
+	OcLow 103
+
+>>OcLow-93
+MapCode 1479
+	OcLow 93
+
+>>BwDom-2
+MapCode 1480
+	BwDom 2
+
+>>SbMx1-158
+MapCode 1481
+	SbMx1 158
+
+>>HrDom-22
+MapCode 1482
+	HrDom 22
+
+>>BfDom-13
+MapCode 1483
+	BfDom 13
+
+>>PjMx1-123
+MapCode 1484
+	PjMx1 123
+
+>>OcLow-63
+MapCode 1485
+	OcLow 63
+
+>>OcLow-158
+MapCode 1486
+	OcLow 158
+
+>>OcLow-9
+MapCode 1487
+	OcLow 9
+
+>>OcLow-58
+MapCode 1488
+	OcLow 58
+
+>>HrDom-125
+MapCode 1489
+	HrDom 125
+
+>>HrdMx-22
+MapCode 1490
+	HrdMx 22
+
+>>OcLow-98
+MapCode 1491
+	OcLow 98
+
+>>PjDee-27
+MapCode 1492
+	PjDee 27
+
+>>PoDee-22
+MapCode 1493
+	PoDee 22
+
+>>OcLow-125
+MapCode 1494
+	OcLow 125
+
+>>SbDee-27
+MapCode 1495
+	SbDee 27
+
+>>BfDom-125
+MapCode 1496
+	BfDom 125
+
+>>BfDom-22
+MapCode 1497
+	BfDom 22
+
+>>HrdMx-38
+MapCode 1498
+	HrdMx 38
+
+>>PjMx1-133
+MapCode 1499
+	PjMx1 133
+
+>>BfDom-15
+MapCode 1500
+	BfDom 15
+
+>>BfDom-102
+MapCode 1501
+	BfDom 102
+
+>>HrdMx-28
+MapCode 1502
+	HrdMx 28
+
+>>HrDom-53
+MapCode 1503
+	HrDom 53
+
+>>BwDom-63
+MapCode 1504
+	BwDom 63
+
+>>SbMx1-23
+MapCode 1505
+	SbMx1 23
+
+>>HrdMx-27
+MapCode 1506
+	HrdMx 27
+
+>>PjMx1-27
+MapCode 1507
+	PjMx1 27
+
+>>PjMx1-113
+MapCode 1508
+	PjMx1 113
+
+>>PoDee-25
+MapCode 1509
+	PoDee 25
+
+>>OcLow-6
+MapCode 1510
+	OcLow 6
+
+>>HrDom-28
+MapCode 1511
+	HrDom 28
+
+>>HrDom-127
+MapCode 1512
+	HrDom 127
+
+>>PjMx1-25
+MapCode 1513
+	PjMx1 25
+
+>>BwDom-118
+MapCode 1514
+	BwDom 118
+
+>>BfDom-61
+MapCode 1515
+	BfDom 61
+
+>>PrDom-53
+MapCode 1516
+	PrDom 53
+
+>>SbLow-27
+MapCode 1517
+	SbLow 27
+
+>>HrdMx-26
+MapCode 1518
+	HrdMx 26
+
+>>OthHd-25
+MapCode 1519
+	OthHd 25
+
+>>SbMx1-50
+MapCode 1520
+	SbMx1 50
+
+>>HrdMx-9
+MapCode 1521
+	HrdMx 9
+
+>>SbMx1-25
+MapCode 1522
+	SbMx1 25
+
+>>BfDom-27
+MapCode 1523
+	BfDom 27
+
+>>BfDom-97
+MapCode 1524
+	BfDom 97
+
+>>PoDee-158
+MapCode 1525
+	PoDee 158
+
+>>BwDom-55
+MapCode 1526
+	BwDom 55
+
+>>OcLow-97
+MapCode 1527
+	OcLow 97
+
+>>SbMx1-133
+MapCode 1528
+	SbMx1 133
+
+>>BfDom-108
+MapCode 1529
+	BfDom 108
+
+>>HrDom-35
+MapCode 1530
+	HrDom 35
+
+>>HrdMx-56
+MapCode 1531
+	HrdMx 56
+
+>>HrDom-23
+MapCode 1532
+	HrDom 23
+
+>>HrdMx-101
+MapCode 1533
+	HrdMx 101
+
+>>SbMx1-16
+MapCode 1534
+	SbMx1 16
+
+>>BwDom-77
+MapCode 1535
+	BwDom 77
+
+>>OcLow-5
+MapCode 1536
+	OcLow 5
+
+>>OcLow-2
+MapCode 1537
+	OcLow 2
+
+>>BfDom-138
+MapCode 1538
+	BfDom 138
+
+>>SbMx1-48
+MapCode 1539
+	SbMx1 48
+
+>>BfDom-63
+MapCode 1540
+	BfDom 63
+
+>>BwDom-50
+MapCode 1541
+	BwDom 50
+
+>>ConMx-27
+MapCode 1542
+	ConMx 27
+
+>>BfDom-8
+MapCode 1543
+	BfDom 8
+
+>>PoDee-26
+MapCode 1544
+	PoDee 26
+
+>>BfDom-9
+MapCode 1545
+	BfDom 9
+
+>>BfDom-30
+MapCode 1546
+	BfDom 30
+
+>>PjDee-4
+MapCode 1547
+	PjDee 4
+
+>>BfDom-25
+MapCode 1548
+	BfDom 25
+
+>>ConMx-4
+MapCode 1549
+	ConMx 4
+
+>>PjMx1-4
+MapCode 1550
+	PjMx1 4
+
+>>SbDee-4
+MapCode 1551
+	SbDee 4
+
+>>BfDom-46
+MapCode 1552
+	BfDom 46
+
+>>ConMx-25
+MapCode 1553
+	ConMx 25
+
+>>BfDom-5
+MapCode 1554
+	BfDom 5
+
+>>Brush/Alder-25
+MapCode 1555
+	Brush/Alder 25
+
+>>ConMx-46
+MapCode 1556
+	ConMx 46
+
+>>BfDom-10
+MapCode 1557
+	BfDom 10
+
+>>BfDom-53
+MapCode 1558
+	BfDom 53
+
+>>PoDee-4
+MapCode 1559
+	PoDee 4
+
+>>HrdMx-4
+MapCode 1560
+	HrdMx 4
+
+>>Brush/Alder-148
+MapCode 1561
+	Brush/Alder 148
+
+>>PjDee-19
+MapCode 1562
+	PjDee 19
+
+>>BfDom-48
+MapCode 1563
+	BfDom 48
+
+>>PrDom-83
+MapCode 1564
+	PrDom 83
+
+>>ConMx-19
+MapCode 1565
+	ConMx 19
+
+>>PrDom-12
+MapCode 1566
+	PrDom 12
+
+>>Brush/Alder-9
+MapCode 1567
+	Brush/Alder 9
+
+>>BfDom-19
+MapCode 1568
+	BfDom 19
+
+>>SbLow-4
+MapCode 1569
+	SbLow 4
+
+>>BfDom-18
+MapCode 1570
+	BfDom 18
+
+>>PoDee-138
+MapCode 1571
+	PoDee 138
+
+>>BwDom-4
+MapCode 1572
+	BwDom 4
+
+>>SbDee-19
+MapCode 1573
+	SbDee 19
+
+>>HrdMx-11
+MapCode 1574
+	HrdMx 11
+
+>>HrDom-4
+MapCode 1575
+	HrDom 4
+
+>>PrDom-88
+MapCode 1576
+	PrDom 88
+
+>>BwDom-71
+MapCode 1577
+	BwDom 71
+
+>>BwDom-61
+MapCode 1578
+	BwDom 61
+
+>>BwDom-11
+MapCode 1579
+	BwDom 11
+
+>>HrdMx-13
+MapCode 1580
+	HrdMx 13
+
+>>SbDee-168
+MapCode 1581
+	SbDee 168
+
+>>SbLow-168
+MapCode 1582
+	SbLow 168
+
+>>BwDom-33
+MapCode 1583
+	BwDom 33
+
+>>SbMx1-27
+MapCode 1584
+	SbMx1 27
+
+>>PjDee-168
+MapCode 1585
+	PjDee 168
+
+>>PjMx1-168
+MapCode 1586
+	PjMx1 168
+
+>>ConMx-168
+MapCode 1587
+	ConMx 168
+
+>>HrDom-143
+MapCode 1588
+	HrDom 143
+
+>>Brush/Alder-27
+MapCode 1589
+	Brush/Alder 27
+
+>>HrdMx-16
+MapCode 1590
+	HrdMx 16
+
+>>BfDom-11
+MapCode 1591
+	BfDom 11
+
+>>ConMx-44
+MapCode 1592
+	ConMx 44
+
+>>PjMx1-44
+MapCode 1593
+	PjMx1 44
+
+>>SbDee-167
+MapCode 1594
+	SbDee 167
+
+>>BwDom-105
+MapCode 1595
+	BwDom 105
+
+>>PjDee-44
+MapCode 1596
+	PjDee 44
+
+>>SbDee-173
+MapCode 1597
+	SbDee 173
+
+>>PjDee-167
+MapCode 1598
+	PjDee 167
+
+>>SbDee-178
+MapCode 1599
+	SbDee 178
+
+>>SbMx1-167
+MapCode 1600
+	SbMx1 167
+
+>>BfDom-16
+MapCode 1601
+	BfDom 16
+
+>>HrDom-98
+MapCode 1602
+	HrDom 98
+
+>>ConMx-178
+MapCode 1603
+	ConMx 178
+
+>>BwDom-98
+MapCode 1604
+	BwDom 98
+
+>>BfDom-45
+MapCode 1605
+	BfDom 45
+
+>>SbMx1-77
+MapCode 1606
+	SbMx1 77
+
+>>SbLow-19
+MapCode 1607
+	SbLow 19
+
+>>PjMx1-153
+MapCode 1608
+	PjMx1 153
+
+>>SbDee-188
+MapCode 1609
+	SbDee 188
+
+>>SbLow-153
+MapCode 1610
+	SbLow 153
+
+>>OcLow-133
+MapCode 1611
+	OcLow 133
+
+>>BwDom-48
+MapCode 1612
+	BwDom 48
+
+>>Brush/Alder-168
+MapCode 1613
+	Brush/Alder 168
+
+>>PjDee-153
+MapCode 1614
+	PjDee 153
+
+>>PjMx1-19
+MapCode 1615
+	PjMx1 19
+
+>>HrdMx-48
+MapCode 1616
+	HrdMx 48
+
+>>SbDee-183
+MapCode 1617
+	SbDee 183
+
+>>SbLow-183
+MapCode 1618
+	SbLow 183
+
+>>OcLow-55
+MapCode 1619
+	OcLow 55
+
+>>OcLow-65
+MapCode 1620
+	OcLow 65
+
+>>BfDom-118
+MapCode 1621
+	BfDom 118
+
+>>HrdMx-18
+MapCode 1622
+	HrdMx 18
+
+>>HrdMx-19
+MapCode 1623
+	HrdMx 19
+
+>>HrDom-50
+MapCode 1624
+	HrDom 50
+
+>>OcLow-50
+MapCode 1625
+	OcLow 50
+
+>>OcLow-183
+MapCode 1626
+	OcLow 183
+
+>>BwDom-110
+MapCode 1627
+	BwDom 110
+
+>>PjDee-107
+MapCode 1628
+	PjDee 107
+
+>>BfDom-96
+MapCode 1629
+	BfDom 96
+
+>>PjDee-117
+MapCode 1630
+	PjDee 117
+
+>>BwDom-27
+MapCode 1631
+	BwDom 27
+
+>>SbMx1-142
+MapCode 1632
+	SbMx1 142
+
+>>SbMx1-19
+MapCode 1633
+	SbMx1 19
+
+>>Brush/Alder-19
+MapCode 1634
+	Brush/Alder 19
+
+>>BwDom-24
+MapCode 1635
+	BwDom 24
+
+>>BwDom-25
+MapCode 1636
+	BwDom 25
+
+>>ConMx-193
+MapCode 1637
+	ConMx 193
+
+>>HrDom-25
+MapCode 1638
+	HrDom 25
+
+>>HrDom-30
+MapCode 1639
+	HrDom 30
+
+>>SbMx1-168
+MapCode 1640
+	SbMx1 168
+
+>>BwDom-102
+MapCode 1641
+	BwDom 102
+
+>>OcLow-17
+MapCode 1642
+	OcLow 17
+
+>>Brush/Alder-15
+MapCode 1643
+	Brush/Alder 15
+
+>>SbDee-193
+MapCode 1644
+	SbDee 193
+
+>>PjMx1-24
+MapCode 1645
+	PjMx1 24
+
+>>HrdMx-117
+MapCode 1646
+	HrdMx 117
+
+>>SbMx1-24
+MapCode 1647
+	SbMx1 24
+
+>>BwDom-21
+MapCode 1648
+	BwDom 21
+
+>>OcLow-15
+MapCode 1649
+	OcLow 15
+
+>>BfDom-4
+MapCode 1650
+	BfDom 4
+
+>>HrdMx-158
+MapCode 1651
+	HrdMx 158
+
+>>HrdMx-25
+MapCode 1652
+	HrdMx 25
+
+>>PoDee-102
+MapCode 1653
+	PoDee 102
+
+>>HrDom-24
+MapCode 1654
+	HrDom 24
+
+>>HrDom-43
+MapCode 1655
+	HrDom 43
+
+>>SbDee-172
+MapCode 1656
+	SbDee 172
+
+>>BwDom-43
+MapCode 1657
+	BwDom 43
+
+>>SbLow-178
+MapCode 1658
+	SbLow 178
+
+>>PjMx1-102
+MapCode 1659
+	PjMx1 102
+
+>>PjDee-34
+MapCode 1660
+	PjDee 34
+
+>>SbDee-206
+MapCode 1661
+	SbDee 206
+
+>>ConMx-37
+MapCode 1662
+	ConMx 37
+
+>>SbLow-132
+MapCode 1663
+	SbLow 132
+
+>>SbDee-37
+MapCode 1664
+	SbDee 37
+
+>>HrDom-113
+MapCode 1665
+	HrDom 113
+
+>>BwDom-19
+MapCode 1666
+	BwDom 19
+
+>>BwDom-66
+MapCode 1667
+	BwDom 66
+
+>>SbMx1-122
+MapCode 1668
+	SbMx1 122
+
+>>HrdMx-113
+MapCode 1669
+	HrdMx 113
+
+>>SbMx1-4
+MapCode 1670
+	SbMx1 4
+
+>>OcLow-24
+MapCode 1671
+	OcLow 24
+
+>>PoDee-32
+MapCode 1672
+	PoDee 32
+
+>>ConMx-122
+MapCode 1673
+	ConMx 122
+
+>>SbLow-39
+MapCode 1674
+	SbLow 39
+
+>>SbMx1-39
+MapCode 1675
+	SbMx1 39
+
+>>PjMx1-26
+MapCode 1676
+	PjMx1 26
+
+>>PjDee-112
+MapCode 1677
+	PjDee 112
+
+>>PjMx1-32
+MapCode 1678
+	PjMx1 32
+
+>>SbDee-39
+MapCode 1679
+	SbDee 39
+
+>>BwDom-38
+MapCode 1680
+	BwDom 38
+
+>>ConMx-39
+MapCode 1681
+	ConMx 39
+
+>>SbMx1-31
+MapCode 1682
+	SbMx1 31
+
+>>PjMx1-31
+MapCode 1683
+	PjMx1 31
+
+>>PoDee-19
+MapCode 1684
+	PoDee 19
+
+>>HrDom-17
+MapCode 1685
+	HrDom 17
+
+>>ConMx-31
+MapCode 1686
+	ConMx 31
+
+>>SbLow-31
+MapCode 1687
+	SbLow 31
+
+>>BwDom-138
+MapCode 1688
+	BwDom 138
+
+>>SbDee-31
+MapCode 1689
+	SbDee 31
+
+>>HrDom-19
+MapCode 1690
+	HrDom 19
+
+>>BfDom-51
+MapCode 1691
+	BfDom 51
+
+>>HrdMx-64
+MapCode 1692
+	HrdMx 64
+
+>>HrdMx-5
+MapCode 1693
+	HrdMx 5
+
+>>PoDee-27
+MapCode 1694
+	PoDee 27
+
+>>HrDom-64
+MapCode 1695
+	HrDom 64
+
+>>HrDom-27
+MapCode 1696
+	HrDom 27
+
+>>BfDom-87
+MapCode 1697
+	BfDom 87
+
+>>BwDom-16
+MapCode 1698
+	BwDom 16
+
+>>HrdMx-62
+MapCode 1699
+	HrdMx 62
+
+>>Brush/Alder-22
+MapCode 1700
+	Brush/Alder 22
+
+>>PoDee-67
+MapCode 1701
+	PoDee 67
+
+>>BfDom-34
+MapCode 1702
+	BfDom 34
+
+>>BfDom-158
+MapCode 1703
+	BfDom 158
+
+>>BwDom-22
+MapCode 1704
+	BwDom 22
+
+>>BwDom-145
+MapCode 1705
+	BwDom 145
+
+>>Brush/Alder-2
+MapCode 1706
+	Brush/Alder 2
+
+>>HrDom-48
+MapCode 1707
+	HrDom 48
+
+>>PjMx1-67
+MapCode 1708
+	PjMx1 67
+
+>>BfDom-49
+MapCode 1709
+	BfDom 49
+
+>>HrDom-45
+MapCode 1710
+	HrDom 45
+
+>>BwDom-45
+MapCode 1711
+	BwDom 45
+
+>>OcLow-25
+MapCode 1712
+	OcLow 25
+
+>>Brush/Alder-39
+MapCode 1713
+	Brush/Alder 39
+
+>>SbDee-198
+MapCode 1714
+	SbDee 198
+
+>>OcLow-22
+MapCode 1715
+	OcLow 22
+
+>>ConMx-198
+MapCode 1716
+	ConMx 198
+
+>>BwDom-150
+MapCode 1717
+	BwDom 150
+
+>>BwDom-53
+MapCode 1718
+	BwDom 53
+
+>>HrdMx-148
+MapCode 1719
+	HrdMx 148
+
+>>HrDom-77
+MapCode 1720
+	HrDom 77
+
+>>PrDom-22
+MapCode 1721
+	PrDom 22
+
+>>Brush/Alder-160
+MapCode 1722
+	Brush/Alder 160
+
+>>BwDom-120
+MapCode 1723
+	BwDom 120
+
+>>HrDom-34
+MapCode 1724
+	HrDom 34
+
+>>SbDee-185
+MapCode 1725
+	SbDee 185
+
+>>Brush/Alder-165
+MapCode 1726
+	Brush/Alder 165
+
+>>PoDee-34
+MapCode 1727
+	PoDee 34
+
+>>BwDom-13
+MapCode 1728
+	BwDom 13
+
+>>Brush/Alder-135
+MapCode 1729
+	Brush/Alder 135
+
+>>SbMx1-170
+MapCode 1730
+	SbMx1 170
+
+>>Brush/Alder-110
+MapCode 1731
+	Brush/Alder 110
+
+>>SbLow-185
+MapCode 1732
+	SbLow 185
+
+>>ConMx-185
+MapCode 1733
+	ConMx 185
+
+>>PjDee-152
+MapCode 1734
+	PjDee 152
+
+>>SbLow-152
+MapCode 1735
+	SbLow 152
+
+>>BwDom-94
+MapCode 1736
+	BwDom 94
+
+>>SbDee-152
+MapCode 1737
+	SbDee 152
+
+>>PjDee-31
+MapCode 1738
+	PjDee 31
+
+>>HrDom-148
+MapCode 1739
+	HrDom 148
+
+>>Brush/Alder-24
+MapCode 1740
+	Brush/Alder 24
+
+>>HrdMx-120
+MapCode 1741
+	HrdMx 120
+
+>>Brush/Alder-8
+MapCode 1742
+	Brush/Alder 8
+
+>>BfDom-120
+MapCode 1743
+	BfDom 120
+
+>>OcLow-145
+MapCode 1744
+	OcLow 145
+
+>>BwDom-111
+MapCode 1745
+	BwDom 111
+
+>>HrDom-130
+MapCode 1746
+	HrDom 130
+
+>>Brush/Alder-26
+MapCode 1747
+	Brush/Alder 26
+
+>>HrDom-120
+MapCode 1748
+	HrDom 120
+
+>>Brush/Alder-14
+MapCode 1749
+	Brush/Alder 14
+
+>>OcLow-120
+MapCode 1750
+	OcLow 120
+
+>>HrDom-140
+MapCode 1751
+	HrDom 140
+
+>>Brush/Alder-12
+MapCode 1752
+	Brush/Alder 12
+
+>>HrdMx-167
+MapCode 1753
+	HrdMx 167
+
+>>OcLow-16
+MapCode 1754
+	OcLow 16
+
+>>SbMx1-26
+MapCode 1755
+	SbMx1 26
+
+>>SbLow-167
+MapCode 1756
+	SbLow 167
+
+>>HrDom-56
+MapCode 1757
+	HrDom 56
+
+>>PjMx1-126
+MapCode 1758
+	PjMx1 126
+
+>>SbLow-146
+MapCode 1759
+	SbLow 146
+
+>>OcLow-150
+MapCode 1760
+	OcLow 150
+
+>>SbDee-126
+MapCode 1761
+	SbDee 126
+
+>>SbDee-146
+MapCode 1762
+	SbDee 146
+
+>>PjMx1-167
+MapCode 1763
+	PjMx1 167
+
+>>Brush/Alder-167
+MapCode 1764
+	Brush/Alder 167
+
+>>Brush/Alder-50
+MapCode 1765
+	Brush/Alder 50
+
+>>OcLow-140
+MapCode 1766
+	OcLow 140
+
+>>OcLow-48
+MapCode 1767
+	OcLow 48
+
+>>OcLow-90
+MapCode 1768
+	OcLow 90
+
+>>Brush/Alder-92
+MapCode 1769
+	Brush/Alder 92
+
+>>OcLow-138
+MapCode 1770
+	OcLow 138
+
+>>HrdMx-34
+MapCode 1771
+	HrdMx 34
+
+>>HrDom-138
+MapCode 1772
+	HrDom 138
+
+>>Brush/Alder-134
+MapCode 1773
+	Brush/Alder 134
+
+>>HrdMx-123
+MapCode 1774
+	HrdMx 123
+
+>>SbLow-126
+MapCode 1775
+	SbLow 126
+
+>>PrDom-17
+MapCode 1776
+	PrDom 17
+
+>>SbMx1-116
+MapCode 1777
+	SbMx1 116
+
+>>SbMx1-126
+MapCode 1778
+	SbMx1 126
+
+>>ConMx-126
+MapCode 1779
+	ConMx 126
+
+>>PjDee-126
+MapCode 1780
+	PjDee 126
+
+>>Brush/Alder-124
+MapCode 1781
+	Brush/Alder 124
+
+>>PrDom-15
+MapCode 1782
+	PrDom 15
+
+>>PjMx1-112
+MapCode 1783
+	PjMx1 112
+
+>>BwDom-62
+MapCode 1784
+	BwDom 62
+
+>>SbMx1-112
+MapCode 1785
+	SbMx1 112
+
+>>Brush/Alder-112
+MapCode 1786
+	Brush/Alder 112
+
+>>PoDee-106
+MapCode 1787
+	PoDee 106
+
+>>PrDom-78
+MapCode 1788
+	PrDom 78
+
+>>HrDom-38
+MapCode 1789
+	HrDom 38
+
+>>HrDom-106
+MapCode 1790
+	HrDom 106
+
+>>PrDom-108
+MapCode 1791
+	PrDom 108
+
+>>PrDom-63
+MapCode 1792
+	PrDom 63
+
+>>Brush/Alder-13
+MapCode 1793
+	Brush/Alder 13
+
+>>OcLow-130
+MapCode 1794
+	OcLow 130
+
+>>HrDom-16
+MapCode 1795
+	HrDom 16
+
+>>HrDom-74
+MapCode 1796
+	HrDom 74
+
+>>PjMx1-97
+MapCode 1797
+	PjMx1 97
+
+>>OcLow-100
+MapCode 1798
+	OcLow 100
+
+>>Brush/Alder-145
+MapCode 1799
+	Brush/Alder 145
+
+>>PoDee-133
+MapCode 1800
+	PoDee 133
+
+>>HrDom-123
+MapCode 1801
+	HrDom 123
+
+>>PwDom-98
+MapCode 1802
+	PwDom 98
+
+>>BwDom-148
+MapCode 1803
+	BwDom 148
+
+>>Brush/Alder-53
+MapCode 1804
+	Brush/Alder 53
+
+>>SbMx1-143
+MapCode 1805
+	SbMx1 143
+
+>>Brush/Alder-43
+MapCode 1806
+	Brush/Alder 43
+
+>>SbMx1-137
+MapCode 1807
+	SbMx1 137
+
+>>SbLow-137
+MapCode 1808
+	SbLow 137
+
+>>OcLow-21
+MapCode 1809
+	OcLow 21
+
+>>OcLow-26
+MapCode 1810
+	OcLow 26
+
+>>HrDom-133
+MapCode 1811
+	HrDom 133
+
+>>OcLow-53
+MapCode 1812
+	OcLow 53
+
+>>PoDee-43
+MapCode 1813
+	PoDee 43
+
+>>ConMx-183
+MapCode 1814
+	ConMx 183
+
+>>PrDom-10
+MapCode 1815
+	PrDom 10
+
+>>OcLow-198
+MapCode 1816
+	OcLow 198
+
+>>SbLow-198
+MapCode 1817
+	SbLow 198
+
+>>OcLow-155
+MapCode 1818
+	OcLow 155
+
+>>BwDom-113
+MapCode 1819
+	BwDom 113
+
+>>BwDom-87
+MapCode 1820
+	BwDom 87
+
+>>Brush/Alder-158
+MapCode 1821
+	Brush/Alder 158
+
+>>HrdMx-163
+MapCode 1822
+	HrdMx 163
+
+>>SbDee-44
+MapCode 1823
+	SbDee 44
+
+>>ConMx-163
+MapCode 1824
+	ConMx 163
+
+>>PjDee-178
+MapCode 1825
+	PjDee 178
+
+>>HrDom-153
+MapCode 1826
+	HrDom 153
+
+>>SbLow-163
+MapCode 1827
+	SbLow 163
+
+>>OcLow-148
+MapCode 1828
+	OcLow 148
+
+>>Brush/Alder-5
+MapCode 1829
+	Brush/Alder 5
+
+>>OcLow-116
+MapCode 1830
+	OcLow 116
+
+>>HrDom-26
+MapCode 1831
+	HrDom 26
+
+>>HrdMx-51
+MapCode 1832
+	HrdMx 51
+
+>>HrDom-51
+MapCode 1833
+	HrDom 51
+
+>>BwDom-67
+MapCode 1834
+	BwDom 67
+
+>>HrDom-158
+MapCode 1835
+	HrDom 158
+
+>>HrdMx-45
+MapCode 1836
+	HrdMx 45
+
+>>BwDom-133
+MapCode 1837
+	BwDom 133
+
+>>Brush/Alder-133
+MapCode 1838
+	Brush/Alder 133
+
+>>Brush/Alder-113
+MapCode 1839
+	Brush/Alder 113
+
+>>HrdMx-143
+MapCode 1840
+	HrdMx 143
+
+>>HrDom-137
+MapCode 1841
+	HrDom 137
+
+>>OcLow-18
+MapCode 1842
+	OcLow 18
+
+>>OthHd-88
+MapCode 1843
+	OthHd 88
+
+>>HrdMx-50
+MapCode 1844
+	HrdMx 50
+
+>>BfDom-37
+MapCode 1845
+	BfDom 37
+
+>>OcLow-123
+MapCode 1846
+	OcLow 123
+
+>>Brush/Alder-4
+MapCode 1847
+	Brush/Alder 4
+
+>>SbDee-36
+MapCode 1848
+	SbDee 36
+
+>>BfDom-153
+MapCode 1849
+	BfDom 153
+
+>>PoDee-153
+MapCode 1850
+	PoDee 153
+
+>>PjDee-36
+MapCode 1851
+	PjDee 36
+
+>>SbMx1-36
+MapCode 1852
+	SbMx1 36
+
+>>SbLow-44
+MapCode 1853
+	SbLow 44
+
+>>OcLow-19
+MapCode 1854
+	OcLow 19
+
+>>SbMx1-153
+MapCode 1855
+	SbMx1 153
+
+>>HrDom-142
+MapCode 1856
+	HrDom 142
+
+>>PrDom-90
+MapCode 1857
+	PrDom 90
+
+>>HrdMx-142
+MapCode 1858
+	HrdMx 142
+
+>>SbLow-202
+MapCode 1859
+	SbLow 202
+
+>>ConMx-142
+MapCode 1860
+	ConMx 142
+
+>>PjDee-202
+MapCode 1861
+	PjDee 202
+
+>>PrDom-70
+MapCode 1862
+	PrDom 70
+
+>>HrdMx-31
+MapCode 1863
+	HrdMx 31
+
+>>ConMx-157
+MapCode 1864
+	ConMx 157
+
+>>SbLow-157
+MapCode 1865
+	SbLow 157
+
+>>HrdMx-35
+MapCode 1866
+	HrdMx 35
+
+>>SbMx1-156
+MapCode 1867
+	SbMx1 156
+
+>>BfDom-36
+MapCode 1868
+	BfDom 36
+
+>>SbLow-172
+MapCode 1869
+	SbLow 172
+
+>>BwDom-185
+MapCode 1870
+	BwDom 185
+
+>>PjDee-137
+MapCode 1871
+	PjDee 137
+
+>>ConMx-137
+MapCode 1872
+	ConMx 137
+
+>>Brush/Alder-123
+MapCode 1873
+	Brush/Alder 123
+
+>>OcLow-45
+MapCode 1874
+	OcLow 45
+
+>>OcLow-35
+MapCode 1875
+	OcLow 35
+
+>>OcLow-153
+MapCode 1876
+	OcLow 153
+
+>>OcLow-40
+MapCode 1877
+	OcLow 40
+
+>>OcLow-124
+MapCode 1878
+	OcLow 124
+
+>>OcLow-160
+MapCode 1879
+	OcLow 160
+
+>>Brush/Alder-31
+MapCode 1880
+	Brush/Alder 31
+
+>>OcLow-32
+MapCode 1881
+	OcLow 32
+
+>>OcLow-170
+MapCode 1882
+	OcLow 170
+
+>>BwDom-26
+MapCode 1883
+	BwDom 26
+
+>>BwDom-31
+MapCode 1884
+	BwDom 31
+
+>>OcLow-182
+MapCode 1885
+	OcLow 182
+
+>>HrdMx-182
+MapCode 1886
+	HrdMx 182
+
+>>SbLow-177
+MapCode 1887
+	SbLow 177
+
+>>OcLow-177
+MapCode 1888
+	OcLow 177
+
+>>SbDee-177
+MapCode 1889
+	SbDee 177
+
+>>BfDom-40
+MapCode 1890
+	BfDom 40
+
+>>PrDom-40
+MapCode 1891
+	PrDom 40
+
+>>OcLow-143
+MapCode 1892
+	OcLow 143
+
+>>OthHd-140
+MapCode 1893
+	OthHd 140
+
+>>SbMx1-180
+MapCode 1894
+	SbMx1 180
+
+>>ConMx-180
+MapCode 1895
+	ConMx 180
+
+>>OthHd-110
+MapCode 1896
+	OthHd 110
+
+>>OcLow-87
+MapCode 1897
+	OcLow 87
+
+>>HrDom-170
+MapCode 1898
+	HrDom 170
+
+>>SbDee-151
+MapCode 1899
+	SbDee 151
+
+>>OcLow-165
+MapCode 1900
+	OcLow 165
+
+>>PoDee-151
+MapCode 1901
+	PoDee 151
+
+>>BfDom-52
+MapCode 1902
+	BfDom 52
+
+>>BwDom-134
+MapCode 1903
+	BwDom 134
+
+>>PoDee-134
+MapCode 1904
+	PoDee 134
+
+>>OcLow-31
+MapCode 1905
+	OcLow 31
+
+>>BwDom-52
+MapCode 1906
+	BwDom 52
+
+>>HrDom-36
+MapCode 1907
+	HrDom 36
+
+>>ConMx-36
+MapCode 1908
+	ConMx 36
+
+>>HrdMx-107
+MapCode 1909
+	HrdMx 107
+
+>>OcLow-13
+MapCode 1910
+	OcLow 13
+
+>>HrdMx-32
+MapCode 1911
+	HrdMx 32
+
+>>OcLow-77
+MapCode 1912
+	OcLow 77
+
+>>HrDom-32
+MapCode 1913
+	HrDom 32
+
+>>SbLow-187
+MapCode 1914
+	SbLow 187
+
+>>PjDee-187
+MapCode 1915
+	PjDee 187
+
+>>BwDom-5
+MapCode 1916
+	BwDom 5
+
+>>BwDom-160
+MapCode 1917
+	BwDom 160
+
+>>BfDom-42
+MapCode 1918
+	BfDom 42
+
+>>ConMx-166
+MapCode 1919
+	ConMx 166
+
+>>SbLow-166
+MapCode 1920
+	SbLow 166
+
+>>BwDom-137
+MapCode 1921
+	BwDom 137
+
+>>BwDom-82
+MapCode 1922
+	BwDom 82
+
+>>SbDee-166
+MapCode 1923
+	SbDee 166
+
+>>PrDom-9
+MapCode 1924
+	PrDom 9
+
+>>SbLow-37
+MapCode 1925
+	SbLow 37
+
+>>OcLow-52
+MapCode 1926
+	OcLow 52
+
+>>Brush/Alder-51
+MapCode 1927
+	Brush/Alder 51
+
+>>PjDee-51
+MapCode 1928
+	PjDee 51
+
+>>OcLow-71
+MapCode 1929
+	OcLow 71
+
+>>HrDom-86
+MapCode 1930
+	HrDom 86
+
+>>SbDee-217
+MapCode 1931
+	SbDee 217
+
+>>SbLow-217
+MapCode 1932
+	SbLow 217
+
+>>HrDom-37
+MapCode 1933
+	HrDom 37
+
+>>BfDom-137
+MapCode 1934
+	BfDom 137
+
+>>SbDee-42
+MapCode 1935
+	SbDee 42
+
+>>PoDee-136
+MapCode 1936
+	PoDee 136
+
+>>SbLow-46
+MapCode 1937
+	SbLow 46
+
+>>BwDom-32
+MapCode 1938
+	BwDom 32
+
+>>OcLow-14
+MapCode 1939
+	OcLow 14
+
+>>OcLow-163
+MapCode 1940
+	OcLow 163
+
+>>SbLow-42
+MapCode 1941
+	SbLow 42
+
+>>SbDee-46
+MapCode 1942
+	SbDee 46
+
+>>BwDom-37
+MapCode 1943
+	BwDom 37
+
+>>HrDom-52
+MapCode 1944
+	HrDom 52
+
+>>HrdMx-37
+MapCode 1945
+	HrdMx 37
+
+>>Brush/Alder-46
+MapCode 1946
+	Brush/Alder 46
+
+>>PoDee-127
+MapCode 1947
+	PoDee 127
+
+>>Brush/Alder-41
+MapCode 1948
+	Brush/Alder 41
+
+>>Brush/Alder-16
+MapCode 1949
+	Brush/Alder 16
+
+>>SbDee-41
+MapCode 1950
+	SbDee 41
+
+>>HrdMx-41
+MapCode 1951
+	HrdMx 41
+
+>>OcLow-37
+MapCode 1952
+	OcLow 37
+
+>>HrdMx-131
+MapCode 1953
+	HrdMx 131
+
+>>ConMx-41
+MapCode 1954
+	ConMx 41
+
+>>PrDom-140
+MapCode 1955
+	PrDom 140
+
+>>HrdMx-44
+MapCode 1956
+	HrdMx 44
+
+>>SbLow-41
+MapCode 1957
+	SbLow 41
+
+>>HrdMx-42
+MapCode 1958
+	HrdMx 42
+
+>>HrDom-44
+MapCode 1959
+	HrDom 44
+
+>>BwDom-42
+MapCode 1960
+	BwDom 42
+
+>>BwDom-44
+MapCode 1961
+	BwDom 44
+
+>>HrDom-42
+MapCode 1962
+	HrDom 42
+
+>>SbLow-47
+MapCode 1963
+	SbLow 47
+
+>>PjDee-132
+MapCode 1964
+	PjDee 132
+
+>>SbLow-162
+MapCode 1965
+	SbLow 162
+
+>>SbDee-162
+MapCode 1966
+	SbDee 162
+
+>>PjDee-162
+MapCode 1967
+	PjDee 162
+
+>>PjMx1-37
+MapCode 1968
+	PjMx1 37
+
+>>OcLow-92
+MapCode 1969
+	OcLow 92
+
+>>SbDee-47
+MapCode 1970
+	SbDee 47
+
+>>ConMx-42
+MapCode 1971
+	ConMx 42
+
+>>BwDom-35
+MapCode 1972
+	BwDom 35
+
+>>HrdMx-46
+MapCode 1973
+	HrdMx 46
+
+>>OcLow-47
+MapCode 1974
+	OcLow 47
+
+>>Brush/Alder-49
+MapCode 1975
+	Brush/Alder 49
+
+>>BfDom-47
+MapCode 1976
+	BfDom 47
+
+>>PrDom-8
+MapCode 1977
+	PrDom 8
+
+>>Brush/Alder-74
+MapCode 1978
+	Brush/Alder 74
+
+>>HrdMx-162
+MapCode 1979
+	HrdMx 162
+
+>>SbMx1-32
+MapCode 1980
+	SbMx1 32
+
+>>OcLow-42
+MapCode 1981
+	OcLow 42
+
+>>BwDom-72
+MapCode 1982
+	BwDom 72
+
+>>BwDom-47
+MapCode 1983
+	BwDom 47
+
+>>HrDom-46
+MapCode 1984
+	HrDom 46
+
+>>OcLow-132
+MapCode 1985
+	OcLow 132
+
+>>PrDom-103
+MapCode 1986
+	PrDom 103
+
+>>HrdMx-47
+MapCode 1987
+	HrdMx 47
+
+>>PrDom-93
+MapCode 1988
+	PrDom 93
+
+>>HrDom-31
+MapCode 1989
+	HrDom 31
+
+>>BwDom-107
+MapCode 1990
+	BwDom 107
+
+>>PrDom-143
+MapCode 1991
+	PrDom 143
+
+>>HrDom-114
+MapCode 1992
+	HrDom 114
+
+>>OcLow-27
+MapCode 1993
+	OcLow 27
+
+>>ConMx-47
+MapCode 1994
+	ConMx 47
+
+>>HrDom-41
+MapCode 1995
+	HrDom 41
+
+>>BfDom-32
+MapCode 1996
+	BfDom 32
+
+>>Brush/Alder-11
+MapCode 1997
+	Brush/Alder 11
+
+>>PrDom-48
+MapCode 1998
+	PrDom 48
+
+>>PrDom-13
+MapCode 1999
+	PrDom 13
+
+>>PoDee-47
+MapCode 2000
+	PoDee 47
+
+>>PoDee-31
+MapCode 2001
+	PoDee 31
+
+>>PjMx1-47
+MapCode 2002
+	PjMx1 47
+
+>>BwDom-86
+MapCode 2003
+	BwDom 86
+
+>>ConMx-57
+MapCode 2004
+	ConMx 57
+
+>>HrDom-57
+MapCode 2005
+	HrDom 57
+
+>>SbDee-57
+MapCode 2006
+	SbDee 57
+
+>>BfDom-57
+MapCode 2007
+	BfDom 57
+
+>>HrdMx-122
+MapCode 2008
+	HrdMx 122
+
+>>ConMx-190
+MapCode 2009
+	ConMx 190
+
+>>OcLow-57
+MapCode 2010
+	OcLow 57
+
+>>SbLow-190
+MapCode 2011
+	SbLow 190
+
+>>SbMx1-47
+MapCode 2012
+	SbMx1 47
+
+>>OcLow-61
+MapCode 2013
+	OcLow 61
+
+>>SbMx1-42
+MapCode 2014
+	SbMx1 42
+
+>>PjDee-42
+MapCode 2015
+	PjDee 42
+
+>>PjDee-173
+MapCode 2016
+	PjDee 173
+
+>>ConMx-173
+MapCode 2017
+	ConMx 173
+
+>>PoDee-37
+MapCode 2018
+	PoDee 37
+
+>>BfDom-35
+MapCode 2019
+	BfDom 35
+
+>>PjDee-47
+MapCode 2020
+	PjDee 47
+
+>>PjDee-41
+MapCode 2021
+	PjDee 41
+
+>>HrdMx-36
+MapCode 2022
+	HrdMx 36
+
+>>PjMx1-41
+MapCode 2023
+	PjMx1 41
+
+>>Brush/Alder-67
+MapCode 2024
+	Brush/Alder 67
+
+>>PjMx1-36
+MapCode 2025
+	PjMx1 36
+
+>>SbLow-36
+MapCode 2026
+	SbLow 36
+
+>>BwDom-40
+MapCode 2027
+	BwDom 40
+
+>>BwDom-34
+MapCode 2028
+	BwDom 34
+
+>>PjDee-37
+MapCode 2029
+	PjDee 37
+
+>>Brush/Alder-34
+MapCode 2030
+	Brush/Alder 34
+
+>>SbMx1-35
+MapCode 2031
+	SbMx1 35
+
+>>BwDom-36
+MapCode 2032
+	BwDom 36
+
+>>SbMx1-132
+MapCode 2033
+	SbMx1 132
+
+>>OcLow-219
+MapCode 2034
+	OcLow 219
+
+>>BwDom-158
+MapCode 2035
+	BwDom 158
+
+>>OcLow-49
+MapCode 2036
+	OcLow 49
+
+>>SbMx1-37
+MapCode 2037
+	SbMx1 37
+
+>>HrDom-40
+MapCode 2038
+	HrDom 40
+
+>>BfDom-112
+MapCode 2039
+	BfDom 112
+
+>>HrDom-49
+MapCode 2040
+	HrDom 49
+
+>>Brush/Alder-36
+MapCode 2041
+	Brush/Alder 36
+
+>>HrDom-132
+MapCode 2042
+	HrDom 132
+
+>>BfDom-39
+MapCode 2043
+	BfDom 39
+
+>>HrdMx-57
+MapCode 2044
+	HrdMx 57
+
+>>HrdMx-190
+MapCode 2045
+	HrdMx 190
+
+>>HrDom-62
+MapCode 2046
+	HrDom 62
+
+>>HrDom-131
+MapCode 2047
+	HrDom 131
+
+>>OcLow-112
+MapCode 2048
+	OcLow 112
+
+>>PoDee-112
+MapCode 2049
+	PoDee 112
+
+>>BfDom-31
+MapCode 2050
+	BfDom 31
+
+>>OcLow-51
+MapCode 2051
+	OcLow 51
+
+>>OcLow-178
+MapCode 2052
+	OcLow 178
+
+>>BfDom-143
+MapCode 2053
+	BfDom 143
+
+>>HrDom-126
+MapCode 2054
+	HrDom 126
+
+>>HrDom-219
+MapCode 2055
+	HrDom 219
+
+>>ConMx-172
+MapCode 2056
+	ConMx 172
+
+>>HrDom-112
+MapCode 2057
+	HrDom 112
+
+>>HrDom-172
+MapCode 2058
+	HrDom 172
+
+>>PoDee-49
+MapCode 2059
+	PoDee 49
+
+>>Brush/Alder-32
+MapCode 2060
+	Brush/Alder 32
+
+>>OcLow-134
+MapCode 2061
+	OcLow 134
+
+>>PoDee-92
+MapCode 2062
+	PoDee 92
+
+>>HrDom-117
+MapCode 2063
+	HrDom 117
+
+>>PrDom-100
+MapCode 2064
+	PrDom 100
+
+>>OcLow-41
+MapCode 2065
+	OcLow 41
+
+>>OcLow-157
+MapCode 2066
+	OcLow 157
+
+>>HrDom-157
+MapCode 2067
+	HrDom 157
+
+>>SbDee-157
+MapCode 2068
+	SbDee 157
+
+>>OcLow-72
+MapCode 2069
+	OcLow 72
+
+>>PoDee-122
+MapCode 2070
+	PoDee 122
+
+>>HrDom-39
+MapCode 2071
+	HrDom 39
+
+>>BwDom-96
+MapCode 2072
+	BwDom 96
+
+>>SbLow-54
+MapCode 2073
+	SbLow 54
+
+>>BfDom-41
+MapCode 2074
+	BfDom 41
+
+>>OcLow-172
+MapCode 2075
+	OcLow 172
+
+>>BfDom-54
+MapCode 2076
+	BfDom 54
+
+>>OcLow-96
+MapCode 2077
+	OcLow 96
+
+>>BfDom-113
+MapCode 2078
+	BfDom 113
+
+>>OcLow-30
+MapCode 2079
+	OcLow 30
+
+>>Brush/Alder-116
+MapCode 2080
+	Brush/Alder 116
+
+>>PjDee-52
+MapCode 2081
+	PjDee 52
+
+>>PoDee-36
+MapCode 2082
+	PoDee 36
+
+>>SbDee-147
+MapCode 2083
+	SbDee 147
+
+>>PoDee-147
+MapCode 2084
+	PoDee 147
+
+>>SbLow-147
+MapCode 2085
+	SbLow 147
+
+>>PwDom-60
+MapCode 2086
+	PwDom 60
+
+>>PwDom-4
+MapCode 2087
+	PwDom 4
+
+>>PwDom-2
+MapCode 2088
+	PwDom 2
+
+>>PwDom-68
+MapCode 2089
+	PwDom 68
+
+>>OcLow-91
+MapCode 2090
+	OcLow 91
+
+>>PoDee-97
+MapCode 2091
+	PoDee 97
+
+>>PoDee-51
+MapCode 2092
+	PoDee 51
+
