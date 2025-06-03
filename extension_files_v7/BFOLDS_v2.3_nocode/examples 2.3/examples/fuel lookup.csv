@@ -1,0 +1,48 @@
+Cover Type,Zone,SF1 Moisture,SF2 Nutrient,Site Age Max,Spring/Fall Season Fuel,Summer Season Fuel
+BfDom,0,0,0,15,O1b,M2 50% Conifer
+BfDom,0,0,0,25,C2,C2
+BfDom,0,0,0,40,M3 30% Dead Fir,M4 30% Dead Fir
+BfDom,0,0,0,60,M3 60% Dead Fir,M4 60% Dead Fir
+BfDom,0,0,0,80,M3 60% Dead Fir,M4 60% Dead Fir
+BfDom,0,0,0,100,M3 100% Dead Fir,M4 100% Dead Fir
+BfDom,0,0,0,380,M3 100% Dead Fir,M4 100% Dead Fir
+BfDom,0,0,0,15,O1b,O1b
+Brush/Alder,0,0,0,380,S2,M2 25% Conifer
+BwDom,0,0,0,380,D1,M2 25% Conifer
+BwDom,0,0,0,19,S2,M2 25% Conifer
+ConMx,0,0,0,380,M1 50% Conifer,M2 50% Conifer
+ConMx,0,0,0,140,M1 50% Conifer,M2 50% Conifer
+HrdMx,0,0,0,380,M1 50% Conifer,M2 50% Conifer
+HrdMx,0,0,0,140,M1 50% Conifer,M2 50% Conifer
+HrDom,0,0,0,380,M1 25% Conifer,M2 25% Conifer
+OcLow,0,0,0,380,C2,C2
+OthHd,0,0,0,380,M1 25% Conifer,M2 25% Conifer
+PjDee,0,0,0,380,C3,C3
+PjDee,0,0,0,50,C4,C4
+PjDee,0,0,0,19,O1a,O1b
+PjMx1,0,0,0,50,M1 75% Conifer,M2 75% Conifer
+PjMx1,0,0,0,380,M1 75% Conifer,M2 75% Conifer
+PjMx1,0,0,0,59,M1 75% Conifer,M2 75% Conifer
+PjMx1,0,0,0,19,O1a,O1b
+PoDee,0,0,0,380,D1,M2 25% Conifer
+PoDee,0,0,0,120,D1,M2 25% Conifer
+PoDee,0,0,0,19,D1,M2 25% Conifer
+PrDom,0,0,0,40,C4,C4
+PrDom,0,0,0,19,O1a,O1b
+PrDom,0,0,0,80,C5,C5
+PrDom,0,0,0,380,C6,C6
+PrwMx,0,0,0,35,C4,C4
+PrwMx,0,0,0,100,C5,C5
+PrwMx,0,0,0,200,C5,C5
+PrwMx,0,0,0,280,C5,C5
+PwDom,0,0,0,35,C4,C4
+PwDom,0,0,0,100,C5,C5
+PwDom,0,0,0,200,C5,C5
+PwDom,0,0,0,280,C5,C5
+SbDee,0,0,0,380,C2,C2
+SbDee,0,0,0,55,C2,C2
+SbLow,0,0,0,35,C1,C1
+SbLow,0,0,0,380,C2,C2
+SbMx1,0,0,0,59,M1 75% Conifer,M2 75% Conifer
+SbMx1,0,0,0,380,C2,C2
+SbMx1,0,0,0,59,M1 75% Conifer,M2 75% Conifer

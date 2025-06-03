@@ -1,0 +1,16 @@
+########################################################
+## IMPORTANT: library order seems to matter here
+########################################################
+
+- repo: Library-Algorithm-SOSIEL
+  org: LANDIS-II-Foundation
+  commit: bcbb57528ce2a7c57a1ebc6ab68f91f91a30eb9e
+
+- repo: Library-SOSIEL-VBGP
+  org: LANDIS-II-Foundation
+  commit: 53cd7b26ca39e1b28f0f6dcc71888c1ba3b2cf01
+
+- repo: Library-PnET-Cohort
+  org: LANDIS-II-Foundation
+  commit: 1f1f0e846e3e501f510d13b0d1918ba9bad3e3f5
+

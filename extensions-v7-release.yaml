@@ -1,0 +1,143 @@
+##  TODO:
+##  - "Extension-DGS-Succession" (requires additional libs)
+##
+
+## Succession Extensions
+- repo: Extension-Age-Only-Succession-Archived
+  org: LANDIS-II-Foundation
+  commit: bcf48e41b385ff0fec9e994c6ba907ffc20d6e83
+
+- repo: Extension-Biomass-Succession
+  org: LANDIS-II-Foundation
+  commit: 4bdbe475c3def1f6f2082ecb4682402a87ba4775
+
+# - repo: Extension-DGS-Succession
+#   org: LANDIS-II-Foundation
+#   commit: ''
+
+- repo: Extension-ForCS-Succession
+  org: LANDIS-II-Foundation
+  commit: 5fda9973fd6c2b58c39cc396479606dceaea295b ## v3.1 src readded
+
+- repo: Extension-NECN-Succession
+  org: LANDIS-II-Foundation
+  commit: 7203fc14a757d05673389ce42b4e7cd59e433d69
+
+- repo: Extension-PnET-Succession
+  org: LANDIS-II-Foundation
+  commit: 472353bb1059b6e1ac80f4c3750d1bca7d7673cd
+
+## Disturbance and Other Extensions
+- repo: Extension-Base-BDA
+  org: LANDIS-II-Foundation
+  commit: 1216055f55474a83038542bc80e70518303c32a4
+
+- repo: Extension-Base-Fire
+  org: LANDIS-II-Foundation
+  commit: c54071a1b6e23951e9bb8970441a599318008408
+
+- repo: Extension-Base-Harvest
+  org: LANDIS-II-Foundation
+  commit: cdb4861eb8389cbe165d2be1d435d01e62e2a8f2
+
+- repo: Extension-Base-Wind
+  org: LANDIS-II-Foundation
+  commit: 7b49d9589b7ccf6735aeba643d10fe0f4e9ad627 ## TODO fix hintpath typo 'Landis.Library'
+
+- repo: Extension-BFOLDS-Fire ## placeholder; available as precompiled dll only
+  org: na
+  commit: na
+
+- repo: Extension-Biomass-Browse
+  org: LANDIS-II-Foundation
+  commit: 1755224fb4fd04b85c3b24e2677376681492b7c4 ## TODO use most recent .csproj file
+
+- repo: Extension-Biomass-Harvest
+  org: LANDIS-II-Foundation
+  commit: 883e93340b75df2759f528a5c17fe4846433c6aa
+
+- repo: Extension-Biomass-Hurricane
+  org: LANDIS-II-Foundation
+  commit: 8aeed8eccd4dbc88109e2dc2926cd5a3b8400c14 ## TODO fix hintpath typo 'Landis.Library'
+
+- repo: Extension-Dynamic-Biomass-Fuels
+  org: LANDIS-II-Foundation
+  commit: 14b65b9d356dcf7bdf5bd7f5003c00be25535958
+
+- repo: Extension-Dynamic-Fire-System
+  org: LANDIS-II-Foundation
+  commit: d75578eebca9d06185a6412466edb95cd45afeb1
+
+- repo: Extension-Dynamic-Fuel-System
+  org: LANDIS-II-Foundation
+  commit: 7d24f401ed3104494421284f709f9e9ee63789c6
+
+- repo: Extension-Land-Use-Plus
+  org: LANDIS-II-Foundation
+  commit: f5085b01da380dec94db47caa0b66adcc02c5308
+
+- repo: Extension-LinearWind
+  org: LANDIS-II-Foundation
+  commit: f0bdd46223e87609e12c9d9d940cb95e475f3927
+
+- repo: Extension-Root-Rot
+  org: LANDIS-II-Foundation
+  commit: b2f5d591a6d9cf86e0a546f5477dedcb9345fe3f
+
+- repo: Extension-Social-Climate-Fire
+  org: LANDIS-II-Foundation
+  commit: 78b550b5ce61aa83d4a6553055ebabe06d863512
+
+- repo: Extension-SOSIEL-Harvest
+  org: LANDIS-II-Foundation
+  commit: 04b52ad9b28837b3ca550faff73c3635fdb04338
+
+- repo: LANDIS-II-Forest-Roads-Simulation-extension
+  org: Klemet
+  commit: dbc52588fcc47a1dcbaf5f72c71f20c626e1707e ## TODO
+
+- repo: LANDIS-II-Magic-Harvest
+  org: Klemet
+  commit: 1e4f9254ff4b96a3d96e1208f79e6c94b9d1576c ## TODO
+
+## Output Extensions
+- repo: Extension-Output-Biomass
+  org: LANDIS-II-Foundation
+  commit: 26a4178de05008b62b570226c8e5c8ab27ac7ac3 ## TODO fix assembly name to register ext
+
+- repo: Extension-Output-Biomass-By-Age
+  org: LANDIS-II-Foundation
+  commit: 8f96e3b1c6598fd8b5ecfe32a9506de3488da85e
+
+- repo: Extension-Output-Biomass-Community
+  org: LANDIS-II-Foundation
+  commit: fc7db62ba68d9b315e5bd207de169c7515747446
+
+- repo: Extension-Output-Biomass-PnET
+  org: LANDIS-II-Foundation
+  commit: 0855165e1601234357d088bda7cfe292e06e03a7
+
+- repo: Extension-Output-Biomass-Reclass
+  org: LANDIS-II-Foundation
+  commit: 571536db574f643a27dd3bbddd7b76f52826198c
+
+- repo: Extension-Output-Cohort-Statistics
+  org: LANDIS-II-Foundation
+  commit: c64ad5b1e9a4916de7f608fa43d436ef6ec2e4e6
+
+- repo: Extension-Output-Landscape-Habitat
+  org: LANDIS-II-Foundation
+  commit: e5701c604d426807051f772dfe599b12a2685dd0 ## TODO use newer .csproj file
+
+- repo: Extension-Output-Max-Species-Age
+  org: LANDIS-II-Foundation
+  commit: d28232fc9025d359e6fc2ccefee64866e75a84ef
+
+- repo: Extension-Output-Wildlife-Habitat
+  org: LANDIS-II-Foundation
+  commit: 027cefcf3cdfbfb70e2247531f514bf5fc0f1912
+
+- repo: Extension-Local-Habitat-Suitability-Output
+  org: LANDIS-II-Foundation
+  commit: fe3de71ec37f761c301cbbfea9eaae34c03d8dd7
+

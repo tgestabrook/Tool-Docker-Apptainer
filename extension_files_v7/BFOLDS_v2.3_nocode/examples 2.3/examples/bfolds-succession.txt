@@ -1,0 +1,9 @@
+LandisData  "BFOLDS Succession 2.0"
+
+
+Timestep  5
+
+
+InitialCommunities     "initial-communities.txt"
+InitialCommunitiesMap  "initial-communities.asc"
+
