@@ -8,6 +8,8 @@ This image closely follows the original `Clean_Docker_LANDIS-II_7_AllExtensions`
   rather than in the Dockerfile, which should be easier to update and maintain going forward;
 - likewise, library repos and commit SHAs are recorded in a shared `libraries-v7-release.yaml` file,
   rather than in the Dockerfile, which should be easier to update and maintain going forward;
+- install additional libraries before installing extensions;
+- use single commit for ForCS 3.1;
 - uses shared versions of the Forest Roads and Magic Harvest extensions' `.csproj` files,
   located in the `extension_files_v7/` directory;
 - rewrote and simplified various installation scripts to use `bash`;
