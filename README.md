@@ -122,7 +122,7 @@ docker pull ghcr.io/landis-ii-foundation/<imagename>:main
 	> - `<directory>` specifies the Docker 'build context', which determines the set of local files
 	>   the bulid process has access to. If `<directory>` is specified as the root directory of the repository,
 	>   then shared files or directories (e.g., `extension_files/`, `scripts/`, and any `*.yaml` files
-	>   can be passed to the build process. Whereas, if `<directory> is specified as one of the repository
+	>   can be passed to the build process. Whereas, if `<directory>` is specified as one of the repository
 	>   subdirectories (e.g., `Clean_Docker_LANDIS-II_8_AllExtensions`), then the build will only use
 	>   the files contained in that subdirectory.
 	> - `<path/to/Dockerfile>` specifies the *relative* path to the `Dockerfile` used to build the image.
