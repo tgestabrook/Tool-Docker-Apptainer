@@ -498,7 +498,7 @@ RUN cd $LANDIS_FOLDER/Tool-Console/src && dotnet build -c Release
 ## Testing
 ################################################################
 
-ARG TESTS_DIR="$LANDIS_DIR/tests"
+ARG TESTS_DIR="$LANDIS_FOLDER/tests"
 
 COPY ./tests $TESTS_DIR
 
