@@ -1,7 +1,17 @@
 # LANDIS-II v8 Docker Image (Linux Build)
 
-This repository contains a Dockerfile and supporting scripts to build a fully functioning **LANDIS-II v8** environment with selected extensions compiled for **Linux**. This setup enables reproducible and portable forest landscape modeling, ideal for high-performance or cloud-based simulations.
-This build uses the latest commits of each extension.
+This image closely follows the original `Clean_Docker_LANDIS-II_8_AllExtensions` image with the following enhancements:
+
+- uses the latest commits of each extension;
+- adds and configures additional software components:
+  - GitHub commandline tools;
+  - miniconda3 environment;
+  - [`tini`](https://github.com/krallin/tini) container init;
+  - [`ttyd`](https://github.com/tsl0922/ttyd) for terminal sharing over the web;
+  - [iRods](https://irods.org/);
+  - `tmux`;
+- custom user `user` and permissions;
+- custom container `ENTRYPOINT` (see [entry.sh](entry.sh));
 
 ---
 
@@ -16,7 +26,6 @@ This build uses the latest commits of each extension.
 - Output Biomass Community
 - Output Biomass Reclass
 - Output Max Spp Age
-
 
 ## Build Instructions
 
