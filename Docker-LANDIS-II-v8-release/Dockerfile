@@ -14,6 +14,7 @@ ENV LC_ALL=C.UTF-8
 ## update and install additional system dependencies:
 ## - `mono-utils` provides `monodis` used to debug ext/lib builds;
 ## - python needed for Magic Harvest;
+## - `xmlstarlet` used to edit xml in .csproj files;
 RUN apt-get update && apt-get upgrade -y \
   && apt-get install -y \
     dotnet-sdk-8.0 \
