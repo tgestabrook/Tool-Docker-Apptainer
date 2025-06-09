@@ -109,7 +109,7 @@ RUN wget -O master.zip https://github.com/LANDIS-II-Foundation/Extension-Output-
     dotnet /opt/Core-Model-v8-LINUX/build/Release/Landis.Extensions.dll add "/opt/Core-Model-v8-LINUX/Extension-Output-Biomass-Reclass-master/deploy/installer/Output Biomass Reclass 4.txt"
 
 # Output Max Spp Age
-RUN wget -O master.zip https://github.com/LANDIS-II-Foundation/Extension-Output-Max-Species-Age.git && \
+RUN wget -O master.zip https://github.com/LANDIS-II-Foundation/Extension-Output-Max-Species-Age/archive/refs/heads/master.zip && \
     unzip master.zip -d /opt/Core-Model-v8-LINUX/ && \
     rm master.zip && \
     cd /opt/Core-Model-v8-LINUX/Extension-Output-Max-Species-Age-master/src && \ 
