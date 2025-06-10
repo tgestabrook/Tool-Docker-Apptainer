@@ -45,30 +45,46 @@ Simply select an image that best suits your needs - you can use "as is" or simpl
 > However, we recommend that you familiarize yourself with the rest of the instructions to learn
 > how to edit and customize them for your own research purposes.
 
-**Generic images**
+### Generic images
 
 These images provide a minimal LANDIS-II installation, including GDAL, plus a python installation.
 
 > 💡 The `Clean_Docker_*` images hardcode the extensions and their specific commits directly in the Dockerfile,
-> whereas the others use `extensions-v8-release.yaml` or `extensions-v8-latest.yaml` to define the versions used.
+> whereas the others refer to a `.yaml` file (e.g., [`extensions-v8-release.yaml`](extensions-v8-release.yaml)) to define the versions used.
 > When customizing multiple images, it is easier to use these shared sets of extensions,
 > especially when important updates (like bug fixes) are made to the extensions and images need to be updated and rebuilt.
+
+**LANDIS-II v7 images**
 
 | Image name             | Subdirectory                               | Description                                         |
 | ---------------------- | ------------------------------------------ | --------------------------------------------------- |
 | `landis-ii-v7-linux`   | `Clean_Docker_LANDIS-II_7_AllExtensions/`  | LANDIS-II v7 (Ubuntu 22.04); fixed versions of v7-compatible extensions; **superseded by `landis-ii-v7-release`** |
-| `landis-ii-v8-linux`   | `Clean_Docker_LANDIS-II_8_AllExtensions/`  | LANDIS-II v8 (Ubuntu 22.04); fixed versions of v8 extensions; **superseded by `landis-ii-v8-release`** |
-| `landis-ii-v8-latest`  | `Clean_Docker_LANDIS-II_8_Latest_Commits/` | LANDIS-II v8 (Ubuntu 22.04); latest versions of v8 extensions |
-| `landis-ii-v7-release` | `Docker-LANDIS-II-v7-release/`             | LANDIS-II v7 (Ubuntu 22.04); fixed versions of v7-compatible extensions |
-| `landis-ii-v8-release` | `Docker-LANDIS-II-v8-release/`             | LANDIS-II v8 (Ubuntu 24.04); fixed versions of v8 extensions |
+| `landis-ii-v7-release` | `Docker-LANDIS-II-v7-release/`             | LANDIS-II v7 (Ubuntu 22.04); [fixed versions of v7-compatible extensions](extensions-v7-release.yaml) |
 
-**Rstudio images**
-
-These images are based on the generic images and add R and a running Rstudio Server instance.
+**LANDIS-II v8 images**
 
 | Image name             | Subdirectory                               | Description                                         |
 | ---------------------- | ------------------------------------------ | --------------------------------------------------- |
-| `landis-ii-v8-rstudio` | `Docker-LANDIS-II-v8-release-Rstudio/`     | LANDIS-II v8 (Ubuntu 24.04); fixed versions of v8 extensions; Rstudio Server |
+| `landis-ii-v8-linux`   | `Clean_Docker_LANDIS-II_8_AllExtensions/`  | LANDIS-II v8 (Ubuntu 22.04); fixed versions of v8 extensions; **superseded by `landis-ii-v8-release`** |
+| `landis-ii-v8-release` | `Docker-LANDIS-II-v8-release/`             | LANDIS-II v8 (Ubuntu 24.04); [fixed versions of v8 extensions](extensions-v8-release.yaml) |
+
+### Rstudio images
+
+These images are based on the generic images and add R and a running Rstudio Server instance.
+
+**LANDIS-II v8 images**
+
+| Image name             | Subdirectory                               | Description                                         |
+| ---------------------- | ------------------------------------------ | --------------------------------------------------- |
+| `landis-ii-v8-rstudio` | `Docker-LANDIS-II-v8-release-Rstudio/`     | LANDIS-II v8 (Ubuntu 24.04); [fixed versions of v8 extensions](extensions-v8-release.yaml); Rstudio Server |
+
+### Other custom images
+
+**LANDIS-II v8 images**
+
+| Image name             | Subdirectory                               | Description                                         |
+| ---------------------- | ------------------------------------------ | --------------------------------------------------- |
+| `landis-ii-v8-latest`  | `Clean_Docker_LANDIS-II_8_Latest_Commits/` | LANDIS-II v8 (Ubuntu 22.04); latest versions of v8 extensions; `miniconda` and [iRods](https://irods.org/) |
 
 ### 📥 Get a prebuilt image
 
