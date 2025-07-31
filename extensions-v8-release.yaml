@@ -68,7 +68,7 @@
 
 - repo: Extension-Social-Climate-Fire
   org: LANDIS-II-Foundation
-  commit: 9206bc0c5cded05941a8405cc5956f00c5b4b103
+  commit: 50da8656eb6cafb2a702bba2e62d6dcdd824c5b9
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
