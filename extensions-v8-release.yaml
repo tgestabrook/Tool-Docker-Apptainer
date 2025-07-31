@@ -22,8 +22,8 @@
   commit: 8ebaf44fd49498b3f1312faafd85333d5b95b86b ## Austen's v8 branch
 
 - repo: Extension-NECN-Succession
-  org: LANDIS-II-Foundation
-  commit: 6d8451e24bf6df5845a98c314540686b6f1d20a9
+  org: tgestabrook
+  commit: 087bbbe64462ecced4312eb4ef2fc1775d25bce4
 
 - repo: Extension-PnET-Succession
   org: aruzicka555
