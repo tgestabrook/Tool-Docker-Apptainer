@@ -15,16 +15,6 @@ docker build . \
   -t landis-ii-8-rstudio:release
 ```
 
-### Windows (Powershell)
-
-```shell
-cd ~/Tool-Docker-Apptainer
-
-docker build . `
-  -f Docker-LANDIS-II-v8-Rstudio/Dockerfile `
-  -t landis-ii-8-rstudio:release
-```
-
 ## Run a container
 
 - specify the local port to use to connect to the container by passing `-p` with appropriate arguments
@@ -49,22 +39,6 @@ docker run -d -it \
   -p 127.0.0.1:8080:8787 \
   --mount type=bind,source=/home/$(id -un)/projects/LANDIS-II,target=/home/rstudio/LANDIS-II \
   --name landis01 \
-  landis-ii-8-rstudio:release
-```
-
-### Windows (Powershell)
-
-```shell
-## example
-docker run -d -it `
-  -e USERID=$(id -u) `
-  -e GROUPID=$(id -g) `
-  -e PASSWORD='<MySecretPassword>' `
-  --cpus=4 `
-  --memory=64g `
-  -p 127.0.0.1:8080:8787 `
-  --mount type=bind,source=/home/$(id -un)/projects/LANDIS-II,target=/home/rstudio/LANDIS-II `
-  --name landis01 `
   landis-ii-8-rstudio:release
 ```
 

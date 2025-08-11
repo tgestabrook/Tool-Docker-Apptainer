@@ -78,7 +78,7 @@ docker run \
   --memory=64g \
   --mount type=bind,src="<SCENARIO_FOLDER_FULL_PATH_ON_COMPUTER>",dst=/scenarioFolder \
   --name landis01 \
-  landis-ii-7-release:release /bin/sh -c "cd /scenarioFolder && dotnet $LANDIS_CONSOLE scenario.txt"
+  landis-ii-7-release:release /bin/sh -c "cd /scenarioFolder && dotnet \$LANDIS_CONSOLE scenario.txt"
 ```
 
 #### Windows (Powershell)
@@ -89,6 +89,6 @@ docker run `
   --memory=64g `
   --mount type=bind,src="<SCENARIO_FOLDER_FULL_PATH_ON_COMPUTER>",dst=/scenarioFolder \
   --name landis01 `
-  landis-ii-7-release:release /bin/sh -c "cd /scenarioFolder && dotnet $LANDIS_CONSOLE scenario.txt"
+  landis-ii-7-release:release /bin/sh -c "cd /scenarioFolder && dotnet `$LANDIS_CONSOLE scenario.txt"
 ```
 
