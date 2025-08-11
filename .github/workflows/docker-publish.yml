@@ -11,8 +11,6 @@ on:
     - cron: '40 9 1,15 * *'
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 env:
   REGISTRY: ghcr.io
