@@ -21,15 +21,31 @@ This image closely follows the original `Clean_Docker_LANDIS-II_8_AllExtensions`
 
 ## Build the image
 
+### Linux (bash)
+
 ```shell
 cd ~/Tool-Docker-Apptainer
 
-docker build . -f Docker-LANDIS-II-v8-release/Dockerfile -t landis-ii-8:release
+docker build . \
+  -f Docker-LANDIS-II-v8-release/Dockerfile \
+  -t landis-ii-8-release:release
+```
+
+### Windows (Powershell)
+
+```shell
+cd ~/Tool-Docker-Apptainer
+
+docker build . `
+  -f Docker-LANDIS-II-v8-release/Dockerfile `
+  -t landis-ii-8-release:release
 ```
 
 ## Run a container
 
 ### Interactive container
+
+#### Linux (bash)
 
 ```shell
 docker run -it \
@@ -37,12 +53,25 @@ docker run -it \
   --memory=64g \
   --mount type=bind,src="<SCENARIO_FOLDER_FULL_PATH_ON_COMPUTER>",dst=/scenarioFolder \
   --name landis01 \
-  landis-ii-8:release
+  landis-ii-8-release:release
+```
+
+#### Windows (Powershell)
+
+```shell
+docker run -it `
+  --cpus=4 `
+  --memory=64g `
+  --mount type=bind,src="<SCENARIO_FOLDER_FULL_PATH_ON_COMPUTER>",dst=/scenarioFolder `
+  --name landis01 `
+  landis-ii-8-release:release
 ```
 
 ### Non-interactive container
 
 E.g., run a single LANDIS-II simulation
+
+#### Linux (bash)
 
 ```shell
 docker run \
@@ -52,3 +81,15 @@ docker run \
   --name landis01 \
   landis-ii-8:release /bin/sh -c "cd /scenarioFolder && dotnet $LANDIS_CONSOLE scenario.txt"
 ```
+
+#### Windows (Powershell)
+
+```shell
+docker run `
+  --cpus=4 `
+  --memory=64g `
+  --mount type=bind,src="<SCENARIO_FOLDER_FULL_PATH_ON_COMPUTER>",dst=/scenarioFolder `
+  --name landis01 `
+  landis-ii-8:release /bin/sh -c "cd /scenarioFolder && dotnet $LANDIS_CONSOLE scenario.txt"
+```
+

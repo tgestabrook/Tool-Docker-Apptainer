@@ -5,11 +5,23 @@ so it provides an Rstudio Server instance for interactive workflows.
 
 ## Build the image
 
+### Linux (bash)
+
 ```shell
 cd ~/Tool-Docker-Apptainer
 
 docker build . \
   -f Docker-LANDIS-II-v8-Rstudio/Dockerfile \
+  -t landis-ii-8-rstudio:release
+```
+
+### Windows (Powershell)
+
+```shell
+cd ~/Tool-Docker-Apptainer
+
+docker build . `
+  -f Docker-LANDIS-II-v8-Rstudio/Dockerfile `
   -t landis-ii-8-rstudio:release
 ```
 
@@ -24,6 +36,8 @@ docker build . \
   (see <https://rocker-project.org/images/versioned/rstudio.html#userid-and-groupid>);
 - limit system resources available to the container by passing e.g., `--memory=64g` and `--cpus=8`;
 
+### Linux (bash)
+
 ```shell
 ## example
 docker run -d -it \
@@ -35,6 +49,22 @@ docker run -d -it \
   -p 127.0.0.1:8080:8787 \
   --mount type=bind,source=/home/$(id -un)/projects/LANDIS-II,target=/home/rstudio/LANDIS-II \
   --name landis01 \
+  landis-ii-8-rstudio:release
+```
+
+### Windows (Powershell)
+
+```shell
+## example
+docker run -d -it `
+  -e USERID=$(id -u) `
+  -e GROUPID=$(id -g) `
+  -e PASSWORD='<MySecretPassword>' `
+  --cpus=4 `
+  --memory=64g `
+  -p 127.0.0.1:8080:8787 `
+  --mount type=bind,source=/home/$(id -un)/projects/LANDIS-II,target=/home/rstudio/LANDIS-II `
+  --name landis01 `
   landis-ii-8-rstudio:release
 ```
 
