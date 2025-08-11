@@ -5,6 +5,8 @@ so it provides an Rstudio Server instance for interactive workflows.
 
 ## Build the image
 
+### Linux (bash)
+
 ```shell
 cd ~/Tool-Docker-Apptainer
 
@@ -23,6 +25,8 @@ docker build . \
   to ensure user file permissions of the container match those of the mounted volume (defaults: `1000`)
   (see <https://rocker-project.org/images/versioned/rstudio.html#userid-and-groupid>);
 - limit system resources available to the container by passing e.g., `--memory=64g` and `--cpus=8`;
+
+### Linux (bash)
 
 ```shell
 ## example
