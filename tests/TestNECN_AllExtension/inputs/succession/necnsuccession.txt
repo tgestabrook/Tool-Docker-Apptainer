@@ -4,28 +4,28 @@ Timestep  5
 
 SeedingAlgorithm  WardSeedDispersal
 
-InitialCommunitiesCSV      ./succession/initial-communities.csv
-InitialCommunitiesMap   ./succession/initial-communities.img
-ClimateConfigFile 	./core/climate.txt	
+InitialCommunitiesCSV      ./inputs/succession/initial-communities.csv
+InitialCommunitiesMap   ./inputs/succession/initial-communities.img
+ClimateConfigFile 	./inputs/disturbances/climateSocialFire/climate-generator-baseline.txt	
 
-SoilDepthMapName				./succession/random110.tif 
-SoilDrainMapName				./succession/constantpoint75.tif 
-SoilBaseFlowMapName				./succession/constantpoint4.tif 
-SoilStormFlowMapName			./succession/constantpoint4.tif
-SoilFieldCapacityMapName		./succession/random_point1_point2.tif
-SoilWiltingPointMapName			./succession/random_point05_point099.tif
-SoilPercentSandMapName			./succession/random_point01_point5.tif
-SoilPercentClayMapName			./succession/random_point01_point5.tif
-InitialSOM1CsurfMapName			./succession/random110.tif
-InitialSOM1NsurfMapName			./succession/random6.tif
-InitialSOM1CsoilMapName			./succession/random110.tif
-InitialSOM1NsoilMapName			./succession/random9.tif
-InitialSOM2CMapName				./succession/random4500.tif
-InitialSOM2NMapName				./succession/random145.tif
-InitialSOM3CMapName				./succession/random1294.tif
-InitialSOM3NMapName				./succession/random50.tif
-InitialDeadWoodSurfaceMapName	./succession/random110.tif 
-InitialDeadCoarseRootsMapName	./succession/random50.tif
+SoilDepthMapName				./inputs/succession/random110.tif 
+SoilDrainMapName				./inputs/succession/constantpoint75.tif 
+SoilBaseFlowMapName				./inputs/succession/constantpoint4.tif 
+SoilStormFlowMapName			./inputs/succession/constantpoint4.tif
+SoilFieldCapacityMapName		./inputs/succession/random_point1_point2.tif
+SoilWiltingPointMapName			./inputs/succession/random_point05_point099.tif
+SoilPercentSandMapName			./inputs/succession/random_point01_point5.tif
+SoilPercentClayMapName			./inputs/succession/random_point01_point5.tif
+InitialSOM1CsurfMapName			./inputs/succession/random110.tif
+InitialSOM1NsurfMapName			./inputs/succession/random6.tif
+InitialSOM1CsoilMapName			./inputs/succession/random110.tif
+InitialSOM1NsoilMapName			./inputs/succession/random9.tif
+InitialSOM2CMapName				./inputs/succession/random4500.tif
+InitialSOM2NMapName				./inputs/succession/random145.tif
+InitialSOM3CMapName				./inputs/succession/random1294.tif
+InitialSOM3NMapName				./inputs/succession/random50.tif
+InitialDeadWoodSurfaceMapName	./inputs/succession/random110.tif 
+InitialDeadCoarseRootsMapName	./inputs/succession/random50.tif
 
 CalibrateMode 	no
 SmokeModelOutputs no  << produces additional maps that are valuable for modeling smoke
@@ -44,7 +44,7 @@ DecayRateSOM1			0.01
 DecayRateSOM2			0.2
 DecayRateSOM3			0.001
 
-SpeciesParameters ./succession/NECN_Spp_Table.csv
+SpeciesParameters ./inputs/succession/NECN_Spp_Table.csv
 
 FireReductionParameters
 >>	Severity	WoodLitter	Litter	CohortWood	CohortFoliar	SOM
