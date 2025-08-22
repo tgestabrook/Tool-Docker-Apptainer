@@ -142,7 +142,7 @@ RUN dotnet $LANDIS_CONSOLE scenario.txt
 ## Cleanup
 ################################################################
 
-WORKDIR / ## reset to default
+WORKDIR /
 
 ## - remove extension and library build log files;
 ## - remove tests and their outputs from the image;

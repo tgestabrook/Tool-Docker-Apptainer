@@ -48,7 +48,7 @@ RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \
 
 ENV PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
-WORKDIR / ## default
+WORKDIR /
 
 ## install yq (used to parse yaml files) from source
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq \
@@ -160,7 +160,7 @@ RUN scripts/install_extensions_v7.sh extensions-v7-release.yaml $LANDIS_DIR
 ## Cleanup
 ################################################################
 
-WORKDIR / ## reset to default
+WORKDIR /
 
 ## - remove extension and library build log files;
 ## - remove tests and their outputs from the image;
