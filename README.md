@@ -413,7 +413,7 @@ To use the Apptainer on a HPC environment :
 - Go to where your `.sif` files are located, and use the following command:
 
   ```shell
-  apptainer exec -C -B <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> <NAME OF YOUR APPTAINER FILE>.sif /bin/sh -c "cd <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> && dotnet $LANDIS_CONSOLE scenario.txt"
+  apptainer exec -C -B <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> <NAME OF YOUR APPTAINER FILE>.sif /bin/sh -c "cd <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> && dotnet \$LANDIS_CONSOLE scenario.txt"
   ```
 
 As you can see, the command is very similar to the one used with Docker:
@@ -432,7 +432,7 @@ As you can see, the command is very similar to the one used with Docker:
 -  `cd <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE>` is a the first command we launch while inside the Apptainer:
   we simply use it to go inside the folder containing your LANDIS-II scenario files,
   which are accessible inside the Apptainer thanks to `-B <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE>` that we used before, which "binded" them inside it.
--  `dotnet $LANDIS_CONSOLE scenario.txt` is the final command we launch to launch the simulation.
+-  `dotnet \$LANDIS_CONSOLE scenario.txt` is the final command we launch to launch the simulation. ⚠ **Important** : You have to escape the `$LANDIS_CONSOLE` variable with a `\` character before it; this is because the variable is inside the apptainer. But if you don't escape it, the shell will try to take it from outside the apptainer (from the Linux installation from which you're launching the command), which will not work.
 
 
 ## 🐛 Problem, issue or bug ?
