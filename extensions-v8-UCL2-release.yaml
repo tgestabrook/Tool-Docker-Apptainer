@@ -85,7 +85,7 @@
 ## TODO: use LANDIS-II-Foundation
 - repo: Extension-Social-Climate-Fire
   org: tgestabrook
-  commit: ee50277d2371edeb5794a3de6335e001c7098496
+  commit: 021c350126f4ff337ad26f8317ffc6802f551482
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
