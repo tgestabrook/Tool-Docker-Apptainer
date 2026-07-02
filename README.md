@@ -363,28 +363,48 @@ docker run \
 
 Simply make sure that the command `cd /scenarioFolder` goes where your `scenario.txt` file is located. If it's in a subfolder, change it to `cd /scenarioFolder/subFolder`.
 
-### 📦 (Optional) Building an apptainer file to use LANDIS-II on HPC environments (e.g. supercomputing clusters)
+### 📦 Using LANDIS-II on HPC environments (e.g. supercomputing clusters) with Apptainer
 
-You can easily create an Apptainer file (in `.sif` format) from a Docker image to deploy on HPC environments.
+On HPC clusters, Docker is usually forbidden and you use [Apptainer](https://apptainer.org/)
+(formerly Singularity) instead. Apptainer runs a single `.sif` file, which you can either
+**download pre-built** or **build yourself** from any of our Docker images.
 
-- First, you need to install Apptainer (the program) on your computer. This can only be done in Linux.
-  If you are on Windows, you can use the WSL that we installed with Docker Desktop (see above)
-  to run an Ubuntu console on your Windows computer. Simply run `wsl -d Ubuntu` in a Powershell terminal.
-  You can also create a Docker container that contains Apptainer.
-  See [this repository](https://github.com/kaczmarj/apptainer-in-docker) for one.
-- Next, you need to export your Docker image as an archive file.
-  Use `docker save <NAME OF DOCKER IMAGE> -o <DOCKER ARCHIVE FILE NAME>.tar` in the terminal.
-- Then, you need to use a Linux terminal with Apptainer installed, and change your working directory
-  to go the folder containing your `.tar` docker archive file.
-- Finally, use this command to build the Apptainer image:
-  
+#### Option 1 (recommended): download a pre-built `.sif`
+
+Pre-built `.sif` files for the simulation images are attached to our
+[Releases](https://github.com/LANDIS-II-Foundation/Tool-Docker-Apptainer/releases).
+Download the one you need — e.g. directly on the cluster with `wget`/`curl` — and follow the
+run instructions below. No build step required.
+
+These `.sif` files are built automatically from the published Docker images, so they stay in
+sync with each release.
+
+#### Option 2: build a `.sif` yourself
+
+Because the Docker images are published to the GitHub Container Registry, Apptainer can build a
+`.sif` **directly from the registry** — there is no need to `docker save` to a `.tar` first:
+
+```shell
+## replace <imagename> with one from the tables above (e.g. landis-ii-v8-release)
+apptainer build <imagename>.sif docker://ghcr.io/landis-ii-foundation/<imagename>:ubuntu-latest
+```
+
+Apptainer only runs on Linux, so:
+
+- **On Linux** — including the WSL Ubuntu that ships with Docker Desktop (run `wsl -d Ubuntu` in
+  a PowerShell terminal) — [install Apptainer](https://apptainer.org/docs/admin/main/installation.html)
+  and run the command above.
+- **On Windows without WSL** — run the build inside a container that already includes Apptainer,
+  so you don't have to install anything extra:
+
   ```shell
-  apptainer build --fakeroot <NAME OF YOUR APPTAINER FILE>.sif docker-archive://<DOCKER ARCHIVE FILE NAME>.tar
+  docker run --rm --privileged kaczmarj/apptainer:latest \
+    build /work/<imagename>.sif docker://ghcr.io/landis-ii-foundation/<imagename>:ubuntu-latest
   ```
 
-  > ⚠ This compilation often takes a lot of RAM, and will fail if you do not have enough of it available!
-  > If that's the case, you can download and use one of the `.sif` files available from the
-  > [Releases](https://github.com/LANDIS-II-Foundation/Tool-Docker-Apptainer/releases) section of this repository.
+> 💡 The slim v8 images build into small `.sif` files (a few hundred MB) on a normal laptop.
+> If a build runs out of RAM — or you simply want to avoid building — use the pre-built `.sif`
+> from the [Releases](https://github.com/LANDIS-II-Foundation/Tool-Docker-Apptainer/releases) (Option 1).
 
 To use the Apptainer on a HPC environment :
 
@@ -393,7 +413,7 @@ To use the Apptainer on a HPC environment :
 - Go to where your `.sif` files are located, and use the following command:
 
   ```shell
-  apptainer exec -C -B <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> <NAME OF YOUR APPTAINER FILE>.sif /bin/sh -c "cd <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> && dotnet $LANDIS_CONSOLE scenario.txt"
+  apptainer exec -C -B <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> <NAME OF YOUR APPTAINER FILE>.sif /bin/sh -c "cd <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE> && dotnet \$LANDIS_CONSOLE scenario.txt"
   ```
 
 As you can see, the command is very similar to the one used with Docker:
@@ -412,7 +432,7 @@ As you can see, the command is very similar to the one used with Docker:
 -  `cd <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE>` is a the first command we launch while inside the Apptainer:
   we simply use it to go inside the folder containing your LANDIS-II scenario files,
   which are accessible inside the Apptainer thanks to `-B <FULL_PATH_TO_FOLDER_WITH_SCENARIO_FILE>` that we used before, which "binded" them inside it.
--  `dotnet $LANDIS_CONSOLE scenario.txt` is the final command we launch to launch the simulation.
+-  `dotnet \$LANDIS_CONSOLE scenario.txt` is the final command we launch to launch the simulation. ⚠ **Important** : You have to escape the `$LANDIS_CONSOLE` variable with a `\` character before it; this is because the variable is inside the apptainer. But if you don't escape it, the shell will try to take it from outside the apptainer (from the Linux installation from which you're launching the command), which will not work.
 
 
 ## 🐛 Problem, issue or bug ?

@@ -56,6 +56,11 @@ for i in $(seq 0 $((count - 1))); do
   repo=$(yq eval ".[$i].repo" "$YAML_FILE")
   org=$(yq eval ".[$i].org" "$YAML_FILE")
   commit=$(yq eval ".[$i].commit" "$YAML_FILE")
+  ## optional: name of a hand-maintained .csproj in extension_files/ to use for
+  ## this entry (Clément's extensions only). Lets one build select a variant
+  ## (e.g. a UCLv2 .csproj) without disturbing the basename-matched default the
+  ## other release builds rely on. Absent -> "" (fall back to basename match).
+  csproj_override=$(yq eval ".[$i].csproj // \"\"" "$YAML_FILE")
 
   if [[ -z "$repo" || -z "$org" || -z "$commit" ]]; then
     echo "Error parsing $YAML_FILE" 1>&2
@@ -89,7 +94,18 @@ for i in $(seq 0 $((count - 1))); do
 
   if [[ "$repo" == "LANDIS-II-Forest-Roads-Simulation-extension" ||
         "$repo" == "LANDIS-II-Magic-Harvest" ]]; then
-    cp "$LANDIS_DIR/extension_files/$(basename "$ext_csproj_file")" "$ext_csproj_file"
+    ## pick the override .csproj: a yaml `csproj:` entry names it explicitly,
+    ## otherwise default to the one matching the repo .csproj's basename.
+    if [[ -n "$csproj_override" ]]; then
+      override_csproj="$LANDIS_DIR/extension_files/$csproj_override"
+    else
+      override_csproj="$LANDIS_DIR/extension_files/$(basename "$ext_csproj_file")"
+    fi
+    if [[ ! -f "$override_csproj" ]]; then
+      echo "Error: .csproj override '$override_csproj' for '$repo' not found" 1>&2
+      exit 1
+    fi
+    cp "$override_csproj" "$ext_csproj_file"
   else
     "$LANDIS_DIR/scripts/update_csproj_misc.sh" "$repo_path"
     "$LANDIS_DIR/scripts/update_csproj_hintpaths.sh" "$repo_path"
@@ -104,6 +120,15 @@ for i in $(seq 0 $((count - 1))); do
   ext_src_path=$(dirname "$ext_csproj_file")
 
   dotnet build "$ext_src_path" -c Release | tee -a "$EXT_LOG_FILE"
+
+  ## fail fast on a failed extension build: the pipe to `tee` masks dotnet's
+  ## exit code (the pipeline returns tee's 0), so `set -e` never trips and a
+  ## broken extension would be registered with no .dll. Check PIPESTATUS.
+  build_status=${PIPESTATUS[0]}
+  if [ "$build_status" -ne 0 ]; then
+    echo "Error: 'dotnet build' failed for extension '$repo' (exit $build_status); aborting." 1>&2
+    exit "$build_status"
+  fi
 
   ## append extension dependencies to the logfile for debugging
   dotnet list "$ext_csproj_file" package | tee -a "$EXT_LOG_FILE"

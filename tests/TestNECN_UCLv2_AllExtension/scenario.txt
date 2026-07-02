@@ -42,7 +42,7 @@ CellLength  30 << meters, so cell area = 900 m2
  	"Biomass Harvest"       ./inputs/disturbances/biomassHarvest/harvest_SetUp.txt
 
 >> FRS module
->>    "Forest Roads Simulation"    ./inputs/disturbances/forestRoadsSimulation/roads.txt
+    "Forest Roads Simulation"    ./inputs/disturbances/forestRoadsSimulation/roads.txt
 
 >> Original Wind
 	"Original Wind" 	./inputs/disturbances/originalWind/original-wind.txt

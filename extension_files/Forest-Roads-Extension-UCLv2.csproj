@@ -22,7 +22,7 @@
 	<Deterministic>false</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	<OutputPath>..\build\extensions</OutputPath>  <!-- ..\ (not ..\..\): at this UCLv1 commit the .csproj is at the repo root, so one level up reaches Core-Model-v8-LINUX/build/extensions. The UCLv2 commit moved the .csproj into src/, so that variant needs ..\..\ instead (see #59). -->
+	<OutputPath>..\..\build\extensions</OutputPath>  <!-- ..\..\ (not ..\): this .csproj is in the repo's src/ subdir, so two levels up reaches Core-Model-v8-LINUX/build/extensions; with ..\ the .dll lands in the cloned repo's own build/extensions, which is rm'd after the build, leaving the extension registered with no .dll (see #59) -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -42,8 +42,8 @@
     <Reference Include="Landis.Landscapes, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Landis.Landscapes.2.0.1\lib\netstandard2.0\Landis.Landscapes.dll</HintPath>
     </Reference>
-    <Reference Include="Landis.Library.UniversalCohorts-v1">
-      <HintPath>..\build\extensions\Landis.Library.UniversalCohorts-v1.dll</HintPath>
+    <Reference Include="Landis.Library.UniversalCohorts-v2">
+      <HintPath>..\build\extensions\Landis.Library.UniversalCohorts-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.HarvestManagement-v4">
       <HintPath>..\build\extensions\Landis.Library.HarvestManagement-v4.dll</HintPath>

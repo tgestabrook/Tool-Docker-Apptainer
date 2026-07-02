@@ -85,8 +85,14 @@ All other enhancements from `Docker-LANDIS-II-v8-release` also apply:
 - LANDIS-II placed at `/opt/landis-ii`;
 - extension and library versions defined in shared `*.yaml` files;
 - shared `.csproj` files for Forest Roads and Magic Harvest extensions (`extension_files/`);
+  this build selects the UCLv2 Forest Roads variant (`Forest-Roads-Extension-UCLv2.csproj`)
+  via the `csproj:` field on its entry in `extensions-v8-UCL2-release.yaml`;
 - build scripts in `bash`, shared in `scripts/`;
 - shared tests (`tests/`) run as part of the build;
+- **multi-stage build** that ships only the .NET *runtime* and the compiled model:
+  the .NET SDK, NuGet caches, cloned sources, and GDAL build/dev packages are all left
+  behind in a throwaway build stage. The final image is **≈0.6 GB** (previously ≈4 GB),
+  which matters most when converting to an Apptainer `.sif` for HPC use;
 
 ## Build the image
 
@@ -127,6 +133,12 @@ docker build . `
   --build-arg UBUNTU_VERSION=24.04 `
   -t landis-ii-v8-uclv2-release:ubuntu-24.04
 ```
+
+> 💡 **Multi-stage build.** This Dockerfile builds in two stages: a `build` stage with the full
+> .NET SDK and GDAL build dependencies that compiles and tests LANDIS-II, and a slim `runtime`
+> stage (Ubuntu + the .NET runtime only) that becomes the final image. When customizing the image,
+> add **runtime** dependencies (e.g. extra Python packages a scenario needs) to the `runtime` stage,
+> and **build-time** dependencies (e.g. to compile an additional extension) to the `build` stage.
 
 ## Run a locally built container
 

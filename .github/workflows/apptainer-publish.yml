@@ -1,0 +1,88 @@
+name: Build and publish Apptainer (.sif) images
+
+## Builds Apptainer/Singularity .sif images directly from the Docker images
+## already published to the GitHub Container Registry (ghcr.io) by
+## `docker-publish.yml`, then attaches them to a GitHub Release.
+##
+## Why this design:
+##   - We convert straight from `docker://ghcr.io/...`, so there is no
+##     `docker save` / tarball step and no local Docker daemon needed.
+##   - Only the simulation images are converted (see matrix below). The R /
+##     RStudio images are larger and not a typical HPC batch use case, so they
+##     are intentionally excluded; if ever needed, publish those as an OCI/ORAS
+##     artifact (`apptainer push ... oras://ghcr.io/...`) to avoid the 2 GB
+##     GitHub Release asset limit.
+##
+## Triggers:
+##   - `release: published` — the normal path. Cut a GitHub Release and the
+##     matching `.sif` files are built from the current `:ubuntu-latest` images
+##     and uploaded as release assets.
+##   - `workflow_dispatch` — manual run for testing or one-off builds; results
+##     are uploaded as workflow artifacts (no release to attach to). An optional
+##     `tag` input lets you target a specific image tag (e.g. `ubuntu-26.04`).
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Docker image tag to convert (e.g. ubuntu-latest, ubuntu-24.04, ubuntu-26.04)"
+        default: "ubuntu-latest"
+        required: false
+
+permissions:
+  contents: write   # upload release assets
+  packages: read    # pull source images from ghcr
+
+jobs:
+  build-sif:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ## Simulation images only — each is well under the 2 GB release-asset
+        ## limit (v8-release / v8-uclv2-release are multi-stage "slim" builds;
+        ## v7-release is ~1.5 GB as a .sif).
+        image:
+          - landis-ii-v7-release
+          - landis-ii-v8-release
+          - landis-ii-v8-uclv2-release
+        ## To also publish the R image, add `landis-ii-v8-r` here AND switch its
+        ## upload to an ORAS push (it can exceed 2 GB). RStudio is omitted on
+        ## purpose (interactive server, not an HPC batch workload).
+
+    steps:
+      - name: Set up Apptainer
+        uses: apptainer/setup-apptainer@v2
+
+      - name: Build .sif from the published Docker image
+        env:
+          ## Authenticate the docker:// pull to avoid anonymous ghcr rate limits
+          ## (also required if the source image is ever made private).
+          APPTAINER_DOCKER_USERNAME: ${{ github.actor }}
+          APPTAINER_DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          owner=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          tag="${{ github.event.inputs.tag || 'ubuntu-latest' }}"
+          src="docker://ghcr.io/${owner}/${{ matrix.image }}:${tag}"
+          out="${{ matrix.image }}.sif"
+          echo "Building ${out} from ${src}"
+          apptainer build "${out}" "${src}"
+          ls -lh "${out}"
+          echo "SIF=${out}" >> "$GITHUB_ENV"
+
+      - name: Attach .sif to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${{ github.event.release.tag_name }}" "${SIF}" --clobber
+
+      - name: Upload .sif as a workflow artifact
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.image }}-sif
+          path: ${{ env.SIF }}
+          if-no-files-found: error

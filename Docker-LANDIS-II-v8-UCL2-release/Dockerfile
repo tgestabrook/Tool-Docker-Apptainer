@@ -1,21 +1,28 @@
 ARG UBUNTU_VERSION=24.04
-FROM ubuntu:${UBUNTU_VERSION}
-ARG UBUNTU_VERSION   ## must re-declare after FROM to stay in scope
-
-LABEL org.opencontainers.image.authors="clem.hardy@pm.me; achubaty@for-cast.ca;"
 
 ################################################################
-## PREREQUISITES
+## STAGE 1: BUILD
+##
+## Full .NET SDK + GDAL headers + build/debug tooling. This stage clones and
+## compiles the core model, support libraries, and all extensions, then runs
+## the test scenarios as a build gate. Nothing from this stage ships in the
+## final image except the compiled `build/` tree (see STAGE 2), so the SDK
+## (~480 MB), the NuGet cache (~560 MB), cloned source, and the GDAL dev/data
+## packages never reach the runtime image.
 ################################################################
+FROM ubuntu:${UBUNTU_VERSION} AS build
+ARG UBUNTU_VERSION    ## must re-declare after FROM to stay in scope
 
 ENV C_INCLUDE_PATH=/usr/include/gdal
 ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LC_ALL=C.UTF-8
 
-## update and install additional system dependencies:
+## update and install build-time system dependencies:
+## - `dotnet-sdk-8.0` compiles the core model and extensions;
+## - `gdal-bin`/`libgdal-dev` provide GDAL headers some extensions compile against;
 ## - `mono-utils` provides `monodis` used to debug ext/lib builds;
-## - python needed for Magic Harvest;
+## - python needed to run the Magic Harvest test scenario in this stage;
 ## - `xmlstarlet` used to edit xml in .csproj files;
 RUN apt-get update && apt-get upgrade -y \
   && apt-get install -y software-properties-common \
@@ -30,11 +37,9 @@ RUN apt-get update && apt-get upgrade -y \
     libjpeg62 \
     libpng16-16t64 \
     mono-utils \
-    nano \
     python3 \
     python3-pip \
     python-is-python3 \
-    vim \
     wget \
     xmlstarlet \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/* ## clean up to save space
@@ -50,7 +55,8 @@ RUN pip install --no-cache-dir \
     scipy
 
 ## Ubuntu 26.04 changed SO names for three libraries that Gdal.Core NuGet's bundled libgdal.so.20
-## was compiled against: libxml2 (.so.2 → .so.16), libicuuc/libicudata (.so.74 → .so.78)
+## was compiled against: libxml2 (.so.2 → .so.16), libicuuc/libicudata (.so.74 → .so.78).
+## Needed here so the test scenarios in this stage can load the bundled GDAL (and again in STAGE 2).
 RUN if [ "${UBUNTU_VERSION}" = "26.04" ]; then \
       ln -s /usr/lib/x86_64-linux-gnu/libxml2.so.16 /usr/lib/x86_64-linux-gnu/libxml2.so.2 \
       && ln -s /usr/lib/x86_64-linux-gnu/libicuuc.so.78 /usr/lib/x86_64-linux-gnu/libicuuc.so.74 \
@@ -157,7 +163,11 @@ RUN scripts/add_console_csproj_dlls.sh $LANDIS_DIR \
 # RUN monodis --assembly "$LANDIS_EXT_DIR/Landis.Library.UniversalCohorts-v1.dll" 1>&2 && exit 1
 
 ################################################################
-## Testing
+## Testing (build gate; runs in this stage with the full toolchain)
+##
+## NOTE: these run with GDAL dev/data present, so they verify the *build*.
+## The slim runtime image (STAGE 2) is smoke-tested separately after build
+## (see this flavour's README) to verify the trimmed runtime dependencies.
 ################################################################
 
 COPY ./tests $TESTS_DIR
@@ -170,21 +180,77 @@ WORKDIR $TESTS_DIR/TestForCS_v8
 
 RUN dotnet $LANDIS_CONSOLE scenario.txt
 
+## Biomass Succession (inputs vintage-matched to the pinned UCLv2 commit; see the test README).
+## The second RUN is a cohort-aging regression check: Output Biomass Community writes per-cell
+## cohort ages, and the maximum must advance by ~the succession timestep each step (~+50 yr over
+## this 50-yr run). A stale Biomass Succession that aged cohorts +1 per timestep instead of per
+## year (fixed in spin-up overhaul #53) would advance only ~+5 yr and fail here.
+WORKDIR $TESTS_DIR/TestBiomassSuccession_UCLv2_v8
+
+RUN dotnet $LANDIS_CONSOLE scenario.txt
+
+RUN A0=$(awk -F, 'NR>1{print $3}' community-input-file-0.csv | sort -n | tail -1); \
+    A50=$(awk -F, 'NR>1{print $3}' community-input-file-50.csv | sort -n | tail -1); \
+    echo "Biomass Succession cohort-aging check: max age yr0=$A0 yr50=$A50 (delta=$((A50 - A0)))"; \
+    [ "$((A50 - A0))" -ge 40 ] || { echo "FAIL: cohorts did not age -- stale Biomass Succession (+1/timestep) bug"; exit 1; }
+
 ################################################################
-## Cleanup
+## STAGE 2: RUNTIME
+##
+## Slim Ubuntu with only what's needed to *run* LANDIS-II: the .NET runtime
+## (no SDK), the handful of system libs the bundled GDAL links at runtime, and
+## python for Magic Harvest. The compiled `build/` tree is copied from STAGE 1.
+## No gdal-bin/gdal-data/PROJ: LANDIS ships its own libgdal.so.20 and writes
+## ungeoreferenced rasters, so no GDAL data or projection support is required.
 ################################################################
+FROM ubuntu:${UBUNTU_VERSION} AS runtime
+ARG UBUNTU_VERSION    ## must re-declare after FROM to stay in scope
 
-WORKDIR /
+LABEL org.opencontainers.image.authors="clem.hardy@pm.me; achubaty@for-cast.ca;"
 
-## - remove extension and library build log files;
-## - remove tests and their outputs from the image;
-## - restore git config changes made previously;
-RUN rm $EXT_LOG_FILE $LIB_LOG_FILE \
-  && rm -rf $TESTS_DIR \
-  && git config --global --unset advice.detachedHead \
-  && git config --global --unset http.lowSpeedLimit \
-  && git config --global --unset http.lowSpeedTime \
-  && git config --global --unset http.postBuffer \
-  && git config --global --unset http.version
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_ALL=C.UTF-8
 
-## TODO: refactor this to use multistage build to get smaller image
+## update and install runtime-only system dependencies:
+## - `dotnet-runtime-8.0` runs the compiled Landis.Console.dll (the SDK is not needed at runtime);
+## - libxml2/libexpat1/libjpeg62/libpng16 are the only system libs the bundled libgdal.so.20
+##   links at runtime (confirmed via ldd); LANDIS uses its own bundled GDAL. The libxml2 runtime
+##   package is `libxml2` on 24.04 but `libxml2-16` on 26.04 (soname bumped .so.2 -> .so.16);
+## - python needed for Magic Harvest.
+RUN apt-get update && apt-get upgrade -y \
+  && if [ "${UBUNTU_VERSION}" = "26.04" ]; then \
+       apt-get install -y software-properties-common \
+       && add-apt-repository ppa:dotnet/backports && apt-get update \
+       && LIBXML2_PKG=libxml2-16; \
+     else \
+       LIBXML2_PKG=libxml2; \
+     fi \
+  && apt-get install -y --no-install-recommends \
+    dotnet-runtime-8.0 \
+    libexpat1 \
+    libjpeg62 \
+    libpng16-16t64 \
+    python3 \
+    python-is-python3 \
+    "$LIBXML2_PKG" \
+  && apt-get clean -y && rm -rf /var/lib/apt/lists/* ## clean up to save space
+
+## Ubuntu 26.04 SO-name workaround for the bundled libgdal.so.20 (see STAGE 1 for details).
+RUN if [ "${UBUNTU_VERSION}" = "26.04" ]; then \
+      ln -s /usr/lib/x86_64-linux-gnu/libxml2.so.16 /usr/lib/x86_64-linux-gnu/libxml2.so.2 \
+      && ln -s /usr/lib/x86_64-linux-gnu/libicuuc.so.78 /usr/lib/x86_64-linux-gnu/libicuuc.so.74 \
+      && ln -s /usr/lib/x86_64-linux-gnu/libicudata.so.78 /usr/lib/x86_64-linux-gnu/libicudata.so.74 \
+      && ldconfig; \
+    fi
+
+ARG LANDIS_DIR="/opt/landis-ii"
+ARG LANDIS_CORE_DIR="$LANDIS_DIR/Core-Model-v8-LINUX"
+ARG LANDIS_REL_DIR="$LANDIS_CORE_DIR/build/Release"
+
+ENV LANDIS_CONSOLE="$LANDIS_REL_DIR/Landis.Console.dll"
+ENV LANDIS_EXT_TOOL="$LANDIS_REL_DIR/Landis.Extensions.dll"
+
+## copy ONLY the compiled LANDIS-II tree (core + extensions + registry) from the build stage
+COPY --from=build $LANDIS_CORE_DIR/build $LANDIS_CORE_DIR/build
+
+WORKDIR $LANDIS_DIR

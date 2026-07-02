@@ -1,15 +1,11 @@
 ##  TODO:
 ##  - "Extension-PnET-Succession" needs UCLv2 update
 ##  - "Extension-Base-BDA" needs UCLv2 update
-##  - "Extension-Dynamic-Biomass-Fuels" needs UCLv2 update
-##  - "Extension-Dynamic-Fire-System" needs UCLv2 update
-##  - "Extension-Land-Use-Plus" needs UCLv2 update
 ##  - "Extension-LinearWind" needs UCLv2 update
-##  - "LANDIS-II-Forest-Roads-Simulation-extension" needs UCLv2 update
-##  - "LANDIS-II-Magic-Harvest" needs UCLv2 update
 ##  - "Extension-Output-Biomass-PnET" needs UCLv2 update
 ##  - "Extension-Output-Wildlife-Habitat" needs UCLv2 update
 ##  - "Extension-Local-Habitat-Suitability-Output" needs UCLv2 update
+##  - "Extension-Land-Use-Plus" needs UCLv2 update (in progress upstream; #59)
 ##
 ##  - (BFOLDS Fire)[https://www.fire-regime-model.com/] not yet ready for v8
 ##  - "Extension-Biomass-Browse" not yet ready for v8
@@ -31,7 +27,7 @@
 
 - repo: Extension-ForCS-Succession
   org: LANDIS-II-Foundation
-  commit: 4f5e7b1f034161fd4fe59e0f41cd9226d0c2c8f3
+  commit: a889d39dd3a4f3f8f681872765335ac08a4656f5 ## fix init with Dynamic Fire (ForCS#8)
 
 - repo: Extension-NECN-Succession
   org: LANDIS-II-Foundation
@@ -63,17 +59,24 @@
   org: LANDIS-II-Foundation
   commit: bef44491f37ffd6950d26bf9d1425db509e974fe
 
-# - repo: Extension-Dynamic-Biomass-Fuels
-#   org: LANDIS-II-Foundation
-#   commit: 3a45afaec8c0dd17bf783043cd18eca8f79e1943
-
-# - repo: Extension-Dynamic-Fire-System
-#   org: LANDIS-II-Foundation
-#   commit: 6c62e31405e64a486d1cee9b21672e1a9ff34e43
-
-- repo: Extension-Land-Use-Plus
+- repo: Extension-Dynamic-Biomass-Fuels
   org: LANDIS-II-Foundation
-  commit: cea58ef6b94a4261dcc6f1b6074e7e130d0198a9
+  commit: 4e3e2f1225b3c72ddaff345932ce3e3b96bd039d
+
+- repo: Extension-Dynamic-Fire-System
+  org: LANDIS-II-Foundation
+  commit: 63d38a7a2b7b5da73eaf7ca448edc44afd774cc4
+
+## Extension-Land-Use-Plus: excluded -- upstream UCLv2 migration is unfinished.
+## master HEAD (cea58ef, the latest commit, itself a mid-migration "still won't
+## compile" state) fails CS0012: its use of Planting.SpeciesList needs
+## Succession-v9, but land-use.csproj references Succession-v10 while the image's
+## harvest libs (BiomassHarvest-v4 / SiteHarvest-v3) are built against v9. No
+## branch or fork is further along. Re-enable once upstream completes the UCLv2
+## update (see #59).
+# - repo: Extension-Land-Use-Plus
+#   org: LANDIS-II-Foundation
+#   commit: cea58ef6b94a4261dcc6f1b6074e7e130d0198a9
 
 # - repo: Extension-LinearWind
 #   org: LANDIS-II-Foundation
@@ -87,6 +90,9 @@
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
   commit: 58f5a260195192c20d521e47b9e049f6c0e94022
+  ## UCLv2 build: use the UCLv2 variant of the hand-maintained .csproj, which
+  ## references Landis.Library.UniversalCohorts-v2 instead of -v1 (see issue #59).
+  csproj: Forest-Roads-Extension-UCLv2.csproj
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
