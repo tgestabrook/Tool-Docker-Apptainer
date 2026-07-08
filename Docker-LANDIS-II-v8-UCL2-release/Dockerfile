@@ -115,7 +115,7 @@ RUN git clone $LANDIS_GITHUB/Core-Model-v8-LINUX.git \
 
 ## get support libraries (use specific commit in case of broken updates)
 RUN git clone $LANDIS_GITHUB/Support-Library-Dlls-v8.git \
-  && git -C $LANDIS_DIR/Support-Library-Dlls-v8 checkout 69d615f07ad0f4fb0cac38fee7ae949bb1722fe1 \
+  && git -C $LANDIS_DIR/Support-Library-Dlls-v8 checkout 4c7f438e8b42a5fc5bd8da2c60f678a9f32f1a48 \
   && mv $LANDIS_DIR/Support-Library-Dlls-v8/* $LANDIS_EXT_DIR/ \
   && rm -r $LANDIS_DIR/Support-Library-Dlls-v8
 
