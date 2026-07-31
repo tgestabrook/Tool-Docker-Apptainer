@@ -176,16 +176,19 @@ RUN scripts/add_console_csproj_dlls.sh $LANDIS_DIR \
 
 COPY ./tests $TESTS_DIR
 
-WORKDIR $TESTS_DIR/TestNECN_UCLv2_AllExtension
+## The `scenario_UCLv2.txt` files live beside the `scenario.txt` the v8 image uses and
+## share the same inputs; they only comment out the extensions this image doesn't ship
+## (see each test's README).
+WORKDIR $TESTS_DIR/TestNECN_AllExtension
 
-RUN dotnet $LANDIS_CONSOLE scenario.txt
+RUN dotnet $LANDIS_CONSOLE scenario_UCLv2.txt
 
 ## PnET Succession + Output Biomass PnET, alongside the disturbance/output extensions
-## this image ships (see the test README for what differs from TestPnET_AllExtension).
-## This also exercises `Landis.Library.PnETCohorts-v2` rebuilt from its UCLv2 branch.
-WORKDIR $TESTS_DIR/TestPnET_UCLv2_AllExtension
+## this image ships. This also exercises `Landis.Library.PnETCohorts-v2` rebuilt from
+## its UCLv2 branch.
+WORKDIR $TESTS_DIR/TestPnET_AllExtension
 
-RUN dotnet $LANDIS_CONSOLE scenario.txt
+RUN dotnet $LANDIS_CONSOLE scenario_UCLv2.txt
 
 WORKDIR $TESTS_DIR/TestForCS_v8
 
