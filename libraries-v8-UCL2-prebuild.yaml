@@ -1,0 +1,31 @@
+## Support libraries that must be rebuilt BEFORE the extensions are compiled
+## (UCLv2 image only; see `Docker-LANDIS-II-v8-UCL2-release/Dockerfile`).
+##
+## The other support libraries are rebuilt *after* the extensions
+## (`libraries-v8-release.yaml`); this file exists for the cases where an
+## extension has to *compile against* a rebuilt library rather than merely load
+## it at runtime.
+##
+## IMPORTANT: library order matters here, as it does in `libraries-v8-release.yaml`.
+
+## Support-Library-Dlls-v8 ships `Landis.Library.PnETCohorts-v2.dll` v2.1.1, which
+## is built against `UniversalCohorts-v1` / `InitialCommunity.Universal` (v1) --
+## it has not been rebuilt since 2025-05-02. The UCLv2 PnET extensions
+## (PnET-Succession, Output Biomass PnET) reference `UniversalCohorts-v2`, so
+## compiling them against the shipped v2.1.1 DLL fails with, e.g.:
+##
+##   error CS0012: The type 'SiteCohorts' is defined in an assembly that is not
+##   referenced. You must add a reference to assembly
+##   'Landis.Library.UniversalCohorts-v1, Version=1.2.0.0, ...'
+##
+## Rebuilding the library from its `UCL_update` branch (v2.2, built against
+## `UniversalCohorts-v2` / `InitialCommunity.Universal-v2` / `Succession-v10`)
+## replaces that DLL in `build/extensions` before the extensions are built.
+##
+## Remove this file (and its Dockerfile step) once Support-Library-Dlls-v8 ships
+## a UCLv2 build of `Landis.Library.PnETCohorts-v2.dll`.
+- repo: Library-PnET-Cohort
+  org: LANDIS-II-Foundation
+  ## `UCL_update` branch HEAD, the commit that PnET-Succession's own .csproj
+  ## names as the source of its `Landis.Library.PnETCohorts-v2` reference.
+  commit: 3c40197848b7b66c31882ce87d82037e42820737

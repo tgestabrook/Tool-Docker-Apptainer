@@ -1,8 +1,6 @@
 ##  TODO:
-##  - "Extension-PnET-Succession" needs UCLv2 update
 ##  - "Extension-Base-BDA" needs UCLv2 update
 ##  - "Extension-LinearWind" needs UCLv2 update
-##  - "Extension-Output-Biomass-PnET" needs UCLv2 update
 ##  - "Extension-Output-Wildlife-Habitat" needs UCLv2 update
 ##  - "Extension-Local-Habitat-Suitability-Output" needs UCLv2 update
 ##  - "Extension-Land-Use-Plus" needs UCLv2 update (in progress upstream; #59)
@@ -33,9 +31,14 @@
   org: LANDIS-II-Foundation
   commit: 040ac120e08747f126f68c851022e72ca378cbc0
 
-# - repo: Extension-PnET-Succession
-#   org: LANDIS-II-Foundation
-#   commit: 5e7e5f95d6a1f47b5a8b62cd92c4598aa0b85d78
+- repo: Extension-PnET-Succession
+  org: LANDIS-II-Foundation
+  ## `UCL_update` branch HEAD ("Updates for UCL and bump to v6.1", 2026-07-14):
+  ## retargets the .csproj to UniversalCohorts-v2 / InitialCommunity.Universal-v2 /
+  ## Succession-v10 (the source itself is unchanged from 6.0.3). Requires the UCLv2
+  ## rebuild of Landis.Library.PnETCohorts-v2 -- see `libraries-v8-UCL2-prebuild.yaml`.
+  ## Not yet merged to `master`; switch to a master commit once upstream merges it.
+  commit: de21116b9abfa3d7d3740bb99c2cf7a001cce89d
 
 ## Disturbance and Other Extensions
 # - repo: Extension-Base-BDA
@@ -97,6 +100,12 @@
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
   commit: 8956c53c3c9e32fb2069c9ff9ad23b9dffb791fe
+  ## UCLv2 build: use the UCLv2 variant of the hand-maintained .csproj, which references
+  ## BiomassHarvest-v7 / HarvestManagement-v5 / SiteHarvest-v3 -- what Biomass Harvest at
+  ## the pin above builds against. The default (UCLv1) file's v6/v4/v2 references compile,
+  ## but throw an InvalidCastException on ManagementAreaDataset the first time Magic Harvest
+  ## runs (caught by tests/TestPnET_UCLv2_AllExtension).
+  csproj: Magic Harvest-UCLv2.csproj
 
 ## Output Extensions
 - repo: Extension-Output-Biomass
@@ -111,9 +120,11 @@
   org: LANDIS-II-Foundation
   commit: 1a95db2ae250566260f23439fbe79b7bb0b3141a
 
-# - repo: Extension-Output-Biomass-PnET
-#   org: LANDIS-II-Foundation
-#   commit: 3924c35120958be9319838ad37e4f67774ac194b
+- repo: Extension-Output-Biomass-PnET
+  org: LANDIS-II-Foundation
+  ## `UCL_update` branch HEAD ("UCL updates and bump to v6.1", 2026-07-14);
+  ## same situation as Extension-PnET-Succession above.
+  commit: e97cdfaeef60cec9b5c429554647bfa9354d6e25
 
 - repo: Extension-Output-Biomass-Reclass
   org: LANDIS-II-Foundation

@@ -109,6 +109,20 @@ RUN git clone $LANDIS_GITHUB/Support-Library-Dlls-v8.git \
   && mv $LANDIS_DIR/Support-Library-Dlls-v8/* $LANDIS_EXT_DIR/ \
   && rm -r $LANDIS_DIR/Support-Library-Dlls-v8
 
+## rebuild the support libraries that the extensions must *compile against*
+##
+##  - most libraries are rebuilt after the extensions (see further below), which is
+##    enough when an extension only needs the rebuilt .dll at run time;
+##  - `Landis.Library.PnETCohorts-v2.dll` is different: the copy shipped in
+##    Support-Library-Dlls-v8 is still the UCLv1 build (v2.1.1), so the UCLv2 PnET
+##    extensions fail to compile against it (CS0012, referencing UniversalCohorts-v1).
+##    It must therefore be replaced *before* the extensions are built;
+##  - see `libraries-v8-UCL2-prebuild.yaml` for details.
+
+COPY libraries-v8-UCL2-prebuild.yaml $LANDIS_DIR/libraries-v8-UCL2-prebuild.yaml
+
+RUN scripts/install_libraries_v8.sh libraries-v8-UCL2-prebuild.yaml $LANDIS_DIR
+
 ## get, build, and register all available extensions
 ##
 ##  - necessary files are downloaded and built using `scripts/install_extensions_v8.sh`;
@@ -163,6 +177,13 @@ RUN scripts/add_console_csproj_dlls.sh $LANDIS_DIR \
 COPY ./tests $TESTS_DIR
 
 WORKDIR $TESTS_DIR/TestNECN_UCLv2_AllExtension
+
+RUN dotnet $LANDIS_CONSOLE scenario.txt
+
+## PnET Succession + Output Biomass PnET, alongside the disturbance/output extensions
+## this image ships (see the test README for what differs from TestPnET_AllExtension).
+## This also exercises `Landis.Library.PnETCohorts-v2` rebuilt from its UCLv2 branch.
+WORKDIR $TESTS_DIR/TestPnET_UCLv2_AllExtension
 
 RUN dotnet $LANDIS_CONSOLE scenario.txt
 
