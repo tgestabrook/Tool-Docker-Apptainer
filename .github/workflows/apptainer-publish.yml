@@ -54,7 +54,7 @@ jobs:
 
     steps:
       - name: Set up Apptainer
-        uses: apptainer/setup-apptainer@v2
+        uses: eWaterCycle/setup-apptainer@v2
 
       - name: Build .sif from the published Docker image
         env:
