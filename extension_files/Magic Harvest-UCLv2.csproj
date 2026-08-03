@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+<!-- UCLv2 variant of "Magic Harvest.csproj", selected via the `csproj:` field on the
+LANDIS-II-Magic-Harvest entry in extensions-v8-UCL2-release.yaml.
+
+It differs from the default (UCLv1) file only in the harvest library references:
+Biomass Harvest at the UCLv2 pin builds as Landis.Extension.BiomassHarvest-**v7** against
+HarvestManagement-**v5** / SiteHarvest-**v3**, so Magic Harvest must be compiled against the
+same ones. Building it against the v6/v4/v2 set instead compiles fine but fails at *run* time
+with, e.g.:
+
+  [A]Landis.Library.HarvestManagement.ManagementAreaDataset cannot be cast to
+  [B]Landis.Library.HarvestManagement.ManagementAreaDataset. Type A originates from
+  'Landis.Library.HarvestManagement-v5' ... Type B originates from
+  'Landis.Library.HarvestManagement-v4' ...
+
+(these references match upstream's own "Magic Harvest.csproj" at the pinned commit;
+see the default file for the rest of the editing notes and the same standing warning:
+if the version of Biomass Harvest or a harvest library changes, update the references here)
+-->
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>2.1</AssemblyVersion>
+    <NeutralLanguage>English</NeutralLanguage>
+    <RootNamespace>Landis.Extension.MagicHarvest</RootNamespace>
+    <AssemblyName>Landis.Extension.MagicHarvest</AssemblyName>
+    <AssemblyTitle>Landis.Extension.MagicHarvest</AssemblyTitle>
+    <PackageProjectUrl>http://www.landis-ii.org</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Klemet/LANDIS-II-Magic-Harvest</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>LANDIS-II;Landis;Extension;Harvest</PackageTags>
+    <Authors>Clement Hardy</Authors>
+    <Description>Magic Harvest Extension</Description>
+	<Deterministic>false</Deterministic>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<OutputPath>..\build\extensions</OutputPath>
+  </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	<OutputPath>..\build\extensions</OutputPath>
+  </PropertyGroup>
+
+ <ItemGroup>
+    <Reference Include="Landis.Core, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Landis.Core.3.0.1\lib\netstandard2.0\Landis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Core.Implementation, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Landis.Core.Implementation.3.0.1\lib\netstandard2.0\Landis.Core.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Extension.BiomassHarvest-v7">
+      <HintPath>..\build\extensions\Landis.Extension.BiomassHarvest-v7.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.HarvestManagement-v5">
+		<SpecificVersion>False</SpecificVersion>
+		<HintPath>..\build\extensions\Landis.Library.HarvestManagement-v5.dll</HintPath>
+	</Reference>
+    <Reference Include="Landis.Library.SiteHarvest-v3">
+		<HintPath>..\build\extensions\Landis.Library.SiteHarvest-v3.dll</HintPath>
+	</Reference>
+    <Reference Include="Landis.SpatialModeling, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Landis.SpatialModeling.2.0.1\lib\netstandard2.0\Landis.SpatialModeling.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Utilities, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Landis.Utilities.2.0.0\lib\netstandard2.0\Landis.Utilities.dll</HintPath>
+    </Reference>
+	<Reference Include="log4net, Version=2.0.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.14\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\InputParameters.cs" />
+    <Compile Include="src\InputParametersParser.cs" />
+    <Compile Include="src\PlugIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NuGet.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>

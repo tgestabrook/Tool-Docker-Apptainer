@@ -88,7 +88,9 @@ CellLength  30 << meters, so cell area = 900 m2
 >> Wildlife habitat output
   "Wildlife Habitat Output"  ./inputs/output/wildlifeHabitat/NESands_Habitat.txt
 
->> Biomass Output PnET
-  "Output-PnET"		./inputs/output/BiomassOutputPnET/biomass.outputPnET.txt
+>> Biomass Output PnET: needs PnET-Succession (it reads PnET site variables), so it cannot
+>> run in an NECN scenario -- it NREs in Output.PnET.ISiteVar.GetIsiteVar. It is exercised by
+>> ../TestPnET_AllExtension instead.
+>>  "Output-PnET"		./inputs/output/BiomassOutputPnET/biomass.outputPnET.txt
 
  RandomNumberSeed	1111

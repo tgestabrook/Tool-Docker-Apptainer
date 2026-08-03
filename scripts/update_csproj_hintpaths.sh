@@ -9,16 +9,21 @@ fi
 ## Set the directory to search from first argument
 SEARCH_DIR="$1"
 
-## New base path to use
-if [[ $(basename "$SEARCH_DIR") == Library-* ]]; then
-  NEW_BASE_PATH="..\\build\\extensions"
-else
-  NEW_BASE_PATH="..\\..\\build\\extensions"
-fi
+## Parent of SEARCH_DIR (i.e., Core-Model-v8-LINUX), which holds build/extensions
+SEARCH_DIR_PARENT=$(dirname "$SEARCH_DIR")
 
 ## Find all .csproj files in the directory (recursively)
 find "$SEARCH_DIR" -type f -name "*.csproj" | while read -r csproj_file; do
   echo "Updating HintPaths in $csproj_file ..."
+
+  ## Compute the path to build/extensions relative to this specific .csproj's
+  ## directory, so repos get the right number of ".." components regardless of
+  ## where their .csproj lives (repo root vs. src/ vs. deeper). Doing this per
+  ## .csproj matters: e.g. Library-PnET-Cohort keeps its .csproj in src/ while
+  ## Library-Universal-Cohort keeps its at the repo root.
+  csproj_dir=$(dirname "$csproj_file")
+  rel_up=$(realpath --relative-to="$csproj_dir" "$SEARCH_DIR_PARENT")
+  NEW_BASE_PATH="${rel_up//\//\\}\\build\\extensions"
 
   ## Extract all current HintPath values
   mapfile -t hint_paths < <(xmlstarlet sel -t -v "//HintPath" -n "$csproj_file")
