@@ -61,9 +61,22 @@ See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
 | Biomass Hurricane |
 | Dynamic Biomass Fuels |
 | Dynamic Fire System |
-| Social Climate Fire |
+| Social Climate Fire (SCRAPPLE) [^scrapple] |
 | Forest Roads Simulation |
 | Magic Harvest |
+
+[^scrapple]: **Only usable with NECN and PnET succession.** Under ForCS Succession or
+    Biomass Succession it crashes at extension load with a `NullReferenceException` in
+    `SiteVars.InitializeDisturbances()`. SCRAPPLE reads fine fuels from
+    `Succession.FineFuels`; when that site variable is unregistered it falls back to
+    `Succession.Litter`, but assigns the result into `SiteVars.FineFuels[site]` — whose
+    getter returns the same field it just found null — so the fallback dereferences null.
+    NECN registers `Succession.FineFuels` directly and PnET registers it via
+    `Library-PnET-Cohort`, so both take the working branch; ForCS and Biomass Succession
+    register only `Succession.Litter`. This is an upstream SCRAPPLE bug, **not** a UCLv2
+    issue: it reproduces on the UCLv1 pin used by `landis-ii-v8-release`, and is still
+    present on upstream master as of v4.3. Fixing it upstream is a one-liner — allocate
+    the site variable (`NewSiteVar<double>()`) before populating it from the litter pool.
 
 **Output**
 

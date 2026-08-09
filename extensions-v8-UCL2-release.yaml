@@ -85,10 +85,32 @@
 #   org: LANDIS-II-Foundation
 #   commit: fde29473f773c9f995f3a702ca919f7f30a6bcd1
 
-## TODO: use LANDIS-II-Foundation
+## Upstream absorbed the UCLv2 migration (`Update UCL and Rebuild`, 2026-06-06) and has
+## since released v4.3, so the jameslamping fork this used to pin (v4.0.4, never merged
+## upstream) is no longer needed. Note upstream master now references
+## UniversalCohorts-v2, so this pin is NOT usable by the UCLv1 `extensions-v8-release.yaml`.
+##
+## KNOWN LIMITATION -- only usable with NECN and PnET succession, NOT ForCS or Biomass
+## Succession, which crash at extension load with a NullReferenceException:
+##
+##   at Landis.Extension.SocialClimateFire.SiteVars.InitializeDisturbances()
+##        in src/SiteVars.cs:line 109
+##   at Landis.Extension.SocialClimateFire.PlugIn.LoadParameters(String, ICore)
+##
+## `InitializeDisturbances()` looks up `Succession.FineFuels`; when that is unregistered
+## it falls back to `Succession.Litter` but assigns into `SiteVars.FineFuels[site]`, whose
+## getter returns the same field it just found null (and which is never allocated with
+## `NewSiteVar<double>()`) -- so the fallback dereferences null. NECN registers
+## `Succession.FineFuels` directly and PnET registers it via `Library-PnET-Cohort`, so both
+## take the working branch; ForCS and Biomass Succession register only `Succession.Litter`.
+##
+## This is NOT a UCLv2 issue -- it reproduces on the UCLv1 pin used by the v8 image, and is
+## still present on upstream master as of v4.3 (the 2026-07-20 fineFuels refactor renamed
+## the fields but left the same null target). Verified by building this image against both
+## pins and running all four succession extensions. See the test READMEs.
 - repo: Extension-Social-Climate-Fire
-  org: jameslamping
-  commit: 4b089aff84322d11348ea0ffe63265cc1d249e10
+  org: LANDIS-II-Foundation
+  commit: 0babccb6f37c55f22a2ae632833582bea5d754d9 ## v4.3
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
