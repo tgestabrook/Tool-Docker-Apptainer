@@ -116,12 +116,14 @@
   org: Klemet
   ## Cleaned-up commit: SDK-style .csproj using Landis.Library.UniversalCohorts-v2
   ## (harvest libs via build/extensions, patched by update_csproj_*.sh).
+  ## Lives on the temporary branch `csproj_fix` (not yet on master/main).
   commit: 24a97eaf7e713a3be40aff0db4955391e2abcf9a
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
   ## Cleaned-up commit: SDK-style .csproj referencing BiomassHarvest-v7 /
   ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh).
+  ## Lives on the temporary branch `csproj_fix` (not yet on master/main).
   commit: 4f629814a49f25fb59ff85d7465030518f3bbf34
 
 ## Output Extensions
