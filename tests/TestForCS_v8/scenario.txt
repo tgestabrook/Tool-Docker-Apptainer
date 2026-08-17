@@ -18,6 +18,26 @@ CellLength  100 << meters, so cell area = 1 ha
 >> Disturbance Extensions   Initialization File
 >> ----------------------   -------------------
 
+>> Social Climate Fire (SCRAPPLE): DO NOT ADD IT HERE -- it is in the image but cannot run
+>> under ForCS. It crashes at extension load, before any input parsing:
+>>
+>>   Loading Social Climate Fire extension ...
+>>   Internal error occurred within the program:
+>>     Object reference not set to an instance of an object.
+>>      at Landis.Extension.SocialClimateFire.SiteVars.InitializeDisturbances()
+>>           in src/SiteVars.cs:line 109   << line number is for the pinned v4.3
+>>
+>> SCRAPPLE reads fine fuels from `Succession.FineFuels`; when that site variable is
+>> unregistered it falls back to `Succession.Litter` but assigns into
+>> `SiteVars.FineFuels[site]`, whose getter returns the same field it just found null --
+>> so the fallback dereferences null. ForCS and Biomass Succession register only
+>> `Succession.Litter`; NECN registers `Succession.FineFuels` directly and PnET registers
+>> it via `Library-PnET-Cohort`, which is why SCRAPPLE runs in ../TestNECN_AllExtension
+>> and ../TestPnET_AllExtension but not here.
+>>
+>> Upstream SCRAPPLE bug, NOT a UCLv2 issue: it reproduces on the UCLv1 pin used by the
+>> v8 image and is still present on upstream master as of v4.3. See
+>> ../../extensions-v8-UCL2-release.yaml for the full write-up.
 
    DisturbancesRandomOrder  no  << optional parameter; default = no
 

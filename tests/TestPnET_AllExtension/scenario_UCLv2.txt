@@ -25,7 +25,10 @@ CellLength  30 << meters, so cell area = 900 m2
 >> Original Fire (Formerly Base Fire)
 >> 	"Original Fire"		./inputs/disturbances/originalFire/original-fire.txt
 
->> Climate-social Fire
+>> Climate-social Fire: works fine under PnET (unlike ForCS/Biomass Succession -- see
+>> ../../extensions-v8-UCL2-release.yaml), but left off because Dynamic Fire System below is
+>> this scenario's fire extension. Enabling both aborts the run: each registers "Fire.Severity"
+>> ("A site variable has already been registered with the name Fire.Severity").
 >> "Social Climate Fire"  ./inputs/disturbances/climateSocialFire/Social-Climate-Fire-Inputs.txt
 
 >> Dynamic Biomass Fuels
