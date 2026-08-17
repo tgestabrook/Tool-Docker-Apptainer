@@ -45,8 +45,8 @@
     <Reference Include="Landis.Library.UniversalCohorts-v2">
       <HintPath>..\build\extensions\Landis.Library.UniversalCohorts-v2.dll</HintPath>
     </Reference>
-    <Reference Include="Landis.Library.HarvestManagement-v4">
-      <HintPath>..\build\extensions\Landis.Library.HarvestManagement-v4.dll</HintPath>
+    <Reference Include="Landis.Library.HarvestManagement-v5">
+      <HintPath>..\build\extensions\Landis.Library.HarvestManagement-v5.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Metadata-v2">
       <HintPath>..\build\extensions\Landis.Library.Metadata-v2.dll</HintPath>
