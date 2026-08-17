@@ -118,7 +118,6 @@
   ## (harvest libs via build/extensions, patched by update_csproj_*.sh), plus
   ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. Supercluster.KDTree)
   ## are copied to build/extensions for runtime loading.
-  ## Lives on the temporary branch `csproj_fix` (not yet on master/main).
   commit: f2e08cc83e9e26e3150ddbdc1830cb38f4d1273f
 
 - repo: LANDIS-II-Magic-Harvest
@@ -127,7 +126,6 @@
   ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh), plus
   ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. log4net) are copied
   ## to build/extensions for runtime loading.
-  ## Lives on the temporary branch `csproj_fix` (not yet on master/main).
   commit: b8e21905e1dd09d8540e5d86d0640a54a7e99377
 
 ## Output Extensions
