@@ -115,16 +115,20 @@
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
   ## Cleaned-up commit: SDK-style .csproj using Landis.Library.UniversalCohorts-v2
-  ## (harvest libs via build/extensions, patched by update_csproj_*.sh).
+  ## (harvest libs via build/extensions, patched by update_csproj_*.sh), plus
+  ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. Supercluster.KDTree)
+  ## are copied to build/extensions for runtime loading.
   ## Lives on the temporary branch `csproj_fix` (not yet on master/main).
-  commit: 24a97eaf7e713a3be40aff0db4955391e2abcf9a
+  commit: f2e08cc83e9e26e3150ddbdc1830cb38f4d1273f
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
   ## Cleaned-up commit: SDK-style .csproj referencing BiomassHarvest-v7 /
-  ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh).
+  ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh), plus
+  ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. log4net) are copied
+  ## to build/extensions for runtime loading.
   ## Lives on the temporary branch `csproj_fix` (not yet on master/main).
-  commit: 4f629814a49f25fb59ff85d7465030518f3bbf34
+  commit: b8e21905e1dd09d8540e5d86d0640a54a7e99377
 
 ## Output Extensions
 - repo: Extension-Output-Biomass
