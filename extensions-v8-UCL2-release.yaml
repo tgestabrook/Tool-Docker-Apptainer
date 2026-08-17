@@ -114,7 +114,7 @@
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
-  commit: 58f5a260195192c20d521e47b9e049f6c0e94022
+  commit: 1d1919f1c00d08c00a335866488c3b6b189b5a67
   ## UCLv2 build: use the UCLv2 variant of the hand-maintained .csproj, which
   ## references Landis.Library.UniversalCohorts-v2 instead of -v1 (see issue #59).
   csproj: Forest-Roads-Extension-UCLv2.csproj
