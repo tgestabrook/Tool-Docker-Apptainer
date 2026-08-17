@@ -1,0 +1,11 @@
+## Prebuilt support-library DLLs for the v8 (UCLv1) images.
+##
+## These are copied into `build/extensions` BEFORE the extensions are compiled,
+## because extensions reference them through HintPaths into that directory.
+## That is why they are not part of `libraries-v8-release.yaml`: those entries
+## are built from source with `dotnet build`, and applied AFTER the extensions.
+## Installed by `scripts/install_support_libraries_v8.sh`.
+
+- repo: Support-Library-Dlls-v8
+  org: LANDIS-II-Foundation
+  commit: f8178b2a8f8d39bf8c4f1884cc446e4e34fee1ff
