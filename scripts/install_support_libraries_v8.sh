@@ -50,7 +50,31 @@ for i in $(seq 0 $((count - 1))); do
   repo_path="$LANDIS_DIR/$repo"
   url="https://github.com/$org/$repo.git"
 
-  git clone "$url" "$repo_path"
+  ## Retry the clone. This is a plain network fetch in the middle of a long image
+  ## build, so a transient failure throws away everything built so far. Observed on a
+  ## fork build of 2026-08-18, 91 s into the clone:
+  ##   fatal: unable to access '...': GnuTLS, handshake failed: The TLS connection
+  ##   was non-properly terminated.
+  ## while the very same step succeeded in the sibling matrix leg. A partial clone
+  ## leaves the directory behind and would make the next attempt fail with "already
+  ## exists", so remove it before retrying.
+  clone_ok=false
+  for attempt in 1 2 3; do
+    if git clone "$url" "$repo_path"; then
+      clone_ok=true
+      break
+    fi
+    echo "  clone attempt $attempt/3 failed" 1>&2
+    rm -rf "$repo_path"
+    if [ "$attempt" -lt 3 ]; then
+      sleep $((attempt * 10))
+    fi
+  done
+  if [ "$clone_ok" != true ]; then
+    echo "Error: failed to clone $url after 3 attempts" 1>&2
+    exit 1
+  fi
+
   git -C "$repo_path" checkout "$commit"
 
   ## Copy the prebuilt DLLs into place, then drop the clone (including its .git
