@@ -37,6 +37,7 @@ docker run --rm `
 ## Included extensions
 
 See [`extensions-v7-release.yaml`](../extensions-v7-release.yaml) and [`libraries-v7-release.yaml`](../libraries-v7-release.yaml) for the exact commit SHAs used.
+The prebuilt `Support-Library-Dlls-v7` commit is pinned inline in the Dockerfile rather than in a `.yaml`: v7 is superseded and those DLLs have not changed since 2024-10-11, so there is nothing there to keep re-reviewing.
 
 **Succession**
 
@@ -91,7 +92,8 @@ See [`extensions-v7-release.yaml`](../extensions-v7-release.yaml) and [`librarie
 This image supersedes `Clean_Docker_LANDIS-II_7_AllExtensions` with the following improvements:
 
 - LANDIS-II placed at `/opt/landis-ii` (standard location for third-party software);
-- extension and library versions defined in shared `*.yaml` files, not hardcoded in the Dockerfile;
+- extension and library versions defined in shared `*.yaml` files, not hardcoded in the Dockerfile
+  (the exception being the prebuilt `Support-Library-Dlls-v7` commit, pinned inline: see above);
 - shared `.csproj` files for Forest Roads and Magic Harvest extensions (`extension_files_v7/`);
 - build scripts rewritten in `bash`, shared in `scripts/`, reusable across image flavours;
 - `yq` used to parse yaml; `xmlstarlet` used to edit `.csproj` XML;

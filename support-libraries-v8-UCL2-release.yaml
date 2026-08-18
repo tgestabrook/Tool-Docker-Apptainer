@@ -1,0 +1,25 @@
+## Prebuilt support-library DLLs for the v8 UCLv2 image.
+##
+## These are copied into `build/extensions` BEFORE the extensions are compiled,
+## because extensions reference them through HintPaths into that directory.
+## That is why they are not part of `libraries-v8-release.yaml`: those entries
+## are built from source with `dotnet build`, and applied AFTER the extensions.
+## Installed by `scripts/install_support_libraries_v8.sh`.
+##
+## Pinned separately from `support-libraries-v8-release.yaml`: this image and the
+## UCLv1 images have always used different commits of the same repo, and the
+## mismatch described below affects only this one.
+
+- repo: Support-Library-Dlls-v8
+  org: LANDIS-II-Foundation
+  ## Bumped from 69d615f0, which shipped `Landis.Library.HarvestManagement-v5.dll`
+  ## and `Landis.Library.SiteHarvest-v3.dll` built against `Succession-v9` while
+  ## every other extension in this image is on `Succession-v10` (see #66, #68).
+  ## This commit also drops `Landis.Extension.BiomassHarvest-v6.dll`, a UCLv1
+  ## extension binary that has no business in the UCLv2 image -- Biomass Harvest
+  ## is built from source here.
+  ##
+  ## NOTE: this does NOT retire `libraries-v8-UCL2-prebuild.yaml`.
+  ## `Landis.Library.PnETCohorts-v2.dll` is still the UCLv1 build even at this
+  ## commit, so that rebuild is still required.
+  commit: f0b0d68e16f45ee3549787e98f622eb8bb170171
