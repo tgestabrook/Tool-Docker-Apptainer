@@ -57,7 +57,7 @@ CellLength  30 << meters, so cell area = 900 m2
     "Hurricane"      ./inputs/disturbances/biomassHuricane/Hurricane_v3.txt
 
 >> Climate BDA (Formerly Base BDA) (not in the UCLv2 image: no UCLv2 update upstream)
->>  "Climate BDA"     ./inputs/disturbances/climateBDA/Climate-BDA_SetUp.txt
+  "Climate BDA"     ./inputs/disturbances/climateBDA/Climate-BDA_SetUp.txt
 
 >> Land-Use Plus (not in the UCLv2 image: upstream UCLv2 migration unfinished; see #59)
 >>   "Land Use Change"      ./inputs/disturbances/landUsePlus/land-use-change-inputs.txt
