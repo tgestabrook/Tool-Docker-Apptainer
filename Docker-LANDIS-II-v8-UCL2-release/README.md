@@ -95,6 +95,11 @@ See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
 This image builds on `Docker-LANDIS-II-v8-release` with the following addition:
 
 - extensions updated for Universal Cohort Library (UCL) v2, fixing a biomass-removal bug;
+- Forest Roads and Magic Harvest now build from their own SDK-style `.csproj`, patched by
+  `scripts/update_csproj_*.sh` exactly like every other extension. The hand-maintained
+  UCLv2 overrides that used to live in `extension_files/` were retired once those two
+  repos converted to SDK-style projects; the UCLv1 images still use overrides, named by
+  the `csproj:` field on a YAML entry;
 
 All other enhancements from `Docker-LANDIS-II-v8-release` also apply:
 
@@ -102,9 +107,6 @@ All other enhancements from `Docker-LANDIS-II-v8-release` also apply:
 - `dotnet` installed from the `apt` repositories;
 - LANDIS-II placed at `/opt/landis-ii`;
 - extension and library versions defined in shared `*.yaml` files;
-- shared `.csproj` files for Forest Roads and Magic Harvest extensions (`extension_files/`);
-  this build selects the UCLv2 Forest Roads variant (`Forest-Roads-Extension-UCLv2.csproj`)
-  via the `csproj:` field on its entry in `extensions-v8-UCL2-release.yaml`;
 - a pre-extension support-library pass (`libraries-v8-UCL2-prebuild.yaml`) that rebuilds
   `Landis.Library.PnETCohorts-v2` from its UCLv2 branch, because `Support-Library-Dlls-v8`
   still ships the UCLv1 build (v2.1.1) that the PnET extensions cannot compile against;

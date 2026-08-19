@@ -22,7 +22,7 @@
 	<Deterministic>false</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	<OutputPath>..\build\extensions</OutputPath>  <!-- ..\ (not ..\..\): at this UCLv1 commit the .csproj is at the repo root, so one level up reaches Core-Model-v8-LINUX/build/extensions. The UCLv2 commit moved the .csproj into src/, so that variant needs ..\..\ instead (see #59). -->
+	<OutputPath>..\build\extensions</OutputPath>  <!-- ..\ (not ..\..\): This file is an override, so update_csproj_outputpaths.sh never sees it; extensions built from their own .csproj (as the UCLv2 image now builds this one) get the right depth computed for them instead. See #59. -->
   </PropertyGroup>
 
   <ItemGroup>
