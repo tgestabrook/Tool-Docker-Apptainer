@@ -90,6 +90,10 @@
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
   commit: 4def8fc98e3d816367f8ba2ec6d2b8ea76d279f6
+  ## UCLv1 build: use the UCLv1 hand-maintained .csproj. Now made explicit because
+  ## install_extensions_v8.sh no longer special-cases this repo by name; otherwise
+  ## it would run the update_csproj_*.sh patchers on the repo's own .csproj.
+  csproj: Magic Harvest.csproj
 
 ## Output Extensions
 - repo: Extension-Output-Biomass

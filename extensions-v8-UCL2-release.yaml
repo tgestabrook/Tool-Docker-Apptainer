@@ -116,20 +116,19 @@
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
-  commit: 1d1919f1c00d08c00a335866488c3b6b189b5a67
-  ## UCLv2 build: use the UCLv2 variant of the hand-maintained .csproj, which
-  ## references Landis.Library.UniversalCohorts-v2 instead of -v1 (see issue #59).
-  csproj: Forest-Roads-Extension-UCLv2.csproj
+  ## Cleaned-up commit: SDK-style .csproj using Landis.Library.UniversalCohorts-v2
+  ## (harvest libs via build/extensions, patched by update_csproj_*.sh), plus
+  ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. Supercluster.KDTree)
+  ## are copied to build/extensions for runtime loading.
+  commit: f2e08cc83e9e26e3150ddbdc1830cb38f4d1273f
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
-  commit: 8956c53c3c9e32fb2069c9ff9ad23b9dffb791fe
-  ## UCLv2 build: use the UCLv2 variant of the hand-maintained .csproj, which references
-  ## BiomassHarvest-v7 / HarvestManagement-v5 / SiteHarvest-v3 -- what Biomass Harvest at
-  ## the pin above builds against. The default (UCLv1) file's v6/v4/v2 references compile,
-  ## but throw an InvalidCastException on ManagementAreaDataset the first time Magic Harvest
-  ## runs (caught by tests/TestPnET_UCLv2_AllExtension).
-  csproj: Magic Harvest-UCLv2.csproj
+  ## Cleaned-up commit: SDK-style .csproj referencing BiomassHarvest-v7 /
+  ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh), plus
+  ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. log4net) are copied
+  ## to build/extensions for runtime loading.
+  commit: b8e21905e1dd09d8540e5d86d0640a54a7e99377
 
 ## Output Extensions
 - repo: Extension-Output-Biomass
