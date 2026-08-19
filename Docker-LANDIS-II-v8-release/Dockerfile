@@ -103,11 +103,18 @@ RUN git clone $LANDIS_GITHUB/Core-Model-v8-LINUX.git \
   && git -C $LANDIS_CORE_DIR checkout 8725da5cd7bfdf3ae28bbd59b1353ec442783d68 \
   && dotnet build $LANDIS_CORE_DIR/Tool-Console/src -c Release
 
-## get support libraries (use specific commit in case of broken updates)
-RUN git clone $LANDIS_GITHUB/Support-Library-Dlls-v8.git \
-  && git -C $LANDIS_DIR/Support-Library-Dlls-v8 checkout f8178b2a8f8d39bf8c4f1884cc446e4e34fee1ff \
-  && mv $LANDIS_DIR/Support-Library-Dlls-v8/* $LANDIS_EXT_DIR/ \
-  && rm -r $LANDIS_DIR/Support-Library-Dlls-v8
+## get the prebuilt support libraries
+##
+##  - the commit is pinned in `support-libraries-v8-release.yaml`, so it is
+##    reviewable alongside the extension and library pins rather than buried here;
+##  - these are copied into `build/extensions` BEFORE the extensions are compiled,
+##    because extensions reference them through HintPaths into that directory;
+##  - they are NOT part of `libraries-v8-release.yaml`: those entries are built from
+##    source with `dotnet build`, and applied after the extensions are built.
+
+COPY support-libraries-v8-release.yaml $LANDIS_DIR/support-libraries-v8-release.yaml
+
+RUN scripts/install_support_libraries_v8.sh support-libraries-v8-release.yaml $LANDIS_DIR
 
 ## get, build, and register all available extensions
 ##

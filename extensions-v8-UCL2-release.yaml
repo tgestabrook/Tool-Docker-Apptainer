@@ -41,9 +41,11 @@
   commit: de21116b9abfa3d7d3740bb99c2cf7a001cce89d
 
 ## Disturbance and Other Extensions
-# - repo: Extension-Base-BDA
-#   org: LANDIS-II-Foundation
-#   commit: 1aaa2e28627ba21949fd9053b9aae18f099032d5
+- repo: Extension-Base-BDA
+  org: LANDIS-II-Foundation
+  # Current commit comes from a stale branch of Base BDA that has the UCL update :
+  # see https://github.com/LANDIS-II-Foundation/Extension-Base-BDA/commit/273e9385cb29a9ef0b242ede995943353d8fddce
+  commit: 273e9385cb29a9ef0b242ede995943353d8fddce
 
 - repo: Extension-Base-Fire
   org: LANDIS-II-Foundation

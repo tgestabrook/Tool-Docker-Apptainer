@@ -39,6 +39,7 @@ docker run --rm `
 ## Included extensions
 
 See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
+[`support-libraries-v8-UCL2-release.yaml`](../support-libraries-v8-UCL2-release.yaml),
 [`libraries-v8-UCL2-prebuild.yaml`](../libraries-v8-UCL2-prebuild.yaml), and
 [`libraries-v8-release.yaml`](../libraries-v8-release.yaml) for the exact commit SHAs used.
 

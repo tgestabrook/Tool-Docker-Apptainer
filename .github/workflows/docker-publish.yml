@@ -20,6 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      ## Cap concurrent legs. Every leg ends by pushing a multi-hundred-MB image to GHCR, and
+      ## running all of them at once trips GitHub's secondary rate limit, which surfaces as a
+      ## push failure reading `denied: permission_denied ... 403 Forbidden` -- the body, not the
+      ## prefix, is where it says "You have exceeded a secondary rate limit". That reads as a
+      ## credentials problem and is not one, which makes it expensive to diagnose. Observed on a
+      ## fork build of 2026-08-18. Builds still run in parallel, just fewer at a time.
+      max-parallel: 3
       matrix:
         include:
           # - dockercontext: ./Clean_Docker_LANDIS-II_7_AllExtensions

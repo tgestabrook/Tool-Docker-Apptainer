@@ -36,7 +36,7 @@ docker run --rm `
 
 ## Included extensions
 
-See [`extensions-v8-release.yaml`](../extensions-v8-release.yaml) and [`libraries-v8-release.yaml`](../libraries-v8-release.yaml) for the exact commit SHAs used.
+See [`extensions-v8-release.yaml`](../extensions-v8-release.yaml), [`libraries-v8-release.yaml`](../libraries-v8-release.yaml), and [`support-libraries-v8-release.yaml`](../support-libraries-v8-release.yaml) for the exact commit SHAs used.
 
 **Succession**
 
