@@ -97,8 +97,14 @@ WORKDIR $LANDIS_DIR
 RUN git clone $LANDIS_GITHUB/Core-Model-v7-LINUX.git \
   && dotnet build $LANDIS_CORE_DIR/Tool-Console/src -c Release
 
-## get support libraries
+## get support libraries (use specific commit in case of broken updates)
+##
+## Kept inline rather than moved to a YAML as the v8 images were: v7 is
+## superseded and these DLLs have not changed since 2024-10-11, so there is
+## nothing here to keep re-reviewing. The pin simply records what this image is
+## already building, which until now was whatever the default branch held.
 RUN git clone $LANDIS_GITHUB/Support-Library-Dlls-v7.git \
+  && git -C $LANDIS_DIR/Support-Library-Dlls-v7 checkout 539907af9e121a2da252570bbcda83765a57b162 \
   && mv $LANDIS_DIR/Support-Library-Dlls-v7/* $LANDIS_EXT_DIR/ \
   && rm -r $LANDIS_DIR/Support-Library-Dlls-v7
 

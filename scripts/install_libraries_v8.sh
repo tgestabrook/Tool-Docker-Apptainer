@@ -83,6 +83,17 @@ for i in $(seq 0 $((count - 1))); do
 
   dotnet build "$ext_src_path" -c Release | tee -a "$LIB_LOG_FILE"
 
+  ## fail fast on a failed library build: the pipe to `tee` masks dotnet's exit
+  ## code (the pipeline returns tee's 0), so `set -e` never trips. Check PIPESTATUS.
+  ## This matters most for libraries built *before* the extensions (see
+  ## `libraries-v8-UCL2-prebuild.yaml`): silently keeping the stale .dll there
+  ## would surface later as a confusing extension compile error.
+  build_status=${PIPESTATUS[0]}
+  if [ "$build_status" -ne 0 ]; then
+    echo "Error: 'dotnet build' failed for library '$repo' (exit $build_status); aborting." 1>&2
+    exit "$build_status"
+  fi
+
   ## append library dependencies to the logfile for debugging
   dotnet list "$ext_csproj_file" package | tee -a "$LIB_LOG_FILE"
 

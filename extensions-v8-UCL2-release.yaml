@@ -1,8 +1,6 @@
 ##  TODO:
-##  - "Extension-PnET-Succession" needs UCLv2 update
 ##  - "Extension-Base-BDA" needs UCLv2 update
 ##  - "Extension-LinearWind" needs UCLv2 update
-##  - "Extension-Output-Biomass-PnET" needs UCLv2 update
 ##  - "Extension-Output-Wildlife-Habitat" needs UCLv2 update
 ##  - "Extension-Local-Habitat-Suitability-Output" needs UCLv2 update
 ##  - "Extension-Land-Use-Plus" needs UCLv2 update (in progress upstream; #59)
@@ -33,14 +31,21 @@
   org: LANDIS-II-Foundation
   commit: 040ac120e08747f126f68c851022e72ca378cbc0
 
-# - repo: Extension-PnET-Succession
-#   org: LANDIS-II-Foundation
-#   commit: 5e7e5f95d6a1f47b5a8b62cd92c4598aa0b85d78
+- repo: Extension-PnET-Succession
+  org: LANDIS-II-Foundation
+  ## `UCL_update` branch HEAD ("Updates for UCL and bump to v6.1", 2026-07-14):
+  ## retargets the .csproj to UniversalCohorts-v2 / InitialCommunity.Universal-v2 /
+  ## Succession-v10 (the source itself is unchanged from 6.0.3). Requires the UCLv2
+  ## rebuild of Landis.Library.PnETCohorts-v2 -- see `libraries-v8-UCL2-prebuild.yaml`.
+  ## Not yet merged to `master`; switch to a master commit once upstream merges it.
+  commit: de21116b9abfa3d7d3740bb99c2cf7a001cce89d
 
 ## Disturbance and Other Extensions
-# - repo: Extension-Base-BDA
-#   org: LANDIS-II-Foundation
-#   commit: 1aaa2e28627ba21949fd9053b9aae18f099032d5
+- repo: Extension-Base-BDA
+  org: LANDIS-II-Foundation
+  # Current commit comes from a stale branch of Base BDA that has the UCL update :
+  # see https://github.com/LANDIS-II-Foundation/Extension-Base-BDA/commit/273e9385cb29a9ef0b242ede995943353d8fddce
+  commit: 273e9385cb29a9ef0b242ede995943353d8fddce
 
 - repo: Extension-Base-Fire
   org: LANDIS-II-Foundation
@@ -82,21 +87,48 @@
 #   org: LANDIS-II-Foundation
 #   commit: fde29473f773c9f995f3a702ca919f7f30a6bcd1
 
-## TODO: use LANDIS-II-Foundation
+## Upstream absorbed the UCLv2 migration (`Update UCL and Rebuild`, 2026-06-06) and has
+## since released v4.3, so the jameslamping fork this used to pin (v4.0.4, never merged
+## upstream) is no longer needed. Note upstream master now references
+## UniversalCohorts-v2, so this pin is NOT usable by the UCLv1 `extensions-v8-release.yaml`.
+##
+## KNOWN LIMITATION -- only usable with NECN and PnET succession, NOT ForCS or Biomass
+## Succession, which crash at extension load with a NullReferenceException:
+##
+##   at Landis.Extension.SocialClimateFire.SiteVars.InitializeDisturbances()
+##        in src/SiteVars.cs:line 109
+##   at Landis.Extension.SocialClimateFire.PlugIn.LoadParameters(String, ICore)
+##
+## `InitializeDisturbances()` looks up `Succession.FineFuels`; when that is unregistered
+## it falls back to `Succession.Litter` but assigns into `SiteVars.FineFuels[site]`, whose
+## getter returns the same field it just found null (and which is never allocated with
+## `NewSiteVar<double>()`) -- so the fallback dereferences null. NECN registers
+## `Succession.FineFuels` directly and PnET registers it via `Library-PnET-Cohort`, so both
+## take the working branch; ForCS and Biomass Succession register only `Succession.Litter`.
+##
+## This is NOT a UCLv2 issue -- it reproduces on the UCLv1 pin used by the v8 image, and is
+## still present on upstream master as of v4.3 (the 2026-07-20 fineFuels refactor renamed
+## the fields but left the same null target). Verified by building this image against both
+## pins and running all four succession extensions. See the test READMEs.
 - repo: Extension-Social-Climate-Fire
-  org: tgestabrook
-  commit: 021c350126f4ff337ad26f8317ffc6802f551482
+  org: LANDIS-II-Foundation
+  commit: 0babccb6f37c55f22a2ae632833582bea5d754d9 ## v4.3
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
-  commit: 58f5a260195192c20d521e47b9e049f6c0e94022
-  ## UCLv2 build: use the UCLv2 variant of the hand-maintained .csproj, which
-  ## references Landis.Library.UniversalCohorts-v2 instead of -v1 (see issue #59).
-  csproj: Forest-Roads-Extension-UCLv2.csproj
+  ## Cleaned-up commit: SDK-style .csproj using Landis.Library.UniversalCohorts-v2
+  ## (harvest libs via build/extensions, patched by update_csproj_*.sh), plus
+  ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. Supercluster.KDTree)
+  ## are copied to build/extensions for runtime loading.
+  commit: f2e08cc83e9e26e3150ddbdc1830cb38f4d1273f
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
-  commit: 8956c53c3c9e32fb2069c9ff9ad23b9dffb791fe
+  ## Cleaned-up commit: SDK-style .csproj referencing BiomassHarvest-v7 /
+  ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh), plus
+  ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. log4net) are copied
+  ## to build/extensions for runtime loading.
+  commit: b8e21905e1dd09d8540e5d86d0640a54a7e99377
 
 ## Output Extensions
 - repo: Extension-Output-Biomass
@@ -111,9 +143,11 @@
   org: LANDIS-II-Foundation
   commit: 1a95db2ae250566260f23439fbe79b7bb0b3141a
 
-# - repo: Extension-Output-Biomass-PnET
-#   org: LANDIS-II-Foundation
-#   commit: 3924c35120958be9319838ad37e4f67774ac194b
+- repo: Extension-Output-Biomass-PnET
+  org: LANDIS-II-Foundation
+  ## `UCL_update` branch HEAD ("UCL updates and bump to v6.1", 2026-07-14);
+  ## same situation as Extension-PnET-Succession above.
+  commit: e97cdfaeef60cec9b5c429554647bfa9354d6e25
 
 - repo: Extension-Output-Biomass-Reclass
   org: LANDIS-II-Foundation

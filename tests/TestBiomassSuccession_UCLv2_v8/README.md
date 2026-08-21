@@ -30,6 +30,30 @@ It was fixed in the Biomass Succession spin-up overhaul (issue #53; the buggy li
 the source commented with `WHERE DID THIS CODE COME FROM?  HUGE MYSTERY`). A stale extension
 that reintroduced it would age cohorts by only ~+5 years over this run and fail the check.
 
+## Do not add Social Climate Fire (SCRAPPLE) to this scenario
+
+SCRAPPLE is in the image but **cannot run under Biomass Succession** (or ForCS). Adding it
+here crashes at extension load, before any input parsing:
+
+```
+Loading Social Climate Fire extension ...
+Internal error occurred within the program:
+  Object reference not set to an instance of an object.
+   at Landis.Extension.SocialClimateFire.SiteVars.InitializeDisturbances()
+        in src/SiteVars.cs:line 109          # line number is for the pinned v4.3
+   at Landis.Extension.SocialClimateFire.PlugIn.LoadParameters(String dataFile, ICore mCore)
+```
+
+SCRAPPLE reads fine fuels from `Succession.FineFuels`; when that site variable is
+unregistered it falls back to `Succession.Litter` but assigns into `SiteVars.FineFuels[site]`,
+whose getter returns the same field it just found null — so the fallback dereferences null.
+Biomass Succession and ForCS register only `Succession.Litter`; NECN registers
+`Succession.FineFuels` directly and PnET registers it via `Library-PnET-Cohort`, which is why
+SCRAPPLE works in `../TestNECN_AllExtension` and `../TestPnET_AllExtension` but not here.
+
+This is an upstream SCRAPPLE bug, **not** a UCLv2 issue — it reproduces on the UCLv1 pin used
+by `landis-ii-v8-release` and is still present on upstream master as of v4.3.
+
 ## Running it manually
 
 ```sh

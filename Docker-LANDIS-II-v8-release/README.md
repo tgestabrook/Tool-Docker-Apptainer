@@ -36,7 +36,7 @@ docker run --rm `
 
 ## Included extensions
 
-See [`extensions-v8-release.yaml`](../extensions-v8-release.yaml) and [`libraries-v8-release.yaml`](../libraries-v8-release.yaml) for the exact commit SHAs used.
+See [`extensions-v8-release.yaml`](../extensions-v8-release.yaml), [`libraries-v8-release.yaml`](../libraries-v8-release.yaml), and [`support-libraries-v8-release.yaml`](../support-libraries-v8-release.yaml) for the exact commit SHAs used.
 
 **Succession**
 
@@ -86,7 +86,9 @@ This image supersedes `Clean_Docker_LANDIS-II_8_AllExtensions` with the followin
 - `dotnet` installed from the `apt` repositories;
 - LANDIS-II placed at `/opt/landis-ii` (standard location for third-party software);
 - extension and library versions defined in shared `*.yaml` files, not hardcoded in the Dockerfile;
-- shared `.csproj` files for Forest Roads and Magic Harvest extensions (`extension_files/`);
+- shared override `.csproj` files for Forest Roads and Magic Harvest (`extension_files/`),
+  named by the `csproj:` field on their YAML entries (the UCLv2 image instead builds these
+  two from their own SDK-style projects);
 - build scripts rewritten in `bash`, shared in `scripts/`, reusable across image flavours;
 - `yq` used to parse yaml; `xmlstarlet` used to edit `.csproj` XML;
 - shared tests (`tests/`) run as part of the build;

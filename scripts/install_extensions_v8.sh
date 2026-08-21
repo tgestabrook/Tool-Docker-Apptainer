@@ -87,20 +87,13 @@ for i in $(seq 0 $((count - 1))); do
   git -C "$repo_path" fetch --depth=1 origin "$commit"
   git -C "$repo_path" checkout "$commit"
 
-  ## Fix the paths etc. in the extension's .csproj file(s);
-  ##  - except for Clément's extensions (which are structured differently) so use custom files.
+  ## Fix .csproj: use a hand-maintained override when a `csproj:` YAML entry
+  ## names one, otherwise patch the repo's own .csproj with the update scripts.
   echo "Fixing .csproj files in $repo_path ..."
   ext_csproj_file="$(find "$repo_path" -type f -name "*.csproj" -print -quit)"
 
-  if [[ "$repo" == "LANDIS-II-Forest-Roads-Simulation-extension" ||
-        "$repo" == "LANDIS-II-Magic-Harvest" ]]; then
-    ## pick the override .csproj: a yaml `csproj:` entry names it explicitly,
-    ## otherwise default to the one matching the repo .csproj's basename.
-    if [[ -n "$csproj_override" ]]; then
-      override_csproj="$LANDIS_DIR/extension_files/$csproj_override"
-    else
-      override_csproj="$LANDIS_DIR/extension_files/$(basename "$ext_csproj_file")"
-    fi
+  if [[ -n "$csproj_override" ]]; then
+    override_csproj="$LANDIS_DIR/extension_files/$csproj_override"
     if [[ ! -f "$override_csproj" ]]; then
       echo "Error: .csproj override '$override_csproj' for '$repo' not found" 1>&2
       exit 1
