@@ -10,7 +10,7 @@
 
 - repo: Library-Universal-Cohort
   org: LANDIS-II-Foundation
-  commit: f19b04a6ca8fd6022eaaedf3896a87dd560b3a10
+  commit: 8f6e7edfc4928512e36be7629cfaeafe8970e076
 
 - repo: Library-Initial-Community
   org: LANDIS-II-Foundation
