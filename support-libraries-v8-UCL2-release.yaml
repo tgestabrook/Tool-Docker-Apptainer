@@ -22,4 +22,4 @@
   ## NOTE: this does NOT retire `libraries-v8-UCL2-prebuild.yaml`.
   ## `Landis.Library.PnETCohorts-v2.dll` is still the UCLv1 build even at this
   ## commit, so that rebuild is still required.
-  commit: f0b0d68e16f45ee3549787e98f622eb8bb170171
+  commit: cfd7d2a3655bc8e1e70959fee827d8b8c2f32c38
