@@ -29,7 +29,7 @@
 
 - repo: Extension-NECN-Succession
   org: LANDIS-II-Foundation
-  commit: 040ac120e08747f126f68c851022e72ca378cbc0
+  commit: 8ed5e107882ec17c4928100a2d5a8e66041eb9b0
 
 - repo: Extension-PnET-Succession
   org: LANDIS-II-Foundation
