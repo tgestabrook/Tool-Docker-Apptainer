@@ -15,30 +15,30 @@
 ##
 
 ## Succession Extensions
-- repo: Extension-Biomass-Succession
-  org: LANDIS-II-Foundation
-  commit: 20610767e25c74fec3031376402d9ac11d111349
+# - repo: Extension-Biomass-Succession
+#   org: LANDIS-II-Foundation
+#   commit: 20610767e25c74fec3031376402d9ac11d111349
 
 # - repo: Extension-DGS-Succession
 #   org: LANDIS-II-Foundation
 #   commit: dde267702c587c10d04951f4c4ea754ebeb67bfa ## v8 branch
 
-- repo: Extension-ForCS-Succession
-  org: LANDIS-II-Foundation
-  commit: a889d39dd3a4f3f8f681872765335ac08a4656f5 ## fix init with Dynamic Fire (ForCS#8)
+# - repo: Extension-ForCS-Succession
+#   org: LANDIS-II-Foundation
+#   commit: a889d39dd3a4f3f8f681872765335ac08a4656f5 ## fix init with Dynamic Fire (ForCS#8)
 
 - repo: Extension-NECN-Succession
   org: LANDIS-II-Foundation
   commit: 040ac120e08747f126f68c851022e72ca378cbc0
 
-- repo: Extension-PnET-Succession
-  org: LANDIS-II-Foundation
-  ## `UCL_update` branch HEAD ("Updates for UCL and bump to v6.1", 2026-07-14):
-  ## retargets the .csproj to UniversalCohorts-v2 / InitialCommunity.Universal-v2 /
-  ## Succession-v10 (the source itself is unchanged from 6.0.3). Requires the UCLv2
-  ## rebuild of Landis.Library.PnETCohorts-v2 -- see `libraries-v8-UCL2-prebuild.yaml`.
-  ## Not yet merged to `master`; switch to a master commit once upstream merges it.
-  commit: de21116b9abfa3d7d3740bb99c2cf7a001cce89d
+# - repo: Extension-PnET-Succession
+#   org: LANDIS-II-Foundation
+#   ## `UCL_update` branch HEAD ("Updates for UCL and bump to v6.1", 2026-07-14):
+#   ## retargets the .csproj to UniversalCohorts-v2 / InitialCommunity.Universal-v2 /
+#   ## Succession-v10 (the source itself is unchanged from 6.0.3). Requires the UCLv2
+#   ## rebuild of Landis.Library.PnETCohorts-v2 -- see `libraries-v8-UCL2-prebuild.yaml`.
+#   ## Not yet merged to `master`; switch to a master commit once upstream merges it.
+#   commit: de21116b9abfa3d7d3740bb99c2cf7a001cce89d
 
 ## Disturbance and Other Extensions
 - repo: Extension-Base-BDA
@@ -47,9 +47,9 @@
   # see https://github.com/LANDIS-II-Foundation/Extension-Base-BDA/commit/273e9385cb29a9ef0b242ede995943353d8fddce
   commit: 273e9385cb29a9ef0b242ede995943353d8fddce
 
-- repo: Extension-Base-Fire
-  org: LANDIS-II-Foundation
-  commit: c1ede6a5297e84f34086f380921c648017541cfe
+# - repo: Extension-Base-Fire
+#   org: LANDIS-II-Foundation
+#   commit: c1ede6a5297e84f34086f380921c648017541cfe
 
 - repo: Extension-Base-Wind
   org: LANDIS-II-Foundation
@@ -60,17 +60,17 @@
   commit: 6303c42009a4ded7f40b2e82874af428dc4837fe
 
 
-- repo: Extension-Biomass-Hurricane
-  org: LANDIS-II-Foundation
-  commit: bef44491f37ffd6950d26bf9d1425db509e974fe
+# - repo: Extension-Biomass-Hurricane
+#   org: LANDIS-II-Foundation
+#   commit: bef44491f37ffd6950d26bf9d1425db509e974fe
 
-- repo: Extension-Dynamic-Biomass-Fuels
-  org: LANDIS-II-Foundation
-  commit: 4e3e2f1225b3c72ddaff345932ce3e3b96bd039d
+# - repo: Extension-Dynamic-Biomass-Fuels
+#   org: LANDIS-II-Foundation
+#   commit: 4e3e2f1225b3c72ddaff345932ce3e3b96bd039d
 
-- repo: Extension-Dynamic-Fire-System
-  org: LANDIS-II-Foundation
-  commit: 63d38a7a2b7b5da73eaf7ca448edc44afd774cc4
+# - repo: Extension-Dynamic-Fire-System
+#   org: LANDIS-II-Foundation
+#   commit: 63d38a7a2b7b5da73eaf7ca448edc44afd774cc4
 
 ## Extension-Land-Use-Plus: excluded -- upstream UCLv2 migration is unfinished.
 ## master HEAD (cea58ef, the latest commit, itself a mid-migration "still won't
@@ -143,11 +143,11 @@
   org: LANDIS-II-Foundation
   commit: 1a95db2ae250566260f23439fbe79b7bb0b3141a
 
-- repo: Extension-Output-Biomass-PnET
-  org: LANDIS-II-Foundation
-  ## `UCL_update` branch HEAD ("UCL updates and bump to v6.1", 2026-07-14);
-  ## same situation as Extension-PnET-Succession above.
-  commit: e97cdfaeef60cec9b5c429554647bfa9354d6e25
+# - repo: Extension-Output-Biomass-PnET
+#   org: LANDIS-II-Foundation
+#   ## `UCL_update` branch HEAD ("UCL updates and bump to v6.1", 2026-07-14);
+#   ## same situation as Extension-PnET-Succession above.
+#   commit: e97cdfaeef60cec9b5c429554647bfa9354d6e25
 
 - repo: Extension-Output-Biomass-Reclass
   org: LANDIS-II-Foundation

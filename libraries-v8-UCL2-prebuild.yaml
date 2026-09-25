@@ -24,8 +24,8 @@
 ##
 ## Remove this file (and its Dockerfile step) once Support-Library-Dlls-v8 ships
 ## a UCLv2 build of `Landis.Library.PnETCohorts-v2.dll`.
-- repo: Library-PnET-Cohort
-  org: LANDIS-II-Foundation
-  ## `UCL_update` branch HEAD, the commit that PnET-Succession's own .csproj
-  ## names as the source of its `Landis.Library.PnETCohorts-v2` reference.
-  commit: 3c40197848b7b66c31882ce87d82037e42820737
+# - repo: Library-PnET-Cohort
+#   org: LANDIS-II-Foundation
+#   ## `UCL_update` branch HEAD, the commit that PnET-Succession's own .csproj
+#   ## names as the source of its `Landis.Library.PnETCohorts-v2` reference.
+#   commit: 3c40197848b7b66c31882ce87d82037e42820737
