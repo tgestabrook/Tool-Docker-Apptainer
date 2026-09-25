@@ -253,7 +253,7 @@ RUN apt-get update && apt-get upgrade -y \
     libpng16-16t64 \
     python3 \
     python-is-python3 \
-    python3-pip
+    python3-pip \
     "$LIBXML2_PKG" \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/* ## clean up to save space
 
