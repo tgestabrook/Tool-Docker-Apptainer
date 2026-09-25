@@ -8,13 +8,13 @@
   org: LANDIS-II-Foundation
   commit: 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca
 
-- repo: Library-Universal-Cohort
-  org: LANDIS-II-Foundation
-  commit: 8f6e7edfc4928512e36be7629cfaeafe8970e076
-
 - repo: Library-Initial-Community
   org: LANDIS-II-Foundation
   commit: a5764892fc6df40e15b55487f88b8788a22461a3
+
+- repo: Library-Universal-Cohort
+  org: LANDIS-II-Foundation
+  commit: 8f6e7edfc4928512e36be7629cfaeafe8970e076
 
 # - repo: Library-PnET-Cohort
 #   org: LANDIS-II-Foundation
