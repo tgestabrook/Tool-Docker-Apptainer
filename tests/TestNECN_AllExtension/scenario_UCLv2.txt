@@ -29,7 +29,7 @@ CellLength  30 << meters, so cell area = 900 m2
  "Social Climate Fire"  ./inputs/disturbances/climateSocialFire/Social-Climate-Fire-Inputs.txt
 
 >> Dynamic Biomass Fuels
-	"Dynamic Fuel System"	./inputs/disturbances/dynamicBiomassFuels/dynamic-fire_SetUpFuel.txt
+>>	"Dynamic Fuel System"	./inputs/disturbances/dynamicBiomassFuels/dynamic-fire_SetUpFuel.txt
 
 >> Dynamic Fire system: in the image (#58), but left off here as in ../TestNECN_AllExtension,
 >> where Social Climate Fire above is this scenario's fire extension.
@@ -52,7 +52,7 @@ CellLength  30 << meters, so cell area = 900 m2
 >>   "Linear Wind"      ./inputs/disturbances/linearWind/LinearWind_Input.txt
 
 >> Hurricane
-  "Hurricane"      ./inputs/disturbances/biomassHuricane/Hurricane_v3.txt
+>>  "Hurricane"      ./inputs/disturbances/biomassHuricane/Hurricane_v3.txt
 
 >> Climate BDA (Formerly Base BDA)
   "Climate BDA"     ./inputs/disturbances/climateBDA/Climate-BDA_SetUp.txt
