@@ -112,8 +112,10 @@
 ## the fields but left the same null target). Verified by building this image against both
 ## pins and running all four succession extensions. See the test READMEs.
 - repo: Extension-Social-Climate-Fire
-  org: LANDIS-II-Foundation
-  commit: 0babccb6f37c55f22a2ae632833582bea5d754d9 ## v4.3
+  # org: LANDIS-II-Foundation
+  # commit: 0babccb6f37c55f22a2ae632833582bea5d754d9 ## v4.3
+  org: tgestabrook
+  commit: 7cceb4f223e20f7ccc6dd620b5be8a0ba37ccb43
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
