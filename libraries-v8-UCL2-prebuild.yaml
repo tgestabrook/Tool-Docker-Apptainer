@@ -29,3 +29,6 @@
 #   ## `UCL_update` branch HEAD, the commit that PnET-Succession's own .csproj
 #   ## names as the source of its `Landis.Library.PnETCohorts-v2` reference.
 #   commit: 3c40197848b7b66c31882ce87d82037e42820737
+- repo: Library-Climate
+  org: LANDIS-II-Foundation
+  commit: 39a520c7f571e4d70362791ec7bdbfceda6fdd35
