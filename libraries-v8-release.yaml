@@ -16,6 +16,10 @@
   org: LANDIS-II-Foundation
   commit: 5dc6dd299eef88ded1c88871470d58c26c1a4093
 
+- repo: Library-Climate
+  org: LANDIS-II-Foundation
+  commit: 39a520c7f571e4d70362791ec7bdbfceda6fdd35
+
 # - repo: Library-PnET-Cohort
 #   org: LANDIS-II-Foundation
 #   commit: f32204629073964a2e99e098b6b0a669415c94dd
