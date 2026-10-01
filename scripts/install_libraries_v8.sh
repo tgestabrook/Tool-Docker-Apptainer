@@ -85,9 +85,9 @@ for i in $(seq 0 $((count - 1))); do
 
   ## fail fast on a failed library build: the pipe to `tee` masks dotnet's exit
   ## code (the pipeline returns tee's 0), so `set -e` never trips. Check PIPESTATUS.
-  ## This matters most for libraries built *before* the extensions (see
-  ## `libraries-v8-UCL2-prebuild.yaml`): silently keeping the stale .dll there
-  ## would surface later as a confusing extension compile error.
+  ## This matters most for a library built *before* the extensions: silently
+  ## keeping the stale .dll there would surface later as a confusing extension
+  ## compile error.
   build_status=${PIPESTATUS[0]}
   if [ "$build_status" -ne 0 ]; then
     echo "Error: 'dotnet build' failed for library '$repo' (exit $build_status); aborting." 1>&2
