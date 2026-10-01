@@ -108,6 +108,27 @@ for i in $(seq 0 $((count - 1))); do
   ## Remove any .sln files as these don't help the builds
   find "$repo_path" -type f -name "*.sln" -exec rm -v {} +
 
+  ## With EXT_DROP_SHADOWING_DLLS=true (set by the UCLv2 Dockerfile), delete the
+  ## extension's committed copy of any DLL that build/extensions already holds
+  ## (support libraries, extensions built earlier). An SDK-style .csproj takes
+  ## every file under its directory as a `None` item, and MSBuild resolves a
+  ## reference from those files ({CandidateAssemblyFiles}) before its HintPath,
+  ## so a committed `lib/*.dll` is compiled against instead of the
+  ## build/extensions copy, and then copied over it (and below to build/Release).
+  ## The UCLv1 images leave it unset: the Forest Roads and Magic Harvest .csproj
+  ## files they use (extension_files/) take some references only from the repos'
+  ## committed `packages/` folders.
+  if [[ "${EXT_DROP_SHADOWING_DLLS:-false}" == "true" ]]; then
+    find "$repo_path" -name .git -prune -o -type f -name "*.dll" -print |
+      while IFS= read -r dll; do
+        if [[ -f "$LANDIS_EXT_DIR/$(basename "$dll")" ]]; then
+          echo "$repo: removing committed ${dll#"$repo_path"/} (build/extensions has $(basename "$dll"))" |
+            tee -a "$EXT_LOG_FILE"
+          rm "$dll"
+        fi
+      done
+  fi
+
   ## Build the extension and add to the extension registry
   ext_csproj_name=$(xmlstarlet sel -t -v "//AssemblyName" "$ext_csproj_file")
   ext_src_path=$(dirname "$ext_csproj_file")

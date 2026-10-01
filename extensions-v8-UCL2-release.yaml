@@ -57,7 +57,13 @@
 
 - repo: Extension-Biomass-Harvest
   org: LANDIS-II-Foundation
-  commit: 6303c42009a4ded7f40b2e82874af428dc4837fe
+  ## v7.1 (master HEAD): only the installer and the registered version change
+  ## (7.0 -> 7.1); `src/` is identical to 6303c420. The fix 7.1 announces is
+  ## Library-Biomass-Harvest db579373, already in Support-Library-Dlls-v8's
+  ## `Landis.Library.BiomassHarvest-v4.dll`. The image ships this build only
+  ## because Magic Harvest's committed 7.0 copy is now dropped
+  ## (`EXT_DROP_SHADOWING_DLLS`, see the Dockerfile).
+  commit: 4dfa0d6b1cd07fafd7900aa763621d5130395f8f
 
 
 - repo: Extension-Biomass-Hurricane

@@ -15,11 +15,20 @@
   ## Bumped from 69d615f0, which shipped `Landis.Library.HarvestManagement-v5.dll`
   ## and `Landis.Library.SiteHarvest-v3.dll` built against `Succession-v9` while
   ## every other extension in this image is on `Succession-v10` (see #66, #68).
-  ## This commit also drops `Landis.Extension.BiomassHarvest-v6.dll`, a UCLv1
+  ## f0b0d68e also dropped `Landis.Extension.BiomassHarvest-v6.dll`, a UCLv1
   ## extension binary that has no business in the UCLv2 image -- Biomass Harvest
   ## is built from source here.
   ##
-  ## NOTE: this does NOT retire `libraries-v8-UCL2-prebuild.yaml`.
-  ## `Landis.Library.PnETCohorts-v2.dll` is still the UCLv1 build even at this
-  ## commit, so that rebuild is still required.
-  commit: f0b0d68e16f45ee3549787e98f622eb8bb170171
+  ## Bumped again, from f0b0d68e, for `Landis.Library.UniversalCohorts-v2.dll`
+  ## 2.0.1 (added in 04c583c1), which has the Library-Universal-Cohort#6 fix
+  ## (8f6e7ed, "Corrected casting"): 1.3.0.0 reduced a cohort by
+  ## `(int) fraction * biomass`, which is 0 for any fraction below 1, so partial
+  ## removals (e.g. Biomass Harvest `(30%)`) removed nothing. No source build of
+  ## that library is needed (cf. #73). The fix reaches the image only because the
+  ## extensions step now drops the 1.3.0.0 copies that three extensions commit
+  ## under `lib/` (`EXT_DROP_SHADOWING_DLLS`, see the Dockerfile), which would
+  ## otherwise replace this copy. The range also adds
+  ## `Landis.Library.Climate-v6.dll` and updates `Landis.Library.PnETCohorts-v2.dll`.
+  ##
+  ## NOTE: this does NOT retire `libraries-v8-UCL2-prebuild.yaml` (see there).
+  commit: cfd7d2a3655bc8e1e70959fee827d8b8c2f32c38

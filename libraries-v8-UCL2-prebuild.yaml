@@ -8,11 +8,10 @@
 ##
 ## IMPORTANT: library order matters here, as it does in `libraries-v8-release.yaml`.
 
-## Support-Library-Dlls-v8 ships `Landis.Library.PnETCohorts-v2.dll` v2.1.1, which
-## is built against `UniversalCohorts-v1` / `InitialCommunity.Universal` (v1) --
-## it has not been rebuilt since 2025-05-02. The UCLv2 PnET extensions
-## (PnET-Succession, Output Biomass PnET) reference `UniversalCohorts-v2`, so
-## compiling them against the shipped v2.1.1 DLL fails with, e.g.:
+## Up to f0b0d68e, Support-Library-Dlls-v8 shipped `Landis.Library.PnETCohorts-v2.dll`
+## v2.1.1, which is built against `UniversalCohorts-v1` / `InitialCommunity.Universal`
+## (v1). The UCLv2 PnET extensions (PnET-Succession, Output Biomass PnET) reference
+## `UniversalCohorts-v2`, so compiling them against that DLL fails with, e.g.:
 ##
 ##   error CS0012: The type 'SiteCohorts' is defined in an assembly that is not
 ##   referenced. You must add a reference to assembly
@@ -22,8 +21,10 @@
 ## `UniversalCohorts-v2` / `InitialCommunity.Universal-v2` / `Succession-v10`)
 ## replaces that DLL in `build/extensions` before the extensions are built.
 ##
-## Remove this file (and its Dockerfile step) once Support-Library-Dlls-v8 ships
-## a UCLv2 build of `Landis.Library.PnETCohorts-v2.dll`.
+## The copy at the pinned cfd7d2a3 is a UCLv2 build (2.3.0.0, from Library-PnET-Cohort
+## main 25d1887), but it references `Climate-v6`, while PnET-Succession de21116b and
+## this rebuild use `Climate-v5`. Remove this file (and its Dockerfile step) once the
+## PnET extensions move to `Climate-v6`.
 - repo: Library-PnET-Cohort
   org: LANDIS-II-Foundation
   ## `UCL_update` branch HEAD, the commit that PnET-Succession's own .csproj
