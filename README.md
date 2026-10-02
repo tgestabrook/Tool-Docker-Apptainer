@@ -59,7 +59,6 @@ Simply select an image that best suits your needs - you can use "as is" or simpl
 | Run LANDIS-II v8 with R and RStudio | `landis-ii-v8-rstudio` |
 | Run LANDIS-II v8 with R (no RStudio) | `landis-ii-v8-r` |
 | Run LANDIS-II v7 simulations | `landis-ii-v7-release` |
-| Use the latest (potentially unstable) extension commits | `landis-ii-v8-latest` |
 
 **v7 vs v8?**
 - Use **v8** unless you have a specific reason not to — it is the current recommended version.
@@ -110,7 +109,7 @@ These images are based on the generic images and add R and/or a running RStudio 
 
 | Image name             | Subdirectory                               | Description                                         |
 | ---------------------- | ------------------------------------------ | --------------------------------------------------- |
-| `landis-ii-v8-latest`  | `Clean_Docker_LANDIS-II_8_Latest_Commits/` | LANDIS-II v8 (Ubuntu 22.04); latest versions of v8 extensions; `miniconda` and [iRods](https://irods.org/) |
+| ~~`landis-ii-v8-latest`~~ | ~~`Clean_Docker_LANDIS-II_8_Latest_Commits/`~~ | **Deprecated** — no longer built since September 2025; use `landis-ii-v8-release` or `landis-ii-v8-uclv2-release` |
 
 ### 📥 Get a pre-built image
 
@@ -395,10 +394,13 @@ Apptainer only runs on Linux, so:
   a PowerShell terminal) — [install Apptainer](https://apptainer.org/docs/admin/main/installation.html)
   and run the command above.
 - **On Windows without WSL** — run the build inside a container that already includes Apptainer,
-  so you don't have to install anything extra:
+  so you don't have to install anything extra. In PowerShell, from the folder where you want the
+  `.sif` saved (the `--mount` line makes that folder `/work` inside the container):
 
   ```shell
-  docker run --rm --privileged kaczmarj/apptainer:latest \
+  docker run --rm --privileged `
+    --mount type=bind,src="${PWD}",dst=/work `
+    kaczmarj/apptainer:latest `
     build /work/<imagename>.sif docker://ghcr.io/landis-ii-foundation/<imagename>:ubuntu-latest
   ```
 
