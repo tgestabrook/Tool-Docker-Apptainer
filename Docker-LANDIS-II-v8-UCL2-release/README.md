@@ -91,6 +91,18 @@ See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
 | Output Cohort Statistics |
 | Output Max Species Age |
 
+### Forest Product Sector Module
+
+The image also includes the [Forest Product Sector Module](https://github.com/LANDIS-II-Foundation/Extension-Forest-Product-Sector) (FPSM), pinned in [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml) as a `type: tool` entry, and installed in `build/Release`.
+FPSM is not a plug-in and is not listed in a scenario file: run it after a ForC Succession simulation, from a folder holding the FPSM input file and the ForC flux logs it names (`HarvestFileLive`, `HarvestFileDOM`; relative paths resolve against that folder, where FPSM also writes its outputs).
+
+```shell
+docker run --rm \
+  --mount type=bind,src="/path/to/your/scenario",dst=/scenarioFolder \
+  ghcr.io/landis-ii-foundation/landis-ii-v8-uclv2-release:ubuntu-latest \
+  /bin/sh -c "cd /scenarioFolder && dotnet \$LANDIS_FPS fps-input.txt"
+```
+
 ## Enhancements over `landis-ii-v8-release`
 
 This image builds on `Docker-LANDIS-II-v8-release` with the following addition:
