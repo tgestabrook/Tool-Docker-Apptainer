@@ -200,6 +200,16 @@ RUN A0=$(awk -F, 'NR>1{print $3}' community-input-file-0.csv | sort -n | tail -1
     echo "Biomass Succession cohort-aging check: max age yr0=$A0 yr50=$A50 (delta=$((A50 - A0)))"; \
     [ "$((A50 - A0))" -ge 40 ] || { echo "FAIL: cohorts did not age -- stale Biomass Succession (+1/timestep) bug"; exit 1; }
 
+## SOSIEL Harvest (its own test scenario, shortened to 20 years; see the test README).
+## The second RUN checks that SOSIEL Harvest harvested sites, not just that it loaded.
+WORKDIR $TESTS_DIR/TestSOSIEL_v8
+
+RUN dotnet $LANDIS_CONSOLE scenario.txt
+
+RUN SITES=$(awk -F, 'NR>1{s+=$4} END{print s+0}' biomass-harvest-summary-log.csv); \
+    echo "SOSIEL Harvest check: harvested sites=$SITES"; \
+    [ "$SITES" -gt 0 ] || { echo "FAIL: SOSIEL Harvest harvested no sites"; exit 1; }
+
 ################################################################
 ## STAGE 2: RUNTIME
 ##
