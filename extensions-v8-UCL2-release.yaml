@@ -119,12 +119,11 @@
 ## the fields but left the same null target). Verified by building this image against both
 ## pins and running all four succession extensions. See the test READMEs.
 ##
-## TODO: upstream master (0babccb, v4.3) still references Climate v5. Until it moves to v6,
-## pin this fork: v4.3 plus one .csproj change pointing the Climate HintPath at
-## `Landis.Library.Climate-v6.dll` (#73).
+## master after SCF#177: v4.3 with the Climate reference moved to v6 and the committed
+## UniversalCohorts-v2 1.3 DLL removed from src/lib. No source changes from v4.3.
 - repo: Extension-Social-Climate-Fire
-  org: tgestabrook
-  commit: 7cceb4f223e20f7ccc6dd620b5be8a0ba37ccb43 ## v4.3 + Climate v6
+  org: LANDIS-II-Foundation
+  commit: dea0e9cfc8a889b49b57091a49e5d68d3dc4f7ba ## v4.3 + Climate v6
 
 - repo: LANDIS-II-Forest-Roads-Simulation-extension
   org: Klemet
