@@ -3,7 +3,6 @@
 ##  - "Extension-Biomass-Browse" not yet ready for v8
 ##  - "Extension-DGS-Succession" not yet ready for v8 (requires additional libs)
 ##  - "Extension-Root-Rot" not yet ready for v8
-##  - "Extension-SOSIEL-Harvest" not yet ready for v8
 ##  - "Extension-Output-Landscape-Habitat" not yet ready for v8
 ##  - "CarenD/Forest_Product_Sector_Module" not yet ready for v8
 ##
@@ -57,6 +56,12 @@
 - repo: Extension-Biomass-Hurricane
   org: LANDIS-II-Foundation
   commit: a6afe3f3d2c8664023e32a9ca66544aa14d24449
+
+## SOSIEL Harvest 2.0. Compiles against Biomass Harvest (above) and the SOSIEL
+## libraries built in `libraries-v8-release-prebuild.yaml`.
+- repo: Extension-SOSIEL-Harvest
+  org: LANDIS-II-Foundation
+  commit: ed6f1106525ed2fdbde4cef2634efc7ae3aa6714
 
 - repo: Extension-Dynamic-Biomass-Fuels
   org: LANDIS-II-Foundation

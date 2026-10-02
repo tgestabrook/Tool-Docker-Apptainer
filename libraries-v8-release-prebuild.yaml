@@ -1,0 +1,14 @@
+## Libraries built from source BEFORE the extensions, for the v8 (UCLv1) images.
+##
+## An extension in `extensions-v8-release.yaml` compiles against each of these, and
+## Support-Library-Dlls-v8 doesn't ship them. Order matters: later entries may
+## reference earlier ones. Installed by `scripts/install_libraries_v8.sh`.
+
+## SOSIEL Harvest 2.0 references SOSIEL-v3 and SOSIEL.VBGP-v1 (which itself references SOSIEL-v3)
+- repo: Library-Algorithm-SOSIEL
+  org: LANDIS-II-Foundation
+  commit: b399eb281a11f7c50505632c249808fa9f0ec0fd ## master ("v8 updates", 2024-10-02)
+
+- repo: Library-SOSIEL-VBGP
+  org: LANDIS-II-Foundation
+  commit: c27c921670e92300ce8313819abec042c99e8ddf ## main ("v8 updates", 2024-10-02)
