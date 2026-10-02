@@ -135,8 +135,11 @@ for i in $(seq 0 $((count - 1))); do
   ## - `deploy/current/`
   ## - `deploy/install/`
   ## - `Deploy/Installation Files/plug-ins-installer-files`
+  ## Only files declaring `LandisData Extension` count: installer folders can also
+  ## hold licence texts (e.g. SOSIEL Harvest's `SHE LGPL.txt` sorts after `SHE 2.txt`).
   ext_txt_file=$(find "$repo_path" -type f -name "*.txt" \( -path "*/deploy/current/*" -o -path "*/[Dd]eploy/[Ii]nstall*/*" \) -print0 \
     | while IFS= read -r -d '' file; do
+      grep -qiE 'LandisData[[:space:]]+"?Extension"?' "$file" || continue
       printf '%s\0' "$(basename "$file"):::${file}"
     done \
   | sort -z \
