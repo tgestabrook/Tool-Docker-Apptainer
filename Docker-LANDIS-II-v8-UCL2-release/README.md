@@ -2,7 +2,7 @@
 
 LANDIS-II v8 (Ubuntu 24.04 and 26.04) with extensions updated for **Universal Cohort Library (UCL) v2**, defined in [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml). UCL v2 fixes a significant biomass-removal bug present in earlier extensions — see the [warning in the main README](../README.md) for details.
 
-> **Note:** Some extensions are still pending UCL v2 updates and are therefore not included: LinearWind, Land Use Plus, Output Wildlife Habitat, and Local Habitat Suitability Output. Use [`landis-ii-v8-release`](../Docker-LANDIS-II-v8-release/) if you need those extensions.
+> **Note:** Some extensions are still pending UCL v2 updates and are therefore not included: Land Use Plus, Output Wildlife Habitat, and Local Habitat Suitability Output. Use [`landis-ii-v8-release`](../Docker-LANDIS-II-v8-release/) if you need those extensions.
 
 **For users:** pull the pre-built image (no build step required).
 **For developers:** build the image locally using the instructions below.
