@@ -91,6 +91,18 @@ See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
 | Output Cohort Statistics |
 | Output Max Species Age |
 
+### Forest Product Sector Module
+
+The image also includes the [Forest Product Sector Module](https://github.com/LANDIS-II-Foundation/Extension-Forest-Product-Sector) (FPSM), pinned in [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml) as a `type: tool` entry, and installed in `build/Release`.
+FPSM is not a plug-in and is not listed in a scenario file: run it after a ForC Succession simulation, from a folder holding the FPSM input file and the ForC flux logs it names (`HarvestFileLive`, `HarvestFileDOM`; relative paths resolve against that folder, where FPSM also writes its outputs).
+
+```shell
+docker run --rm \
+  --mount type=bind,src="/path/to/your/scenario",dst=/scenarioFolder \
+  ghcr.io/landis-ii-foundation/landis-ii-v8-uclv2-release:ubuntu-latest \
+  /bin/sh -c "cd /scenarioFolder && dotnet \$LANDIS_FPS fps-input.txt"
+```
+
 ## Enhancements over `landis-ii-v8-release`
 
 This image builds on `Docker-LANDIS-II-v8-release` with the following addition:
@@ -101,6 +113,12 @@ This image builds on `Docker-LANDIS-II-v8-release` with the following addition:
   UCLv2 overrides that used to live in `extension_files/` were retired once those two
   repos converted to SDK-style projects; the UCLv1 images still use overrides, named by
   the `csproj:` field on a YAML entry;
+- before building an extension, the build deletes the extension's committed copy of any
+  DLL that `build/extensions` already holds (`EXT_DROP_SHADOWING_DLLS` in the Dockerfile),
+  so the image ships the support libraries and extensions pinned in the `*.yaml` files.
+  Without this, the `Landis.Library.UniversalCohorts-v2.dll` 1.3.0.0 that three
+  extensions commit replaces the 2.0.1 copy from `Support-Library-Dlls-v8`; in 1.3.0.0,
+  partial cohort removals (e.g. Biomass Harvest `(30%)`) remove nothing;
 
 All other enhancements from `Docker-LANDIS-II-v8-release` also apply:
 
@@ -109,8 +127,8 @@ All other enhancements from `Docker-LANDIS-II-v8-release` also apply:
 - LANDIS-II placed at `/opt/landis-ii`;
 - extension and library versions defined in shared `*.yaml` files;
 - a pre-extension support-library pass (`libraries-v8-UCL2-prebuild.yaml`) that rebuilds
-  `Landis.Library.PnETCohorts-v2` from its UCLv2 branch, because `Support-Library-Dlls-v8`
-  still ships the UCLv1 build (v2.1.1) that the PnET extensions cannot compile against;
+  `Landis.Library.PnETCohorts-v2` from its UCLv2 branch, because the `Support-Library-Dlls-v8`
+  copy references `Landis.Library.Climate-v6`, while the PnET extensions use Climate-v5;
 - build scripts in `bash`, shared in `scripts/`;
 - shared tests (`tests/`) run as part of the build;
 - **multi-stage build** that ships only the .NET *runtime* and the compiled model:

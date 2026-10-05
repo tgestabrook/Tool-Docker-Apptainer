@@ -11,7 +11,6 @@
 ##  - "Extension-Root-Rot" not yet ready for v8
 ##  - "Extension-SOSIEL-Harvest" not yet ready for v8
 ##  - "Extension-Output-Landscape-Habitat" not yet ready for v8
-##  - "CarenD/Forest_Product_Sector_Module" not yet ready for v8
 ##
 
 ## Succession Extensions
@@ -57,7 +56,13 @@
 
 - repo: Extension-Biomass-Harvest
   org: LANDIS-II-Foundation
-  commit: 6303c42009a4ded7f40b2e82874af428dc4837fe
+  ## v7.1 (master HEAD): only the installer and the registered version change
+  ## (7.0 -> 7.1); `src/` is identical to 6303c420. The fix 7.1 announces is
+  ## Library-Biomass-Harvest db579373, already in Support-Library-Dlls-v8's
+  ## `Landis.Library.BiomassHarvest-v4.dll`. The image ships this build only
+  ## because Magic Harvest's committed 7.0 copy is now dropped
+  ## (`EXT_DROP_SHADOWING_DLLS`, see the Dockerfile).
+  commit: 4dfa0d6b1cd07fafd7900aa763621d5130395f8f
 
 
 - repo: Extension-Biomass-Hurricane
@@ -168,3 +173,25 @@
 # - repo: Extension-Local-Habitat-Suitability-Output
 #   org: LANDIS-II-Foundation
 #   commit: 82d58f26da4b66ef1117b7f350d5ec9f5410776f
+
+## Tools: stand-alone programs, not plug-ins, so never registered (`type: tool`;
+## built in their own pass of `scripts/install_extensions_v8.sh`)
+
+## Forest Product Sector Module (FPSM): a stand-alone post-processor of ForC
+## Succession's flux logs (`log_FluxBio.csv`, `log_FluxDOM.csv`), run after a
+## simulation as `dotnet $LANDIS_FPS <input file>`, and built in the tool pass
+## after the console rebuild (see the UCL2 Dockerfile). It references no cohort
+## library, so it could also be built for the UCLv1 image.
+- repo: Extension-Forest-Product-Sector
+  org: FOR-CAST
+  type: tool
+  ## Temporary pin to the FOR-CAST fork; revert to LANDIS-II-Foundation once
+  ## upstream PRs #8 and #9 merge.
+  ## Branch: FOR-CAST/fix/domtofps-allocation (upstream PR #9, "Allocate DOMtoFPS by
+  ## its own proportions, not the snag proportions"), stacked on
+  ## FOR-CAST/fix/fatal-unmatched-allocation (upstream PR #8, 54d1daf9, "Fail when
+  ## harvested carbon has no forest-to-mills proportions"). Both branch from upstream
+  ## main 0fbf9ee6 (merge of #10), which includes the NuGet.config from #1 that
+  ## declares the MyGet feed Landis.Core is restored from.
+  ## Replace the SHA below if the branch moves.
+  commit: 574f5636e74468fb1ed9a88d9070ae57f18bc9b5
