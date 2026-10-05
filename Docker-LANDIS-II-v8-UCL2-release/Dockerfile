@@ -117,21 +117,6 @@ COPY support-libraries-v8-UCL2-release.yaml $LANDIS_DIR/support-libraries-v8-UCL
 
 RUN scripts/install_support_libraries_v8.sh support-libraries-v8-UCL2-release.yaml $LANDIS_DIR
 
-## rebuild the support libraries that the extensions must *compile against*
-##
-##  - most libraries are rebuilt after the extensions (see further below), which is
-##    enough when an extension only needs the rebuilt .dll at run time;
-##  - `Landis.Library.PnETCohorts-v2.dll` is different: the copy shipped in
-##    Support-Library-Dlls-v8 references `Landis.Library.Climate-v6`, while the PnET
-##    extensions pinned here are built against Climate-v5 (earlier copies were the
-##    UCLv1 build, which they fail to compile against). It is therefore replaced
-##    *before* the extensions are built;
-##  - see `libraries-v8-UCL2-prebuild.yaml` for details.
-
-COPY libraries-v8-UCL2-prebuild.yaml $LANDIS_DIR/libraries-v8-UCL2-prebuild.yaml
-
-RUN scripts/install_libraries_v8.sh libraries-v8-UCL2-prebuild.yaml $LANDIS_DIR
-
 ## get, build, and register all available extensions
 ##
 ##  - necessary files are downloaded and built using `scripts/install_extensions_v8.sh`;
@@ -218,8 +203,7 @@ WORKDIR $TESTS_DIR/TestNECN_AllExtension
 RUN dotnet $LANDIS_CONSOLE scenario_UCLv2.txt
 
 ## PnET Succession + Output Biomass PnET, alongside the disturbance/output extensions
-## this image ships. This also exercises `Landis.Library.PnETCohorts-v2` rebuilt from
-## its UCLv2 branch.
+## this image ships. This also exercises the prebuilt `Landis.Library.PnETCohorts-v2`.
 WORKDIR $TESTS_DIR/TestPnET_AllExtension
 
 RUN dotnet $LANDIS_CONSOLE scenario_UCLv2.txt

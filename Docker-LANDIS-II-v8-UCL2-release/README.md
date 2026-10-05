@@ -2,7 +2,7 @@
 
 LANDIS-II v8 (Ubuntu 24.04 and 26.04) with extensions updated for **Universal Cohort Library (UCL) v2**, defined in [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml). UCL v2 fixes a significant biomass-removal bug present in earlier extensions — see the [warning in the main README](../README.md) for details.
 
-> **Note:** Some extensions are still pending UCL v2 updates and are therefore not included: Base BDA, LinearWind, Land Use Plus, Output Wildlife Habitat, and Local Habitat Suitability Output. Use [`landis-ii-v8-release`](../Docker-LANDIS-II-v8-release/) if you need those extensions.
+> **Note:** Some extensions are still pending UCL v2 updates and are therefore not included: LinearWind, Land Use Plus, Output Wildlife Habitat, and Local Habitat Suitability Output. Use [`landis-ii-v8-release`](../Docker-LANDIS-II-v8-release/) if you need those extensions.
 
 **For users:** pull the pre-built image (no build step required).
 **For developers:** build the image locally using the instructions below.
@@ -39,8 +39,7 @@ docker run --rm `
 ## Included extensions
 
 See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
-[`support-libraries-v8-UCL2-release.yaml`](../support-libraries-v8-UCL2-release.yaml),
-[`libraries-v8-UCL2-prebuild.yaml`](../libraries-v8-UCL2-prebuild.yaml), and
+[`support-libraries-v8-UCL2-release.yaml`](../support-libraries-v8-UCL2-release.yaml), and
 [`libraries-v8-release.yaml`](../libraries-v8-release.yaml) for the exact commit SHAs used.
 
 **Succession**
@@ -60,6 +59,7 @@ See [`extensions-v8-UCL2-release.yaml`](../extensions-v8-UCL2-release.yaml),
 | Base Wind |
 | Biomass Harvest |
 | Biomass Hurricane |
+| Climate BDA |
 | Dynamic Biomass Fuels |
 | Dynamic Fire System |
 | Social Climate Fire (SCRAPPLE) [^scrapple] |
@@ -108,6 +108,8 @@ docker run --rm \
 This image builds on `Docker-LANDIS-II-v8-release` with the following addition:
 
 - extensions updated for Universal Cohort Library (UCL) v2, fixing a biomass-removal bug;
+- the extensions that read climate (NECN, PnET, Biomass Succession, Climate BDA, and
+  Social Climate Fire) all use Climate Library v6;
 - Forest Roads and Magic Harvest now build from their own SDK-style `.csproj`, patched by
   `scripts/update_csproj_*.sh` exactly like every other extension. The hand-maintained
   UCLv2 overrides that used to live in `extension_files/` were retired once those two
@@ -126,9 +128,6 @@ All other enhancements from `Docker-LANDIS-II-v8-release` also apply:
 - `dotnet` installed from the `apt` repositories;
 - LANDIS-II placed at `/opt/landis-ii`;
 - extension and library versions defined in shared `*.yaml` files;
-- a pre-extension support-library pass (`libraries-v8-UCL2-prebuild.yaml`) that rebuilds
-  `Landis.Library.PnETCohorts-v2` from its UCLv2 branch, because the `Support-Library-Dlls-v8`
-  copy references `Landis.Library.Climate-v6`, while the PnET extensions use Climate-v5;
 - build scripts in `bash`, shared in `scripts/`;
 - shared tests (`tests/`) run as part of the build;
 - **multi-stage build** that ships only the .NET *runtime* and the compiled model:

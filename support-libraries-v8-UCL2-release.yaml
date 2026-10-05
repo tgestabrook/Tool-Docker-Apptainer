@@ -30,5 +30,6 @@
   ## otherwise replace this copy. The range also adds
   ## `Landis.Library.Climate-v6.dll` and updates `Landis.Library.PnETCohorts-v2.dll`.
   ##
-  ## NOTE: this does NOT retire `libraries-v8-UCL2-prebuild.yaml` (see there).
+  ## Its `Landis.Library.PnETCohorts-v2.dll` (2.3.0.0) is a UCLv2, Climate v6 build that
+  ## PnET-Succession master uses directly, so it is no longer rebuilt from source.
   commit: cfd7d2a3655bc8e1e70959fee827d8b8c2f32c38

@@ -4,9 +4,10 @@ A small Biomass Succession test scenario for the **`landis-ii-v8-uclv2-release`*
 
 The inputs are the upstream
 [Extension-Biomass-Succession](https://github.com/LANDIS-II-Foundation/Extension-Biomass-Succession)
-repository's own `testings/CoreV8.0-BiomassSuccession7.0` example, taken at the **commit this
-image pins** for Biomass Succession in `extensions-v8-UCL2-release.yaml`
-(`20610767`, which links against `Landis.Library.UniversalCohorts-v2`).
+repository's own `testings/CoreV8.0-BiomassSuccession7.0` example, taken at `20610767`, the
+commit this image pinned for Biomass Succession when the test was added (it links against
+`Landis.Library.UniversalCohorts-v2`). The same inputs run unchanged at the current pin
+(`68b2569`, Climate v6).
 The companion `tests/TestBiomassSuccession_v8/` uses the UCLv1-vintage commit instead.
 (The scenario/input format is unchanged between the two vintages; only the compiled
 Universal-Cohorts library differs.)
