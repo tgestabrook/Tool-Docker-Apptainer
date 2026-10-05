@@ -93,6 +93,15 @@ COPY support-libraries-v8-release.yaml $LANDIS_DIR/support-libraries-v8-release.
 
 RUN scripts/install_support_libraries_v8.sh support-libraries-v8-release.yaml $LANDIS_DIR
 
+## build libraries that extensions compile against but Support-Library-Dlls-v8 lacks
+##
+##  - see `libraries-v8-release-prebuild.yaml` (e.g. the SOSIEL libraries for SOSIEL Harvest);
+##  - they go into build/extensions, where the extension builds below find them.
+
+COPY libraries-v8-release-prebuild.yaml $LANDIS_DIR/libraries-v8-release-prebuild.yaml
+
+RUN scripts/install_libraries_v8.sh libraries-v8-release-prebuild.yaml $LANDIS_DIR
+
 ## get, build, and register all available extensions
 ##
 ##  - necessary files are downloaded and built using `scripts/install_extensions_v8.sh`;

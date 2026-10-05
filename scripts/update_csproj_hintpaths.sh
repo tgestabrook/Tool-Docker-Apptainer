@@ -44,4 +44,24 @@ find "$SEARCH_DIR" -type f -name "*.csproj" | while read -r csproj_file; do
       -v "$new_path" \
       "$csproj_file"
   done
+
+  ## Add a HintPath to any <Reference> without one, if build/extensions has that DLL
+  ## and no <PackageReference> supplies it (e.g. SOSIEL Harvest's .csproj gives no
+  ## HintPaths, so nothing above applies)
+  mapfile -t bare_refs < <(xmlstarlet sel -t -m "//Reference[not(HintPath)]" -v "@Include" -n "$csproj_file")
+
+  for ref in "${bare_refs[@]}"; do
+    name="${ref%%,*}"   ## drop any ", Version=..." suffix
+    [[ -n "$name" && -f "$SEARCH_DIR_PARENT/build/extensions/$name.dll" ]] || continue
+    [[ -z "$(xmlstarlet sel -t -c "//PackageReference[@Include='$name']" "$csproj_file")" ]] || continue
+
+    new_path="$NEW_BASE_PATH\\$name.dll"
+
+    echo " - Adding: $name -> $new_path"
+
+    xmlstarlet ed -L \
+      -s "//Reference[@Include='$ref'][not(HintPath)]" \
+      -t elem -n "HintPath" -v "$new_path" \
+      "$csproj_file"
+  done
 done
