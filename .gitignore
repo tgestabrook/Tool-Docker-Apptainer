@@ -4,3 +4,7 @@
 .RData
 .Ruserdata
 README.html
+
+## Working copy written by tests/*/inputs/disturbances/magicHarvest/switchManagementNames.py.
+## The prescription variants it copies from are tracked; this one is generated per run.
+**/magicHarvest/*_ACTIVE.txt
