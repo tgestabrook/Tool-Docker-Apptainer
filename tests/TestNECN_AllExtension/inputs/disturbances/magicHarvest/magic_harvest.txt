@@ -2,7 +2,11 @@ LandisData "Magic Harvest"
 
 Timestep 10
 
-HarvestExtensionParameterFile ./inputs/disturbances/magicHarvest/biomass-harvest_SetUp_s2e1.txt
+>> Points at an untracked working file that switchManagementNames.py writes
+>> before each re-initialization. The two prescription variants it copies from
+>> stay tracked and unmodified, so running the scenario no longer leaves the
+>> repository dirty or changes what a second run starts from.
+HarvestExtensionParameterFile ./inputs/disturbances/magicHarvest/biomass-harvest_SetUp_s2e1_ACTIVE.txt
 
 ProcessToLaunch python
 

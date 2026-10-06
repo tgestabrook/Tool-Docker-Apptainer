@@ -18,6 +18,8 @@ name: Build and publish Apptainer (.sif) images
 ##     matching `.sif` files are built from the current `:ubuntu-latest` images
 ##     and uploaded as release assets. Pre-releases are skipped, so a release
 ##     used for something else (e.g. a test DLL build) doesn't get `.sif` files.
+##     The job first waits for `docker-publish.yml` to finish on the release's
+##     commit, so a release cut right after a merge converts the new images.
 ##   - `workflow_dispatch` — manual run for testing or one-off builds; results
 ##     are uploaded as workflow artifacts (no release to attach to). An optional
 ##     `tag` input lets you target a specific image tag (e.g. `ubuntu-26.04`).
@@ -35,6 +37,7 @@ on:
 permissions:
   contents: write   # upload release assets
   packages: read    # pull source images from ghcr
+  actions: read     # find and wait for the Docker build of the release's commit
 
 jobs:
   build-sif:
@@ -57,6 +60,23 @@ jobs:
         ## purpose (interactive server, not an HPC batch workload).
 
     steps:
+      ## Without this, a release published while that commit's Docker build is still
+      ## running converts the previous :ubuntu-latest images (as release 2.0 did).
+      - name: Wait for the Docker build of the release's commit
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          run_id=$(gh run list --repo "${{ github.repository }}" --workflow docker-publish.yml \
+            --commit "${{ github.sha }}" --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+          if [ -z "$run_id" ]; then
+            echo "::warning::No Docker build found for ${{ github.sha }}; converting the current images."
+            exit 0
+          fi
+          echo "Waiting for Docker build run ${run_id} ..."
+          gh run watch "$run_id" --repo "${{ github.repository }}" --interval 30 --exit-status > /dev/null
+
       - name: Set up Apptainer
         uses: eWaterCycle/setup-apptainer@v2
 
