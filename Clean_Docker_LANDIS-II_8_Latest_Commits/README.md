@@ -1,5 +1,8 @@
 # LANDIS-II v8 Docker Image (Linux Build)
 
+> ⚠️ **Deprecated.** This image has not been built or published since September 2025.
+> Use `landis-ii-v8-release` or `landis-ii-v8-uclv2-release` instead (see the [main README](../README.md)).
+
 This image closely follows the original `Clean_Docker_LANDIS-II_8_AllExtensions` image with the following enhancements:
 
 - uses the latest commits of each extension;

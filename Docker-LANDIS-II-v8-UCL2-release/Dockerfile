@@ -94,6 +94,7 @@ ARG TESTS_DIR="$LANDIS_DIR/tests"
 
 ENV LANDIS_CONSOLE="$LANDIS_REL_DIR/Landis.Console.dll"
 ENV LANDIS_EXT_TOOL="$LANDIS_REL_DIR/Landis.Extensions.dll"
+ENV LANDIS_FPS="$LANDIS_REL_DIR/Landis.Extension.FPS-v1.dll"
 
 WORKDIR $LANDIS_DIR
 
@@ -126,29 +127,25 @@ COPY support-libraries-v8-UCL2-release.yaml $LANDIS_DIR/support-libraries-v8-UCL
 
 RUN scripts/install_support_libraries_v8.sh support-libraries-v8-UCL2-release.yaml $LANDIS_DIR
 
-## rebuild the support libraries that the extensions must *compile against*
-##
-##  - most libraries are rebuilt after the extensions (see further below), which is
-##    enough when an extension only needs the rebuilt .dll at run time;
-##  - `Landis.Library.PnETCohorts-v2.dll` is different: the copy shipped in
-##    Support-Library-Dlls-v8 is still the UCLv1 build (v2.1.1), so the UCLv2 PnET
-##    extensions fail to compile against it (CS0012, referencing UniversalCohorts-v1).
-##    It must therefore be replaced *before* the extensions are built;
-##  - see `libraries-v8-UCL2-prebuild.yaml` for details.
-
-COPY libraries-v8-UCL2-prebuild.yaml $LANDIS_DIR/libraries-v8-UCL2-prebuild.yaml
-
-RUN scripts/install_libraries_v8.sh libraries-v8-UCL2-prebuild.yaml $LANDIS_DIR
-
 ## get, build, and register all available extensions
 ##
 ##  - necessary files are downloaded and built using `scripts/install_extensions_v8.sh`;
 ##  - the script parses `extensions-v8-UCL2-release.yaml` to checkout specific commits;
 ##  - it uses sparse checkout of specific directories to avoid downloading the entire repo;
 ##  - it cleans up afterwards, removing the extension source files to save space in the image;
+##  - `EXT_DROP_SHADOWING_DLLS=true` makes it delete an extension's committed copy of any
+##    DLL already in `build/extensions` before building it. Otherwise the
+##    `Landis.Library.UniversalCohorts-v2.dll` 1.3.0.0 that Social Climate Fire, Forest
+##    Roads and Output Biomass PnET commit replaces the Support-Library-Dlls-v8 copy, and
+##    Magic Harvest's committed `Landis.Extension.BiomassHarvest-v7.dll` replaces the
+##    Biomass Harvest build;
+##  - entries marked `type: tool` are skipped here and built after the console
+##    rebuild (see below);
 
 COPY extension_files $LANDIS_DIR/extension_files
 COPY extensions-v8-UCL2-release.yaml $LANDIS_DIR/extensions-v8-UCL2-release.yaml
+
+ENV EXT_DROP_SHADOWING_DLLS=true
 
 RUN scripts/install_extensions_v8.sh extensions-v8-UCL2-release.yaml $LANDIS_DIR
 
@@ -179,6 +176,21 @@ RUN scripts/install_libraries_v8.sh libraries-v8-release.yaml $LANDIS_DIR
 WORKDIR $LANDIS_DIR
 RUN scripts/add_console_csproj_dlls.sh $LANDIS_DIR \
   && dotnet build $LANDIS_CORE_DIR/Tool-Console/src -c Release
+
+## build the tools listed in `extensions-v8-UCL2-release.yaml` (`type: tool`)
+##
+##  - the one tool is the Forest Product Sector Module (FPSM), a stand-alone
+##    post-processor of ForC Succession's flux logs, run as
+##    `dotnet $LANDIS_FPS <input file>`;
+##  - tools are installed in build/Release only, so they are neither registered
+##    nor referenced by the console;
+##  - built after the console rebuild, which replaces `MathNet.Numerics.dll` in
+##    build/Release (4.0.0.0 from the support libraries) with its own 5.0.0.0, so
+##    that FPSM's shipped examples, run as a build gate, use the DLLs the image
+##    ships;
+##  - `EXT_DROP_SHADOWING_DLLS` (set above) applies to this pass too.
+
+RUN scripts/install_extensions_v8.sh extensions-v8-UCL2-release.yaml $LANDIS_DIR tool
 
 ## DEBUG: rebuild of Tool-Console (Universal Cohorts 2.2.0.0 expected???)
 # RUN monodis --assembly "$LANDIS_EXT_DIR/Landis.Library.UniversalCohorts-v1.dll" 1>&2 && exit 1
@@ -280,6 +292,7 @@ ARG LANDIS_REL_DIR="$LANDIS_CORE_DIR/build/Release"
 
 ENV LANDIS_CONSOLE="$LANDIS_REL_DIR/Landis.Console.dll"
 ENV LANDIS_EXT_TOOL="$LANDIS_REL_DIR/Landis.Extensions.dll"
+ENV LANDIS_FPS="$LANDIS_REL_DIR/Landis.Extension.FPS-v1.dll"
 
 ## copy ONLY the compiled LANDIS-II tree (core + extensions + registry) from the build stage
 COPY --from=build $LANDIS_CORE_DIR/build $LANDIS_CORE_DIR/build
