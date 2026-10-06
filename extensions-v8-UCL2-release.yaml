@@ -134,8 +134,9 @@
   ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. Supercluster.KDTree)
   ## are copied to build/extensions for runtime loading. Its support-library
   ## references are Private=false with lib/ kept out of the project items, so its
-  ## build no longer replaces newer libraries in build/extensions (repo issue #4).
-  commit: b2f6f2d695c4b02cb20debef3eaaad7b0045a291
+  ## build no longer replaces newer libraries in build/extensions (repo issue #4), and PR #5
+  ## drops ignoreversion from its installer's shared libraries (2.1.1 prep).
+  commit: fa1af334d06bdea1d09b977d93cf0633d54d1601
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
@@ -144,8 +145,9 @@
   ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. log4net) are copied
   ## to build/extensions for runtime loading. Its harvest references are
   ## Private=false with lib/ kept out of the project items, so its build no longer
-  ## replaces Biomass Harvest in build/extensions (repo issue #2).
-  commit: b3551b1d20627a7ddf2d1eea0347403d2c7bcf4d
+  ## replaces Biomass Harvest in build/extensions (repo issue #2), and its
+  ## installer likewise drops ignoreversion on shared libraries.
+  commit: 4685b7f8376dfb7d0cfcef107ec6cca506e721b6
 
 ## Output Extensions
 - repo: Extension-Output-Biomass
