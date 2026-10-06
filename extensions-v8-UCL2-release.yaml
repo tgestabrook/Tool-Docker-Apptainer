@@ -25,8 +25,14 @@
 #   commit: dde267702c587c10d04951f4c4ea754ebeb67bfa ## v8 branch
 
 - repo: Extension-ForCS-Succession
-  org: LANDIS-II-Foundation
-  commit: a889d39dd3a4f3f8f681872765335ac08a4656f5 ## fix init with Dynamic Fire (ForCS#8)
+  org: FOR-CAST
+  ## Temporary pin to the FOR-CAST fork; revert to LANDIS-II-Foundation once
+  ## Extension-ForCS-Succession#11 merges. Now that UniversalCohorts-v2 2.0.1
+  ## really reduces a cohort (#74), a889d39 books only 1/biomass of the carbon a
+  ## partial removal takes, and the rest leaves the live pools unaccounted for.
+  ## Branch FOR-CAST/fix/partial-mortality-fraction (= #11) is one commit on
+  ## a889d39d, the previous pin (fix init with Dynamic Fire, ForCS#8).
+  commit: f8a9e7d725bb418a720a197970b84bbe07e640ef
 
 ## v8.3.1: Climate v6, plus NECN's side of the partial cohort mortality fix (#73).
 - repo: Extension-NECN-Succession
