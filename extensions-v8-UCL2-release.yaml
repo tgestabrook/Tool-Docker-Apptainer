@@ -1,14 +1,13 @@
 ##  TODO:
-##  - "Extension-LinearWind" needs UCLv2 update
 ##  - "Extension-Output-Wildlife-Habitat" needs UCLv2 update
 ##  - "Extension-Local-Habitat-Suitability-Output" needs UCLv2 update
 ##  - "Extension-Land-Use-Plus" needs UCLv2 update (in progress upstream; #59)
+##  - "Extension-SOSIEL-Harvest" needs UCLv2 update (in the UCLv1 v8 image)
 ##
 ##  - (BFOLDS Fire)[https://www.fire-regime-model.com/] not yet ready for v8
 ##  - "Extension-Biomass-Browse" not yet ready for v8
 ##  - "Extension-DGS-Succession" not yet ready for v8 (requires additional libs)
 ##  - "Extension-Root-Rot" not yet ready for v8
-##  - "Extension-SOSIEL-Harvest" not yet ready for v8
 ##  - "Extension-Output-Landscape-Habitat" not yet ready for v8
 ##
 
@@ -90,9 +89,13 @@
 #   org: LANDIS-II-Foundation
 #   commit: cea58ef6b94a4261dcc6f1b6074e7e130d0198a9
 
-# - repo: Extension-LinearWind
-#   org: LANDIS-II-Foundation
-#   commit: fde29473f773c9f995f3a702ca919f7f30a6bcd1
+## FOR-CAST fork: upstream `UCL_update` (93db01a, "UCL update to ReduceOrKillMarkedCohort()
+## function", 2026-07-15) plus a HintPath fix: its .csproj names UniversalCohorts-v2 but hinted
+## the v1 DLL, so it compiled against v1 and failed (CS0535/CS0539). Switch to upstream once
+## LANDIS-II-Foundation/Extension-LinearWind#7 merges, and to `master` once `UCL_update` does.
+- repo: Extension-LinearWind
+  org: FOR-CAST
+  commit: 72819ee2019f0ce5e396e261acdd6ab13026edff
 
 ## Upstream absorbed the UCLv2 migration (`Update UCL and Rebuild`, 2026-06-06) and has
 ## since released v4.3, so the jameslamping fork this used to pin (v4.0.4, never merged
@@ -129,16 +132,20 @@
   ## Cleaned-up commit: SDK-style .csproj using Landis.Library.UniversalCohorts-v2
   ## (harvest libs via build/extensions, patched by update_csproj_*.sh), plus
   ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. Supercluster.KDTree)
-  ## are copied to build/extensions for runtime loading.
-  commit: f2e08cc83e9e26e3150ddbdc1830cb38f4d1273f
+  ## are copied to build/extensions for runtime loading. Its support-library
+  ## references are Private=false with lib/ kept out of the project items, so its
+  ## build no longer replaces newer libraries in build/extensions (repo issue #4).
+  commit: b2f6f2d695c4b02cb20debef3eaaad7b0045a291
 
 - repo: LANDIS-II-Magic-Harvest
   org: Klemet
   ## Cleaned-up commit: SDK-style .csproj referencing BiomassHarvest-v7 /
   ## HarvestManagement-v5 / SiteHarvest-v3 (patched by update_csproj_*.sh), plus
   ## CopyLocalLockFileAssemblies=true so NuGet DLLs (incl. log4net) are copied
-  ## to build/extensions for runtime loading.
-  commit: b8e21905e1dd09d8540e5d86d0640a54a7e99377
+  ## to build/extensions for runtime loading. Its harvest references are
+  ## Private=false with lib/ kept out of the project items, so its build no longer
+  ## replaces Biomass Harvest in build/extensions (repo issue #2).
+  commit: b3551b1d20627a7ddf2d1eea0347403d2c7bcf4d
 
 ## Output Extensions
 - repo: Extension-Output-Biomass

@@ -7,9 +7,9 @@ I've tried to put as much extensions working at the same time as possible to try
 | File | Used by | Difference |
 | ---- | ------- | ---------- |
 | `scenario.txt` | `landis-ii-v8-release` (and the R / RStudio images) | all extensions enabled |
-| `scenario_UCLv2.txt` | `landis-ii-v8-uclv2-release` | Linear Wind, Climate BDA, Land Use Plus, Local Habitat Output and Wildlife Habitat Output commented out |
+| `scenario_UCLv2.txt` | `landis-ii-v8-uclv2-release` | Land Use Plus, Local Habitat Output and Wildlife Habitat Output commented out |
 
-Those five are commented out of the UCLv2 scenario because that image does not ship them:
+Those three are commented out of the UCLv2 scenario because that image does not ship them:
 all but Land Use Plus have no UCL v2 update upstream yet, and Land Use Plus is excluded
 while its upstream UCL v2 migration is unfinished (see issue #59). Re-enable them there as
 they get their updates. The inputs are shared, so a change to the inputs affects both runs.
