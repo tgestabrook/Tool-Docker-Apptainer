@@ -5,8 +5,12 @@
 ########################################################
 
 - repo: Library-Metadata
-  org: LANDIS-II-Foundation
-  commit: 72b8caa14cdd6af81c6e1e4541c4c3e18bc63eca
+  org: FOR-CAST
+  ## Temporary pin to the FOR-CAST fork; revert to LANDIS-II-Foundation once
+  ## upstream PR #8 merges. Branch: FOR-CAST/fix/accept-changes-once (upstream
+  ## `72b8caa` plus one line). Writing n log rows was O(n^2), which stalled
+  ## Biomass Succession loading for minutes to hours (Extension-Biomass-Succession#65).
+  commit: 2bee2e7d180037066e74accdbf86b9c5a612f385
 
 - repo: Library-Universal-Cohort
   org: LANDIS-II-Foundation
