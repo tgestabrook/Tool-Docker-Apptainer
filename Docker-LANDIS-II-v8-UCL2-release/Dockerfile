@@ -274,9 +274,19 @@ RUN apt-get update && apt-get upgrade -y \
     libjpeg62 \
     libpng16-16t64 \
     python3 \
+    python3-pip \
     python-is-python3 \
     "$LIBXML2_PKG" \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/* ## clean up to save space
+
+RUN pip install --no-cache-dir \
+    --ignore-installed \
+    --break-system-packages \
+    numpy \
+    pandas \
+    rasterio \
+    geopandas \
+    scipy
 
 ## Ubuntu 26.04 SO-name workaround for the bundled libgdal.so.20 (see STAGE 1 for details).
 RUN if [ "${UBUNTU_VERSION}" = "26.04" ]; then \
