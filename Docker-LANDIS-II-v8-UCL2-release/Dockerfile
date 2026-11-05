@@ -286,6 +286,7 @@ RUN pip install --no-cache-dir \
     pandas \
     rasterio \
     geopandas \
+    matplotlib \
     scipy
 
 ## Ubuntu 26.04 SO-name workaround for the bundled libgdal.so.20 (see STAGE 1 for details).
